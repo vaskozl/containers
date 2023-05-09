@@ -3,11 +3,21 @@ include:
    ref: main
    file: build.yaml
 
-build:
+build:logrotate:
   needs: []
   extends: .build_container
   stage: build
   variables:
     CONTEXT: logrotate
     REPO: ghcr.io/vaskozl/logrotate
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+
+
+build:lwp-simple:
+  needs: []
+  extends: .build_container
+  stage: build
+  variables:
+    CONTEXT: lwp-simple
+    REPO: ghcr.io/vaskozl/lwp-simple
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
