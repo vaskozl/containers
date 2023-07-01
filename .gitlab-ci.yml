@@ -9,7 +9,7 @@ include:
   stage: build
   rules:
     - changes:
-      - ${CONTEXT}/
+      - ${CONTEXT}/*
   variables:
     REPO: ghcr.io/vaskozl/${CONTEXT}
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
