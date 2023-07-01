@@ -13,11 +13,6 @@ include:
     REPO: ghcr.io/vaskozl/${CONTEXT}
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
 
-build:logrotate:
-  extends: .common
-  variables:
-    CONTEXT: logrotate
-
 build:lwp-simple:
   extends: .common
   variables:
