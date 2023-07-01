@@ -21,3 +21,12 @@ build:lwp-simple:
     CONTEXT: lwp-simple
     REPO: ghcr.io/vaskozl/lwp-simple
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+
+build:jellyfin:
+  needs: []
+  extends: .build_container
+  stage: build
+  variables:
+    CONTEXT: jellyfin
+    REPO: ghcr.io/vaskozl/jellyfin
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
