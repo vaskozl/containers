@@ -7,9 +7,10 @@ include:
   needs: []
   extends: .build_container
   stage: build
-  only:
-    - ${CONTEXT}
-    - .gitlab-ci.yml
+  rules:
+    - changes:
+      - ${CONTEXT}/
+      - .gitlab-ci.yml
   variables:
     REPO: ghcr.io/vaskozl/${CONTEXT}
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
