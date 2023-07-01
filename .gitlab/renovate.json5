@@ -1,0 +1,51 @@
+{
+  "enabled": true,
+  "semanticCommits": "disabled",
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "packageRules": [
+    // global docker datasource settings
+    {
+      "matchDatasources": ["docker"],
+      "enabled": true,
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "commitMessageTopic": "image {{depName}}"
+    },
+    // add labels according to package and update types
+    {
+      "matchUpdateTypes": ["major"],
+      "labels": ["dep/major"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "labels": ["dep/minor"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "labels": ["dep/patch"]
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "labels": ["dep/digest"]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "addLabels": ["renovate/container"]
+    },
+    {
+      "matchDatasources": ["helm"],
+      "addLabels": ["renovate/helm"]
+    },
+    // enable automerge on < minor
+    {
+      "matchUpdateTypes": ["major", "minor", "patch", "digest"],
+      "automerge": true
+    }
+  ]
+}
