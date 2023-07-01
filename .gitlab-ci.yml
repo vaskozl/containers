@@ -3,30 +3,27 @@ include:
    ref: main
    file: build.yaml
 
-build:logrotate:
+.common:
   needs: []
   extends: .build_container
   stage: build
+  only:
+    - ${CONTEXT}
+  variables:
+    REPO: ghcr.io/vaskozl/${CONTEXT}
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+
+build:logrotate:
+  extends: .common
   variables:
     CONTEXT: logrotate
-    REPO: ghcr.io/vaskozl/logrotate
-    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
-
 
 build:lwp-simple:
-  needs: []
-  extends: .build_container
-  stage: build
+  extends: .common
   variables:
     CONTEXT: lwp-simple
-    REPO: ghcr.io/vaskozl/lwp-simple
-    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
 
 build:jellyfin:
-  needs: []
-  extends: .build_container
-  stage: build
+  extends: .common
   variables:
     CONTEXT: jellyfin
-    REPO: ghcr.io/vaskozl/jellyfin
-    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
