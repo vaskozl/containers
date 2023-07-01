@@ -26,3 +26,13 @@ build:jellyfin:
   extends: .common
   variables:
     CONTEXT: jellyfin
+
+build:homer:
+  extends: .common
+  variables:
+    CONTEXT: homer
+
+build:qbit_manage:
+  extends: .common
+  variables:
+    CONTEXT: qbit_manage
