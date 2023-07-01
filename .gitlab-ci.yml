@@ -9,9 +9,12 @@ include:
   stage: build
   only:
     - ${CONTEXT}
+    - .gitlab-ci.yml
   variables:
     REPO: ghcr.io/vaskozl/${CONTEXT}
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+  before_script:
+    - TAG=$(head -n 1 $CONTEXT/Dockerfile | sed 's/.*://')
 
 build:lwp-simple:
   extends: .common
