@@ -45,3 +45,8 @@ build:buildkit:
   extends: .common
   variables:
     CONTEXT: buildkit
+
+build:renovate:
+  extends: .common
+  variables:
+    CONTEXT: renovate
