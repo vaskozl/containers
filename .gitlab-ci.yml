@@ -50,3 +50,8 @@ build:renovate:
   extends: .common
   variables:
     CONTEXT: renovate
+
+build:znc:
+  extends: .common
+  variables:
+    CONTEXT: znc
