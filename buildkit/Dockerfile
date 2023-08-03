@@ -1,1 +1,1 @@
-FROM moby/buildkit:v0.12.0
+FROM moby/buildkit:v0.12.1
