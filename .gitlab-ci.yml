@@ -55,3 +55,8 @@ build:znc:
   extends: .common
   variables:
     CONTEXT: znc
+
+build:logrotate:
+  extends: .common
+  variables:
+    CONTEXT: logrotate
