@@ -3,7 +3,7 @@ FROM public.ecr.aws/docker/library/alpine:3.18.3
 ENV CRON_SCHEDULE='0 * * * *' \
     LOGROTATE_FREQUENCY='daily' \
     LOGROTATE_ROTATE='31' \
-    LOGROTATE_MODE='create'
+    LOGROTATE_MODE='copytruncate'
 
 RUN apk --no-cache add logrotate tini gettext libintl \
     && mkdir -p /logs \
