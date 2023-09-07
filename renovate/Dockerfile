@@ -1,1 +1,1 @@
-FROM renovate/renovate:36.82
+FROM renovate/renovate:36.87
