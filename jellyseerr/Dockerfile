@@ -1,1 +1,1 @@
-FROM fallenbagel/jellyseerr:1.6.0
+FROM fallenbagel/jellyseerr:1.7.0
