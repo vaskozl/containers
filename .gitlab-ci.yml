@@ -13,6 +13,7 @@ include:
   variables:
     REPO: ghcr.io/vaskozl/${CONTEXT}
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+    EXTRA_BUILDKIT_ARGS: '--label "org.opencontainers.image.source=https://github.com/vaskozl/containers"'
   before_script:
     - TAG=$(head -n 1 $CONTEXT/Dockerfile | sed 's/.*://')
 
