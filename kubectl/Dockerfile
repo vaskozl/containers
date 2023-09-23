@@ -1,4 +1,4 @@
-FROM manjarolinux/base:20230917
+FROM manjarolinux/base:20230922
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
     pacman -Sy --noconfirm \

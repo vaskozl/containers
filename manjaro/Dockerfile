@@ -1,1 +1,1 @@
-FROM manjarolinux/base:20230917
+FROM manjarolinux/base:20230922
