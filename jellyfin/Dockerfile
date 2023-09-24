@@ -1,1 +1,1 @@
-FROM jellyfin/jellyfin:10.8.10
+FROM jellyfin/jellyfin:10.8.11
