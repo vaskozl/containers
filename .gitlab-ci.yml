@@ -77,16 +77,14 @@ build:kubectl:
   variables:
     CONTEXT: kubectl
   before_script:
-    - TAG=rolling
+    - TAG=$(pacman -Sy --print-format %v $CONTEXT | tail -n1 | sed 's/.*://')
 
 build:docker:
   extends: .common
   variables:
     CONTEXT: docker
   before_script:
-    - TAG=rolling
-
-
+    - TAG=$(pacman -Sy --print-format %v $CONTEXT | tail -n1 | sed 's/.*://')
 
 build:archlinux:
   extends: .common
