@@ -1,4 +1,4 @@
-FROM menci/archlinuxarm:latest
+FROM ghcr.io/vaskozl/archlinux:rolling
 
 USER root
 WORKDIR /mnt
@@ -30,9 +30,6 @@ ENV LANG=en_US.UTF-8
 
 RUN locale-gen && \
     pacman-key --init && \
-    pacman-key --populate archlinux && \
-    (pacman-key --populate archlinuxarm || true)
-
-RUN echo "done"
+    pacman-key --populate
 
 CMD ["/usr/bin/bash"]
