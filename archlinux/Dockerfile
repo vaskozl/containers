@@ -1,10 +1,12 @@
-FROM ghcr.io/vaskozl/archlinux:rolling
+FROM ghcr.io/vaskozl/archlinux
 
-USER root
 WORKDIR /mnt
 
 ARG NEWROOT=/mnt
 ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist"
+
+ARG TARGETARCH
+ARG AMD64_MIRROR="https://geo.mirror.pkgbuild.com/$repo/os/$arch"
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
     mkdir -m 0755 -p $NEWROOT/var/{cache/pacman/pkg,lib/pacman,log} $NEWROOT/{dev,run,etc} \
@@ -17,10 +19,10 @@ RUN --mount=type=cache,target=/var/cache/pacman/\
     # Install Arch Linux ARM keyring if available
     && (pacman -r $NEWROOT -S --noconfirm archlinuxarm-keyring || true) \
     # Remove current pacman database, likely outdated very soon
-    && rm $NEWROOT/var/lib/pacman/sync/*
+    && rm $NEWROOT/var/lib/pacman/sync/* \
+    && if [ "$TARGETARCH" = "amd64" ];then echo "Server = $AMD64_MIRROR" > /etc/pacman.d/mirrorlist; fi
 
 FROM scratch
-ARG TARGETARCH
 ARG LANG=en_US.UTF-8
 
 COPY --from=0 /mnt /
