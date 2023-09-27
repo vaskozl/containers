@@ -76,10 +76,13 @@ build:kubectl:
   extends: .common
   variables:
     CONTEXT: kubectl
+  before_script:
+    - TAG=rolling
 
 build:archlinux:
   extends: .common
   variables:
     CONTEXT: archlinux
-    TAG2: rolling
     EXTRA_BUILDKIT_ARGS: --build-arg CACHE_BUST=$(date +%s)
+  before_script:
+    - TAG=rolling
