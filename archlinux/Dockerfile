@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux
+FROM menci/archlinuxarm:latest
 
 WORKDIR /mnt
 
