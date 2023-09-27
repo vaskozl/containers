@@ -5,7 +5,7 @@ WORKDIR /mnt
 ARG NEWROOT=/mnt
 ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist"
 
-ARG TARGETARCH
+ARG TARGETARCH CACHE_BUST
 RUN --mount=type=cache,target=/var/cache/pacman/\
     mkdir -m 0755 -p $NEWROOT/var/{cache/pacman/pkg,lib/pacman,log} $NEWROOT/{dev,run,etc} \
     && ln -s /var/cache/pacman $NEWROOT/var/cache/pacman \
