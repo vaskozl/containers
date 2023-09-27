@@ -79,6 +79,15 @@ build:kubectl:
   before_script:
     - TAG=rolling
 
+build:docker:
+  extends: .common
+  variables:
+    CONTEXT: docker
+  before_script:
+    - TAG=rolling
+
+
+
 build:archlinux:
   extends: .common
   variables:
