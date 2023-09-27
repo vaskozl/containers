@@ -76,3 +76,9 @@ build:kubectl:
   extends: .common
   variables:
     CONTEXT: kubectl
+
+build:archlinux:
+  extends: .common
+  variables:
+    CONTEXT: archlinux
+    TAG2: rolling
