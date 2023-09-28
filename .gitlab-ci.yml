@@ -17,6 +17,22 @@ include:
   before_script:
     - TAG=$(head -n 1 $CONTEXT/Dockerfile | sed 's/.*://')
 
+.pacman:
+  needs: []
+  extends: .build_container
+  stage: build
+  rules:
+    - changes:
+      - pacman/*
+      - .gitlab-ci.yml
+  variables:
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+    EXTRA_BUILDKIT_ARGS: --build-arg="PACKAGE=$PACKAGE"
+    CONTEXT: pacman
+  before_script:
+    - TAG=$(pacman -Sy --print-format %v $PACKAGE | tail -n1 | sed 's/.*://')
+    - REPO="ghcr.io/vaskozl/${PACKAGE// /-}"
+
 build:lwp-simple:
   extends: .common
   variables:
@@ -88,3 +104,8 @@ build:archlinux:
     TAG2: latest
   before_script:
     - TAG=rolling
+
+build:postfix:
+  extends: .pacman
+  variables:
+    PACKAGE: postfix
