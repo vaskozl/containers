@@ -33,7 +33,6 @@ include:
     - TAG=$(pacman -Sy --print-format %v $FIRST_PACKAGE | tail -n1 | sed 's/.*://')
     - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
     - EXTRA_BUILDKIT_ARGS=--build-arg="PACKAGE=$PACKAGE"
-    - env
 
 build:lwp-simple:
   extends: .common
