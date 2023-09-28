@@ -85,5 +85,6 @@ build:archlinux:
   extends: .common
   variables:
     CONTEXT: archlinux
+    TAG2: latest
   before_script:
     - TAG=rolling
