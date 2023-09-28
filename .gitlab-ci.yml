@@ -67,11 +67,6 @@ build:inspircd:
   variables:
     CONTEXT: inspircd
 
-build:manjaro:
-  extends: .common
-  variables:
-    CONTEXT: manjaro
-
 build:kubectl:
   extends: .common
   variables:
