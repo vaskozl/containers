@@ -131,3 +131,13 @@ build:perl-mojolicious:
   extends: .makepkg
   variables:
     PACKAGE: perl-mojolicious
+
+build:sonarr-develop:
+  extends: .makepkg
+  variables:
+    PACKAGE: sonarr-develop
+
+build:radarr-develop:
+  extends: .makepkg
+  variables:
+    PACKAGE: radarr-develop
