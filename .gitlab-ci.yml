@@ -87,6 +87,14 @@ build:archlinux:
   before_script:
     - TAG=rolling
 
+build:yay:
+  extends: .common
+  variables:
+    CONTEXT: yay
+    TAG2: latest
+  before_script:
+    - TAG=rolling
+
 build:kubeconform:
   extends: .pacman
   variables:
