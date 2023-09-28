@@ -34,6 +34,11 @@ include:
     - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
     - EXTRA_BUILDKIT_ARGS=--build-arg="PACKAGE=$PACKAGE"
 
+.makepkg:
+  extends: .pacman
+  variables:
+    CONTEXT: makepkg
+
 build:jellyfin:
   extends: .common
   variables:
