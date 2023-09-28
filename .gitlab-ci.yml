@@ -130,3 +130,8 @@ build:perl-libwww:
   extends: .pacman
   variables:
     PACKAGE: perl-libwww
+
+build:perl-mojolicious:
+  extends: .makepkg
+  variables:
+    PACKAGE: perl-mojolicious
