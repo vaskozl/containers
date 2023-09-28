@@ -90,6 +90,5 @@ build:archlinux:
   extends: .common
   variables:
     CONTEXT: archlinux
-    EXTRA_BUILDKIT_ARGS: --build-arg="CACHE_BUST=$(date +%s)"
   before_script:
     - TAG=rolling
