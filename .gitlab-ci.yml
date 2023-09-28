@@ -27,12 +27,12 @@ include:
       - .gitlab-ci.yml
   variables:
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
-    EXTRA_BUILDKIT_ARGS: --build-arg="PACKAGE=$PACKAGE"
     CONTEXT: pacman
   before_script:
     - FIRST_PACKAGE="${PACKAGE%%,*}"
     - TAG=$(pacman -Sy --print-format %v $FIRST_PACKAGE | tail -n1 | sed 's/.*://')
     - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
+    - EXTRA_BUILDKIT_ARGS=--build-arg="PACKAGE=$PACKAGE"
     - env
 
 build:lwp-simple:
