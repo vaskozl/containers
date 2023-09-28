@@ -154,3 +154,13 @@ build:radarr-develop:
   extends: .makepkg
   variables:
     PACKAGE: radarr-develop
+
+build:readarr-develop:
+  extends: .makepkg
+  variables:
+    PACKAGE: readarr-develop
+
+build:prowlarr-develop:
+  extends: .makepkg
+  variables:
+    PACKAGE: prowlarr-develop
