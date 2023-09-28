@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:698a4932c2ad26f34039318c3aa381a9eca96d26a968868ace6e9a0d65d1eaab
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:a20c0e51ca7223c42c94677bcb26e706de24b6416a08c64e61abd9b7c67a066b
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
     pacman -Sy --noconfirm \
