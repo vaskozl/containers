@@ -26,7 +26,11 @@ RUN --mount=type=cache,target=/var/cache/pacman/ \
     # amd64 arch comes with all mirrors commented out, use the GeoIP mirror
     if [ "$TARGETARCH" = "amd64" ];then \
         echo 'Server = https://geo.mirror.pkgbuild.com/$repo/os/$arch' > $NEWROOT/etc/pacman.d/mirrorlist; \
-    fi
+    fi && \
+
+    # enable parallel downloads
+    sed -i $NEWROOT/etc/pacman.conf -E 's/^#(ParallelDownloads)/\1/'
+
 
 FROM scratch
 ARG LANG=en_US.UTF-8
