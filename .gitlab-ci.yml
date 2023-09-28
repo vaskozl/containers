@@ -83,9 +83,10 @@ build:archlinux:
   extends: .common
   variables:
     CONTEXT: archlinux
-    TAG2: latest
+    TAG: latest
+    TAG2: rolling
   before_script:
-    - TAG=rolling
+    - EXTRA_BUILDKIT_ARGS=--build-arg="CACHE_BUST=$(date +%s)"\ --squash
 
 build:yay:
   extends: .common
