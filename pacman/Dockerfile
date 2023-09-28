@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:5b79c66b91af699a8fd48ba35d4072b620323da77056bd93d299eae06faa4732
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:7a3b4a4db8d78e95dc345b8a8d076a6d230db53b804b5508474cea439d1082e8
 
 ARG PACKAGE
 
