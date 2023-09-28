@@ -30,8 +30,9 @@ include:
     EXTRA_BUILDKIT_ARGS: --build-arg="PACKAGE=$PACKAGE"
     CONTEXT: pacman
   before_script:
-    - TAG=$(pacman -Sy --print-format %v $PACKAGE | tail -n1 | sed 's/.*://')
-    - REPO="ghcr.io/vaskozl/${PACKAGE// /-}"
+    - FIRST_PACKAGE="${PACKAGE%% *}"
+    - TAG=$(pacman -Sy --print-format %v $FIRST_PACKAGE | tail -n1 | sed 's/.*://')
+    - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
 
 build:lwp-simple:
   extends: .common
