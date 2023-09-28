@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:latest
+FROM ghcr.io/vaskozl/archlinux:latest AS pacstrap
 
 WORKDIR /mnt
 
@@ -31,7 +31,7 @@ RUN \
     fi
 
 FROM scratch
-COPY --from=0 /mnt /
+COPY --from=pacstrap /mnt /
 
 # Install busybox at the end of $PATH. GNU versions come first if available
 ENV PATH="${PATH}:/opt/busybox/bin"
