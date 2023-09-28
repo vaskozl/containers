@@ -34,11 +34,6 @@ include:
     - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
     - EXTRA_BUILDKIT_ARGS=--build-arg="PACKAGE=$PACKAGE"
 
-build:lwp-simple:
-  extends: .common
-  variables:
-    CONTEXT: lwp-simple
-
 build:jellyfin:
   extends: .common
   variables:
@@ -116,3 +111,8 @@ build:dovecot:
   extends: .pacman
   variables:
     PACKAGE: dovecot
+
+build:perl-libwww:
+  extends: .pacman
+  variables:
+    PACKAGE: perl-libwww
