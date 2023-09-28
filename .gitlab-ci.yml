@@ -85,20 +85,6 @@ build:inspircd:
   variables:
     CONTEXT: inspircd
 
-build:kubectl:
-  extends: .common
-  variables:
-    CONTEXT: kubectl
-  before_script:
-    - TAG=$(pacman -Sy --print-format %v $CONTEXT | tail -n1 | sed 's/.*://')
-
-build:docker:
-  extends: .common
-  variables:
-    CONTEXT: docker
-  before_script:
-    - TAG=$(pacman -Sy --print-format %v $CONTEXT | tail -n1 | sed 's/.*://')
-
 build:archlinux:
   extends: .common
   variables:
@@ -111,6 +97,16 @@ build:kubeconform:
   extends: .pacman
   variables:
     PACKAGE: kubeconform,kustomize,go-yq
+
+build:kubectl:
+  extends: .pacman
+  variables:
+    PACKAGE: kubectl
+
+build:docker:
+  extends: .pacman
+  variables:
+    PACKAGE: docker,docker-buildx,sed
 
 build:postfix:
   extends: .pacman
