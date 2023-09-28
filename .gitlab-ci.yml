@@ -30,9 +30,10 @@ include:
     EXTRA_BUILDKIT_ARGS: --build-arg="PACKAGE=$PACKAGE"
     CONTEXT: pacman
   before_script:
-    - FIRST_PACKAGE="${PACKAGE%% *}"
+    - FIRST_PACKAGE="${PACKAGE%%,*}"
     - TAG=$(pacman -Sy --print-format %v $FIRST_PACKAGE | tail -n1 | sed 's/.*://')
     - REPO="ghcr.io/vaskozl/${FIRST_PACKAGE}"
+    - env
 
 build:lwp-simple:
   extends: .common
@@ -106,7 +107,17 @@ build:archlinux:
   before_script:
     - TAG=rolling
 
+build:kubeconform:
+  extends: .pacman
+  variables:
+    PACKAGE: kubeconform,kustomize,go-yq
+
 build:postfix:
   extends: .pacman
   variables:
     PACKAGE: postfix
+
+build:dovecot:
+  extends: .pacman
+  variables:
+    PACKAGE: dovecot

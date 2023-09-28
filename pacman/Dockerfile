@@ -3,4 +3,4 @@ FROM ghcr.io/vaskozl/archlinux:rolling@sha256:a20c0e51ca7223c42c94677bcb26e706de
 ARG PACKAGE
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
-    pacman -Sy --noconfirm $PACKAGE
+    pacman -Sy --noconfirm $(echo $PACKAGE | tr ',' ' ')
