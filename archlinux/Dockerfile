@@ -31,8 +31,6 @@ RUN \
     fi
 
 FROM scratch
-ARG LANG=en_US.UTF-8
-
 COPY --from=0 /mnt /
 
 # Install busybox at the end of $PATH. GNU versions come first if available
