@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/alpine:3.18.3
+FROM public.ecr.aws/docker/library/alpine:3.18.4
 
 ENV CRON_SCHEDULE='0 * * * *' \
     LOGROTATE_FREQUENCY='daily' \
