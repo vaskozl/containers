@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:9c6052b09d203c311ce369c74facbaeb128401527b09bcb67e02c4d9409937e1 AS makepkg
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:412c8db2c15d5c167e86e58cd728da35c2d1fe2267bff5b44bf059c368ea0990 AS makepkg
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
     pacman -Sy --noconfirm git base-devel sudo shadow
@@ -17,7 +17,7 @@ RUN --mount=type=cache,target=/var/cache/pacman/\
     makepkg -s --noconfirm
 
 
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:9c6052b09d203c311ce369c74facbaeb128401527b09bcb67e02c4d9409937e1
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:412c8db2c15d5c167e86e58cd728da35c2d1fe2267bff5b44bf059c368ea0990
 
 ARG PACKAGE
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/$PACKAGE,target=/mnt \
