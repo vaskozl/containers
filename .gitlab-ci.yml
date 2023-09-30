@@ -42,100 +42,100 @@ include:
     - FIRST="${AURS%%,*}"
     - REPO="ghcr.io/vaskozl/${FIRST}"
     - TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$FIRST" | sed -E 's/.*"Version":"([0-9\.-]+)".*/\1/')
-    - EXTRA_BUILDKIT_ARGS=--build-arg="PKGS=$PKGS" --build-arg="AURS=$AURS"
+    - EXTRA_BUILDKIT_ARGS="--build-arg='PKGS=$PKGS' --build-arg='AURS=$AURS'"
 
-build:jellyfin:
-  extends: .common
-  variables:
-    CONTEXT: jellyfin
-
-build:jellyseerr:
-  extends: .common
-  variables:
-    CONTEXT: jellyseerr
-
-build:homer:
-  extends: .common
-  variables:
-    CONTEXT: homer
-
-build:qbit_manage:
-  extends: .common
-  variables:
-    CONTEXT: qbit_manage
-
-build:buildkit:
-  extends: .common
-  variables:
-    CONTEXT: buildkit
-
-build:renovate:
-  extends: .common
-  variables:
-    CONTEXT: renovate
-
-build:znc:
-  extends: .common
-  variables:
-    CONTEXT: znc
-
-build:logrotate:
-  extends: .common
-  variables:
-    CONTEXT: logrotate
-
-build:inspircd:
-  extends: .common
-  variables:
-    CONTEXT: inspircd
-
-build:archlinux:
-  extends: .common
-  variables:
-    CONTEXT: archlinux
-    TAG: latest
-    TAG2: rolling
-  before_script:
-    - EXTRA_BUILDKIT_ARGS=--build-arg="CACHE_BUST=$(date +%s)"\ --squash
-
-#-------------------
-# Pure arch packages
-#-------------------
-
-build:kubeconform:
-  extends: .pacman
-  variables:
-    PACKAGE: kubeconform,kustomize,go-yq
-
-build:net-tools:
-  extends: .pacman
-  variables:
-    PACKAGE: net-tools,iproute2,iputils,tcpdump,traceroute,strace,lsof,atop,htop,iperf3,nmap
-
-build:kubectl:
-  extends: .pacman
-  variables:
-    PACKAGE: kubectl
-
-build:docker:
-  extends: .pacman
-  variables:
-    PACKAGE: docker,docker-buildx,sed
-
-build:postfix:
-  extends: .pacman
-  variables:
-    PACKAGE: postfix
-
-build:dovecot:
-  extends: .pacman
-  variables:
-    PACKAGE: dovecot
-
-build:perl-libwww:
-  extends: .pacman
-  variables:
-    PACKAGE: perl-libwww
+      #build:jellyfin:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: jellyfin
+      #
+      #build:jellyseerr:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: jellyseerr
+      #
+      #build:homer:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: homer
+      #
+      #build:qbit_manage:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: qbit_manage
+      #
+      #build:buildkit:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: buildkit
+      #
+      #build:renovate:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: renovate
+      #
+      #build:znc:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: znc
+      #
+      #build:logrotate:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: logrotate
+      #
+      #build:inspircd:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: inspircd
+      #
+      #build:archlinux:
+      #  extends: .common
+      #  variables:
+      #    CONTEXT: archlinux
+      #    TAG: latest
+      #    TAG2: rolling
+      #  before_script:
+      #    - EXTRA_BUILDKIT_ARGS=--build-arg="CACHE_BUST=$(date +%s)"\ --squash
+      #
+      ##-------------------
+      ## Pure arch packages
+      ##-------------------
+      #
+      #build:kubeconform:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: kubeconform,kustomize,go-yq
+      #
+      #build:net-tools:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: net-tools,iproute2,iputils,tcpdump,traceroute,strace,lsof,atop,htop,iperf3,nmap
+      #
+      #build:kubectl:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: kubectl
+      #
+      #build:docker:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: docker,docker-buildx,sed
+      #
+      #build:postfix:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: postfix
+      #
+      #build:dovecot:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: dovecot
+      #
+      #build:perl-libwww:
+      #  extends: .pacman
+      #  variables:
+      #    PACKAGE: perl-libwww
 
 #-------------------
 # AUR based packages
