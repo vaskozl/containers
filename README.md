@@ -32,6 +32,8 @@ You can choose the tag that best fits your needs, whether you want the latest ve
 
 - **Common base**: All images are built with the same common archlinux base. If you use multiple images the base layer will be shared - they will take up less disk space and pull faster than a mixture of images which do not share the same base. Furthermore the common archlinux base featuring `pacman` makes debugging that much easier and more consistent.
 
+- **`tini` included**: Images come with [tini](https://github.com/krallin/tini) set as the default entrypoint. Tini is properly installed via the AUR (no curling) and will ensure that forks of processes are correctly reaped, while also properly passing down termination signals.
+
 ## Usage
 
 ### Running the Container
