@@ -177,3 +177,8 @@ build:znc:
     PKGS: znc,znc-clientbuffer
     AURS: znc-push-git
     VERSION: pkg
+
+build:maddy:
+  extends: .makepkg
+  variables:
+    AURS: maddy
