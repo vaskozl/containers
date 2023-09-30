@@ -20,8 +20,6 @@ RUN --mount=type=cache,target=/var/cache/pacman/ \
     pacman -r $NEWROOT -Sy --noconfirm $PACSTRAP && \
     # Install Arch Linux ARM keyring if available
     (pacman -r $NEWROOT -S --noconfirm archlinuxarm-keyring || true) && \
-    # Remove current pacman database, likely outdated very soon
-    rm $NEWROOT/var/lib/pacman/sync/* && \
     rm $NEWROOT/dev/null
 
 # amd64 arch comes with all mirrors commented out, use the GeoIP mirror
