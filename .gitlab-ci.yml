@@ -5,6 +5,7 @@ include:
 
 .common:
   needs: []
+  interruptible: true
   extends: .build_container
   stage: build
   rules:
@@ -19,6 +20,7 @@ include:
 
 .makepkg:
   needs: []
+  interruptible: true
   extends: .build_container
   stage: build
   rules:
