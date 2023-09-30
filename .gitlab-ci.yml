@@ -40,7 +40,9 @@ include:
         die "Neither AURS nor PKGS was set"
       fi
     - REPO="ghcr.io/vaskozl/${FIRST}"
-    - EXTRA_BUILDKIT_ARGS="--build-arg='PKGS=$PKGS' --build-arg='AURS=$AURS'"
+    - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
+    - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi
+    - echo $EXTRA_BUILDKIT_ARGS
 
 build:jellyfin:
   extends: .common
