@@ -1,15 +1,65 @@
-# Multiarch Containers
+# Multi-Arch Arch Linux Containers
 
-This repository hosts containers based on Arch Linux that come pre-installed with various packages, including `docker`, `kubeconform`, `dovecot`, `postfix`, and more. These containers are designed for multiarch compatibility, thanks to the Arch Linux ARM project.
+## Introduction
 
-## Container Tags
+This repository provides OCI/Docker containers for Arch Linux that are built with consistency, minimalism, and multi-architecture support in mind. These containers leverage both official packages from the Arch Linux repositories and packages from the Arch User Repository (AUR). One of the key features of these containers is that they are versioned based on package versions, similar to official Docker images.
 
-The tags follow the format of official dockerhub images. Versions follow the package version of the archlinux package:
+## Tagging Scheme
 
-* 1.28.2-1
-* 1.28.2
-* 1.28
-* 1
-* latest
+We follow a versioning scheme of upstream archlinux packages. For example `ghcr.io/vaskozl/kubectl:1.28.2-1` is available as:
 
-None of them are guarranteed to be immutable as images are rebuilt with the latest base and librariries. If you need immutability, pin by sha256.
+* ghcr.io/vaskozl/kubectl:latest
+* ghcr.io/vaskozl/kubectl:1.28.2-1
+* ghcr.io/vaskozl/kubectl:1.28.2
+* ghcr.io/vaskozl/kubectl:1.28
+* ghcr.io/vaskozl/kubectl:1
+
+You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even release pinned tags are not guarranteed to be immutable as the base is rebuilt daily. The best and intenteded way immutability is desired is to just pin the images by by sha256.
+
+## Features
+
+- **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`, thanks to the Arch Linux ARM project.
+
+- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` which is built daily and does not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
+
+- **Minimal Footprint**: The containers are designed to be minimal and lightweight, only including the `archlinux-keyring pacman pacman-mirrorlist busybox` (instead of just installing `base`). This helps reduce the attack surface and minimize resource usage.
+
+- **Versioned Images**: The container images are versioned based on the package versions, making it easy to pin your application to a specific version. This approach is similar to the way official Docker images are versioned.
+
+- **Busybox included**: A minimal archlinux container has very few debugging tools installed, as such busybox is used to provide missing utils. Busybox utils are symliked in /opt/busybox/bin at the end of `$PATH` so GNU utils take presedence if installed, which you can easily do via pacman if needed!
+
+- **Official and AUR Packages**: We provide a blend of containers utilising official packages from the Arch Linux repositories and community-contributed packages from the AUR.
+
+
+## Usage
+
+### Running the Container
+
+To run the container interactively:
+
+```bash
+docker run -it ghcr.io/vaskozl/archlinux
+```
+
+### Building a custom container
+
+For example `ghcr.io/vaskozl/znc` includes `znc` and `znc-clientbuffer` from the official repos and `znc-push-git` from the AUR. To build it use the `PKGS` and `AURS` env vars, containing all required packages seperated by commas.
+
+
+```bash
+docker buildx build . --build-arg="PKGS=znc,znc-clientbuffer" --build-arg="AURS=znc-push-git" -t znc
+```
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+This project would not be possible without the efforts and support of the Arch Linux and Arch Linux ARM communities and all the maintainers which make this possible. We extend our thanks to them for making Arch Linux available and accessible on a variety of architectures.
+
+Credit to [lopsided98 repo](https://github.com/lopsided98/archlinux-docker) which provided inspiration for the base build.
+
+---
+
+*Disclaimer: This project is not officially affiliated with the Arch Linux project or the Arch Linux ARM project. It is a community-driven effort to provide consistent multiarch Arch Linux containers.*
