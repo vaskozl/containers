@@ -1,7 +1,7 @@
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:eccfb5416f2e4dc2b4d1aceeace77eee6d12ac17fc73c469c6a1026dd6ec5b4f AS makepkg
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:c27e4e7ae683474cd1c3a205a60960dc9ee2d4f4279306246c4d1a3c60d81229 AS makepkg
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
-    pacman -Sy --noconfirm git base-devel sudo shadow
+    pacman -S --noconfirm git base-devel sudo shadow
 
 ARG USER=makepkg
 RUN useradd --system --create-home $USER  && \
@@ -20,11 +20,10 @@ RUN --mount=type=cache,target=/var/cache/pacman/\
     done
 
 
-FROM ghcr.io/vaskozl/archlinux:rolling@sha256:eccfb5416f2e4dc2b4d1aceeace77eee6d12ac17fc73c469c6a1026dd6ec5b4f
+FROM ghcr.io/vaskozl/archlinux:rolling@sha256:c27e4e7ae683474cd1c3a205a60960dc9ee2d4f4279306246c4d1a3c60d81229
 
 ARG PKGS AURS
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
-    pacman -Sy && \
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
     if [ -n "$AURS" ]; then pacman -U --noconfirm /mnt/*/*.pkg.tar.*; fi && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi
