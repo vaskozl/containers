@@ -30,7 +30,7 @@ include:
     CONTEXT: makepkg
   before_script:
     - |
-      if [ -n "$AURS" ]; then
+      if [ -n "$AURS" && "$VERSION" != "pkg" ]; then
         FIRST="${AURS%%,*}"
         TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$FIRST" | sed -E 's/.*"Version":"([0-9\.-]+)".*/\1/')
       elif [ -n "$PKGS" ]; then
@@ -170,3 +170,10 @@ build:flood-git:
   extends: .makepkg
   variables:
     AURS: flood-git
+
+build:znc:
+  extends: .makepkg
+  variables:
+    PKGS: znc znc-clientbuffer
+    AURS: znc-push-git
+    VERSION: pkg
