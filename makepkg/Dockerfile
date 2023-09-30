@@ -15,6 +15,8 @@ RUN --mount=type=cache,target=/var/cache/pacman/\
     for aur_pkg in "${AURS[@]}"; do \
         git clone https://aur.archlinux.org/${aur_pkg}.git && \
         cd $aur_pkg && \
+        # Optimistically add aarch64 as an allowed architecture to build for
+        sed -i "/^arch=/ { /\baarch64\b/! s/\(arch=([^)]*\))/\1 'aarch64')/ }" PKGBUILD && \
         makepkg -s --noconfirm && \
         cd ~; \
     done
