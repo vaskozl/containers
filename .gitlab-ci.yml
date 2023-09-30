@@ -24,7 +24,6 @@ include:
   rules:
     - changes:
       - makepkg/*
-      - .gitlab-ci.yml
   variables:
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
     CONTEXT: makepkg
@@ -78,11 +77,6 @@ build:logrotate:
   extends: .common
   variables:
     CONTEXT: logrotate
-
-build:inspircd:
-  extends: .common
-  variables:
-    CONTEXT: inspircd
 
 build:archlinux:
   extends: .common
@@ -172,3 +166,8 @@ build:znc:
     PKGS: znc,znc-clientbuffer
     AURS: znc-push-git
     VERSION: pkg
+
+build:inspircd:
+  extends: .makepkg
+  variables:
+    AURS: inspircd
