@@ -32,7 +32,7 @@ include:
     - |
       if [ -n "$AURS" -a "$VERSION" != "pkg" ]; then
         FIRST="${AURS%%,*}"
-        TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$FIRST" | sed -E 's/.*"Version":"([0-9\.-]+)".*/\1/')
+        TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$FIRST" |  sed -E 's/.*"Version":"([^"]+)".*/\1/')
       elif [ -n "$PKGS" ]; then
         FIRST="${PKGS%%,*}"
         TAG=$(pacman -Sy --print-format %v $FIRST | tail -n1 | sed 's/.*://')
