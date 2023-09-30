@@ -165,3 +165,8 @@ build:prowlarr-develop:
   extends: .makepkg
   variables:
     AURS: prowlarr-develop
+
+build:flood-git:
+  extends: .makepkg
+  variables:
+    AURS: flood-git
