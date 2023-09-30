@@ -8,11 +8,11 @@ This repository provides OCI/Docker containers for Arch Linux that are built wit
 
 We follow a versioning scheme of upstream archlinux packages. For example `ghcr.io/vaskozl/kubectl:1.28.2-1` is available as:
 
-* ghcr.io/vaskozl/kubectl:latest
-* ghcr.io/vaskozl/kubectl:1.28.2-1
-* ghcr.io/vaskozl/kubectl:1.28.2
-* ghcr.io/vaskozl/kubectl:1.28
-* ghcr.io/vaskozl/kubectl:1
+* `ghcr.io/vaskozl/kubectl:latest`
+* `ghcr.io/vaskozl/kubectl:1.28.2-1`
+* `ghcr.io/vaskozl/kubectl:1.28.2`
+* `ghcr.io/vaskozl/kubectl:1.28`
+* `ghcr.io/vaskozl/kubectl:1`
 
 You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even release pinned tags are not guarranteed to be immutable as the base is rebuilt daily. The best and intenteded way immutability is desired is to just pin the images by by sha256.
 
