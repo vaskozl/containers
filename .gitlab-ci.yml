@@ -39,9 +39,10 @@ include:
   variables:
     CONTEXT: makepkg
   before_script:
-    - REPO="ghcr.io/vaskozl/${PACKAGE}"
-    - TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$PACKAGE" | sed -E 's/.*"Version":"([0-9\.-]+)".*/\1/')
-    - EXTRA_BUILDKIT_ARGS=--build-arg="PACKAGE=$PACKAGE"
+    - FIRST="${AURS%%,*}"
+    - REPO="ghcr.io/vaskozl/${FIRST}"
+    - TAG=$(curl "https://aur.archlinux.org/rpc/?v=5&type=info&arg=$FIRST" | sed -E 's/.*"Version":"([0-9\.-]+)".*/\1/')
+    - EXTRA_BUILDKIT_ARGS=--build-arg="PKGS=$PKGS" --build-arg="AURS=$AURS"
 
 build:jellyfin:
   extends: .common
@@ -143,24 +144,24 @@ build:perl-libwww:
 build:perl-mojolicious:
   extends: .makepkg
   variables:
-    PACKAGE: perl-mojolicious
+    AURS: perl-mojolicious
 
-build:sonarr-develop:
-  extends: .makepkg
-  variables:
-    PACKAGE: sonarr-develop
-
-build:radarr-develop:
-  extends: .makepkg
-  variables:
-    PACKAGE: radarr-develop
-
-build:readarr-develop:
-  extends: .makepkg
-  variables:
-    PACKAGE: readarr-develop
-
-build:prowlarr-develop:
-  extends: .makepkg
-  variables:
-    PACKAGE: prowlarr-develop
+      #build:sonarr-develop:
+      #  extends: .makepkg
+      #  variables:
+      #    AURS: sonarr-develop
+      #
+      #build:radarr-develop:
+      #  extends: .makepkg
+      #  variables:
+      #    AURS: radarr-develop
+      #
+      #build:readarr-develop:
+      #  extends: .makepkg
+      #  variables:
+      #    AURS: readarr-develop
+      #
+      #build:prowlarr-develop:
+      #  extends: .makepkg
+      #  variables:
+      #    AURS: prowlarr-develop
