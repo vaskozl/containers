@@ -177,3 +177,9 @@ build:inspircd:
   extends: .makepkg
   variables:
     AURS: inspircd
+
+build:homer-web:
+  extends: .makepkg
+  variables:
+    PKGS: miniserve
+    AURS: homer-web
