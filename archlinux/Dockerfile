@@ -15,7 +15,7 @@ RUN \
     mknod $NEWROOT/dev/null c 1 3
 
 # Install packages in the new root
-RUN --mount=type=cache,target=/var/cache/pacman/ \
+RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/ \
     ln -s /var/cache/pacman $NEWROOT/var/cache/pacman && \
     pacman -r $NEWROOT -Sy --noconfirm $PACSTRAP && \
     # Install Arch Linux ARM keyring if available
