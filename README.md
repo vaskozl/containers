@@ -14,13 +14,15 @@ We follow a versioning scheme of upstream archlinux packages. For example `ghcr.
 * `ghcr.io/vaskozl/kubectl:1.28`
 * `ghcr.io/vaskozl/kubectl:1`
 
-You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even release pinned tags are not guarranteed to be immutable as the base is rebuilt daily. The best and intenteded way immutability is desired is to just pin the images by by sha256.
+You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even release pinned tags are not guarranteed to be immutable as the base is rebuilt weekly.
+
+The best and intenteded way immutability is desired is to just pin the images by by sha256.
 
 ## Features
 
 - **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`, thanks to the Arch Linux ARM project.
 
-- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` which is built daily and does not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
+- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` which is built weekly and does not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
 
 - **Minimal Footprint**: The containers are designed to be minimal and lightweight, only including the `archlinux-keyring pacman pacman-mirrorlist busybox` (instead of just installing `base`). This helps reduce the attack surface and minimize resource usage.
 
