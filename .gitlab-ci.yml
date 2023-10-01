@@ -8,8 +8,10 @@ include:
   interruptible: true
   extends: .build_container
   stage: build
-  rules:
-    - changes:
+  only:
+    refs:
+      - main
+    changes:
       - ${CONTEXT}/*
   variables:
     REPO: ghcr.io/vaskozl/${CONTEXT}
@@ -23,8 +25,10 @@ include:
   interruptible: true
   extends: .build_container
   stage: build
-  rules:
-    - changes:
+  only:
+    refs:
+      - main
+    changes:
       - makepkg/*
   variables:
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
