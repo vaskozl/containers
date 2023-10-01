@@ -18,7 +18,8 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
         cd ~/$aur_pkg && \
         # Optimistically add aarch64 as an allowed architecture to build for
         sed -i "/^arch=/ { /\bany\b/! { /\baarch64\b/! s/\(arch=([^)]*\))/\1 'aarch64')/ }}" PKGBUILD && \
-        makepkg --syncdeps --nobuild --noconfirm; \
+        makepkg --syncdeps --nobuild --noconfirm && \
+        cd ~; \
     done
 
 RUN \
