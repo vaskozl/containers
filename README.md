@@ -38,12 +38,12 @@ The best and intenteded way immutability is desired is to just pin the images by
 
 ## Usage
 
-### Running the Container
+### Running the containers
 
-To run the container interactively:
-
+To run the base container interactively:
 ```bash
-docker run -it ghcr.io/vaskozl/archlinux
+docker run -it ghcr.io/vaskozl/archlinux bash
+docker run -it ghcr.io/vaskozl/znc:1.8.2 bash
 ```
 
 ### Building a custom container
