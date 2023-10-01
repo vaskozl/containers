@@ -59,11 +59,6 @@ build:jellyseerr:
   variables:
     CONTEXT: jellyseerr
 
-build:homer:
-  extends: .common
-  variables:
-    CONTEXT: homer
-
 build:qbit_manage:
   extends: .common
   variables:
