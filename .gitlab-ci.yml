@@ -178,3 +178,8 @@ build:homer-web:
   variables:
     PKGS: miniserve
     AURS: homer-web
+
+build:thelounge:
+  extends: .makepkg
+  variables:
+    AURS: thelounge
