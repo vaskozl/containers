@@ -8,9 +8,8 @@ include:
   interruptible: true
   extends: .build_container
   stage: build
-  only:
-    refs:
-      - main
+  rules:
+  - if: $CI_COMMIT_BRANCH == "main"
     changes:
       - ${CONTEXT}/*
   variables:
@@ -25,9 +24,10 @@ include:
   interruptible: true
   extends: .build_container
   stage: build
-  only:
-    refs:
-      - main
+  rules:
+  - if: $CI_PIPELINE_SOURCE == "schedule"
+    when: never
+  - if: $CI_COMMIT_BRANCH == "main"
     changes:
       - makepkg/*
   variables:
