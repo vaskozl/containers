@@ -183,3 +183,9 @@ build:thelounge:
   extends: .makepkg
   variables:
     AURS: thelounge
+
+build:jellyfin:
+  extends: .makepkg
+  variables:
+    PKGS: jellyfin-server,jellyfin-web,intel-media-driver,intel-compute-runtime,intel-media-sdk,intel-media-sdk,onevpl-intel-gpu
+    PLATFORM: linux/amd64
