@@ -161,13 +161,6 @@ build:flood-git:
   variables:
     AURS: flood-git
 
-build:znc:
-  extends: .makepkg
-  variables:
-    PKGS: znc,znc-clientbuffer
-    AURS: znc-push-git
-    VERSION: pkg
-
 build:inspircd:
   extends: .makepkg
   variables:
