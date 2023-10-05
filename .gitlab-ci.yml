@@ -110,7 +110,7 @@ build:kubectl:
 build:docker:
   extends: .makepkg
   variables:
-    PKGS: docker,docker-buildx,sed
+    PKGS: docker,docker-buildx,sed,jq,skopeo
 
 build:postfix:
   extends: .makepkg
