@@ -30,6 +30,7 @@ include:
   - if: $CI_COMMIT_BRANCH == "main"
     changes:
       - makepkg/*
+      - .gitlab-ci.yml
   variables:
     DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
     CONTEXT: makepkg
@@ -45,9 +46,19 @@ include:
         die "Neither AURS nor PKGS was set"
       fi
     - REPO="ghcr.io/vaskozl/${FIRST}"
+    - created="$(skopeo inspect docker://$REPO:$TAG | jq -r '.Created' | date -f /dev/stdin +%s || true)"
+    - >
+      if [ "$created" ]; then
+        now=$(date -u +%s);
+        days=$(((now - created) / ( 24 * 60 * 60 )));
+        echo "$REPO:$TAG found and $days days old";
+        if [ "$days" -lt 7 ]; then
+          echo 'Setting SKIP_BUILD to true';
+          SKIP_BUILD="true";
+        fi
+      fi
     - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
     - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi
-    - echo $EXTRA_BUILDKIT_ARGS
 
 build:jellyfin:
   extends: .common
