@@ -3,7 +3,7 @@ FROM ghcr.io/vaskozl/archlinux:latest AS pacstrap
 WORKDIR /mnt
 
 ARG NEWROOT=/mnt
-ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist busybox"
+ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist busybox catatonit"
 
 ARG TARGETARCH CACHE_BUST
 
@@ -47,4 +47,5 @@ RUN pacman-key --init && \
     # Remove lsign key
     rm -rf /etc/pacman.d/gnupg/{openpgp-revocs.d/,private-keys-v1.d/,pubring.gpg~,gnupg.S.}*
 
+ENTRYPOINT ["/usr/bin/catatonit", "--"]
 CMD ["/usr/bin/bash"]
