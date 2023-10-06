@@ -13,7 +13,7 @@ WORKDIR /home/$USER
 ARG AURS
 # Loop twice sync deps with pacman cache first time and build the second time around
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
-    for aur_pkg in tini "${AURS[@]}"; do \
+    for aur_pkg in "${AURS[@]}"; do \
         git clone --depth=1 https://aur.archlinux.org/${aur_pkg}.git && \
         cd ~/$aur_pkg && \
         # Optimistically add aarch64 as an allowed architecture to build for
@@ -23,7 +23,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     done
 
 RUN \
-    for aur_pkg in tini "${AURS[@]}"; do \
+    for aur_pkg in "${AURS[@]}"; do \
         cd ~/$aur_pkg && makepkg --noconfirm; \
     done
 
@@ -35,5 +35,3 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
     pacman -U --noconfirm /mnt/*/*.pkg.tar.* && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi
-
-ENTRYPOINT ["/usr/bin/tini", "--"]
