@@ -3,21 +3,9 @@ include:
    ref: main
    file: build.yaml
 
-.common:
-  needs: []
-  interruptible: true
-  extends: .build_container
-  stage: build
-  rules:
-  - if: $CI_COMMIT_BRANCH == "main"
-    changes:
-      - ${CONTEXT}/*
-  variables:
-    REPO: ghcr.io/vaskozl/${CONTEXT}
-    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
-    EXTRA_BUILDKIT_ARGS: '--label "org.opencontainers.image.source=https://github.com/vaskozl/containers"'
-  before_script:
-    - TAG=$(head -n 1 $CONTEXT/Dockerfile | sed 's/.*://')
+#-------------------
+# Templates
+#-------------------
 
 .makepkg:
   needs: []
@@ -60,40 +48,20 @@ include:
     - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
     - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi
 
-build:jellyfin:
-  extends: .common
-  variables:
-    CONTEXT: jellyfin
-
-build:jellyseerr:
-  extends: .common
-  variables:
-    CONTEXT: jellyseerr
-
-build:qbit_manage:
-  extends: .common
-  variables:
-    CONTEXT: qbit_manage
-
-build:buildkit:
-  extends: .common
-  variables:
-    CONTEXT: buildkit
-
-build:renovate:
-  extends: .common
-  variables:
-    CONTEXT: renovate
-
-build:logrotate:
-  extends: .common
-  variables:
-    CONTEXT: logrotate
+#-------------------
+# Base
+#-------------------
 
 build:archlinux:
-  extends: .common
+  extends: .build_container
+  rules:
+  - if: $CI_COMMIT_BRANCH == "main"
+    changes:
+      - ${CONTEXT}/*
   variables:
+    REPO: ghcr.io/vaskozl/archlinux
     CONTEXT: archlinux
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
     TAG: latest
     TAG2: rolling
   before_script:
