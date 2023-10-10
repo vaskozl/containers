@@ -46,7 +46,7 @@ include:
         fi
       fi
     - >
-      EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg EXP_PKG=\"$FIRST\" --build-arg EXP_VER=\"$TAG\""
+      EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg EXP_PKG=$FIRST --build-arg EXP_VER=$TAG"
     - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
     - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi
 
