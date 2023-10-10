@@ -33,8 +33,8 @@ ARG PKGS AURS EXP_PKG EXP_VER
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
-    pacman -U --noconfirm /mnt/*/*.pkg.tar.* && \
+    if [ -n "$AURS" ]; then pacman -U --noconfirm /mnt/*/*.pkg.tar.*; fi && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi && \
-    if ! pacman -Q $EXP_PKG | grep "$EXP_VER"; then \
+    if ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
         pacman -Q && echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
     fi
