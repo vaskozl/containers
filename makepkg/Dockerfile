@@ -29,9 +29,12 @@ RUN \
 
 FROM ghcr.io/vaskozl/archlinux:rolling@sha256:fdf06404c9e58a612e6d1d3ac082d070c9efabddf1b867eb8c163571cbae849b
 
-ARG PKGS AURS
+ARG PKGS AURS EXP_PKG EXP_VER
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
     pacman -U --noconfirm /mnt/*/*.pkg.tar.* && \
-    if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi
+    if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi && \
+    if ! pacman -Q $EXP_PKG | grep "$EXP_VER"; then \
+        pacman -Q && echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
+    fi
