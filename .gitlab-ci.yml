@@ -108,6 +108,11 @@ build:perl-libwww:
   variables:
     PKGS: perl-libwww
 
+build:hugo:
+  extends: .makepkg
+  variables:
+    PKGS: hugo
+
 #-------------------
 # AUR based packages
 #-------------------
