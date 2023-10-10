@@ -16,8 +16,8 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     for aur_pkg in "${AURS[@]}"; do \
         git clone --depth=1 https://aur.archlinux.org/${aur_pkg}.git && \
         cd ~/$aur_pkg && \
-        # Optimistically add aarch64 as an allowed architecture to build for
-        sed -i "/^arch=/ { /\bany\b/! { /\baarch64\b/! s/\(arch=([^)]*\))/\1 'aarch64')/ }}" PKGBUILD && \
+        # Optimistically build for any arch
+        sed -i "/^arch=.*/arch=('any')/" PKGBUILD && \
         makepkg --syncdeps --nobuild --noconfirm && \
         cd ~; \
     done
@@ -36,5 +36,5 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     if [ -n "$AURS" ]; then pacman -U --noconfirm /mnt/*/*.pkg.tar.*; fi && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm $(echo $PKGS | tr ',' ' '); fi && \
     if ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
-        pacman -Q && echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
+        echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
     fi
