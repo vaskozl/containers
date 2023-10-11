@@ -46,5 +46,5 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
 
 RUN --mount=target=/mnt \
     if [ -d "/mnt/$EXP_PKG/files" ]; then \
-        cp -r /mnt/$EXP_PKG/files/. / \
+        cp -r /mnt/$EXP_PKG/files/. /; \
     fi
