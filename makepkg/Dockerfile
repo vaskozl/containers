@@ -43,3 +43,8 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     if ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
         echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
     fi
+
+RUN --mount=target=/mnt \
+    if [ -d "/mnt/$EXP_PKG/files" ]; then \
+        cp -r /mnt/$EXP_PKG/files/. / \
+    fi
