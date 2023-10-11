@@ -1,0 +1,4 @@
+build:net-tools:
+  extends: .makepkg
+  variables:
+    PKGS: net-tools,iproute2,iputils,tcpdump,traceroute,strace,lsof,atop,htop,iperf3,nmap

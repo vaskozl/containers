@@ -1,0 +1,4 @@
+build:sonarr-develop:
+  extends: .makepkg
+  variables:
+    AURS: sonarr-develop

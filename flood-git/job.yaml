@@ -1,0 +1,4 @@
+build:flood-git:
+  extends: .makepkg
+  variables:
+    AURS: flood-git

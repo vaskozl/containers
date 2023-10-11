@@ -1,0 +1,4 @@
+build:kubectl:
+  extends: .makepkg
+  variables:
+    PKGS: kubectl

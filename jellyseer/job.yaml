@@ -1,0 +1,4 @@
+build:jellyseerr:
+  extends: .makepkg
+  variables:
+    AURS: jellyseerr

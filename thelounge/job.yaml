@@ -1,0 +1,4 @@
+build:thelounge:
+  extends: .makepkg
+  variables:
+    AURS: thelounge

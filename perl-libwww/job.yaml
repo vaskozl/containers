@@ -1,0 +1,4 @@
+build:perl-libwww:
+  extends: .makepkg
+  variables:
+    PKGS: perl-libwww

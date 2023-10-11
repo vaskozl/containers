@@ -1,0 +1,5 @@
+build:baikal:
+  extends: .makepkg
+  variables:
+    AURS: baikal
+    PKGS: nginx,msmtp,msmtp-mta
