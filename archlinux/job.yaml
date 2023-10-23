@@ -15,4 +15,4 @@ build:archlinux:
     TAG: latest
     TAG2: rolling
   before_script:
-    - EXTRA_BUILDKIT_ARGS=--build-arg="CACHE_BUST=$(date +%s)"\ --squash
+    - EXTRA_BUILDKIT_ARGS="--build-arg=CACHE_BUST=$(date +%s) --squash"

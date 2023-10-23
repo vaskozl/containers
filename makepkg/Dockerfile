@@ -10,7 +10,7 @@ RUN useradd --system --create-home $USER  && \
 USER $USER
 WORKDIR /home/$USER
 
-ARG AURS
+ARG AURS CACHE_BUST
 RUN IFS=','; read -ra AURS <<< "$AURS"
 # Sync deps first so we don't lock the cache during the build
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
@@ -32,7 +32,7 @@ RUN \
 
 FROM ghcr.io/vaskozl/archlinux:rolling
 
-ARG PKGS AURS EXP_PKG EXP_VER
+ARG PKGS AURS EXP_PKG EXP_VER CACHE_BUST
 
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     --mount=type=cache,sharing=locked,target=/var/cache/pacman/\

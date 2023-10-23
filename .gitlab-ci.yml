@@ -7,7 +7,8 @@ include:
 # Templates
 #-------------------
 .makepkg:
-  needs: []
+  needs:
+    - build:archlinux
   interruptible: true
   extends: .build_container
   stage: build
@@ -47,7 +48,7 @@ include:
 
   - >
     EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg EXP_PKG=$FIRST --build-arg
-    EXP_VER=$TAG"
+    EXP_VER=$TAG --build-arg=CACHE_BUST=$(date +%s)"
 
   - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
   - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi
