@@ -2,3 +2,4 @@ build:flood-git:
   extends: .makepkg
   variables:
     AURS: flood-git
+    SKIP_VERSION_CHECK: 'yes'
