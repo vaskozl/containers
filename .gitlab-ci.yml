@@ -8,7 +8,8 @@ include:
 #-------------------
 .makepkg:
   needs:
-    - build:archlinux
+    - job: build:archlinux
+      optional: true
   interruptible: true
   extends: .build_container
   stage: build
