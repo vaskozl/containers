@@ -4,6 +4,7 @@
 
 build:archlinux:
   extends: .build_container
+  stage: build
   rules:
   - if: $CI_COMMIT_BRANCH == "main"
     changes:
