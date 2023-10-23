@@ -40,7 +40,7 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
     if [ -n "$AURS" ]; then pacman -U --noconfirm /mnt/*/*.pkg.tar.*; fi && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm ${PKGS[@]}; fi && \
-    if ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
+    if [ -n "$EXP_PKG" ] && ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
         echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
     fi
 

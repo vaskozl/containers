@@ -48,11 +48,10 @@ docker run -it ghcr.io/vaskozl/znc:1.8.2 bash
 
 ### Building a custom container
 
-For example `ghcr.io/vaskozl/znc` includes `znc` and `znc-clientbuffer` from the official repos and `znc-push-git` from the AUR. To build it use the `PKGS` and `AURS` env vars, containing all required packages seperated by commas.
-
+For example if you wanted to build znc including `znc` and `znc-clientbuffer` from the official repos and `znc-push-git` from the AUR you can set the `PKGS` and `AURS` env vars, with the required packages seperated by commas.
 
 ```bash
-docker buildx build . --build-arg="PKGS=znc,znc-clientbuffer" --build-arg="AURS=znc-push-git" -t znc
+docker buildx build . --build-arg="PKGS=znc,znc-clientbuffer" --build-arg="AURS=znc-push-git" -t znc -f makepkg/Dockerfile
 ```
 
 ## License
