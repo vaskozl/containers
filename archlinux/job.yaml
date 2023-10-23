@@ -1,0 +1,18 @@
+#-------------------
+# Base
+#-------------------
+
+build:archlinux:
+  extends: .build_container
+  rules:
+  - if: $CI_COMMIT_BRANCH == "main"
+    changes:
+      - ${CONTEXT}/*
+  variables:
+    REPO: ghcr.io/vaskozl/archlinux
+    CONTEXT: archlinux
+    DOCKER_AUTH_CONFIG: $GHCR_AUTH_CONFIG
+    TAG: latest
+    TAG2: rolling
+  before_script:
+    - EXTRA_BUILDKIT_ARGS=--build-arg="CACHE_BUST=$(date +%s)"\ --squash
