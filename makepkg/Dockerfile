@@ -44,7 +44,7 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
         echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
     fi
 
-RUN --mount=target=/mnt \
-    if [ -d "/mnt/$EXP_PKG/files" ]; then \
-        cp -r /mnt/$EXP_PKG/files/. /; \
+RUN --mount=target=/src \
+    if [ -d "/src/$EXP_PKG/files" ]; then \
+        cp -r /src/$EXP_PKG/files/. /; \
     fi
