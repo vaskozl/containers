@@ -1,0 +1,4 @@
+build:logrotate:
+  extends: .makepkg
+  variables:
+    PKGS: logrotate
