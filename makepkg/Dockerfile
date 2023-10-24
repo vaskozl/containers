@@ -45,6 +45,11 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     fi
 
 RUN --mount=target=/src \
+    if [ -d "/src/makepkg/files" ]; then \
+        cp -r /src/makepkg/files/. /; \
+    fi; \
     if [ -d "/src/$EXP_PKG/files" ]; then \
         cp -r /src/$EXP_PKG/files/. /; \
-    fi
+    fi;
+
+ENTRYPOINT ["/usr/bin/catatonit", "--", "/usr/local/bin/entrypoint.sh"]
