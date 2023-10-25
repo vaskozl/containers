@@ -36,11 +36,9 @@ COPY --from=pacstrap /mnt /
 ENV PATH="${PATH}:/opt/busybox/bin"
 RUN mkdir -p /opt/busybox/bin && busybox --install -s /opt/busybox/bin
 
-# Set the locale properly
+# Set the locale to C.UTF-8 no need for locale-gen
 ENV LANG=C.UTF-8
-RUN echo "LANG=$LANG" > /etc/locale.conf && \
-    echo "$LANG UTF-8" > /etc/locale.gen && \
-    locale-gen
+RUN echo "LANG=$LANG" > /etc/locale.conf
 
 # Init the pacman keychain
 RUN pacman-key --init && \
