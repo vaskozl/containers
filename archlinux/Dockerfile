@@ -17,7 +17,6 @@ RUN \
 # Install packages in the new root
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/ \
     ln -s /var/cache/pacman $NEWROOT/var/cache/pacman && \
-    sed -i '/NoExtract.*etc\/pacman.conf/d' /etc/pacman.conf && \
     pacman -r $NEWROOT -Sy --noconfirm $PACSTRAP && \
     # Install Arch Linux ARM keyring if available
     (pacman -r $NEWROOT -S --noconfirm archlinuxarm-keyring || true) && \
