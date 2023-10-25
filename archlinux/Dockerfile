@@ -47,5 +47,8 @@ RUN pacman-key --init && \
     # Remove lsign key
     rm -rf /etc/pacman.d/gnupg/{openpgp-revocs.d/,private-keys-v1.d/,pubring.gpg~,gnupg.S.}*
 
+# Disable docs and locale installatation
+RUN --mount=target=/src \
+    cat /src/pacman-conf.d-noextract.conf >> /etc/pacman.conf
+
 ENTRYPOINT ["/usr/bin/catatonit", "--"]
-CMD ["/usr/bin/bash"]
