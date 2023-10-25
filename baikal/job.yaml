@@ -2,4 +2,4 @@ build:baikal:
   extends: .makepkg
   variables:
     AURS: baikal
-    PKGS: nginx,php-fpm,msmtp,msmtp-mta
+    PKGS: nginx,php-fpm,php-sqlite,sqlite,msmtp,msmtp-mta
