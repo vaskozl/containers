@@ -1,4 +1,0 @@
-build:radarr-develop:
-  extends: .makepkg
-  variables:
-    AURS: radarr-develop
