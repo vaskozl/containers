@@ -1,4 +1,0 @@
-build:postfix:
-  extends: .makepkg
-  variables:
-    PKGS: postfix

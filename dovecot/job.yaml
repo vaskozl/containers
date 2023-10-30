@@ -1,4 +1,0 @@
-build:dovecot:
-  extends: .makepkg
-  variables:
-    PKGS: dovecot
