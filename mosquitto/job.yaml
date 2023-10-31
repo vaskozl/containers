@@ -1,0 +1,4 @@
+build:mosquitto:
+  extends: .makepkg
+  variables:
+    PKGS: mosquitto
