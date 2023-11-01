@@ -49,13 +49,13 @@ include:
 
   - |
     if [ -z "$SKIP_VERSION_CHECK" ]; then
-      EXP_VER="$TAG"
+      VERSION="$TAG"
     else
       echo "Warning: SKIP_VERSION_CHECK is set. Will not check that the installed package matches the container tag."
     fi
   - >
-    EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg EXP_PKG=$FIRST --build-arg
-    EXP_VER=$EXP_VER --build-arg=CACHE_BUST=$(date +%s)"
+    EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGNAME=$FIRST --build-arg
+    VERSION=$VERSION --build-arg=CACHE_BUST=$(date +%s)"
 
   - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg PKGS=$PKGS";fi
   - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS="$EXTRA_BUILDKIT_ARGS --build-arg AURS=$AURS";fi

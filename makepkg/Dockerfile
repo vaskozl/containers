@@ -32,7 +32,7 @@ RUN \
 
 FROM ghcr.io/vaskozl/archlinux:rolling
 
-ARG PKGS AURS EXP_PKG EXP_VER CACHE_BUST
+ARG PKGS AURS PKGNAME VERSION CACHE_BUST
 
 RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
@@ -40,16 +40,16 @@ RUN --mount=type=bind,from=makepkg,source=/home/makepkg/,target=/mnt \
     if [ -z "$AURS" ] && [ -z "$PKGS" ]; then echo 'No AURS or PKGS'; exit 1; fi && \
     if [ -n "$AURS" ]; then pacman -U --noconfirm /mnt/*/*.pkg.tar.*; fi && \
     if [ -n "$PKGS" ]; then pacman -S --noconfirm ${PKGS[@]}; fi && \
-    if [ -n "$EXP_PKG" ] && ! pacman -Q $EXP_PKG | grep -F "$EXP_VER"; then \
-        echo "Expected $EXP_VER but got $(pacman -Q $EXP_PKG)" && exit 1; \
+    if [ -n "$PKGNAME" ] && ! pacman -Q $PKGNAME | grep -F "$VERSION"; then \
+        echo "Expected $VERSION but got $(pacman -Q $PKGNAME)" && exit 1; \
     fi
 
 RUN --mount=target=/src \
     if [ -d "/src/makepkg/files" ]; then \
         cp -r /src/makepkg/files/. /; \
     fi; \
-    if [ -d "/src/$EXP_PKG/files" ]; then \
-        cp -r /src/$EXP_PKG/files/. /; \
+    if [ -d "/src/$PKGNAME/files" ]; then \
+        cp -r /src/$PKGNAME/files/. /; \
     fi;
 
 ENTRYPOINT ["/usr/bin/catatonit", "--", "/usr/local/bin/entrypoint.sh"]
