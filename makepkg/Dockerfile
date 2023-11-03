@@ -14,12 +14,12 @@ ARG AURS CACHE_BUST
 RUN IFS=','; read -ra AURS <<< "$AURS"
 # Sync deps first so we don't lock the cache during the build
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
+    --mount=target=/src \
     IFS=','; read -ra AURS <<< "$AURS"; \
     for aur_pkg in "${AURS[@]}"; do \
         git clone --depth=1 https://aur.archlinux.org/${aur_pkg}.git && \
         cd ~/$aur_pkg && \
-        # Optimistically build for any arch
-        sed -i "s/^arch=.*/arch=('any')/" PKGBUILD && \
+        /src/makepkg/pkgbuild-customize.pl PKGBUILD && \
         makepkg --syncdeps --nobuild --noconfirm && \
         cd ~; \
     done
