@@ -126,7 +126,7 @@ my $report = _generate_report($ctrs, $avgs);
 if ($mail_to and $report) {
   # Create a new email message
   my $msg = MIME::Lite->new(
-    From    => $mail_from || 'Scanner',
+    From    => $mail_from || 'scanner',
     To      => $mail_to,
     Subject => 'Vulnerability Report',
     Data    => $report,
