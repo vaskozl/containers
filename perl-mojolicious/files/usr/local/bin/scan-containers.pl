@@ -55,7 +55,7 @@ sub _installed_packages {
           if ($container_image =~ IMAGE_FILTER) {
             print "Scanning $container_image\n" if $verbose;
             # TODO: Use wss instead of shelling out
-            my @lines = `kubectl exec -it -n "$namespace" "$pod_name" -c "$container_name" -- pacman -Q`;
+            my @lines = `kubectl exec -n "$namespace" "$pod_name" -c "$container_name" -- pacman -Q`;
             warn "Could not enumerate packages in $container_image" unless @lines;
             for (@lines) {
               my ($name, $ver) = split;
