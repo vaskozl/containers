@@ -22,7 +22,7 @@ The best and intenteded way immutability is desired is to just pin the images by
 
 - **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`, thanks to the Arch Linux ARM project.
 
-- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` which is built weekly and does not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
+- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` weekly and do not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
 
 - **Minimal Footprint**: The containers are designed to be minimal and lightweight, only including the `archlinux-keyring pacman pacman-mirrorlist busybox` (instead of just installing `base`). This helps reduce the attack surface and minimize resource usage.
 
@@ -40,10 +40,15 @@ The best and intenteded way immutability is desired is to just pin the images by
 
 ### Running the containers
 
-To run the base container interactively:
+The containers do not provide custom entrypoint scripts, and users are expected to provide
+the command and arguments they desire.
+
+In most cases that simply means running the program that is installed with the argument that you desire.
+
+This helps keep everything simple and predictable and means you don't have to sift through a list environment variables just to figure out how to run the bespoke entrypoint. Configuration files can simply be mounted with volumes.
 ```bash
 docker run -it ghcr.io/vaskozl/archlinux bash
-docker run -it ghcr.io/vaskozl/znc:1.8.2 bash
+docker run -it -p 1883 ghcr.io/vaskozl/mosquitto:2.0.18 mosquitto
 ```
 
 ### Building a custom container
