@@ -1,8 +1,8 @@
-# Multi-Arch Arch Linux Containers
+# Arch Linux Containers
 
 ## Introduction
 
-This repository provides OCI/Docker containers for Arch Linux that are built with consistency, minimalism, and multi-architecture support in mind. These containers leverage both official packages from the Arch Linux repositories and packages from the Arch User Repository (AUR). One of the key features of these containers is that they are versioned based on package versions, similar to official Docker images.
+This repository provides Arch-Linux based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and packages from the Arch User Repository (AUR). Containers is that they are versioned based on package versions, similar to official Docker images.
 
 ## Tagging Scheme
 
