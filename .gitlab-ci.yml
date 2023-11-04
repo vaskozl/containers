@@ -36,7 +36,7 @@ include:
   - created="$(skopeo inspect docker://$REPO:$TAG | jq -r '.Created' | date -f /dev/stdin
     +%s || true)"
   - >
-    if [ "$created" ]; then
+    if [ "$created" ] && [ -z "$FORCE_BUILD" ]; then
       now=$(date -u +%s);
       days=$(((now - created) / ( 24 * 60 * 60 )));
       echo "$REPO:$TAG found and $days days old";
