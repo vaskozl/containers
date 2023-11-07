@@ -1,0 +1,4 @@
+build:microbin:
+  extends: .makepkg
+  variables:
+    AURS: microbin-bin
