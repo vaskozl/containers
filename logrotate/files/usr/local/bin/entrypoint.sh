@@ -6,10 +6,10 @@ if [ -z "$LOGROTATE_PATTERN" ]; then
   exit;
 fi
 
-CRON_SCHEDULE=${CRON_SCHEDULE:-"0 * * * *"}
-LOGROTATE_FREQUENCY=${LOGROTATE_FREQUENCY:-"daily"}
-LOGROTATE_ROTATE=${LOGROTATE_ROTATE:-"31"}
-LOGROTATE_MODE=${LOGROTATE_MODE:-"copytruncate"}
+export CRON_SCHEDULE=${CRON_SCHEDULE:-"0 * * * *"}
+export LOGROTATE_FREQUENCY=${LOGROTATE_FREQUENCY:-"daily"}
+export LOGROTATE_ROTATE=${LOGROTATE_ROTATE:-"31"}
+export LOGROTATE_MODE=${LOGROTATE_MODE:-"copytruncate"}
 
 mkdir -p /var/spool/cron/crontabs
 cat /etc/logrotate.tpl.conf | envsubst > /etc/logrotate.conf
