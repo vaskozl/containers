@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-if [ -z $LOGROTATE_PATTERN ]; then
+if [ -z "$LOGROTATE_PATTERN" ]; then
   echo '$LOGROTATE_PATTERN must be set';
   exit;
 fi
