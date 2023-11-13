@@ -52,4 +52,7 @@ RUN --mount=target=/src \
         cp -r /src/$PKGNAME/files/. /; \
     fi;
 
+ARG ENTRYPOINT_CMD
+ENV ENTRYPOINT_CMD=$ENTRYPOINT_CMD
+
 ENTRYPOINT ["/usr/bin/catatonit", "--", "/usr/local/bin/entrypoint.sh"]
