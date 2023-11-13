@@ -1,0 +1,4 @@
+build:qbittorrent-nox:
+  extends: .makepkg
+  variables:
+    PKGS: qbittorrent-nox
