@@ -2,3 +2,4 @@ build:prowlarr-develop:
   extends: .makepkg
   variables:
     AURS: prowlarr
+    EXEC: /usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/config

@@ -2,3 +2,4 @@ build:hugo:
   extends: .makepkg
   variables:
     PKGS: hugo
+    EXEC: hugo

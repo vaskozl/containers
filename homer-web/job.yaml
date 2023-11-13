@@ -3,3 +3,4 @@ build:homer-web:
   variables:
     PKGS: miniserve
     AURS: homer-web
+    EXEC: miniserve --index index.html /usr/share/webapps/homer/

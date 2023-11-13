@@ -2,3 +2,4 @@ build:inspircd:
   extends: .makepkg
   variables:
     AURS: inspircd
+    EXEC: inspircd --nofork

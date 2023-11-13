@@ -3,3 +3,4 @@ build:flood-git:
   variables:
     AURS: flood-git
     SKIP_VERSION_CHECK: 'yes'
+    EXEC: flood

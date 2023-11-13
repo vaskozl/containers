@@ -2,3 +2,4 @@ build:kubeconform:
   extends: .makepkg
   variables:
     PKGS: kubeconform,kustomize,go-yq
+    EXEC: kubeconform

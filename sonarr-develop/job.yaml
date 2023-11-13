@@ -2,3 +2,4 @@ build:sonarr-develop:
   extends: .makepkg
   variables:
     AURS: sonarr-develop
+    EXEC: /usr/lib/sonarr/bin/Sonarr -nobrowser -data=/config

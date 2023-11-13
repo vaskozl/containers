@@ -2,3 +2,4 @@ build:ripgrep:
   extends: .makepkg
   variables:
     PKGS: ripgrep,gzip,jq,gron
+    EXEC: rg

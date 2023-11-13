@@ -2,3 +2,4 @@ build:buildkit:
   extends: .makepkg
   variables:
     PKGS: buildkit
+    EXEC: buildkitd
