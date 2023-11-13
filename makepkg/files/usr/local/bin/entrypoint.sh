@@ -13,14 +13,14 @@ else
   echo -e "${BLUE}INFO${RESET}: Running as UID=$(id -u) and GID=$(id -g)"
 fi
 
-# If there are no arguments run $ENTRYPOINT_CMD as is
+# If there are no arguments run $EXEC as is
 if [ $# -eq 0 ]; then
-  set -- $ENTRYPOINT_CMD
+  set -- $EXEC
 
-# Predend the binary from $ENTRYPOINT_CMD if command with flags
+# Predend the binary from $EXEC if command with flags
 elif [ "${1:0:1}" = '-' ]; then
-  bin="${ENTRYPOINT_CMD%% *}"  # Extract the first word from ENTRYPOINT_CMD
-  set -- $bin "$@"
+  bin="${EXEC%% *}"  # Extract the first word from EXEC
+  set -- "$bin" "$@"
 fi
 
 
