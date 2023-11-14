@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository provides Arch-Linux based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and packages from the Arch User Repository (AUR). Containers is that they are versioned based on package versions, similar to official Docker images.
+This repository provides Arch-Linux based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and packages from the Arch User Repository (AUR). Containers are versioned based on package versions, similar to official Docker images.
 
 ## Tagging Scheme
 
