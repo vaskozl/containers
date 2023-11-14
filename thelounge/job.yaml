@@ -2,4 +2,4 @@ build:thelounge:
   extends: .makepkg
   variables:
     AURS: thelounge
-    EXEC: node /usr/sbin/thelounge start
+    EXEC: thelounge start
