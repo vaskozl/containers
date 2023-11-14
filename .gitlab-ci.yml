@@ -42,7 +42,7 @@ include:
       echo "$REPO:$TAG found and $days days old";
       if [ "$days" -lt 6 ]; then
         echo 'Setting SKIP_BUILD to true';
-        #SKIP_BUILD="true";
+        SKIP_BUILD="true";
       fi
     fi
 
