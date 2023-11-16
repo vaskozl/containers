@@ -1,0 +1,5 @@
+build:authelia:
+  extends: .makepkg
+  variables:
+    AURS: authelia-bin
+    EXEC: authelia
