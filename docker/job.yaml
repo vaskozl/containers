@@ -1,4 +1,4 @@
 build:docker:
   extends: .makepkg
   variables:
-    PKGS: docker,docker-buildx,sed,jq,skopeo
+    PKGS: docker,docker-buildx,sed,jq,skopeo,git

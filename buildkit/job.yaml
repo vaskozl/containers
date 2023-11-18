@@ -1,5 +1,5 @@
 build:buildkit:
   extends: .makepkg
   variables:
-    PKGS: buildkit
+    PKGS: buildkit,git
     EXEC: buildkitd
