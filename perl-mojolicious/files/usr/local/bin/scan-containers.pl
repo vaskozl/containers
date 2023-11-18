@@ -78,10 +78,10 @@ sub _generate_report {
       for my $avg (@$avgs) {
         if (grep { $name eq $_ } @{$avg->{packages}}) {
           next if $avg->{status} eq "Not affected";
+          # Skip if we are above the fixed version
+          next if ($avg->{fixed} and _compare($installed{$name}, $avg->{fixed} >= 0);
+          # Skip if there is no version to upgrade to and the -u flag was set
           next if (!$avg->{fixed} and $upgradeable);
-          next unless
-            _compare($installed{$name}, $avg->{affected}) >= 0 and
-            (!$avg->{fixed} or _compare($installed{$name}, $avg->{fixed}) == -1);
 
           $ctr_message .= "\t$avg->{severity}: $name is affected by $avg->{type} (" .
             join(' ', map { "https://security.archlinux.org/$_"  } @{$avg->{issues}}) .').';
@@ -97,6 +97,8 @@ sub _generate_report {
 }
 
 sub _split_ver { split /[.+:~-]/, lc(shift) || 0 }
+
+# Returns 1 if the first argument is bigger, 0 if equal and -1 otherwise.
 sub _compare {
   my @v1 = _split_ver(shift);
   my @v2 = _split_ver(shift);
