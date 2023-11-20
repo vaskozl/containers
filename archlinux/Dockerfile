@@ -51,4 +51,9 @@ RUN pacman-key --init && \
 RUN --mount=target=/src \
     cat /src/pacman-conf.d-noextract.conf >> /etc/pacman.conf
 
+# Add unprivileged users
+RUN \
+    adduser -D -u 568 kah && \
+    adduser -D -u 1000 archie
+
 ENTRYPOINT ["/usr/bin/catatonit", "--"]
