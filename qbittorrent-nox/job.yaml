@@ -2,4 +2,4 @@ build:qbittorrent-nox:
   extends: .makepkg
   variables:
     PKGS: qbittorrent-nox
-    EXEC: ionice -c3 /usr/bin/qbittorrent-nox --w
+    EXEC: nice ionice -c3 qbittorrent-nox --webui-port='55555'
