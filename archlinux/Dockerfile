@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:latest AS pacstrap
+FROM ghcr.io/vaskozl/yay AS pacstrap
 
 WORKDIR /mnt
 
