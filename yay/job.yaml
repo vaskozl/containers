@@ -1,5 +1,0 @@
-build:yay:
-  extends: .makepkg
-  variables:
-    AURS: yay
-    EXEC: yay
