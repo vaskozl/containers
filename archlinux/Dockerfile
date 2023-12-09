@@ -19,7 +19,9 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/ \
     ln -s /var/cache/pacman $NEWROOT/var/cache/pacman && \
     pacman -r $NEWROOT -Sy --noconfirm $PACSTRAP && \
     # Install Arch Linux ARM keyring if available
-    (pacman -r $NEWROOT -S --noconfirm archlinuxarm-keyring || true) && \
+    if [ "$TARGETARCH" = "arm64" ]; then \
+        pacman -r $NEWROOT -S --noconfirm archlinuxarm-keyring; \
+    fi && \
     rm $NEWROOT/dev/null
 
 # amd64 arch comes with all mirrors commented out, use the GeoIP mirror
@@ -46,6 +48,11 @@ RUN pacman-key --init && \
     pacman-key --populate && \
     # Remove lsign key
     rm -rf /etc/pacman.d/gnupg/{openpgp-revocs.d/,private-keys-v1.d/,pubring.gpg~,gnupg.S.}*
+
+# Fix archlinuxarm build key not being trusted properly
+RUN if [ "$TARGETARCH" = "arm64" ]; then \
+    echo -e "5\ny\n" | gpg --homedir /etc/pacman.d/gnupg --command-fd 0 --expert --edit-key builder@archlinuxarm.org trust; \
+    fi
 
 # Disable docs and locale installatation
 RUN --mount=target=/src \
