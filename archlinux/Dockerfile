@@ -50,8 +50,9 @@ RUN pacman-key --init && \
     rm -rf /etc/pacman.d/gnupg/{openpgp-revocs.d/,private-keys-v1.d/,pubring.gpg~,gnupg.S.}*
 
 # Fix archlinuxarm build key not being trusted properly
+ARG TARGETARCH
 RUN if [ "$TARGETARCH" = "arm64" ]; then \
-    echo -e "5\ny\n" | gpg --homedir /etc/pacman.d/gnupg --command-fd 0 --expert --edit-key builder@archlinuxarm.org trust; \
+    echo -e "5\ny\n" | gpg --homedir /etc/pacman.d/gnupg --no-tty --command-fd 0 --expert --edit-key builder@archlinuxarm.org trust; \
     fi
 
 # Disable docs and locale installatation
