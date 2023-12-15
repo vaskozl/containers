@@ -79,7 +79,7 @@ sub _generate_report {
         if (grep { $name eq $_ } @{$avg->{packages}}) {
           next if $avg->{status} eq "Not affected";
           # Skip if we are above the fixed version
-          next if ($avg->{fixed} and _compare($installed{$name}, $avg->{fixed} >= 0);
+          next if ($avg->{fixed} and _compare($installed{$name}, $avg->{fixed}) >= 0);
           # Skip if there is no version to upgrade to and the -u flag was set
           next if (!$avg->{fixed} and $upgradeable);
 
