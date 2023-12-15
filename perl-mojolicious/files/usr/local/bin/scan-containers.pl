@@ -82,8 +82,9 @@ sub _generate_report {
           next if ($avg->{fixed} and _compare($installed{$name}, $avg->{fixed}) >= 0);
           # Skip if there is no version to upgrade to and the -u flag was set
           next if (!$avg->{fixed} and $upgradeable);
+          # Skip if the current version is lower than the affected version
 
-          $ctr_message .= "\t$avg->{severity}: $name is affected by $avg->{type} (" .
+          $ctr_message .= "\t$avg->{severity}: $name $installed{$name} is affected by $avg->{type} (" .
             join(' ', map { "https://security.archlinux.org/$_"  } @{$avg->{issues}}) .').';
           $ctr_message .= " Update to at least $avg->{fixed}" if $avg->{fixed};
           $ctr_message .= " No fix available:(" unless $avg->{fixed};
