@@ -73,7 +73,6 @@ sub _generate_report {
 
   for my $ctr (keys %{$ctrs}) {
     my %installed = %{$ctrs->{$ctr}};
-    my $ctr_message;
     for my $name (keys %installed) {
       for my $avg (@$avgs) {
         if (grep { $name eq $_ } @{$avg->{packages}}) {
@@ -82,17 +81,24 @@ sub _generate_report {
           next if ($avg->{fixed} and _compare($installed{$name}, $avg->{fixed}) >= 0);
           # Skip if there is no version to upgrade to and the -u flag was set
           next if (!$avg->{fixed} and $upgradeable);
-          # Skip if the current version is lower than the affected version
 
-          $ctr_message .= "\t$avg->{severity}: $name $installed{$name} is affected by $avg->{type} (" .
-            join(' ', map { "https://security.archlinux.org/$_"  } @{$avg->{issues}}) .').';
-          $ctr_message .= " Update to at least $avg->{fixed}" if $avg->{fixed};
-          $ctr_message .= " No fix available:(" unless $avg->{fixed};
-          $ctr_message .= "\n";
+	 push @{$avg->{affected_ctrs}}, $ctr;
         }
       }
     }
-    $report .= "$ctr\n$ctr_message" if $ctr_message;
+  }
+  for my $avg (@$avgs) {
+    if ($avg->{affected_ctrs}) {
+      $report .= "$avg->{severity}: @{$avg->{packages}} is affected by $avg->{type} (" .
+        join(' ', map { "https://security.archlinux.org/$_"  } @{$avg->{issues}}) .').';
+      $report .= " Update to at least $avg->{fixed}" if $avg->{fixed};
+      $report .= " No fix available:(" unless $avg->{fixed};
+      $report .= "\n";
+      for my $ctr (@{$avg->{affected_ctrs}}) {
+        $report .= "\t$ctr\n";
+      }
+      $report .= "\n";
+    }
   }
   $report
 }
