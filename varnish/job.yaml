@@ -2,4 +2,4 @@ build:varnish:
   extends: .makepkg
   variables:
     PKGS: varnish
-    EXEC: varnishd -j unix,user=nobody -F -a :6081 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s malloc,128M
+    EXEC: varnishd -j unix,user=nobody -F -a :6081 -T localhost:6082 -f /etc/varnish/default.vcl -s malloc,128M
