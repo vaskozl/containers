@@ -17,6 +17,8 @@ RUN \
 # Install packages in the new root
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/ \
     ln -s /var/cache/pacman $NEWROOT/var/cache/pacman && \
+    pacman-key --init && \
+    pacman -Sy --noconfirm archlinux-keyring && \
     pacman -r $NEWROOT -Sy --noconfirm $PACSTRAP && \
     # Install Arch Linux ARM keyring if available
     if [ "$TARGETARCH" = "arm64" ]; then \
