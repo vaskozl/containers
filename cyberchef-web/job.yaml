@@ -1,0 +1,6 @@
+build:cyberchef-web:
+  extends: .makepkg
+  variables:
+    PKGS: miniserve
+    AURS: cyberchef-web
+    EXEC: miniserve --index index.html /usr/share/webapps/cyberchef/
