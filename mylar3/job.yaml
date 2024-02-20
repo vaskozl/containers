@@ -1,5 +1,0 @@
-build:radarr:
-  extends: .makepkg
-  variables:
-    AURS: mylar3
-    EXEC: /usr/bin/python /usr/lib/mylar3/Mylar.py --config /config/mylar3.ini --datadir /config --nolaunch
