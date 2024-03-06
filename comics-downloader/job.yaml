@@ -2,3 +2,5 @@ build:comics-downloader:
   extends: .makepkg
   variables:
     AURS: comics-downloader-git
+    SKIP_VERSION_CHECK: 'yes'
+    EXEC: comics-downloader
