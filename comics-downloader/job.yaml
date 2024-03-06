@@ -1,0 +1,4 @@
+build:comics-downloader:
+  extends: .makepkg
+  variables:
+    AURS: comics-downloader-git
