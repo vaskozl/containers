@@ -35,7 +35,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     --mount=target=/src \
     IFS=','; read -ra AURS <<< "$AURS"; \
     for aur_pkg in "${AURS[@]}"; do \
-        aur sync --noconfirm --noview ${aur_pkg}; \
+        aur sync --noconfirm --noview --ignorearch ${aur_pkg}; \
     done && \
     sudo paccache -rk 1 && \
     sudo paccache -c /home/custompkgs -rk 1
