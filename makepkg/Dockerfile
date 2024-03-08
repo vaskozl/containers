@@ -1,7 +1,7 @@
 FROM ghcr.io/vaskozl/archlinux:rolling as makepkg
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
-    pacman -S --noconfirm git base-devel sudo shadow pacutils paccache python-setuptools
+    pacman -S --noconfirm git base-devel sudo shadow pacutils pacman-contrib python-setuptools
 
 # Add a non-root user for building AUR packages
 ARG USER=makepkg
@@ -37,7 +37,8 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     for aur_pkg in "${AURS[@]}"; do \
         aur sync --noconfirm --noview ${aur_pkg}; \
     done && \
-    paccache -r 1
+    sudo paccache -rk 1 && \
+    sudo paccache -c /home/custompkgs -rk 1
 
 FROM ghcr.io/vaskozl/archlinux:rolling
 
