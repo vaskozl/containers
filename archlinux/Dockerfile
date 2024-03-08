@@ -1,9 +1,9 @@
-FROM ghcr.io/vaskozl/yay AS pacstrap
+FROM ghcr.io/vaskozl/archlinux:latest AS pacstrap
 
 WORKDIR /mnt
 
 ARG NEWROOT=/mnt
-ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist util-linux busybox catatonit"
+ARG PACSTRAP="archlinux-keyring pacman pacman-mirrorlist pacutils util-linux busybox catatonit"
 
 ARG TARGETARCH CACHE_BUST
 
