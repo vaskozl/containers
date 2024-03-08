@@ -1,0 +1,6 @@
+build:calibre-web:
+  extends: .makepkg
+  variables:
+    AURS: calibre-web,kepubify
+    PKGS: python-jsonschema,imagemagick
+    EXEC: /usr/lib/calibre-web/cps.py
