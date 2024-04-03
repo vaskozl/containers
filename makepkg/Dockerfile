@@ -8,25 +8,38 @@ ARG USER=makepkg
 RUN useradd --system --create-home $USER  && \
     echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USER
 
-# Enable the [custom] repo
-RUN perl -0777 -pi -e 's/#(\[custom\])\n#(SigLevel.*)\n#(Server.*)\n/$1\n$2\n$3\n/' /etc/pacman.conf
 
 # Init ithe [custom] repo in bind mounted cache
-ARG REPO_DB=/home/custompkgs/custom.db.tar.gz
+ARG REPO_DIR=/home/custompkgs
 RUN --mount=type=cache,sharing=locked,target=/home/custompkgs\
-    install -o $USER -dm755 /home/custompkgs && \
-    sudo -u $USER repo-add $REPO_DB && \
-    pacsync custom
+    install -o $USER -dm755 $REPO_DIR
 
 USER $USER
 WORKDIR /home/$USER
 
-# Install aurutils
+# Build aurutils and init [custom]
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
+    --mount=type=cache,sharing=locked,target=/home/custompkgs\
     git clone --depth=1 https://aur.archlinux.org/aurutils.git && \
     cd aurutils && \
-    makepkg -si --noconfirm
+    makepkg -s --noconfirm && \
+    mv *.pkg.tar.* $REPO_DIR/ && \
+    repo-add $REPO_DIR/custom.db.tar $REPO_DIR/*.pkg.tar.*
 
+USER root
+
+# Enable the [custom] repo
+RUN perl -0777 -pi -e 's/#(\[custom\])\n#(SigLevel.*)\n#(Server.*)\n/$1\n$2\n$3\n/' /etc/pacman.conf
+
+# Install aurutils
+RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
+    --mount=type=cache,sharing=locked,target=/home/custompkgs\
+    pacsync custom && \
+    pacman -S --noconfirm aurutils
+
+USER $USER
+
+# Build AUR packages
 ARG AURS CACHE_BUST
 RUN IFS=','; read -ra AURS <<< "$AURS"
 # Sync deps first so we don't lock the cache during the build
@@ -38,7 +51,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
         aur sync --noconfirm --noview --ignorearch ${aur_pkg}; \
     done && \
     sudo paccache -rk 1 && \
-    sudo paccache -c /home/custompkgs -rk 1
+    sudo paccache -c $REPO_DIR -rk 1
 
 FROM ghcr.io/vaskozl/archlinux:rolling
 
