@@ -24,7 +24,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     cd aurutils && \
     makepkg -s --noconfirm && \
     mv *.pkg.tar.* $REPO_DIR/ && \
-    repo-add $REPO_DIR/custom.db.tar $REPO_DIR/*.pkg.tar.*
+    repo-add -R $REPO_DIR/custom.db.tar $REPO_DIR/aurutils-*.pkg.tar.*
 
 USER root
 
