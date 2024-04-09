@@ -2,3 +2,4 @@ build:msmtp:
   extends: .makepkg
   variables:
     PKGS: msmtp,msmtp-mta
+    EXEC: msmtp
