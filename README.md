@@ -14,7 +14,7 @@ We follow a versioning scheme of upstream archlinux packages. For example `ghcr.
 * `ghcr.io/vaskozl/kubectl:1.28`
 * `ghcr.io/vaskozl/kubectl:1`
 
-You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even release pinned tags are not guarranteed to be immutable as the base is rebuilt weekly.
+You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even releases pinned tags are not guarranteed to be immutable as the base is rebuilt weekly.
 
 The best and intenteded way to achieve immutability is to just pin the images by by sha256.
 
@@ -50,6 +50,8 @@ This helps keep everything simple and predictable and means you don't have to si
 docker run -it ghcr.io/vaskozl/archlinux bash
 docker run -it -p 1883 ghcr.io/vaskozl/mosquitto:2.0.18 mosquitto
 ```
+
+For more specific examples, check out [my manifests repository](https://github.com/vaskozl/home-infra).
 
 ### Building a custom container
 
