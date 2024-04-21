@@ -1,6 +1,6 @@
 build:kcc:
   extends: .makepkg
   variables:
-    AURS: kcc,comics-downloader-git
-    PKGS: p7zip,python-cffi
+    AURS: kcc
+    PKGS: p7zip,python-cffi,python-pip
     EXEC: kcc-c2e
