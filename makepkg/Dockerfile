@@ -77,7 +77,7 @@ RUN --mount=target=/src \
         cp -r /src/$PKGNAME/files/. /; \
     fi;
 
-RUN [ -e "/usr/local/bin/post-install.sh" ] && /usr/local/bin/post-install.sh
+RUN if [ -e "/usr/local/bin/post-install.sh" ]; then /usr/local/bin/post-install.sh;fi
 
 ARG EXEC
 ENV EXEC=$EXEC
