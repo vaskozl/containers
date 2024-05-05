@@ -1,0 +1,5 @@
+build:rspamd:
+  extends: .makepkg
+  variables:
+    PKGS: rspamd
+    EXEC: rspamd -f
