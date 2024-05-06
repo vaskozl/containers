@@ -1,0 +1,5 @@
+build:maddy:
+  extends: .makepkg
+  variables:
+    PKGS: maddy
+    EXEC: maddy -config "/data/maddy.conf" run
