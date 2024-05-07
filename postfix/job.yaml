@@ -1,5 +1,0 @@
-build:postfix:
-  extends: .makepkg
-  variables:
-    PKGS: postfix
-    EXEC: postfix start-fg
