@@ -10,6 +10,7 @@ use Path::Tiny;
 
 use constant ARCH_SECURITY => 'https://security.archlinux.org/issues/all.json';
 use constant MAIL_SERVER   => 'mail.sko.ai';
+use constant MAIL_PORT     => 2225;
 use constant IMAGE_FILTER  => qr{ghcr[.]io/vaskozl};
 use constant SA_TOKEN      => '/var/run/secrets/kubernetes.io/serviceaccount/token';
 
@@ -141,7 +142,7 @@ if ($mail_to and $report) {
     Data    => $report,
   );
 
-  $msg->send('smtp', MAIL_SERVER);
+  $msg->send('smtp', MAIL_SERVER, Port => MAIL_PORT);
   print "Email sent successfully\n";
 } else {
   print $report;
