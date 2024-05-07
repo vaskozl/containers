@@ -37,7 +37,9 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
     pacsync custom && \
     pacman -S --noconfirm aurutils
 
+
 USER $USER
+RUN mkdir -p ~/.gnupg && echo 'auto-key-retrieve' >> ~/.gnupg/gpg.conf
 
 # Build AUR packages
 ARG AURS CACHE_BUST
