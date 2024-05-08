@@ -2,4 +2,4 @@ build:maddy:
   extends: .makepkg
   variables:
     AURS: maddy
-    EXEC: maddy -config "/data/maddy.conf" run
+    EXEC: maddy run
