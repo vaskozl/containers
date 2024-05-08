@@ -2,5 +2,5 @@ build:kcc:
   extends: .makepkg
   variables:
     AURS: kcc
-    PKGS: p7zip,python-cffi,python-pip
+    PKGS: p7zip,python-cffi,python-pip,python-setuptools
     EXEC: kcc-c2e
