@@ -1,0 +1,4 @@
+build:cni-plugins:
+  extends: .makepkg
+  variables:
+    PKGS: cni-plugins
