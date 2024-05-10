@@ -55,6 +55,7 @@ include:
   - |
     EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=PKGNAME=$FIRST")
     EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=VERSION=$VERSION")
+    EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=SOURCE=${SOURCE:=https://github.com/vaskozl/containers}")
     EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=CACHE_BUST=$(date +%s)")
   - if [ -n "$PKGS" ];then EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=PKGS=$PKGS");fi
   - if [ -n "$AURS" ];then EXTRA_BUILDKIT_ARGS_ARRAY+=("--build-arg=AURS=$AURS");fi

@@ -57,9 +57,14 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
 
 FROM ghcr.io/vaskozl/archlinux:rolling
 
-COPY --from=0 /etc/pacman.conf /etc/pacman.conf
+ARG PKGS AURS PKGNAME VERSION SOURCE CACHE_BUST
+LABEL org.opencontainers.image.authors="vaskozl" \
+      org.opencontainers.image.source=$SOURCE \
+      org.opencontainers.image.title=$PKGNAME \
+      org.opencontainers.image.version=$VERSION \
+      version=$VERSION
 
-ARG PKGS AURS PKGNAME VERSION CACHE_BUST
+COPY --from=0 /etc/pacman.conf /etc/pacman.conf
 
 RUN --mount=type=cache,sharing=locked,target=/home/custompkgs\
     --mount=type=cache,sharing=locked,target=/var/cache/pacman/\
