@@ -3,3 +3,4 @@ build:kubectl:
   variables:
     PKGS: kubectl
     EXEC: kubectl
+    SOURCE: "https://github.com/kubernetes/kubectl"

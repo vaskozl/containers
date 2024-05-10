@@ -3,3 +3,4 @@ build:varnish:
   variables:
     PKGS: varnish
     EXEC: varnishd -j unix,user=nobody -F -a :6081 -T localhost:6082 -f /etc/varnish/default.vcl -s malloc,128M
+    SOURCE: "https://github.com/varnishcache/varnish-cache"

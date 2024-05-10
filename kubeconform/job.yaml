@@ -3,3 +3,4 @@ build:kubeconform:
   variables:
     PKGS: kubeconform,kustomize,go-yq
     EXEC: kubeconform
+    SOURCE: "https://github.com/yannh/kubeconform"

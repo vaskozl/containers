@@ -3,3 +3,4 @@ build:prowlarr-develop:
   variables:
     AURS: prowlarr
     EXEC: /usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/config
+    SOURCE: "https://github.com/Prowlarr/Prowlarr"

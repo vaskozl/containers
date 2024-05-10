@@ -2,3 +2,4 @@ build:cni-plugins:
   extends: .makepkg
   variables:
     PKGS: cni-plugins
+    SOURCE: "https://github.com/containernetworking/plugins"

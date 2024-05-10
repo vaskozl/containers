@@ -3,3 +3,4 @@ build:baikal:
   variables:
     AURS: baikal
     PKGS: nginx,php-fpm,php-sqlite,sqlite,msmtp,msmtp-mta
+    SOURCE: "https://github.com/sabre-io/Baikal"

@@ -3,3 +3,4 @@ build:thelounge:
   variables:
     AURS: thelounge
     EXEC: thelounge start
+    SOURCE: "https://github.com/thelounge/thelounge"

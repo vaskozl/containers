@@ -3,3 +3,4 @@ build:perl-mojolicious:
   variables:
     AURS: perl-mojolicious
     PKGS: perl-io-socket-ssl,perl-mime-lite,perl-json-xs,perl-path-tiny,kubectl
+    SOURCE: "https://github.com/mojolicious/mojo"

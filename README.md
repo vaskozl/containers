@@ -22,6 +22,8 @@ The best and intenteded way to achieve immutability is to just pin the images by
 
 - **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`, thanks to the Arch Linux ARM project.
 
+- **Renovate compatible**: Containers have the `org.opencontainers.image.source` label to facilitate changelog population.
+
 - **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers from a common base `ghcr.io/vaskozl/archlinux:rolling` weekly and do not strip the package database. This ensures that all packages in the container are built against the same libraries. Furthermore package database is left in the final images such that pacman can be used reliably in the container or if the image is used as a base. This is in line with [arch wiki best practices](https://wiki.archlinux.org/title/system_maintenance#Partial_upgrades_are_unsupported).
 
 - **Minimal Footprint**: The containers are designed to be minimal and lightweight, only including a subset of `base`. This helps reduce the attack surface and minimize resource usage.

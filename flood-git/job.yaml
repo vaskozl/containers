@@ -4,3 +4,4 @@ build:flood-git:
     AURS: flood-git
     SKIP_VERSION_CHECK: 'yes'
     EXEC: flood
+    SOURCE: "https://github.com/jesec/flood"

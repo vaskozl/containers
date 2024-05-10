@@ -3,3 +3,4 @@ build:hugo:
   variables:
     PKGS: hugo
     EXEC: hugo
+    SOURC: "https://github.com/gohugoio/hugo"

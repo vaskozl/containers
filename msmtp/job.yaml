@@ -3,3 +3,4 @@ build:msmtp:
   variables:
     PKGS: msmtp,msmtp-mta
     EXEC: msmtp
+    SOURCE: "https://github.com/marlam/msmtp"

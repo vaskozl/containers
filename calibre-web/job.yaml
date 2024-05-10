@@ -4,3 +4,4 @@ build:calibre-web:
     AURS: calibre-web,kepubify-bin
     PKGS: python-jsonschema,imagemagick
     EXEC: /usr/lib/calibre-web/cps.py
+    SOURCE: "https://github.com/janeczku/calibre-web"

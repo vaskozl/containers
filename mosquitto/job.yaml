@@ -3,3 +3,4 @@ build:mosquitto:
   variables:
     PKGS: mosquitto
     EXEC: mosquitto
+    SOURCE: "https://github.com/eclipse/mosquitto"

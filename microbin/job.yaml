@@ -3,3 +3,4 @@ build:microbin:
   variables:
     AURS: microbin-bin
     EXEC: microbin
+    SOURCE: "https://github.com/szabodanika/microbin"

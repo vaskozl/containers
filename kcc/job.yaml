@@ -4,3 +4,4 @@ build:kcc:
     AURS: kcc
     PKGS: p7zip,python-cffi,python-pip,python-setuptools
     EXEC: kcc-c2e
+    SOURCE: "https://github.com/ciromattia/kcc"

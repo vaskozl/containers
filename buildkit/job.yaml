@@ -3,3 +3,4 @@ build:buildkit:
   variables:
     PKGS: buildkit,git
     EXEC: buildkitd
+    SOURCE: "https://github.com/moby/buildkit"

@@ -3,3 +3,4 @@ build:logrotate:
   variables:
     PKGS: logrotate
     EXEC: logrotate -v
+    SOURCE: "https://github.com/logrotate/logrotate"

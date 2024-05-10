@@ -3,3 +3,4 @@ build:rspamd:
   variables:
     PKGS: rspamd
     EXEC: rspamd -f
+    SOURCE: "https://github.com/rspamd/rspamd"

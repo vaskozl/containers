@@ -2,3 +2,4 @@ build:jellyseerr:
   extends: .makepkg
   variables:
     AURS: jellyseerr
+    SOURCE: "https://github.com/Fallenbagel/jellyseerr"

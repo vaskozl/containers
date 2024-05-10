@@ -3,3 +3,4 @@ build:maddy:
   variables:
     AURS: maddy
     EXEC: maddy run
+    SOURCE: "https://github.com/foxcpp/maddy"

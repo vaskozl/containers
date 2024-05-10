@@ -3,3 +3,4 @@ build:readarr-develop:
   variables:
     AURS: readarr-develop
     EXEC: /usr/lib/readarr/bin/Readarr -nobrowser -data=/config
+    SOURCE: "https://github.com/Readarr/Readarr"

@@ -4,3 +4,4 @@ build:cyberchef-web:
     PKGS: miniserve
     AURS: cyberchef-web
     EXEC: miniserve --index index.html /usr/share/webapps/cyberchef/
+    SOURCE: "https://github.com/gchq/CyberChef"

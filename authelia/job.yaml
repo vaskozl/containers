@@ -3,3 +3,4 @@ build:authelia:
   variables:
     AURS: authelia-bin
     EXEC: authelia
+    SOURCE: "https://github.com/authelia/authelia"
