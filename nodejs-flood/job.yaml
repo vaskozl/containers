@@ -1,7 +1,6 @@
-build:flood-git:
+build:nodejs-flood:
   extends: .makepkg
   variables:
-    AURS: flood-git
-    SKIP_VERSION_CHECK: 'yes'
+    AURS: nodejs-flood
     EXEC: flood
     SOURCE: "https://github.com/jesec/flood"
