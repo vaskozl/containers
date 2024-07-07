@@ -1,4 +1,4 @@
-FROM ghcr.io/vaskozl/archlinux:rolling as makepkg
+FROM ghcr.io/vaskozl/archlinux:rolling AS makepkg
 
 RUN --mount=type=cache,target=/var/cache/pacman/\
     pacman -S --noconfirm git base-devel sudo shadow pacutils pacman-contrib python-setuptools
