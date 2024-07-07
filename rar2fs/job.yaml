@@ -1,4 +1,4 @@
-build:calibre-web:
+build:rar2fs:
   extends: .makepkg
   variables:
     AURS: rar2fs
