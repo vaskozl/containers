@@ -1,0 +1,6 @@
+build:calibre-web:
+  extends: .makepkg
+  variables:
+    AURS: rar2fs
+    EXEC: rar2fs -h
+    SOURCE: "https://github.com/hasse69/rar2fs"
