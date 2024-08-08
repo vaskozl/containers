@@ -60,6 +60,9 @@ For more specific examples, check out [my manifests repository](https://github.c
 For example if you wanted to build znc including `znc` and `znc-clientbuffer` from the official repos and `znc-push-git` from the AUR you can set the `PKGS` and `AURS` env vars, with the required packages seperated by commas.
 
 ```bash
+# Build a fresh base image first in order to have an up to date package db
+docker buildx build -t ghcr.io/vaskozl/archlinux:rolling archlinux
+# Include whatever packages you want!
 docker buildx build . --build-arg="PKGS=znc,znc-clientbuffer" --build-arg="AURS=znc-push-git" -t znc -f makepkg/Dockerfile
 ```
 
