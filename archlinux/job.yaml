@@ -3,6 +3,7 @@
 #-------------------
 
 build:archlinux:
+  retry: 1
   extends: .build_container
   stage: build
   rules:
