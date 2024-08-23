@@ -1,0 +1,6 @@
+build:v2ray:
+  extends: .makepkg
+  variables:
+    PKGS: v2ray
+    EXEC: v2ray
+    SOURCE: "https://github.com/v2ray/v2ray-core"
