@@ -1,6 +1,6 @@
 build:fail2ban:
   extends: .makepkg
   variables:
-    PKGS: fail2ban
+    PKGS: fail2ban,nftables
     EXEC: fail2ban-server -f start
     SOURCE: "https://github.com/fail2ban/fail2ban"
