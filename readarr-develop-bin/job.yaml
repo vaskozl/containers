@@ -1,6 +1,6 @@
-build:readarr-develop:
+build:readarr-develop-bin:
   extends: .makepkg
   variables:
-    AURS: readarr-develop
+    AURS: readarr-develop-bin
     EXEC: /usr/lib/readarr/bin/Readarr -nobrowser -data=/config
     SOURCE: "https://github.com/Readarr/Readarr"

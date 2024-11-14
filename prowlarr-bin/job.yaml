@@ -1,6 +1,6 @@
-build:prowlarr-develop:
+build:prowlarr-bin:
   extends: .makepkg
   variables:
-    AURS: prowlarr
+    AURS: prowlarr-bin
     EXEC: /usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/config
     SOURCE: "https://github.com/Prowlarr/Prowlarr"

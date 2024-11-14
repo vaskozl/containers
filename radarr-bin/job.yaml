@@ -1,6 +1,6 @@
-build:radarr:
+build:radarr-bin:
   extends: .makepkg
   variables:
-    AURS: radarr
+    AURS: radarr-bin
     EXEC: /usr/lib/radarr/bin/Radarr -nobrowser -data=/config
     SOURCE: "https://github.com/Radarr/Radarr"
