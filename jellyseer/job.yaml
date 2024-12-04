@@ -3,3 +3,4 @@ build:jellyseerr:
   variables:
     AURS: jellyseerr
     SOURCE: "https://github.com/Fallenbagel/jellyseerr"
+    PLATFORM: linux/amd64
