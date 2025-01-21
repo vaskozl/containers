@@ -2,5 +2,5 @@ build:bazarr:
   extends: .makepkg
   variables:
     AURS: bazarr
-    EXEC: /usr/bin/python /usr/lib/python*/site-packages/bazarr/bazarr.py --no-update --config /config
+    EXEC: /usr/bin/python /opt/bazarr/bazarr.py --no-update --config /config
     SOURCE: "https://github.com/morpheus65535/bazarr"
