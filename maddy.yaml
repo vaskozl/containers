@@ -1,0 +1,12 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - maddy=0.8.1-r0
+entrypoint:
+  command: maddy run
+archs:
+  - arm64
+  - amd64
