@@ -47,16 +47,16 @@ publish:$PKG:
     TAG: $VERSION
   script:
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
-    - apko publish --sbom=false "$file" "${REPO}${PKG}:latest"
-    - >
+    - |
+      IMAGES="${REPO}${PKG}:latest"
       if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+r[0-9]+';then
         # Strip version segments from right to left
         while [ -n "\$TAG" ]; do
-          apko publish --sbom=false "$file" "${REPO}${PKG}:\$TAG"
+          IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG"
           TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?r?[0-9]+$//')
-          sleep 1
         done
       fi
+    - apko publish --sbom=false "$file" \$IMAGES
 EOF
 done
 
