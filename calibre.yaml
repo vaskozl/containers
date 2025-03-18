@@ -1,0 +1,12 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - calibre=7.26.0-r0
+entrypoint:
+  command: calibre-server
+archs:
+  - arm64
+  - amd64
