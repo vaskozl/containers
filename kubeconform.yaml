@@ -1,0 +1,15 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - kubeconform=0.6.6-r4
+    - kustomize
+    - yq
+    - busybox
+entrypoint:
+  command: kubeconform
+archs:
+  - arm64
+  - amd64

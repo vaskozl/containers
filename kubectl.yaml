@@ -1,0 +1,12 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - kubectl=1.32.2-r1
+entrypoint:
+  command: kubectl
+archs:
+  - arm64
+  - amd64
