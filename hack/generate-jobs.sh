@@ -42,10 +42,19 @@ publish:$PKG:
   image: ghcr.io/vaskozl/apko
   only:
     changes:
+      - hack/generate-jobs.sh
       - $file
   script:
     - apko login ghcr.io -u "$GHCR_USER" -p "$GHCR_PASSWORD"
-    - apko publish "$file" "${REPO}${PKG}:${TAG}"
+    - >
+        if echo "$TAG" | grep -qE '^v?([0-9]+[\.\-])+r[0-9]+';then
+          apko publish --sbom=false "$file" "${REPO}${PKG}:latest"
+          # Strip version segments from right to left
+          while [ -n "$TAG" ]; do
+            apko publish --sbom=false "$file" "${REPO}${PKG}:${TAG}"
+            TAG=$(echo $TAG | sed -r 's/[v\.\-]?r?[0-9]+$//')
+          done
+        fi
 EOF
 done
 
