@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "semanticCommits": "disabled",
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "automerge": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [".+\\.ya?ml$"],
+      "matchStrings": [
+        "- (?<apkPkg>.*?)=(?<currentValue>.*)"
+      ],
+      "datasourceTemplate": "repology",
+      "depNameTemplate": "alpine_edge/{{{apkPkg}}}",
+      "versioningTemplate": "loose"
+    }
+  ]
+}
