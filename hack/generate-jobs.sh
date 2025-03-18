@@ -40,6 +40,9 @@ EOF
 publish:$PKG:
   stage: publish
   image: ghcr.io/vaskozl/apko
+  only:
+    changes:
+      - $file
   script:
     - apko login ghcr.io -u "$GHCR_USER" -p "$GHCR_PASSWORD"
     - apko publish "$file" "${REPO}${PKG}:${TAG}"
