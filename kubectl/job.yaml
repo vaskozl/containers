@@ -1,6 +1,0 @@
-build:kubectl:
-  extends: .makepkg
-  variables:
-    PKGS: kubectl
-    EXEC: kubectl
-    SOURCE: "https://github.com/kubernetes/kubectl"
