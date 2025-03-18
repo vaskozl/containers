@@ -1,6 +1,0 @@
-build:6tunnel:
-  extends: .makepkg
-  variables:
-    PKGS: 6tunnel
-    EXEC: 6tunnel -h
-    SOURCE: "https://github.com/wojtekka/6tunnel"
