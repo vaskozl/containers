@@ -4,8 +4,8 @@ contents:
   repositories:
     - https://packages.wolfi.dev/os
   packages:
-    - wolfi-base
     - apko
+    - wolfi-base
     - yq
 
 entrypoint:
