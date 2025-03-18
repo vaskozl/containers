@@ -31,9 +31,8 @@ for file in *.yaml; do
 $FIRST
 EOF
 
-  TAG="${VERSION:-latest}"
 
-  echo "Creating job for $file as radarr:$TAG"
+  echo "Creating job for $file as radarr:${VERSION:-latest}"
 
   # Append job to config
   cat >> "$CONFIG_FILE" <<EOF
@@ -44,17 +43,20 @@ publish:$PKG:
     changes:
       - hack/generate-jobs.sh
       - $file
+  variables:
+    TAG: $VERSION
   script:
-    - apko login ghcr.io -u "$GHCR_USER" -p "$GHCR_PASSWORD"
+    - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
+    - apko publish --sbom=false "$file" "${REPO}${PKG}:latest"
     - >
-        if echo "$TAG" | grep -qE '^v?([0-9]+[\.\-])+r[0-9]+';then
-          apko publish --sbom=false "$file" "${REPO}${PKG}:latest"
-          # Strip version segments from right to left
-          while [ -n "$TAG" ]; do
-            apko publish --sbom=false "$file" "${REPO}${PKG}:${TAG}"
-            TAG=$(echo $TAG | sed -r 's/[v\.\-]?r?[0-9]+$//')
-          done
-        fi
+      if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+r[0-9]+';then
+        # Strip version segments from right to left
+        while [ -n "\$TAG" ]; do
+          apko publish --sbom=false "$file" "${REPO}${PKG}:\$TAG"
+          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?r?[0-9]+$//')
+          sleep 1
+        done
+      fi
 EOF
 done
 
