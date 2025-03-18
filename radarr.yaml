@@ -1,0 +1,14 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - radarr=5.19.3.9730-r0
+
+entrypoint:
+  command: /usr/lib/radarr/bin/Radarr -nobrowser -data=/config
+
+archs:
+  - arm64
+  - amd64

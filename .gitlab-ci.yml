@@ -1,0 +1,21 @@
+stages:
+  - generate
+  - publish
+
+generate:
+  stage: generate
+  image: ghcr.io/vaskozl/apko
+  script:
+    - hack/generate-jobs.sh
+  variables:
+    REPO: ghcr.io/vaskozl/
+  artifacts:
+    paths:
+      - generated-config.yml
+
+builds:
+  stage: publish
+  trigger:
+    include:
+      - artifact: generated-config.yml
+        job: generate
