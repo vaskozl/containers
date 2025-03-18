@@ -1,6 +1,0 @@
-build:qbittorrent-nox:
-  extends: .makepkg
-  variables:
-    PKGS: qbittorrent-nox
-    EXEC: nice ionice -c3 qbittorrent-nox --webui-port='55555'
-    SOURCE: "https://github.com/qbittorrent/qBittorrent"

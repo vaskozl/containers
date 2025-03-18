@@ -1,6 +1,0 @@
-build:hugo:
-  extends: .makepkg
-  variables:
-    PKGS: hugo
-    EXEC: hugo
-    SOURC: "https://github.com/gohugoio/hugo"
