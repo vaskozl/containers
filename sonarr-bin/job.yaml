@@ -1,6 +1,0 @@
-build:sonarr-bin:
-  extends: .makepkg
-  variables:
-    AURS: sonarr-bin
-    EXEC: /usr/lib/sonarr/bin/Sonarr -nobrowser -data=/config
-    SOURCE: "https://github.com/Sonarr/Sonarr"

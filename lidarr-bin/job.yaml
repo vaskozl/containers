@@ -1,6 +1,0 @@
-build:lidarr-bin:
-  extends: .makepkg
-  variables:
-    AURS: lidarr-bin
-    EXEC: /usr/lib/lidarr/bin/Lidarr -nobrowser -data=/config
-    SOURCE: "https://github.com/Lidarr/Lidarr"
