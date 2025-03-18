@@ -1,0 +1,14 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - lidarr=2.9.6.4552-r0
+
+entrypoint:
+  command: /usr/lib/lidarr/bin/Lidarr -nobrowser -data=/config
+
+archs:
+  - arm64
+  - amd64

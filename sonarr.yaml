@@ -1,0 +1,14 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - sonarr=4.0.13.2932-r0
+
+entrypoint:
+  command: /usr/lib/sonarr/bin/Sonarr -nobrowser -data=/config
+
+archs:
+  - arm64
+  - amd64
