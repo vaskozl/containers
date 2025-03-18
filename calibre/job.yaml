@@ -1,6 +1,0 @@
-build:calibre:
-  extends: .makepkg
-  variables:
-    PKGS: calibre
-    EXEC: calibre-server
-    SOURCE: "https://github.com/kovidgoyal/calibre"
