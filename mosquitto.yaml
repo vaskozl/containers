@@ -5,10 +5,8 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - mosquitto=2.0.20-r0
-
 entrypoint:
   command: /usr/sbin/mosquitto
-
 archs:
   - arm64
   - amd64

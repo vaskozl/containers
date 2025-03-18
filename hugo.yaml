@@ -4,10 +4,8 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/community
   packages:
     - hugo=0.145.0-r0
-
 entrypoint:
   command: hugo
-
 archs:
   - arm64
   - amd64

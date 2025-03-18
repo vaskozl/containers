@@ -4,10 +4,8 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/community
   packages:
     - qbittorrent-nox=5.0.4-r0
-
 entrypoint:
   command: nice -n10 ionice -c3 qbittorrent-nox --webui-port='55555' --confirm-legal-notice
-
 archs:
   - arm64
   - amd64

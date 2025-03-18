@@ -3,10 +3,8 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/main
   packages:
     - logrotate=3.21.0-r1
-
 entrypoint:
   command: logrotate
-
 archs:
   - arm64
   - amd64
