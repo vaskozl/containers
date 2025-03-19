@@ -6,6 +6,7 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - thelounge=4.4.3-r0
+    - ca-certificates-bundle
 entrypoint:
   command: thelounge start
 archs:

@@ -6,6 +6,7 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - kubectl=1.32.2-r1
+    - ca-certificates-bundle
 entrypoint:
   command: kubectl
 archs:

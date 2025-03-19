@@ -7,6 +7,7 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - maddy=0.8.1-r0
+    - ca-certificates-bundle
 entrypoint:
   command: maddy run
 archs:
