@@ -1,0 +1,18 @@
+# yaml-language-server: =https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - jellyfin=10.10.6-r0
+    - jellyfin-web
+    - intel-media-driver
+    - intel-media-sdk
+    - onevpl-intel-gpu
+    - libva-intel-driver
+entrypoint:
+  command: jellyfin
+archs:
+  - arm64
+  - amd64
