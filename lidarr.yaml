@@ -1,12 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
 contents:
-  repositories:
-    - https://dl-cdn.alpinelinux.org/alpine/edge/main
-    - https://dl-cdn.alpinelinux.org/alpine/edge/community
-    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - lidarr=2.9.6.4552-r0
-    - ca-certificates-bundle
 entrypoint:
   command: /usr/lib/lidarr/bin/Lidarr -nobrowser -data=/config
 archs:

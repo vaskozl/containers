@@ -1,11 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
 contents:
-  repositories:
-    - https://dl-cdn.alpinelinux.org/alpine/edge/main
-    - https://dl-cdn.alpinelinux.org/alpine/edge/community
   packages:
     - qbittorrent-nox=5.0.4-r0
-    - ca-certificates-bundle
 entrypoint:
   command: nice -n10 ionice -c3 qbittorrent-nox --webui-port='55555' --confirm-legal-notice
 archs:
