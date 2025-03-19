@@ -1,0 +1,15 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    - https://dl-cdn.alpinelinux.org/alpine/edge/testing
+  packages:
+    - ripgrep=14.1.1-r0
+    - gzip
+    - gron
+    - jq
+entrypoint:
+  command: rg
+archs:
+  - arm64
+  - amd64
