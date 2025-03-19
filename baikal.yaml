@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - baikal=0.10.1-r0
+    - nginx
+    - php-fpm
+    - php-pdo_sqlite
+entrypoint:
+  command: sh -c 'php-fpm83 && exec /usr/sbin/nginx -g "daemon off;"'
+accounts:
+  groups:
+    - groupname: nginx
+      gid: 10000
+  users:
+    - username: nginx
+      uid: 10000
+  run-as: nginx
+archs:
+  - arm64
+  - amd64
+paths:
+  - path: /run/nginx
+    type: directory
+    uid: 10000
+    gid: 10000
+    permissions: 0o755
