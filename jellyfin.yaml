@@ -14,5 +14,4 @@ contents:
 entrypoint:
   command: jellyfin
 archs:
-  - arm64
   - amd64
