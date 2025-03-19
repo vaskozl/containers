@@ -1,3 +1,4 @@
+# yaml-language-server: =https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
 contents:
   repositories:
     - https://dl-cdn.alpinelinux.org/alpine/edge/main
