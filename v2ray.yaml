@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - v2ray=5.28.0-r1
+entrypoint:
+  command: v2ray
+archs:
+  - arm64
+  - amd64
