@@ -6,6 +6,7 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
     - ripgrep=14.1.1-r0
+    - busybox
     - gzip
     - gron
     - jq
