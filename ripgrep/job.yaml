@@ -1,6 +1,0 @@
-build:ripgrep:
-  extends: .makepkg
-  variables:
-    PKGS: ripgrep,gzip,jq,gron,lnav
-    EXEC: rg
-    SOURCE: "https://github.com/BurntSushi/ripgrep"

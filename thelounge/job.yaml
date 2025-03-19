@@ -1,6 +1,0 @@
-build:thelounge:
-  extends: .makepkg
-  variables:
-    AURS: thelounge
-    EXEC: thelounge start
-    SOURCE: "https://github.com/thelounge/thelounge"
