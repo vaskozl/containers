@@ -15,7 +15,7 @@ accounts:
   users:
     - username: nginx
       uid: 10000
-  run-as: nginx
+  run-as: root
 archs:
   - arm64
   - amd64
