@@ -25,9 +25,3 @@ paths:
     uid: 10000
     gid: 10000
     permissions: 0o755
-  - path: /usr/share/webapps/baikal/Specific/db
-    type: symlink
-    source: /var/lib/baikal/db
-  - path: /usr/share/webapps/baikal/config
-    type: symlink
-    source: /var/lib/baikal/config
