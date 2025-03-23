@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - kubeconform=0.6.6-r4
+    - kubeconform=0.6.6-r5
     - kustomize
     - yq
 entrypoint:
