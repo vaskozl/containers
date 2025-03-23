@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - radarr=5.19.3.9730-r0
+    - radarr=5.20.2.9777-r0
 entrypoint:
   command: /usr/lib/radarr/bin/Radarr -nobrowser -data=/config
 archs:
