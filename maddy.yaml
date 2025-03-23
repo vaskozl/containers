@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - maddy=0.8.1-r0
+    - maddy=0.8.1-r1
 entrypoint:
   command: maddy run
 archs:
