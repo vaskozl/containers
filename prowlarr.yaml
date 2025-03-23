@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - prowlarr=1.31.2.4975-r0
+    - prowlarr=1.32.2.4987-r0
 entrypoint:
   command: /usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/config
 archs:
