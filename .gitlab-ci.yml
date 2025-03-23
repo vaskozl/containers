@@ -3,6 +3,8 @@ stages:
   - publish
 generate:
   stage: generate
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
   image: ghcr.io/vaskozl/apko
   script:
     - hack/generate-jobs.sh
