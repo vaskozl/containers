@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - nginx=1.26.3-r1
+entrypoint:
+   command: catatonit -- /usr/sbin/nginx
+cmd: -e /dev/stderr -g "daemon off;"
+stop-signal: SIGQUIT
+accounts:
+  groups:
+    - groupname: http
+      gid: 33
+  users:
+    - username: http
+      uid: 33
+  run-as: http
+paths:
+  - path: /run/nginx
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o777
+  - path: /var/lib/nginx
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+    recursive: true
+  - path: /var/log
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+    recursive: true
+vcs-url: https://github.com/nginx/nginx
+archs:
+  - arm64
