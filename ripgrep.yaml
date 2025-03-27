@@ -8,6 +8,7 @@ contents:
     - jq
 entrypoint:
   command: rg
+vcs-url: https://github.com/BurntSushi/ripgrep
 archs:
   - arm64
   - amd64

@@ -5,6 +5,7 @@ contents:
     - radarr=5.20.2.9777-r0
 entrypoint:
   command: /usr/lib/radarr/bin/Radarr -nobrowser -data=/config
+vcs-url: https://github.com/Radarr/Radarr
 archs:
   - arm64
   - amd64

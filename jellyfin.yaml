@@ -10,5 +10,6 @@ contents:
     - libva-intel-driver
 entrypoint:
   command: jellyfin
+vcs-url: https://github.com/jellyfin/jellyfin
 archs:
   - amd64

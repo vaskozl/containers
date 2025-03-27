@@ -5,6 +5,7 @@ contents:
     - prowlarr=1.32.2.4987-r0
 entrypoint:
   command: /usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/config
+vcs-url: https://github.com/Prowlarr/Prowlarr
 archs:
   - arm64
   - amd64

@@ -5,6 +5,7 @@ contents:
     - v2ray=5.28.0-r1
 entrypoint:
   command: v2ray
+vcs-url: https://github.com/v2ray/v2ray-core
 archs:
   - arm64
   - amd64

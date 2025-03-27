@@ -5,6 +5,7 @@ contents:
     - mosquitto=2.0.20-r0
 entrypoint:
   command: /usr/sbin/mosquitto
+vcs-url: https://github.com/eclipse/mosquitto
 archs:
   - arm64
   - amd64

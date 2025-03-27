@@ -5,6 +5,7 @@ contents:
     - sonarr=4.0.14.2939-r0
 entrypoint:
   command: /usr/lib/sonarr/bin/Sonarr -nobrowser -data=/config
+vcs-url: https://github.com/Sonarr/Sonarr
 archs:
   - arm64
   - amd64

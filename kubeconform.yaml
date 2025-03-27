@@ -7,6 +7,7 @@ contents:
     - yq
 entrypoint:
   command: kubeconform
+vcs-url: https://github.com/yannh/kubeconform
 archs:
   - arm64
   - amd64

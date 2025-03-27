@@ -5,6 +5,7 @@ contents:
     - lidarr=2.9.6.4552-r0
 entrypoint:
   command: /usr/lib/lidarr/bin/Lidarr -nobrowser -data=/config
+vcs-url: https://github.com/Lidarr/Lidarr
 archs:
   - arm64
   - amd64

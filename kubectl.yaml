@@ -5,6 +5,7 @@ contents:
     - kubectl=1.32.2-r1
 entrypoint:
   command: kubectl
+vcs-url: https://github.com/kubernetes/kubectl
 archs:
   - arm64
   - amd64

@@ -5,6 +5,7 @@ contents:
     - thelounge=4.4.3-r0
 entrypoint:
   command: thelounge start
+vcs-url: https://github.com/thelounge/thelounge
 archs:
   - arm64
   - amd64

@@ -16,6 +16,7 @@ accounts:
     - username: nginx
       uid: 10000
   run-as: root
+vcs-url: https://github.com/sabre-io/Baikal
 archs:
   - arm64
   - amd64
