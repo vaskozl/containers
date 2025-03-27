@@ -4,7 +4,7 @@ contents:
   packages:
     - mosquitto=2.0.20-r0
 entrypoint:
-  command: /usr/sbin/mosquitto
+   command: catatonit -- /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto
 archs:
   - arm64

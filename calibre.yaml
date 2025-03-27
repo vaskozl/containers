@@ -4,7 +4,7 @@ contents:
   packages:
     - calibre=8.0.1-r0
 entrypoint:
-  command: calibre-server
+   command: catatonit -- calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre
 archs:
   - arm64

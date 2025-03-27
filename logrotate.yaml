@@ -4,7 +4,7 @@ contents:
   packages:
     - logrotate=3.21.0-r1
 entrypoint:
-  command: logrotate
+   command: catatonit -- logrotate
 vcs-url: https://github.com/logrotate/logrotate
 archs:
   - arm64

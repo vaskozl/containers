@@ -8,6 +8,7 @@ contents:
     - busybox
     - alpine-baselayout
     - ca-certificates-bundle
+    - catatonit
 
 accounts:
   groups:

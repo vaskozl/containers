@@ -58,7 +58,7 @@ contents:
     - perl-crypt-ssleay
     - perl-net-ssleay
 entrypoint:
-  command: zsh
+   command: catatonit -- zsh
 archs:
   - arm64
   - amd64

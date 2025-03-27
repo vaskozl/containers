@@ -7,7 +7,7 @@ contents:
     - gron
     - jq
 entrypoint:
-  command: rg
+   command: catatonit -- rg
 vcs-url: https://github.com/BurntSushi/ripgrep
 archs:
   - arm64

@@ -7,7 +7,7 @@ contents:
     - php-fpm
     - php-pdo_sqlite
 entrypoint:
-  command: sh -c 'php-fpm83 && exec /usr/sbin/nginx -g "daemon off;"'
+   command: catatonit -g -- sh -c 'php-fpm83 && exec /usr/sbin/nginx -g "daemon off;"'
 accounts:
   groups:
     - groupname: nginx

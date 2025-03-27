@@ -6,7 +6,7 @@ contents:
     - kustomize
     - yq
 entrypoint:
-  command: kubeconform
+   command: catatonit -- kubeconform
 vcs-url: https://github.com/yannh/kubeconform
 archs:
   - arm64

@@ -4,7 +4,7 @@ contents:
   packages:
     - perl-libwww=6.77-r0
 entrypoint:
-  command: perl
+   command: catatonit -- perl
 archs:
   - arm64
   - amd64

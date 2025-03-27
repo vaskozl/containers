@@ -4,7 +4,7 @@ contents:
   packages:
     - kubectl=1.32.2-r1
 entrypoint:
-  command: kubectl
+   command: catatonit -- kubectl
 vcs-url: https://github.com/kubernetes/kubectl
 archs:
   - arm64

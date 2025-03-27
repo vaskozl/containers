@@ -9,7 +9,7 @@ contents:
     - onevpl-intel-gpu
     - libva-intel-driver
 entrypoint:
-  command: jellyfin
+   command: catatonit -- jellyfin
 vcs-url: https://github.com/jellyfin/jellyfin
 archs:
   - amd64
