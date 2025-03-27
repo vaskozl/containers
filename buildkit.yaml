@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - buildkit-0.20.1-r0
+    - git
+entrypoint:
+  command: catatonit -- buildkitd
+accounts:
+  run-as: root
+vcs-url: https://github.com/moby/buildkit
+archs:
+  - arm64
+  - amd64
