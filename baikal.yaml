@@ -4,6 +4,12 @@ contents:
   packages:
     - baikal=0.10.1-r0
     - php-fpm
+    - php-session
+    - php-openssl
+    - php-json
+    - php-dom
+    - php-ctype
+    - php-cgi
     - php-pdo_sqlite
 entrypoint:
    command: catatonit -g --
