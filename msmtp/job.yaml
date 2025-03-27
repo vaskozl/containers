@@ -1,6 +1,0 @@
-build:msmtp:
-  extends: .makepkg
-  variables:
-    PKGS: msmtp,msmtp-mta
-    EXEC: msmtp
-    SOURCE: "https://github.com/marlam/msmtp"
