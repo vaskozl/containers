@@ -13,5 +13,5 @@ contents:
     - php-pdo_sqlite
 entrypoint:
    command: catatonit -g --
-cmd: sh -c 'php-fpm83 -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
+cmd: sh -c 'php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
 vcs-url: https://github.com/sabre-io/Baikal
