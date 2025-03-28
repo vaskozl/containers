@@ -1,5 +1,0 @@
-build:docker:
-  extends: .makepkg
-  variables:
-    PKGS: docker,docker-buildx,sed,jq,skopeo,git
-    SOURCE: "https://github.com/docker/cli"

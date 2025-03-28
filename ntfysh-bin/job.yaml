@@ -1,6 +1,0 @@
-build:ntfysh-bin:
-  extends: .makepkg
-  variables:
-    AURS: ntfysh-bin
-    EXEC: ntfy serve --no-log-dates
-    SOURCE: "https://github.com/binwiederhier/ntfy"
