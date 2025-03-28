@@ -11,6 +11,9 @@ contents:
     - php-ctype
     - php-cgi
     - php-pdo_sqlite
+    - php-simplexml
+    - php-iconv
+    - php-mbstring
 entrypoint:
    command: catatonit -g --
 cmd: sh -c 'php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
