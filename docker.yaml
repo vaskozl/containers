@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - docker=28.0.4-r0
+    - docker-cli-buildx
+    - sed
+    - jq
+    - skopeo
+    - git
+entrypoint:
+   command: catatonit -- sh
+vcs-url: https://github.com/docker/cli
+archs:
+  - arm64
+  - amd64
