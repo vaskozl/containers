@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - ntfy=2.11.0-r8
+entrypoint:
+  command: catatonit -- ntfy
+cmd: serve --no-log-dates
+vcs-url: https://github.com/binwiederhier/ntfy
+archs:
+  - arm64
+  - amd64
