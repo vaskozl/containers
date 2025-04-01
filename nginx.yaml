@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - nginx=1.26.3-r1
+    - nginx=1.26.3-r3
 entrypoint:
    command: catatonit -- /usr/sbin/nginx
 cmd: -e /dev/stderr -g "daemon off;"
