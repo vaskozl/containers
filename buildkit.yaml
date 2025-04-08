@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - buildkit-0.20.1-r0
+    - buildkit=0.20.1-r0
     - git
 entrypoint:
   command: catatonit -- buildkitd
