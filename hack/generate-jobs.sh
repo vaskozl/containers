@@ -38,7 +38,7 @@ EOF
   cat >> "$CONFIG_FILE" <<EOF
 publish:$PKG:
   stage: publish
-  image: ghcr.io/vaskozl/apko
+  image: ghcr.io/vaskozl/apko:0.25.6-nodq
   only:
     changes:
       - hack/generate-jobs.sh
