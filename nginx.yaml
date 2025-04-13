@@ -36,3 +36,4 @@ paths:
 vcs-url: https://github.com/nginx/nginx
 archs:
   - arm64
+  - amd64
