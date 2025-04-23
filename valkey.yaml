@@ -6,7 +6,7 @@ contents:
     - valkey-cli
 entrypoint:
   command: catatonit -- valkey-server
-cmd: run
+cmd: --save "" --appendonly "no" --protected-mode "no"
 vcs-url: https://github.com/valkey-io/valkey
 archs:
   - arm64
