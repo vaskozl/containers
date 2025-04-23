@@ -47,12 +47,13 @@ publish:$PKG:
     TAG: $VERSION
   script:
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
+    - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
     - |
-      IMAGES="${REPO}${PKG}:latest"
+      IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
       if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+r[0-9]+';then
         # Strip version segments from right to left
         while [ -n "\$TAG" ]; do
-          IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG"
+          IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
           TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?r?[0-9]+$//')
         done
       fi
