@@ -4,6 +4,7 @@ contents:
   packages:
     - net-tools=2.10-r3
     - apache2-utils
+    - apk
     - bash
     - bind-tools
     - bird
@@ -16,6 +17,8 @@ contents:
     - ethtool
     - file
     - fping
+    - git
+    - httpie
     - iftop
     - iperf
     - iperf3
@@ -25,7 +28,6 @@ contents:
     - iptraf-ng
     - iputils
     - ipvsadm
-    - httpie
     - jq
     - libc6-compat
     - liboping
@@ -38,25 +40,24 @@ contents:
     - nmap
     - nmap-nping
     - nmap-scripts
+    - openssh
     - openssl
+    - perl-crypt-ssleay
+    - perl-net-ssleay
     - py3-pip
     - py3-setuptools
     - scapy
     - socat
     - speedtest-cli
-    - openssh
     - strace
+    - swaks
     - tcpdump
     - tcptraceroute
     - tshark
     - util-linux
     - vim
-    - git
-    - zsh
     - websocat
-    - swaks
-    - perl-crypt-ssleay
-    - perl-net-ssleay
+    - zsh
 entrypoint:
    command: catatonit -- zsh
 archs:
