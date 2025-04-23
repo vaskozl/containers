@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - valkey=7.2.8-r0
+    - valkey-cli
+entrypoint:
+  command: catatonit -- valkey-server
+cmd: run
+vcs-url: https://github.com/valkey-io/valkey
+archs:
+  - arm64
+  - amd64
