@@ -2,6 +2,6 @@ build:kcc:
   extends: .makepkg
   variables:
     AURS: kcc
-    PKGS: p7zip,python-cffi,python-pip
+    PKGS: p7zip,python-cffi,python-pip,python-numpy
     EXEC: kcc-c2e
     SOURCE: "https://github.com/ciromattia/kcc"
