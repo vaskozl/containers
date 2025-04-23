@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - grype=0.87.0-r3
+    - kubectl
+entrypoint:
+   command: catatonit -- grype
+archs:
+  - arm64
+  - amd64
