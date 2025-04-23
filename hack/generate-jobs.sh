@@ -32,7 +32,7 @@ $FIRST
 EOF
 
 
-  echo "Creating job for $file as radarr:${VERSION:-latest}"
+  echo "Creating job for $file as $PKG:${VERSION:-latest}"
 
   # Append job to config
   cat >> "$CONFIG_FILE" <<EOF
