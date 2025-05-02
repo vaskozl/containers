@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - anubis=1.17.0-r0
+entrypoint:
+   command: catatonit -- anubis
+vcs-url: https://github.com/TecharoHQ/anubis
