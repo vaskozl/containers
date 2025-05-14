@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - kubectl=1.32.2-r1
+    - kubectl=1.32.2-r3
 entrypoint:
    command: catatonit -- kubectl
 vcs-url: https://github.com/kubernetes/kubectl
