@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - anubis=1.17.1-r1
+    - anubis=1.18.0-r0
 entrypoint:
    command: catatonit -- anubis
 vcs-url: https://github.com/TecharoHQ/anubis
