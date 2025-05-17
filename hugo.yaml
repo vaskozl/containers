@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - hugo=0.145.0-r1
+    - hugo=0.147.2-r0
 entrypoint:
    command: catatonit -- hugo
 vcs-url: https://github.com/gohugoio/hugo
