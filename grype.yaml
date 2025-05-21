@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - grype=0.87.0-r4
+    - grype=0.92.0-r0
     - kubectl
 entrypoint:
    command: catatonit -- grype
