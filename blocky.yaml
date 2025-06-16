@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - blocky=0.24-r7
+entrypoint:
+   command: catatonit -- blocky
+vcs-url: https://github.com/0xERR0R/blocky
+archs:
+  - arm64
+  - amd64
