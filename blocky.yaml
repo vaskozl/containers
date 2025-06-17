@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - blocky=0.24-r7
+    - blocky=0.26.2-r0
 entrypoint:
    command: catatonit -- blocky
 vcs-url: https://github.com/0xERR0R/blocky
