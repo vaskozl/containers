@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - lidarr=2.11.2.4629-r0
+    - lidarr=2.12.4.4658-r0
 entrypoint:
    command: catatonit -- /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config
