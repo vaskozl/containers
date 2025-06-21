@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - sonarr=4.0.14.2939-r0
+    - sonarr=4.0.15.2940-r0
 entrypoint:
    command: catatonit -- /usr/lib/sonarr/bin/Sonarr
 cmd: -nobrowser -data=/config
