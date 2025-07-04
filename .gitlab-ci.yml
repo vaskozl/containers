@@ -15,6 +15,8 @@ generate:
       - generated-config.yml
 builds:
   stage: publish
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
   trigger:
     include:
       - artifact: generated-config.yml
