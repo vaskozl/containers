@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - ripgrep=14.1.1-r0
+    - ripgrep=14.1.1-r0 # repo=community
     - gzip
     - gron
     - jq

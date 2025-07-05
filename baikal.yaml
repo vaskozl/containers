@@ -2,7 +2,7 @@
 include: nginx.yaml
 contents:
   packages:
-    - baikal=0.10.1-r1
+    - baikal=0.10.1-r1 # repo=testing
     - php-cgi
     - php-ctype
     - php-dom

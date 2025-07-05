@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - prowlarr=1.37.0.5076-r0
+    - prowlarr=1.37.0.5076-r0 # repo=testing
 entrypoint:
    command: catatonit -- /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config

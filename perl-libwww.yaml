@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - perl-libwww=6.77-r0
+    - perl-libwww=6.77-r0 # repo=main
 entrypoint:
    command: catatonit -- perl
 archs:

@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - mosquitto=2.0.21-r0
+    - mosquitto=2.0.21-r0 # repo=main
 entrypoint:
    command: catatonit -- /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto

@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - thelounge=4.4.3-r0
+    - thelounge=4.4.3-r0 # repo=testing
 entrypoint:
    command: catatonit -- thelounge
 cmd: start

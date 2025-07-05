@@ -5,7 +5,7 @@ contents:
   repositories:
     - https://packages.wolfi.dev/os
   packages:
-    - apko
+    - apko=0.28.0-r0 # repo=wolfi
     - wolfi-base
     - yq
 entrypoint:

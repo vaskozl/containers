@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - valkey=8.1.1-r1
+    - valkey=8.1.1-r1 # repo=main
     - valkey-cli
 entrypoint:
   command: catatonit -- valkey-server

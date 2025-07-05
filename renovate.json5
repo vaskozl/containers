@@ -16,11 +16,24 @@
       "customType": "regex",
       "fileMatch": [".+\\.ya?ml$"],
       "matchStrings": [
-        "- (?<apkPkg>.*?)=(?<currentValue>.*)"
+        "- (?<packageName>.*?)=(?<currentValue>.*) # repo=(?<repo>.*?)"
       ],
-      "datasourceTemplate": "repology",
-      "depNameTemplate": "alpine_edge/{{{apkPkg}}}",
+      "datasourceTemplate": "custom.{{{repo}}}",
       "versioningTemplate": "loose"
     }
-  ]
+  ],
+  "customDatasources": {
+    "wolfi": {
+      "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
+    },
+    "alpine-main": {
+      "defaultRegistryUrlTemplate": "http://apk-main:3000/{{packageName}}"
+    },
+    "alpine-community": {
+      "defaultRegistryUrlTemplate": "http://apk-community:3000/{{packageName}}"
+    },
+    "alpine-testing": {
+      "defaultRegistryUrlTemplate": "http://apk-testing:3000/{{packageName}}"
+    }
+  }
 }

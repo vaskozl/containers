@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - calibre=8.5.0-r0
+    - calibre=8.5.0-r0 # repo=testing
 entrypoint:
    command: catatonit -- calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre

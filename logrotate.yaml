@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - logrotate=3.22.0-r0
+    - logrotate=3.22.0-r0 # repo=main
 entrypoint:
    command: catatonit -- logrotate
 vcs-url: https://github.com/logrotate/logrotate

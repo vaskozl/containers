@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - v2ray=5.32.0-r0
+    - v2ray=5.32.0-r0 # repo=community
 entrypoint:
    command: catatonit -- v2ray
 vcs-url: https://github.com/v2ray/v2ray-core
