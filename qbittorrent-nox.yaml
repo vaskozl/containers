@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - qbittorrent-nox=5.1.1-r0 # repo=community
+    - qbittorrent-nox=5.1.2-r0 # repo=community
 entrypoint:
    command: catatonit -- nice -n10 ionice -c3 qbittorrent-nox
 cmd: --webui-port='55555' --confirm-legal-notice
