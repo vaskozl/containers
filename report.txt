@@ -1,0 +1,1128 @@
+>>> docker.io/bitnami/postgres-exporter:0.12.0-debian-11-r86
+NAME                        INSTALLED               FIXED-IN                       TYPE       VULNERABILITY        SEVERITY   
+bsdutils                    1:2.36.1-8+deb11u1      2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+golang.org/x/crypto         v0.7.0                  0.31.0                         go-module  GHSA-v778-237x-gjrc  Critical    
+golang.org/x/crypto         v0.7.0                  0.35.0                         go-module  GHSA-hcg3-q754-cr77  High        
+golang.org/x/crypto         v0.7.0                  0.17.0                         go-module  GHSA-45x7-px36-x8w8  Medium      
+golang.org/x/net            v0.8.0                  0.17.0                         go-module  GHSA-4374-p667-p6c8  High        
+golang.org/x/net            v0.8.0                  0.13.0                         go-module  GHSA-2wrh-6pvc-2jm9  Medium      
+golang.org/x/net            v0.8.0                  0.23.0                         go-module  GHSA-4v7x-pqxf-cx7m  Medium      
+golang.org/x/net            v0.8.0                  0.17.0                         go-module  GHSA-qppj-fm5r-hxr3  Medium      
+golang.org/x/net            v0.8.0                  0.36.0                         go-module  GHSA-qxp5-gwg8-xv66  Medium      
+golang.org/x/net            v0.8.0                  0.38.0                         go-module  GHSA-vvgc-356p-c3xw  Medium      
+google.golang.org/protobuf  v1.28.1                 1.33.0                         go-module  GHSA-8r3f-844c-mc37  Medium      
+libblkid1                   2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u7                deb        CVE-2023-4911        High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u9                deb        CVE-2024-2961        High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33599       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33601       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33602       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33600       Medium      
+libc6                       2.31-13+deb11u6         2.31-13+deb11u7                deb        CVE-2023-4911        High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u9                deb        CVE-2024-2961        High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33599       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33601       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33602       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33600       Medium      
+libcom-err2                 1.46.2-2                1.46.2-2+deb11u1               deb        CVE-2022-1304        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u5                deb        CVE-2024-0553        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u5                deb        CVE-2024-0567        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u4                deb        CVE-2023-5981        Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u7                deb        CVE-2024-12243       Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u6                deb        CVE-2024-28834       Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u6                deb        CVE-2024-28835       Medium      
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libmount1                   2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libncurses6                 6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libncursesw6                6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36084       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36085       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36086       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36087       Low         
+libsmartcols1               2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-5535        Critical    
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0464        High        
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-4741        High        
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0465        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0466        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-2650        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1v-0~deb11u1               deb        CVE-2023-3446        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1v-0~deb11u1               deb        CVE-2023-3817        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2023-5678        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-0727        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-2511        Medium      
+libssl1.1                   1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-9143        Medium      
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-7008        Medium      
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50387       Negligible  
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50868       Negligible  
+libtasn1-6                  4.16.0-2+deb11u1        4.16.0-2+deb11u2               deb        CVE-2024-12133       Medium      
+libtinfo6                   6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-7008        Medium      
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50387       Negligible  
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50868       Negligible  
+libuuid1                    2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+login                       1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-4641        Medium      
+login                       1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-29383       Low         
+mount                       2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+ncurses-base                6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-5535        Critical    
+openssl                     1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0464        High        
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-4741        High        
+openssl                     1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0465        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-0466        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1n-0+deb11u5               deb        CVE-2023-2650        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1v-0~deb11u1               deb        CVE-2023-3446        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1v-0~deb11u1               deb        CVE-2023-3817        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2023-5678        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-0727        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-2511        Medium      
+openssl                     1.1.1n-0+deb11u4        1.1.1w-0+deb11u2               deb        CVE-2024-9143        Medium      
+passwd                      1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-4641        Medium      
+passwd                      1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-29383       Low         
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u4               deb        CVE-2020-16156       High        
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u4               deb        CVE-2023-31484       High        
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u3               deb        CVE-2023-47038       High        
+stdlib                      go1.20.2                1.21.0-0                       go-module  CVE-2023-24531       Critical    
+stdlib                      go1.20.2                1.19.8, *1.20.3                go-module  CVE-2023-24538       Critical    
+stdlib                      go1.20.2                1.19.9, *1.20.4                go-module  CVE-2023-24540       Critical    
+stdlib                      go1.20.2                1.19.10, *1.20.5               go-module  CVE-2023-29402       Critical    
+stdlib                      go1.20.2                1.19.10, *1.20.5               go-module  CVE-2023-29404       Critical    
+stdlib                      go1.20.2                1.19.10, *1.20.5               go-module  CVE-2023-29405       Critical    
+stdlib                      go1.20.2                *1.21.11, 1.22.4               go-module  CVE-2024-24790       Critical    
+stdlib                      go1.20.2                *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical    
+stdlib                      go1.20.2                1.19.8, *1.20.3                go-module  CVE-2023-24534       High        
+stdlib                      go1.20.2                1.19.8, *1.20.3                go-module  CVE-2023-24536       High        
+stdlib                      go1.20.2                1.19.8, *1.20.3                go-module  CVE-2023-24537       High        
+stdlib                      go1.20.2                1.19.9, *1.20.4                go-module  CVE-2023-24539       High        
+stdlib                      go1.20.2                1.19.9, *1.20.4                go-module  CVE-2023-29400       High        
+stdlib                      go1.20.2                1.19.10, *1.20.5               go-module  CVE-2023-29403       High        
+stdlib                      go1.20.2                *1.20.9, 1.21.2                go-module  CVE-2023-39323       High        
+stdlib                      go1.20.2                *1.20.10, 1.21.3               go-module  CVE-2023-39325       High        
+stdlib                      go1.20.2                *1.20.10, 1.21.3               go-module  CVE-2023-44487       High        
+stdlib                      go1.20.2                *1.20.12, 1.21.5               go-module  CVE-2023-45285       High        
+stdlib                      go1.20.2                *1.21.9, 1.22.2                go-module  CVE-2023-45288       High        
+stdlib                      go1.20.2                *1.21.8, 1.22.1                go-module  CVE-2024-24784       High        
+stdlib                      go1.20.2                *1.21.12, 1.22.5               go-module  CVE-2024-24791       High        
+stdlib                      go1.20.2                *1.22.7, 1.23.1                go-module  CVE-2024-34156       High        
+stdlib                      go1.20.2                *1.22.7, 1.23.1                go-module  CVE-2024-34158       High        
+stdlib                      go1.20.2                1.19.11, *1.20.6               go-module  CVE-2023-29406       Medium      
+stdlib                      go1.20.2                1.19.12, *1.20.7               go-module  CVE-2023-29409       Medium      
+stdlib                      go1.20.2                *1.20.8, 1.21.1                go-module  CVE-2023-39318       Medium      
+stdlib                      go1.20.2                *1.20.8, 1.21.1                go-module  CVE-2023-39319       Medium      
+stdlib                      go1.20.2                *1.20.12, 1.21.5               go-module  CVE-2023-39326       Medium      
+stdlib                      go1.20.2                *1.21.8, 1.22.1                go-module  CVE-2023-45289       Medium      
+stdlib                      go1.20.2                *1.21.8, 1.22.1                go-module  CVE-2023-45290       Medium      
+stdlib                      go1.20.2                *1.21.8, 1.22.1                go-module  CVE-2024-24783       Medium      
+stdlib                      go1.20.2                *1.21.8, 1.22.1                go-module  CVE-2024-24785       Medium      
+stdlib                      go1.20.2                *1.21.10, 1.22.3               go-module  CVE-2024-24787       Medium      
+stdlib                      go1.20.2                *1.21.11, 1.22.4               go-module  CVE-2024-24789       Medium      
+stdlib                      go1.20.2                *1.22.7, 1.23.1                go-module  CVE-2024-34155       Medium      
+stdlib                      go1.20.2                *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium      
+stdlib                      go1.20.2                *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium      
+stdlib                      go1.20.2                *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium      
+tar                         1.34+dfsg-1             1.34+dfsg-1+deb11u1            deb        CVE-2022-48303       Medium      
+tar                         1.34+dfsg-1             1.34+dfsg-1+deb11u1            deb        CVE-2023-39804       Medium      
+util-linux                  2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low
+>>> docker.io/bitnami/postgresql:14.8.0
+NAME              INSTALLED                FIXED-IN                                TYPE     VULNERABILITY   SEVERITY   
+PostgreSQL        14.8.0                   11.21, 12.16, 13.12, *14.9, 15.4        bitnami  CVE-2023-39417  High        
+PostgreSQL        14.8.0                   11.22, 12.17, 13.13, *14.10, 15.5       bitnami  CVE-2023-5869   High        
+PostgreSQL        14.8.0                   12.18, 13.14, *14.11, 15.6              bitnami  CVE-2024-0985   High        
+PostgreSQL        14.8.0                   12.21, 13.17, *14.14, 15.9, 16.5, 17.1  bitnami  CVE-2024-10979  High        
+PostgreSQL        14.8.0                   12.20, 13.16, *14.13, 15.8, 16.4        bitnami  CVE-2024-7348   High        
+PostgreSQL        14.8.0                   13.19, *14.16, 15.11, 16.7, 17.3        bitnami  CVE-2025-1094   High        
+PostgreSQL        14.8.0                   11.22, 12.17, 13.13, *14.10, 15.5       bitnami  CVE-2023-5868   Medium      
+PostgreSQL        14.8.0                   11.22, 12.17, 13.13, *14.10, 15.5       bitnami  CVE-2023-5870   Medium      
+PostgreSQL        14.8.0                   12.21, 13.17, *14.14, 15.9, 16.5, 17.1  bitnami  CVE-2024-10976  Medium      
+PostgreSQL        14.8.0                   12.21, 13.17, *14.14, 15.9, 16.5, 17.1  bitnami  CVE-2024-10978  Medium      
+PostgreSQL        14.8.0                   *14.12, 15.7, 16.3                      bitnami  CVE-2024-4317   Medium      
+PostgreSQL        14.8.0                   12.21, 13.17, *14.14, 15.9, 16.5, 17.1  bitnami  CVE-2024-10977  Low         
+Protobuf-c        1.4.1                    *3.18.3, 3.19.5, 3.20.2, 3.21.6         bitnami  CVE-2022-1941   High        
+Protobuf-c        1.4.1                    4.28.2                                  bitnami  CVE-2024-7254   High        
+bsdutils          1:2.36.1-8+deb11u1       2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+libblkid1         2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u7                         deb      CVE-2023-4911   High        
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u9                         deb      CVE-2024-2961   High        
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33599  High        
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33601  High        
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33602  High        
+libc-bin          2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33600  Medium      
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u7                         deb      CVE-2023-4911   High        
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u9                         deb      CVE-2024-2961   High        
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33599  High        
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33601  High        
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33602  High        
+libc-l10n         2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33600  Medium      
+libc6             2.31-13+deb11u6          2.31-13+deb11u7                         deb      CVE-2023-4911   High        
+libc6             2.31-13+deb11u6          2.31-13+deb11u9                         deb      CVE-2024-2961   High        
+libc6             2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33599  High        
+libc6             2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33601  High        
+libc6             2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33602  High        
+libc6             2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33600  Medium      
+libcom-err2       1.46.2-2                 1.46.2-2+deb11u1                        deb      CVE-2022-1304   High        
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u5                         deb      CVE-2024-0553   High        
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u5                         deb      CVE-2024-0567   High        
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u4                         deb      CVE-2023-5981   Medium      
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u7                         deb      CVE-2024-12243  Medium      
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u6                         deb      CVE-2024-28834  Medium      
+libgnutls30       3.7.1-5+deb11u3          3.7.1-5+deb11u6                         deb      CVE-2024-28835  Medium      
+libgssapi-krb5-2  1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37371  Critical    
+libgssapi-krb5-2  1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37370  High        
+libgssapi-krb5-2  1.18.3-6+deb11u3         1.18.3-6+deb11u4                        deb      CVE-2023-36054  Medium      
+libgssapi-krb5-2  1.18.3-6+deb11u3         1.18.3-6+deb11u6                        deb      CVE-2025-24528  Unknown     
+libk5crypto3      1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37371  Critical    
+libk5crypto3      1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37370  High        
+libk5crypto3      1.18.3-6+deb11u3         1.18.3-6+deb11u4                        deb      CVE-2023-36054  Medium      
+libk5crypto3      1.18.3-6+deb11u3         1.18.3-6+deb11u6                        deb      CVE-2025-24528  Unknown     
+libkrb5-3         1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37371  Critical    
+libkrb5-3         1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37370  High        
+libkrb5-3         1.18.3-6+deb11u3         1.18.3-6+deb11u4                        deb      CVE-2023-36054  Medium      
+libkrb5-3         1.18.3-6+deb11u3         1.18.3-6+deb11u6                        deb      CVE-2025-24528  Unknown     
+libkrb5support0   1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37371  Critical    
+libkrb5support0   1.18.3-6+deb11u3         1.18.3-6+deb11u5                        deb      CVE-2024-37370  High        
+libkrb5support0   1.18.3-6+deb11u3         1.18.3-6+deb11u4                        deb      CVE-2023-36054  Medium      
+libkrb5support0   1.18.3-6+deb11u3         1.18.3-6+deb11u6                        deb      CVE-2025-24528  Unknown     
+libmount1         2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+libncurses6       6.2+20201114-2+deb11u1   6.2+20201114-2+deb11u2                  deb      CVE-2023-29491  High        
+libncursesw6      6.2+20201114-2+deb11u1   6.2+20201114-2+deb11u2                  deb      CVE-2023-29491  High        
+libsepol1         3.1-1                    3.1-1+deb11u1                           deb      CVE-2021-36084  Low         
+libsepol1         3.1-1                    3.1-1+deb11u1                           deb      CVE-2021-36085  Low         
+libsepol1         3.1-1                    3.1-1+deb11u1                           deb      CVE-2021-36086  Low         
+libsepol1         3.1-1                    3.1-1+deb11u1                           deb      CVE-2021-36087  Low         
+libsmartcols1     2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+libsqlite3-0      3.34.1-3                 3.34.1-3+deb11u1                        deb      CVE-2021-36690  High        
+libsqlite3-0      3.34.1-3                 3.34.1-3+deb11u1                        deb      CVE-2023-7104   High        
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-5535   Critical    
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-4741   High        
+libssl1.1         1.1.1n-0+deb11u5         1.1.1v-0~deb11u1                        deb      CVE-2023-3446   Medium      
+libssl1.1         1.1.1n-0+deb11u5         1.1.1v-0~deb11u1                        deb      CVE-2023-3817   Medium      
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2023-5678   Medium      
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-0727   Medium      
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-2511   Medium      
+libssl1.1         1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-9143   Medium      
+libsystemd0       247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-7008   Medium      
+libsystemd0       247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-50387  Negligible  
+libsystemd0       247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-50868  Negligible  
+libtasn1-6        4.16.0-2+deb11u1         4.16.0-2+deb11u2                        deb      CVE-2024-12133  Medium      
+libtinfo6         6.2+20201114-2+deb11u1   6.2+20201114-2+deb11u2                  deb      CVE-2023-29491  High        
+libudev1          247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-7008   Medium      
+libudev1          247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-50387  Negligible  
+libudev1          247.3-7+deb11u4          247.3-7+deb11u6                         deb      CVE-2023-50868  Negligible  
+libuuid1          2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u5                 deb      CVE-2022-2309   High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2022-49043  High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2024-25062  High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2024-56171  High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2025-24928  High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2025-27113  High        
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u5                 deb      CVE-2016-3709   Medium      
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2023-39615  Medium      
+libxml2           2.9.10+dfsg-6.7+deb11u4  2.9.10+dfsg-6.7+deb11u6                 deb      CVE-2023-45322  Medium      
+libxslt1.1        1.1.34-4+deb11u1         1.1.34-4+deb11u2                        deb      CVE-2024-55549  High        
+libxslt1.1        1.1.34-4+deb11u1         1.1.34-4+deb11u2                        deb      CVE-2025-24855  High        
+locales           2.31-13+deb11u6          2.31-13+deb11u7                         deb      CVE-2023-4911   High        
+locales           2.31-13+deb11u6          2.31-13+deb11u9                         deb      CVE-2024-2961   High        
+locales           2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33599  High        
+locales           2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33601  High        
+locales           2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33602  High        
+locales           2.31-13+deb11u6          2.31-13+deb11u10                        deb      CVE-2024-33600  Medium      
+login             1:4.8.1-1                1:4.8.1-1+deb11u1                       deb      CVE-2023-4641   Medium      
+login             1:4.8.1-1                1:4.8.1-1+deb11u1                       deb      CVE-2023-29383  Low         
+mount             2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low         
+ncurses-base      6.2+20201114-2+deb11u1   6.2+20201114-2+deb11u2                  deb      CVE-2023-29491  High        
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-5535   Critical    
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-4741   High        
+openssl           1.1.1n-0+deb11u5         1.1.1v-0~deb11u1                        deb      CVE-2023-3446   Medium      
+openssl           1.1.1n-0+deb11u5         1.1.1v-0~deb11u1                        deb      CVE-2023-3817   Medium      
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2023-5678   Medium      
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-0727   Medium      
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-2511   Medium      
+openssl           1.1.1n-0+deb11u5         1.1.1w-0+deb11u2                        deb      CVE-2024-9143   Medium      
+passwd            1:4.8.1-1                1:4.8.1-1+deb11u1                       deb      CVE-2023-4641   Medium      
+passwd            1:4.8.1-1                1:4.8.1-1+deb11u1                       deb      CVE-2023-29383  Low         
+perl-base         5.32.1-4+deb11u2         5.32.1-4+deb11u4                        deb      CVE-2020-16156  High        
+perl-base         5.32.1-4+deb11u2         5.32.1-4+deb11u4                        deb      CVE-2023-31484  High        
+perl-base         5.32.1-4+deb11u2         5.32.1-4+deb11u3                        deb      CVE-2023-47038  High        
+tar               1.34+dfsg-1              1.34+dfsg-1+deb11u1                     deb      CVE-2022-48303  Medium      
+tar               1.34+dfsg-1              1.34+dfsg-1+deb11u1                     deb      CVE-2023-39804  Medium      
+util-linux        2.36.1-8+deb11u1         2.36.1-8+deb11u2                        deb      CVE-2024-28085  Low
+>>> docker.io/bitnami/redis-exporter:1.52.0-debian-11-r5
+NAME                        INSTALLED               FIXED-IN                       TYPE       VULNERABILITY        SEVERITY   
+bsdutils                    1:2.36.1-8+deb11u1      2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+google.golang.org/protobuf  v1.30.0                 1.33.0                         go-module  GHSA-8r3f-844c-mc37  Medium      
+libblkid1                   2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u7                deb        CVE-2023-4911        High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u9                deb        CVE-2024-2961        High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33599       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33601       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33602       High        
+libc-bin                    2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33600       Medium      
+libc6                       2.31-13+deb11u6         2.31-13+deb11u7                deb        CVE-2023-4911        High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u9                deb        CVE-2024-2961        High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33599       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33601       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33602       High        
+libc6                       2.31-13+deb11u6         2.31-13+deb11u10               deb        CVE-2024-33600       Medium      
+libcom-err2                 1.46.2-2                1.46.2-2+deb11u1               deb        CVE-2022-1304        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u5                deb        CVE-2024-0553        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u5                deb        CVE-2024-0567        High        
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u4                deb        CVE-2023-5981        Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u7                deb        CVE-2024-12243       Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u6                deb        CVE-2024-28834       Medium      
+libgnutls30                 3.7.1-5+deb11u3         3.7.1-5+deb11u6                deb        CVE-2024-28835       Medium      
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libgssapi-krb5-2            1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libk5crypto3                1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libkrb5-3                   1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37371       Critical    
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u5               deb        CVE-2024-37370       High        
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u4               deb        CVE-2023-36054       Medium      
+libkrb5support0             1.18.3-6+deb11u3        1.18.3-6+deb11u6               deb        CVE-2025-24528       Unknown     
+libmount1                   2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libncurses6                 6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libncursesw6                6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36084       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36085       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36086       Low         
+libsepol1                   3.1-1                   3.1-1+deb11u1                  deb        CVE-2021-36087       Low         
+libsmartcols1               2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-5535        Critical    
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-4741        High        
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1v-0~deb11u1               deb        CVE-2023-3446        Medium      
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1v-0~deb11u1               deb        CVE-2023-3817        Medium      
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2023-5678        Medium      
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-0727        Medium      
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-2511        Medium      
+libssl1.1                   1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-9143        Medium      
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-7008        Medium      
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50387       Negligible  
+libsystemd0                 247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50868       Negligible  
+libtasn1-6                  4.16.0-2+deb11u1        4.16.0-2+deb11u2               deb        CVE-2024-12133       Medium      
+libtinfo6                   6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-7008        Medium      
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50387       Negligible  
+libudev1                    247.3-7+deb11u2         247.3-7+deb11u6                deb        CVE-2023-50868       Negligible  
+libuuid1                    2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+login                       1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-4641        Medium      
+login                       1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-29383       Low         
+mount                       2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low         
+ncurses-base                6.2+20201114-2+deb11u1  6.2+20201114-2+deb11u2         deb        CVE-2023-29491       High        
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-5535        Critical    
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-4741        High        
+openssl                     1.1.1n-0+deb11u5        1.1.1v-0~deb11u1               deb        CVE-2023-3446        Medium      
+openssl                     1.1.1n-0+deb11u5        1.1.1v-0~deb11u1               deb        CVE-2023-3817        Medium      
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2023-5678        Medium      
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-0727        Medium      
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-2511        Medium      
+openssl                     1.1.1n-0+deb11u5        1.1.1w-0+deb11u2               deb        CVE-2024-9143        Medium      
+passwd                      1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-4641        Medium      
+passwd                      1:4.8.1-1               1:4.8.1-1+deb11u1              deb        CVE-2023-29383       Low         
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u4               deb        CVE-2020-16156       High        
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u4               deb        CVE-2023-31484       High        
+perl-base                   5.32.1-4+deb11u2        5.32.1-4+deb11u3               deb        CVE-2023-47038       High        
+stdlib                      go1.20.6                1.21.0-0                       go-module  CVE-2023-24531       Critical    
+stdlib                      go1.20.6                *1.21.11, 1.22.4               go-module  CVE-2024-24790       Critical    
+stdlib                      go1.20.6                *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical    
+stdlib                      go1.20.6                *1.20.9, 1.21.2                go-module  CVE-2023-39323       High        
+stdlib                      go1.20.6                *1.20.10, 1.21.3               go-module  CVE-2023-39325       High        
+stdlib                      go1.20.6                *1.20.10, 1.21.3               go-module  CVE-2023-44487       High        
+stdlib                      go1.20.6                *1.20.12, 1.21.5               go-module  CVE-2023-45285       High        
+stdlib                      go1.20.6                *1.21.9, 1.22.2                go-module  CVE-2023-45288       High        
+stdlib                      go1.20.6                *1.21.8, 1.22.1                go-module  CVE-2024-24784       High        
+stdlib                      go1.20.6                *1.21.12, 1.22.5               go-module  CVE-2024-24791       High        
+stdlib                      go1.20.6                *1.22.7, 1.23.1                go-module  CVE-2024-34156       High        
+stdlib                      go1.20.6                *1.22.7, 1.23.1                go-module  CVE-2024-34158       High        
+stdlib                      go1.20.6                1.19.12, *1.20.7               go-module  CVE-2023-29409       Medium      
+stdlib                      go1.20.6                *1.20.8, 1.21.1                go-module  CVE-2023-39318       Medium      
+stdlib                      go1.20.6                *1.20.8, 1.21.1                go-module  CVE-2023-39319       Medium      
+stdlib                      go1.20.6                *1.20.12, 1.21.5               go-module  CVE-2023-39326       Medium      
+stdlib                      go1.20.6                *1.21.8, 1.22.1                go-module  CVE-2023-45289       Medium      
+stdlib                      go1.20.6                *1.21.8, 1.22.1                go-module  CVE-2023-45290       Medium      
+stdlib                      go1.20.6                *1.21.8, 1.22.1                go-module  CVE-2024-24783       Medium      
+stdlib                      go1.20.6                *1.21.8, 1.22.1                go-module  CVE-2024-24785       Medium      
+stdlib                      go1.20.6                *1.21.10, 1.22.3               go-module  CVE-2024-24787       Medium      
+stdlib                      go1.20.6                *1.21.11, 1.22.4               go-module  CVE-2024-24789       Medium      
+stdlib                      go1.20.6                *1.22.7, 1.23.1                go-module  CVE-2024-34155       Medium      
+stdlib                      go1.20.6                *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium      
+stdlib                      go1.20.6                *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium      
+stdlib                      go1.20.6                *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium      
+tar                         1.34+dfsg-1             1.34+dfsg-1+deb11u1            deb        CVE-2022-48303       Medium      
+tar                         1.34+dfsg-1             1.34+dfsg-1+deb11u1            deb        CVE-2023-39804       Medium      
+util-linux                  2.36.1-8+deb11u1        2.36.1-8+deb11u2               deb        CVE-2024-28085       Low
+>>> docker.io/bitnami/redis:7.0.15-debian-12-r20
+NAME               INSTALLED         FIXED-IN                       TYPE       VULNERABILITY   SEVERITY 
+Redis(R)           7.0.15-10         6.2.16, *7.2.6, 7.4.1          bitnami    CVE-2024-31449  High      
+Redis(R)           7.0.15-10         *7.2.6, 7.4.1                  bitnami    CVE-2024-31227  Medium    
+Redis(R)           7.0.15-10         6.2.16, *7.2.6, 7.4.1          bitnami    CVE-2024-31228  Medium    
+Redis(R)           7.0.15-10         *7.2.7, 7.4.2                  bitnami    CVE-2024-51741  Medium    
+libc-bin           2.36-9+deb12u7    2.36-9+deb12u10                deb        CVE-2025-0395   High      
+libc6              2.36-9+deb12u7    2.36-9+deb12u10                deb        CVE-2025-0395   High      
+libgnutls30        3.7.9-2+deb12u3   3.7.9-2+deb12u4                deb        CVE-2024-12243  Medium    
+liblzma5           5.4.1-0.2         5.4.1-1                        deb        CVE-2025-31115  High      
+libperl5.36        5.36.0-7+deb12u1  5.36.0-7+deb12u2               deb        CVE-2024-56406  High      
+libssl3            3.0.13-1~deb12u1  3.0.15-1~deb12u1               deb        CVE-2024-5535   Critical  
+libssl3            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-4741   High      
+libssl3            3.0.13-1~deb12u1  3.0.14-1~deb12u2               deb        CVE-2024-6119   High      
+libssl3            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-2511   Medium    
+libssl3            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-4603   Medium    
+libssl3            3.0.13-1~deb12u1  3.0.15-1~deb12u1               deb        CVE-2024-9143   Medium    
+libtasn1-6         4.19.0-2          4.19.0-2+deb12u1               deb        CVE-2024-12133  Medium    
+openssl            3.0.13-1~deb12u1  3.0.15-1~deb12u1               deb        CVE-2024-5535   Critical  
+openssl            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-4741   High      
+openssl            3.0.13-1~deb12u1  3.0.14-1~deb12u2               deb        CVE-2024-6119   High      
+openssl            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-2511   Medium    
+openssl            3.0.13-1~deb12u1  3.0.14-1~deb12u1               deb        CVE-2024-4603   Medium    
+openssl            3.0.13-1~deb12u1  3.0.15-1~deb12u1               deb        CVE-2024-9143   Medium    
+perl               5.36.0-7+deb12u1  5.36.0-7+deb12u2               deb        CVE-2024-56406  High      
+perl-base          5.36.0-7+deb12u1  5.36.0-7+deb12u2               deb        CVE-2024-56406  High      
+perl-modules-5.36  5.36.0-7+deb12u1  5.36.0-7+deb12u2               deb        CVE-2024-56406  High      
+stdlib             go1.22.5          *1.23.8, 1.24.2                go-module  CVE-2025-22871  Critical  
+stdlib             go1.22.5          *1.22.7, 1.23.1                go-module  CVE-2024-34156  High      
+stdlib             go1.22.5          *1.22.7, 1.23.1                go-module  CVE-2024-34158  High      
+stdlib             go1.22.5          *1.22.7, 1.23.1                go-module  CVE-2024-34155  Medium    
+stdlib             go1.22.5          *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336  Medium    
+stdlib             go1.22.5          *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341  Medium    
+stdlib             go1.22.5          *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866  Medium
+>>> docker.io/bobokun/qbit_manage:v4.2.1@sha256:e9e7888df6f63fddc8d5326f7bd308d523c181ec28c67357f67167592c41b7b3
+NAME         INSTALLED  FIXED-IN                                             TYPE    VULNERABILITY        SEVERITY 
+c-ares       1.34.3-r0  1.34.5-r0                                            apk     CVE-2025-31498       High      
+python       3.11.11    3.9.22, 3.10.17, *3.11.12, 3.12.9, 3.13.2, 3.14.0a5  binary  CVE-2025-0938        Medium    
+python       3.11.11    3.14.0                                               binary  CVE-2024-3220        Low       
+setuptools   65.5.1     70.0.0                                               python  GHSA-cx63-2mw6-8hw5  High      
+sqlite-libs  3.48.0-r0  3.48.0-r1                                            apk     CVE-2025-29087       Low       
+xz-libs      5.6.3-r0   5.6.3-r1                                             apk     CVE-2025-31115       High
+>>> docker.io/grafana/grafana:11.5.1
+NAME                           INSTALLED  FIXED-IN                       TYPE       VULNERABILITY        SEVERITY 
+curl                           8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0665        Critical  
+curl                           8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0725        High      
+curl                           8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0167        Low       
+github.com/go-jose/go-jose/v3  v3.0.3     3.0.4                          go-module  GHSA-c6gw-w398-hv78  Medium    
+github.com/golang-jwt/jwt/v4   v4.5.1     4.5.2                          go-module  GHSA-mh63-6h87-95cp  High      
+github.com/golang-jwt/jwt/v5   v5.2.1     5.2.2                          go-module  GHSA-mh63-6h87-95cp  High      
+github.com/openfga/openfga     v1.6.2     1.8.3                          go-module  GHSA-32q6-rr98-cjqv  Medium    
+github.com/openfga/openfga     v1.6.2     1.8.5                          go-module  GHSA-g4v5-6f5p-m38j  Medium    
+golang.org/x/crypto            v0.32.0    0.35.0                         go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net               v0.34.0    0.36.0                         go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net               v0.34.0    0.38.0                         go-module  GHSA-vvgc-356p-c3xw  Medium    
+libcrypto3                     3.3.2-r0   3.3.3-r0                       apk        CVE-2024-12797       Medium    
+libcrypto3                     3.3.2-r0   3.3.2-r2                       apk        CVE-2024-13176       Medium    
+libcrypto3                     3.3.2-r0   3.3.2-r1                       apk        CVE-2024-9143        Medium    
+libcurl                        8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0665        Critical  
+libcurl                        8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0725        High      
+libcurl                        8.11.1-r0  8.12.0-r0                      apk        CVE-2025-0167        Low       
+libssl3                        3.3.2-r0   3.3.3-r0                       apk        CVE-2024-12797       Medium    
+libssl3                        3.3.2-r0   3.3.2-r2                       apk        CVE-2024-13176       Medium    
+libssl3                        3.3.2-r0   3.3.2-r1                       apk        CVE-2024-9143        Medium    
+musl                           1.2.5-r0   1.2.5-r1                       apk        CVE-2025-26519       High      
+musl-utils                     1.2.5-r0   1.2.5-r1                       apk        CVE-2025-26519       High      
+stdlib                         go1.23.5   *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical  
+stdlib                         go1.23.5   1.22.12, *1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium
+>>> docker.io/jesec/flood:4.9.3@sha256:e9c8a3fd460ad1e81b47e7e17ec257a998f4e92e2b8c4935190d63c28e5b9b50
+NAME        INSTALLED  FIXED-IN   TYPE  VULNERABILITY   SEVERITY 
+c-ares      1.34.3-r0  1.34.5-r0  apk   CVE-2025-31498  High      
+libcrypto3  3.3.2-r4   3.3.3-r0   apk   CVE-2024-12797  Medium    
+libcrypto3  3.3.2-r4   3.3.2-r5   apk   CVE-2024-13176  Medium    
+libcurl     8.11.1-r0  8.12.0-r0  apk   CVE-2025-0665   Critical  
+libcurl     8.11.1-r0  8.12.0-r0  apk   CVE-2025-0725   High      
+libcurl     8.11.1-r0  8.12.0-r0  apk   CVE-2025-0167   Low       
+libssl3     3.3.2-r4   3.3.3-r0   apk   CVE-2024-12797  Medium    
+libssl3     3.3.2-r4   3.3.2-r5   apk   CVE-2024-13176  Medium    
+musl        1.2.5-r8   1.2.5-r9   apk   CVE-2025-26519  High      
+musl-utils  1.2.5-r8   1.2.5-r9   apk   CVE-2025-26519  High
+>>> docker.io/ollama/ollama:0.5.7
+NAME                 INSTALLED                FIXED-IN                       TYPE       VULNERABILITY        SEVERITY   
+golang.org/x/crypto  v0.31.0                  0.35.0                         go-module  GHSA-hcg3-q754-cr77  High        
+golang.org/x/net     v0.25.0                  0.36.0                         go-module  GHSA-qxp5-gwg8-xv66  Medium      
+golang.org/x/net     v0.25.0                  0.38.0                         go-module  GHSA-vvgc-356p-c3xw  Medium      
+gpgv                 2.2.27-3ubuntu2.1        2.2.27-3ubuntu2.3              deb        CVE-2025-30258       Medium      
+gzip                 1.10                     1.12                           binary     CVE-2022-1271        High        
+libc-bin             2.35-0ubuntu3.8          2.35-0ubuntu3.9                deb        CVE-2025-0395        Medium      
+libc6                2.35-0ubuntu3.8          2.35-0ubuntu3.9                deb        CVE-2025-0395        Medium      
+libcap2              1:2.44-1ubuntu0.22.04.1  1:2.44-1ubuntu0.22.04.2        deb        CVE-2025-1390        Medium      
+libgnutls30          3.7.3-4ubuntu1.5         3.7.3-4ubuntu1.6               deb        CVE-2024-12243       Medium      
+libgssapi-krb5-2     1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.5              deb        CVE-2024-3596        Medium      
+libgssapi-krb5-2     1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2025-24528       Medium      
+libgssapi-krb5-2     1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26461       Low         
+libgssapi-krb5-2     1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26458       Negligible  
+libk5crypto3         1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.5              deb        CVE-2024-3596        Medium      
+libk5crypto3         1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2025-24528       Medium      
+libk5crypto3         1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26461       Low         
+libk5crypto3         1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26458       Negligible  
+libkrb5-3            1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.5              deb        CVE-2024-3596        Medium      
+libkrb5-3            1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2025-24528       Medium      
+libkrb5-3            1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26461       Low         
+libkrb5-3            1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26458       Negligible  
+libkrb5support0      1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.5              deb        CVE-2024-3596        Medium      
+libkrb5support0      1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2025-24528       Medium      
+libkrb5support0      1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26461       Low         
+libkrb5support0      1.19.2-2ubuntu0.4        1.19.2-2ubuntu0.6              deb        CVE-2024-26458       Negligible  
+libssl3              3.0.2-0ubuntu1.18        3.0.2-0ubuntu1.19              deb        CVE-2024-13176       Low         
+libssl3              3.0.2-0ubuntu1.18        3.0.2-0ubuntu1.19              deb        CVE-2024-9143        Low         
+libtasn1-6           4.18.0-4build1           4.18.0-4ubuntu0.1              deb        CVE-2024-12133       Medium      
+openssl              3.0.2-0ubuntu1.18        3.0.2-0ubuntu1.19              deb        CVE-2024-13176       Low         
+openssl              3.0.2-0ubuntu1.18        3.0.2-0ubuntu1.19              deb        CVE-2024-9143        Low         
+perl-base            5.34.0-3ubuntu1.3        5.34.0-3ubuntu1.4              deb        CVE-2024-56406       Medium      
+stdlib               go1.23.4                 *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical    
+stdlib               go1.23.4                 1.22.11, *1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium      
+stdlib               go1.23.4                 1.22.11, *1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium      
+stdlib               go1.23.4                 1.22.12, *1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium
+>>> ghcr.io/0xerr0r/blocky:v0.25
+NAME                 INSTALLED  FIXED-IN                       TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.32.0    0.35.0                         go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net     v0.34.0    0.36.0                         go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net     v0.34.0    0.38.0                         go-module  GHSA-vvgc-356p-c3xw  Medium    
+stdlib               go1.22.4   *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical  
+stdlib               go1.22.4   1.21.12, *1.22.5               go-module  CVE-2024-24791       High      
+stdlib               go1.22.4   *1.22.7, 1.23.1                go-module  CVE-2024-34156       High      
+stdlib               go1.22.4   *1.22.7, 1.23.1                go-module  CVE-2024-34158       High      
+stdlib               go1.22.4   *1.22.7, 1.23.1                go-module  CVE-2024-34155       Medium    
+stdlib               go1.22.4   *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium    
+stdlib               go1.22.4   *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium    
+stdlib               go1.22.4   *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium
+>>> ghcr.io/autobrr/autobrr:v1.60.0@sha256:5f95def0aa664e653c5de820f27661357a5c77a8eef0dd7fa204efedfb7d0e45
+NAME                           INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+c-ares                         1.34.3-r0  1.34.5-r0        apk        CVE-2025-31498       High      
+github.com/go-jose/go-jose/v4  v4.0.2     4.0.5            go-module  GHSA-c6gw-w398-hv78  Medium    
+golang.org/x/net               v0.35.0    0.36.0           go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net               v0.35.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+stdlib                         go1.23.7   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/dani-garcia/vaultwarden:1.33.2@sha256:87edb99945da91bd7504ac1435495595af2e89ad2c7adc151ae5bf091ec8baf2
+NAME                   INSTALLED            FIXED-IN              TYPE  VULNERABILITY   SEVERITY 
+curl                   7.88.1-10+deb12u8    7.88.1-10+deb12u9     deb   CVE-2024-9681   Medium    
+curl                   7.88.1-10+deb12u8    7.88.1-10+deb12u10    deb   CVE-2024-11053  Low       
+curl                   7.88.1-10+deb12u8    7.88.1-10+deb12u11    deb   CVE-2025-0167   Low       
+libc-bin               2.36-9+deb12u9       2.36-9+deb12u10       deb   CVE-2025-0395   High      
+libc-dev-bin           2.36-9+deb12u9       2.36-9+deb12u10       deb   CVE-2025-0395   High      
+libc6                  2.36-9+deb12u9       2.36-9+deb12u10       deb   CVE-2025-0395   High      
+libc6-dev              2.36-9+deb12u9       2.36-9+deb12u10       deb   CVE-2025-0395   High      
+libcurl4               7.88.1-10+deb12u8    7.88.1-10+deb12u9     deb   CVE-2024-9681   Medium    
+libcurl4               7.88.1-10+deb12u8    7.88.1-10+deb12u10    deb   CVE-2024-11053  Low       
+libcurl4               7.88.1-10+deb12u8    7.88.1-10+deb12u11    deb   CVE-2025-0167   Low       
+libgnutls30            3.7.9-2+deb12u3      3.7.9-2+deb12u4       deb   CVE-2024-12243  Medium    
+liblzma5               5.4.1-0.2            5.4.1-1               deb   CVE-2025-31115  High      
+libmariadb-dev         1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2024-21096  Medium    
+libmariadb-dev         1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2025-21490  Medium    
+libmariadb-dev-compat  1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2024-21096  Medium    
+libmariadb-dev-compat  1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2025-21490  Medium    
+libmariadb3            1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2024-21096  Medium    
+libmariadb3            1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2025-21490  Medium    
+libpq5                 15.10-0+deb12u1      15.11-0+deb12u1       deb   CVE-2025-1094   High      
+libtasn1-6             4.19.0-2             4.19.0-2+deb12u1      deb   CVE-2024-12133  Medium    
+mariadb-common         1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2024-21096  Medium    
+mariadb-common         1:10.11.6-0+deb12u1  1:10.11.11-0+deb12u1  deb   CVE-2025-21490  Medium    
+perl-base              5.36.0-7+deb12u1     5.36.0-7+deb12u2      deb   CVE-2024-56406  High
+>>> ghcr.io/fallenbagel/jellyseerr:2.5.2@sha256:2a611369ad1d0d501c2d051fc89b6246ff081fb4a30879fdc75642cf6a37b1a6
+NAME            INSTALLED  FIXED-IN  TYPE  VULNERABILITY        SEVERITY 
+@babel/helpers  7.24.7     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+@babel/helpers  7.26.9     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+@babel/runtime  7.22.5     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+@babel/runtime  7.24.7     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+@babel/runtime  7.26.0     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+@babel/runtime  7.26.9     7.26.10   npm   GHSA-968p-4wvh-cqc8  Medium    
+cookie          0.4.2      0.7.0     npm   GHSA-pxg6-pf52-xh8x  Low       
+image-size      1.2.0      1.2.1     npm   GHSA-m5qc-5hw7-8vg7  High      
+next            14.2.25    14.2.26   npm   GHSA-223j-4rm8-mrmf  Low       
+tough-cookie    2.5.0      4.1.3     npm   GHSA-72xf-g2v4-qvf3  Medium    
+xml2js          0.4.16     0.5.0     npm   GHSA-776f-qx25-q3cc  Medium    
+xml2js          0.4.19     0.5.0     npm   GHSA-776f-qx25-q3cc  Medium    
+xml2js          0.4.23     0.5.0     npm   GHSA-776f-qx25-q3cc  Medium
+>>> ghcr.io/fluent/fluent-bit:4.0.0@sha256:3cabd4bd59596931cd99d812c99200e12fa08758fd08dfb0549c96ae97a70ddd
+NAME      INSTALLED  FIXED-IN  TYPE  VULNERABILITY   SEVERITY 
+liblzma5  5.4.1-0.2  5.4.1-1   deb   CVE-2025-31115  High
+>>> ghcr.io/fluxcd/helm-controller:v1.2.0
+NAME                              INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+github.com/containerd/containerd  v1.7.24    1.7.27           go-module  GHSA-265r-hfxg-fhmg  Medium    
+golang.org/x/crypto               v0.32.0    0.35.0           go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net                  v0.34.0    0.36.0           go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net                  v0.34.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+helm.sh/helm/v3                   v3.17.1    3.17.3           go-module  GHSA-4hfp-h4cw-hj8p  Medium    
+helm.sh/helm/v3                   v3.17.1    3.17.3           go-module  GHSA-5xqw-8hwv-wg92  Medium    
+stdlib                            go1.23.6   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/fluxcd/kustomize-controller:v1.5.1
+NAME                          INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+c-ares                        1.34.3-r0  1.34.5-r0        apk        CVE-2025-31498       High      
+github.com/golang-jwt/jwt/v5  v5.2.1     5.2.2            go-module  GHSA-mh63-6h87-95cp  High      
+golang.org/x/crypto           v0.33.0    0.35.0           go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net              v0.35.0    0.36.0           go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net              v0.35.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+libexpat                      2.6.4-r0   2.7.0-r0         apk        CVE-2024-8176        High      
+sqlite-libs                   3.48.0-r0  3.48.0-r1        apk        CVE-2025-29087       Low       
+stdlib                        go1.23.6   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/fluxcd/notification-controller:v1.5.0
+NAME                          INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+github.com/golang-jwt/jwt/v4  v4.5.1     4.5.2            go-module  GHSA-mh63-6h87-95cp  High      
+github.com/golang-jwt/jwt/v5  v5.2.1     5.2.2            go-module  GHSA-mh63-6h87-95cp  High      
+golang.org/x/crypto           v0.33.0    0.35.0           go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net              v0.35.0    0.36.0           go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net              v0.35.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+libcrypto3                    3.3.2-r4   3.3.3-r0         apk        CVE-2024-12797       Medium    
+libcrypto3                    3.3.2-r4   3.3.2-r5         apk        CVE-2024-13176       Medium    
+libssl3                       3.3.2-r4   3.3.3-r0         apk        CVE-2024-12797       Medium    
+libssl3                       3.3.2-r4   3.3.2-r5         apk        CVE-2024-13176       Medium    
+musl                          1.2.5-r8   1.2.5-r9         apk        CVE-2025-26519       High      
+musl-utils                    1.2.5-r8   1.2.5-r9         apk        CVE-2025-26519       High      
+stdlib                        go1.23.6   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/fluxcd/source-controller:v1.5.0
+NAME                              INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+github.com/containerd/containerd  v1.7.24    1.7.27           go-module  GHSA-265r-hfxg-fhmg  Medium    
+github.com/go-jose/go-jose/v3     v3.0.3     3.0.4            go-module  GHSA-c6gw-w398-hv78  Medium    
+github.com/go-jose/go-jose/v4     v4.0.4     4.0.5            go-module  GHSA-c6gw-w398-hv78  Medium    
+github.com/golang-jwt/jwt/v4      v4.5.1     4.5.2            go-module  GHSA-mh63-6h87-95cp  High      
+github.com/golang-jwt/jwt/v5      v5.2.1     5.2.2            go-module  GHSA-mh63-6h87-95cp  High      
+golang.org/x/crypto               v0.32.0    0.35.0           go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net                  v0.34.0    0.36.0           go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net                  v0.34.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+helm.sh/helm/v3                   v3.17.0    3.17.3           go-module  GHSA-4hfp-h4cw-hj8p  Medium    
+helm.sh/helm/v3                   v3.17.0    3.17.3           go-module  GHSA-5xqw-8hwv-wg92  Medium    
+libcrypto3                        3.3.2-r4   3.3.3-r0         apk        CVE-2024-12797       Medium    
+libcrypto3                        3.3.2-r4   3.3.2-r5         apk        CVE-2024-13176       Medium    
+libssl3                           3.3.2-r4   3.3.3-r0         apk        CVE-2024-12797       Medium    
+libssl3                           3.3.2-r4   3.3.2-r5         apk        CVE-2024-13176       Medium    
+musl                              1.2.5-r8   1.2.5-r9         apk        CVE-2025-26519       High      
+musl-utils                        1.2.5-r8   1.2.5-r9         apk        CVE-2025-26519       High      
+stdlib                            go1.23.6   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/headlamp-k8s/headlamp:v0.30.0@sha256:5b46b8bd7a68deb762730ac086bad0a7473b9a926b3c5f3af8933ae05cad7a68
+NAME              INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/net  v0.36.0    0.38.0           go-module  GHSA-vvgc-356p-c3xw  Medium    
+helm.sh/helm/v3   v3.15.3    3.17.3           go-module  GHSA-4hfp-h4cw-hj8p  Medium    
+helm.sh/helm/v3   v3.15.3    3.17.3           go-module  GHSA-5xqw-8hwv-wg92  Medium    
+stdlib            go1.24.0   1.23.8, *1.24.2  go-module  CVE-2025-22871       Critical
+>>> ghcr.io/home-assistant/home-assistant:2025.4.3
+NAME                    INSTALLED  FIXED-IN                       TYPE       VULNERABILITY        SEVERITY 
+c-ares                  1.34.3-r0  1.34.5-r0                      apk        CVE-2025-31498       High      
+giflib                  5.2.2-r0   5.2.2-r1                       apk        CVE-2025-31344       High      
+golang.org/x/crypto     v0.26.0    0.31.0                         go-module  GHSA-v778-237x-gjrc  Critical  
+golang.org/x/crypto     v0.26.0    0.35.0                         go-module  GHSA-hcg3-q754-cr77  High      
+libexpat                2.6.4-r0   2.7.0-r0                       apk        CVE-2024-8176        High      
+libjxl                  0.10.3-r0  0.10.4-r0                      apk        CVE-2024-11403       Medium    
+libjxl                  0.10.3-r0  0.10.4-r0                      apk        CVE-2024-11498       Medium    
+libxml2                 2.13.4-r3  2.13.4-r4                      apk        CVE-2024-56171       High      
+libxml2                 2.13.4-r3  2.13.4-r4                      apk        CVE-2025-24928       High      
+libxml2                 2.13.4-r3  2.13.4-r5                      apk        CVE-2025-27113       High      
+mbedtls                 3.6.2-r0   3.6.3-r0                       apk        CVE-2025-27809       Medium    
+mbedtls                 3.6.2-r0   3.6.3-r0                       apk        CVE-2025-27810       Medium    
+musl-utils              1.2.5-r8   1.2.5-r9                       apk        CVE-2025-26519       High      
+openssh-client-common   9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26465       Medium    
+openssh-client-common   9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26466       Medium    
+openssh-client-default  9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26465       Medium    
+openssh-client-default  9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26466       Medium    
+openssh-keygen          9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26465       Medium    
+openssh-keygen          9.9_p1-r2  9.9_p2-r0                      apk        CVE-2025-26466       Medium    
+python                  3.13.2     3.14.0                         binary     CVE-2024-3220        Low       
+python-jose             3.3.0      3.4.0                          python     GHSA-6c5p-j8vq-pqhj  Critical  
+python-jose             3.3.0      3.4.0                          python     GHSA-cjwg-qfpm-7377  Medium    
+sentry-sdk              1.45.1     2.8.0                          python     GHSA-g92j-qhmh-64v2  Low       
+sqlite-libs             3.48.0-r0  3.48.0-r1                      apk        CVE-2025-29087       Low       
+stdlib                  go1.23.3   *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical  
+stdlib                  go1.23.3   1.22.11, *1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium    
+stdlib                  go1.23.3   1.22.11, *1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium    
+stdlib                  go1.23.3   1.22.12, *1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium    
+xz                      5.6.3-r0   5.6.3-r1                       apk        CVE-2025-31115       High      
+xz-libs                 5.6.3-r0   5.6.3-r1                       apk        CVE-2025-31115       High
+>>> ghcr.io/immich-app/immich-machine-learning:v1.131.2@sha256:29836cf73146057ac388546021fff3e00c923e22a28587cceb5108a5e537987d
+NAME          INSTALLED         FIXED-IN                                             TYPE    VULNERABILITY        SEVERITY 
+certifi       2023.11.17        2024.7.4                                             python  GHSA-248v-346w-9cwc  Low       
+idna          3.6               3.7                                                  python  GHSA-jjg7-2v4v-x38h  Medium    
+liblzma5      5.4.1-0.2         5.4.1-1                                              deb     CVE-2025-31115       High      
+onnx          1.16.0            1.16.2                                               python  GHSA-6rq9-53c3-f7vj  High      
+onnx          1.16.0            1.17.0                                               python  GHSA-h36j-8vv3-cj52  High      
+perl-base     5.36.0-7+deb12u1  5.36.0-7+deb12u2                                     deb     CVE-2024-56406       High      
+python        3.11.11           3.9.22, 3.10.17, *3.11.12, 3.12.9, 3.13.2, 3.14.0a5  binary  CVE-2025-0938        Medium    
+python        3.11.11           3.14.0                                               binary  CVE-2024-3220        Low       
+scikit-learn  1.3.2             1.5.0                                                python  GHSA-jw8x-6495-233v  Medium    
+setuptools    65.5.1            70.0.0                                               python  GHSA-cx63-2mw6-8hw5  High      
+urllib3       2.1.0             2.2.2                                                python  GHSA-34jh-p97f-mpxf  Medium
+>>> ghcr.io/immich-app/immich-server:v1.131.3@sha256:7e5b6729b12b5e5cc5d98bcc6f7c27f723fabae4ee77696855808ebd5200bbf8
+NAME                     INSTALLED                FIXED-IN                         TYPE       VULNERABILITY        SEVERITY   
+@babel/helpers           7.26.9                   7.26.10                          npm        GHSA-968p-4wvh-cqc8  Medium      
+@babel/runtime           7.22.5                   7.26.10                          npm        GHSA-968p-4wvh-cqc8  Medium      
+@nestjs/common           11.0.12                  11.0.16                          npm        GHSA-cj7v-w2c7-cp7c  Medium      
+bsdutils                 1:2.38.1-5+deb12u3       2.39.3-11                        deb        CVE-2024-28085       Low         
+coreutils                9.1-1                    9.5-1                            deb        CVE-2024-0684        Medium      
+coreutils                9.1-1                    9.4-1                            deb        CVE-2016-2781        Low         
+curl                     7.88.1-10+deb12u12       8.3.0-3                          deb        CVE-2023-38545       Critical    
+curl                     7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0665        Critical    
+curl                     7.88.1-10+deb12u12       8.3.0-1                          deb        CVE-2023-38039       High        
+curl                     7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2398        High        
+curl                     7.88.1-10+deb12u12       8.9.0-1                          deb        CVE-2024-6197        High        
+curl                     7.88.1-10+deb12u12       8.5.0-1                          deb        CVE-2023-46218       Medium      
+curl                     7.88.1-10+deb12u12       8.5.0-1                          deb        CVE-2023-46219       Medium      
+curl                     7.88.1-10+deb12u12       8.6.0-1                          deb        CVE-2024-0853        Medium      
+curl                     7.88.1-10+deb12u12       8.9.0-1                          deb        CVE-2024-6874        Medium      
+curl                     7.88.1-10+deb12u12       8.9.1-1                          deb        CVE-2024-7264        Medium      
+curl                     7.88.1-10+deb12u12       8.10.0-1                         deb        CVE-2024-8096        Medium      
+curl                     7.88.1-10+deb12u12       8.11.0-1                         deb        CVE-2024-9681        Medium      
+curl                     7.88.1-10+deb12u12       8.3.0-3                          deb        CVE-2023-38546       Low         
+curl                     7.88.1-10+deb12u12       8.11.1-1                         deb        CVE-2024-11053       Low         
+curl                     7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2004        Low         
+curl                     7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0167        Low         
+curl                     7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2379        Negligible  
+curl                     7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2466        Negligible  
+curl                     7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0725        Negligible  
+esbuild                  0.23.0                   0.25.0                           npm        GHSA-67mh-4wv8-2f99  Medium      
+gcc-12-base              12.2.0-14                12.3.0-9                         deb        CVE-2023-4039        Negligible  
+gpgv                     2.2.40-1.1               2.2.46-5                         deb        CVE-2025-30258       Low         
+libblkid1                2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+libcairo-gobject2        1.16.0-7                 1.18.0-1                         deb        CVE-2019-6461        Low         
+libcairo-gobject2        1.16.0-7                 1.17.8-3                         deb        CVE-2019-6462        Low         
+libcairo2                1.16.0-7                 1.18.0-1                         deb        CVE-2019-6461        Low         
+libcairo2                1.16.0-7                 1.17.8-3                         deb        CVE-2019-6462        Low         
+libcap2                  1:2.66-4                 1:2.73-4                         deb        CVE-2025-1390        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.3.0-3                          deb        CVE-2023-38545       Critical    
+libcurl4                 7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0665        Critical    
+libcurl4                 7.88.1-10+deb12u12       8.3.0-1                          deb        CVE-2023-38039       High        
+libcurl4                 7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2398        High        
+libcurl4                 7.88.1-10+deb12u12       8.9.0-1                          deb        CVE-2024-6197        High        
+libcurl4                 7.88.1-10+deb12u12       8.5.0-1                          deb        CVE-2023-46218       Medium      
+libcurl4                 7.88.1-10+deb12u12       8.5.0-1                          deb        CVE-2023-46219       Medium      
+libcurl4                 7.88.1-10+deb12u12       8.6.0-1                          deb        CVE-2024-0853        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.9.0-1                          deb        CVE-2024-6874        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.9.1-1                          deb        CVE-2024-7264        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.10.0-1                         deb        CVE-2024-8096        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.11.0-1                         deb        CVE-2024-9681        Medium      
+libcurl4                 7.88.1-10+deb12u12       8.3.0-3                          deb        CVE-2023-38546       Low         
+libcurl4                 7.88.1-10+deb12u12       8.11.1-1                         deb        CVE-2024-11053       Low         
+libcurl4                 7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2004        Low         
+libcurl4                 7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0167        Low         
+libcurl4                 7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2379        Negligible  
+libcurl4                 7.88.1-10+deb12u12       8.7.1-1                          deb        CVE-2024-2466        Negligible  
+libcurl4                 7.88.1-10+deb12u12       8.12.0+git20250209.89ed161+ds-1  deb        CVE-2025-0725        Negligible  
+libde265-0               1.0.11-1+deb12u2         1.0.12-1                         deb        CVE-2023-27103       High        
+libde265-0               1.0.11-1+deb12u2         1.0.13-1                         deb        CVE-2023-43887       High        
+libde265-0               1.0.11-1+deb12u2         1.0.15-1                         deb        CVE-2023-49465       High        
+libde265-0               1.0.11-1+deb12u2         1.0.15-1                         deb        CVE-2023-49467       High        
+libde265-0               1.0.11-1+deb12u2         1.0.15-1                         deb        CVE-2023-49468       High        
+libde265-0               1.0.11-1+deb12u2         1.0.12-1                         deb        CVE-2023-27102       Medium      
+libde265-0               1.0.11-1+deb12u2         1.0.13-1                         deb        CVE-2023-47471       Medium      
+libde265-0               1.0.11-1+deb12u2         1.0.13-1                         deb        CVE-2023-51792       Low         
+libexpat1                2.5.0-1+deb12u1          2.6.2-2                          deb        CVE-2024-45491       Critical    
+libexpat1                2.5.0-1+deb12u1          2.6.2-2                          deb        CVE-2024-45492       Critical    
+libexpat1                2.5.0-1+deb12u1          2.6.0-1                          deb        CVE-2023-52425       High        
+libexpat1                2.5.0-1+deb12u1          2.6.2-2                          deb        CVE-2024-45490       High        
+libexpat1                2.5.0-1+deb12u1          2.7.0-1                          deb        CVE-2024-8176        High        
+libexpat1                2.5.0-1+deb12u1          2.6.3-2                          deb        CVE-2024-50602       Medium      
+libexpat1                2.5.0-1+deb12u1          2.6.0-1                          deb        CVE-2023-52426       Negligible  
+libexpat1                2.5.0-1+deb12u1          2.6.1-2                          deb        CVE-2024-28757       Negligible  
+libfreetype6             2.12.1+dfsg-5+deb12u4    2.13.1+dfsg-1                    deb        CVE-2025-27363       High        
+libgcc-s1                12.2.0-14                12.3.0-9                         deb        CVE-2023-4039        Negligible  
+libgdk-pixbuf-2.0-0      2.42.10+dfsg-1+deb12u1   2.42.12+dfsg-1                   deb        CVE-2022-48622       High        
+libgdk-pixbuf2.0-common  2.42.10+dfsg-1+deb12u1   2.42.12+dfsg-1                   deb        CVE-2022-48622       High        
+libglib2.0-0             2.74.6-2+deb12u5         2.82.1-1                         deb        CVE-2024-52533       Critical    
+libglib2.0-0             2.74.6-2+deb12u5         2.80.0-10                        deb        CVE-2024-34397       Medium      
+libglib2.0-0             2.74.6-2+deb12u5         2.84.1-1                         deb        CVE-2025-3360        Low         
+libgnutls30              3.7.9-2+deb12u4          3.8.3-1                          deb        CVE-2024-0553        High        
+libgnutls30              3.7.9-2+deb12u4          3.8.3-1                          deb        CVE-2024-0567        High        
+libgnutls30              3.7.9-2+deb12u4          3.8.2-1                          deb        CVE-2023-5981        Medium      
+libgnutls30              3.7.9-2+deb12u4          3.8.9-2                          deb        CVE-2024-12243       Medium      
+libgnutls30              3.7.9-2+deb12u4          3.8.4-2                          deb        CVE-2024-28834       Medium      
+libgnutls30              3.7.9-2+deb12u4          3.8.4-2                          deb        CVE-2024-28835       Medium      
+libgomp1                 12.2.0-14                12.3.0-9                         deb        CVE-2023-4039        Negligible  
+libgsf-1-114             1.14.50-1+deb12u1        1.14.52-1.1                      deb        CVE-2024-36474       High        
+libgsf-1-114             1.14.50-1+deb12u1        1.14.52-1.1                      deb        CVE-2024-42415       High        
+libgsf-1-common          1.14.50-1+deb12u1        1.14.52-1.1                      deb        CVE-2024-36474       High        
+libgsf-1-common          1.14.50-1+deb12u1        1.14.52-1.1                      deb        CVE-2024-42415       High        
+libgssapi-krb5-2         1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37371       Critical    
+libgssapi-krb5-2         1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37370       High        
+libgssapi-krb5-2         1.20.1-2+deb12u2         1.20.1-3                         deb        CVE-2023-36054       Medium      
+libgssapi-krb5-2         1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-26462       Medium      
+libgssapi-krb5-2         1.20.1-2+deb12u2         1.21.3-5                         deb        CVE-2025-24528       Unknown     
+libharfbuzz0b            6.0.0+dfsg-3             10.1.0-2                         deb        CVE-2024-56732       Critical    
+libharfbuzz0b            6.0.0+dfsg-3             8.0.0-1                          deb        CVE-2023-25193       High        
+libk5crypto3             1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37371       Critical    
+libk5crypto3             1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37370       High        
+libk5crypto3             1.20.1-2+deb12u2         1.20.1-3                         deb        CVE-2023-36054       Medium      
+libk5crypto3             1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-26462       Medium      
+libk5crypto3             1.20.1-2+deb12u2         1.21.3-5                         deb        CVE-2025-24528       Unknown     
+libkrb5-3                1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37371       Critical    
+libkrb5-3                1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37370       High        
+libkrb5-3                1.20.1-2+deb12u2         1.20.1-3                         deb        CVE-2023-36054       Medium      
+libkrb5-3                1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-26462       Medium      
+libkrb5-3                1.20.1-2+deb12u2         1.21.3-5                         deb        CVE-2025-24528       Unknown     
+libkrb5support0          1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37371       Critical    
+libkrb5support0          1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-37370       High        
+libkrb5support0          1.20.1-2+deb12u2         1.20.1-3                         deb        CVE-2023-36054       Medium      
+libkrb5support0          1.20.1-2+deb12u2         1.21.3-1                         deb        CVE-2024-26462       Medium      
+libkrb5support0          1.20.1-2+deb12u2         1.21.3-5                         deb        CVE-2025-24528       Unknown     
+libldap-2.5-0            2.5.13+dfsg-5            2.5.16+dfsg-1                    deb        CVE-2023-2953        High        
+liblzma5                 5.4.1-0.2                5.6.1+really5.4.5-1              deb        CVE-2024-3094        Critical    
+liblzma5                 5.4.1-0.2                5.8.1-1                          deb        CVE-2025-31115       High        
+libmount1                2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+libmpg123-0              1.31.2-1+deb12u1         1.32.8-1                         deb        CVE-2024-10573       Medium      
+libncursesw6             6.4-4                    6.4+20230625-1                   deb        CVE-2023-50495       Medium      
+libnghttp2-14            1.52.0-1+deb12u2         1.57.0-1                         deb        CVE-2023-44487       High        
+libnghttp2-14            1.52.0-1+deb12u2         1.61.0-1                         deb        CVE-2024-28182       Medium      
+libopenexr-3-1-30        3.1.5-5                  3.1.13-1                         deb        CVE-2023-5841        Critical    
+libopenexr-3-1-30        3.1.5-5                  3.1.13-1                         deb        CVE-2024-31047       Low         
+libopenjp2-7             2.5.0-2+deb12u1          2.5.3-1                          deb        CVE-2021-3575        High        
+libopenjp2-7             2.5.0-2+deb12u1          2.5.3-1                          deb        CVE-2024-56826       Medium      
+libopenjp2-7             2.5.0-2+deb12u1          2.5.3-1                          deb        CVE-2024-56827       Medium      
+libpam-modules           1.5.2-6+deb12u1          1.7.0-2                          deb        CVE-2024-10041       Medium      
+libpam-modules           1.5.2-6+deb12u1          1.5.3-4                          deb        CVE-2024-22365       Medium      
+libpam-modules-bin       1.5.2-6+deb12u1          1.7.0-2                          deb        CVE-2024-10041       Medium      
+libpam-modules-bin       1.5.2-6+deb12u1          1.5.3-4                          deb        CVE-2024-22365       Medium      
+libpam-runtime           1.5.2-6+deb12u1          1.7.0-2                          deb        CVE-2024-10041       Medium      
+libpam-runtime           1.5.2-6+deb12u1          1.5.3-4                          deb        CVE-2024-22365       Medium      
+libpam0g                 1.5.2-6+deb12u1          1.7.0-2                          deb        CVE-2024-10041       Medium      
+libpam0g                 1.5.2-6+deb12u1          1.5.3-4                          deb        CVE-2024-22365       Medium      
+libperl5.40              5.40.1-2                 5.40.1-3                         deb        CVE-2024-56406       High        
+librsvg2-2               2.54.7+dfsg-1~deb12u1    2.54.7+dfsg-1                    deb        CVE-2023-38633       Medium      
+libsmartcols1            2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+libsqlite3-0             3.40.1-2+deb12u1         3.43.1-1                         deb        CVE-2023-7104        High        
+libsqlite3-0             3.40.1-2+deb12u1         3.43.2-1                         deb        CVE-2024-0232        Medium      
+libsqlite3-0             3.40.1-2+deb12u1         3.46.1-3                         deb        CVE-2025-3277        Medium      
+libsqlite3-0             3.40.1-2+deb12u1         3.46.1-3                         deb        CVE-2025-29087       Low         
+libssh2-1                1.10.0-3+b1              1.11.0-4                         deb        CVE-2023-48795       Negligible  
+libssl3                  3.0.15-1~deb12u1         3.3.2-1                          deb        CVE-2024-5535        Critical    
+libssl3                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-4741        High        
+libssl3                  3.0.15-1~deb12u1         3.3.2-1                          deb        CVE-2024-6119        High        
+libssl3                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2023-6129        Medium      
+libssl3                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2023-6237        Medium      
+libssl3                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2024-0727        Medium      
+libssl3                  3.0.15-1~deb12u1         3.4.1-1                          deb        CVE-2024-12797       Medium      
+libssl3                  3.0.15-1~deb12u1         3.4.1-1                          deb        CVE-2024-13176       Medium      
+libssl3                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-2511        Medium      
+libssl3                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-4603        Medium      
+libssl3                  3.0.15-1~deb12u1         3.3.2-2                          deb        CVE-2024-9143        Medium      
+libstdc++6               12.2.0-14                12.3.0-9                         deb        CVE-2023-4039        Negligible  
+libsystemd0              252.36-1~deb12u1         255.4-1                          deb        CVE-2023-50387       High        
+libsystemd0              252.36-1~deb12u1         255.1-3                          deb        CVE-2023-7008        Medium      
+libsystemd0              252.36-1~deb12u1         255.4-1                          deb        CVE-2023-50868       Unknown     
+libtasn1-6               4.19.0-2+deb12u1         4.20.0-1                         deb        CVE-2024-12133       Medium      
+libtheora0               1.1.1+dfsg.1-16.1+b1     1.2.0~alpha1+dfsg-6              deb        CVE-2024-56431       Critical    
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-4                deb        CVE-2023-52355       High        
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-4                deb        CVE-2023-52356       High        
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-5                deb        CVE-2024-7006        High        
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-25433       Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-26965       Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-26966       Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-2908        Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-3576        Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1~rc3-1                      deb        CVE-2023-3618        Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-1                deb        CVE-2023-40745       Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-1                deb        CVE-2023-41175       Medium      
+libtiff6                 4.5.0-6+deb12u2          4.5.1+git230720-2                deb        CVE-2023-6277        Medium      
+libtinfo6                6.4-4                    6.4+20230625-1                   deb        CVE-2023-50495       Medium      
+libudev1                 252.36-1~deb12u1         255.4-1                          deb        CVE-2023-50387       High        
+libudev1                 252.36-1~deb12u1         255.1-3                          deb        CVE-2023-7008        Medium      
+libudev1                 252.36-1~deb12u1         255.4-1                          deb        CVE-2023-50868       Unknown     
+libuuid1                 2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+libvpx7                  1.12.0-1+deb12u3         1.12.0-1.2                       deb        CVE-2023-44488       High        
+libvpx7                  1.12.0-1+deb12u3         1.13.1-2                         deb        CVE-2023-6349        Medium      
+libvpx7                  1.12.0-1+deb12u3         1.14.1-1                         deb        CVE-2024-5197        Medium      
+libvpx7                  1.12.0-1+deb12u3         1.12.0-1.1                       deb        CVE-2023-5217        Negligible  
+libx11-6                 2:1.8.4-2+deb12u2        2:1.8.6-1                        deb        CVE-2023-3138        High        
+libx11-6                 2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43787       High        
+libx11-6                 2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43785       Medium      
+libx11-6                 2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43786       Medium      
+libx11-data              2:1.8.4-2+deb12u2        2:1.8.6-1                        deb        CVE-2023-3138        High        
+libx11-data              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43787       High        
+libx11-data              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43785       Medium      
+libx11-data              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43786       Medium      
+libx11-xcb1              2:1.8.4-2+deb12u2        2:1.8.6-1                        deb        CVE-2023-3138        High        
+libx11-xcb1              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43787       High        
+libx11-xcb1              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43785       Medium      
+libx11-xcb1              2:1.8.4-2+deb12u2        2:1.8.7-1                        deb        CVE-2023-43786       Medium      
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.9.14+dfsg-1.3                  deb        CVE-2022-2309        High        
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.12.7+dfsg+really2.9.14-0.4     deb        CVE-2022-49043       High        
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.12.7+dfsg+really2.9.14-0.4     deb        CVE-2024-56171       High        
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.12.7+dfsg+really2.9.14-0.4     deb        CVE-2025-24928       High        
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.12.7+dfsg+really2.9.14-0.4     deb        CVE-2025-27113       High        
+libxml2                  2.9.14+dfsg-1.3~deb12u1  2.12.7+dfsg+really2.9.14-0.4     deb        CVE-2024-34459       Negligible  
+libzvbi-common           0.2.41-1                 0.2.44-1                         deb        CVE-2025-2176        High        
+libzvbi-common           0.2.41-1                 0.2.44-1                         deb        CVE-2025-2177        High        
+libzvbi-common           0.2.41-1                 0.2.44-1                         deb        CVE-2025-2173        Medium      
+libzvbi-common           0.2.41-1                 0.2.44-1                         deb        CVE-2025-2174        Medium      
+libzvbi-common           0.2.41-1                 0.2.44-1                         deb        CVE-2025-2175        Medium      
+libzvbi0                 0.2.41-1                 0.2.44-1                         deb        CVE-2025-2176        High        
+libzvbi0                 0.2.41-1                 0.2.44-1                         deb        CVE-2025-2177        High        
+libzvbi0                 0.2.41-1                 0.2.44-1                         deb        CVE-2025-2173        Medium      
+libzvbi0                 0.2.41-1                 0.2.44-1                         deb        CVE-2025-2174        Medium      
+libzvbi0                 0.2.41-1                 0.2.44-1                         deb        CVE-2025-2175        Medium      
+login                    1:4.13+dfsg1-1+b1        1:4.13+dfsg1-2                   deb        CVE-2023-4641        Medium      
+login                    1:4.13+dfsg1-1+b1        1:4.13+dfsg1-2                   deb        CVE-2023-29383       Low         
+mount                    2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+ncurses-base             6.4-4                    6.4+20230625-1                   deb        CVE-2023-50495       Medium      
+ncurses-bin              6.4-4                    6.4+20230625-1                   deb        CVE-2023-50495       Medium      
+next                     15.1.2                   15.2.3                           npm        GHSA-f82v-jwr5-mffw  Critical    
+openssl                  3.0.15-1~deb12u1         3.3.2-1                          deb        CVE-2024-5535        Critical    
+openssl                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-4741        High        
+openssl                  3.0.15-1~deb12u1         3.3.2-1                          deb        CVE-2024-6119        High        
+openssl                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2023-6129        Medium      
+openssl                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2023-6237        Medium      
+openssl                  3.0.15-1~deb12u1         3.1.5-1                          deb        CVE-2024-0727        Medium      
+openssl                  3.0.15-1~deb12u1         3.4.1-1                          deb        CVE-2024-12797       Medium      
+openssl                  3.0.15-1~deb12u1         3.4.1-1                          deb        CVE-2024-13176       Medium      
+openssl                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-2511        Medium      
+openssl                  3.0.15-1~deb12u1         3.2.2-1                          deb        CVE-2024-4603        Medium      
+openssl                  3.0.15-1~deb12u1         3.3.2-2                          deb        CVE-2024-9143        Medium      
+passwd                   1:4.13+dfsg1-1+b1        1:4.13+dfsg1-2                   deb        CVE-2023-4641        Medium      
+passwd                   1:4.13+dfsg1-1+b1        1:4.13+dfsg1-2                   deb        CVE-2023-29383       Low         
+perl                     5.40.1-2                 5.40.1-3                         deb        CVE-2024-56406       High        
+perl-base                5.40.1-2                 5.40.1-3                         deb        CVE-2024-56406       High        
+perl-modules-5.40        5.40.1-2                 5.40.1-3                         deb        CVE-2024-56406       High        
+prismjs                  1.29.0                   1.30.0                           npm        GHSA-x7hr-w5r2-h6wg  Medium      
+stdlib                   go1.22.4                 *1.23.8, 1.24.2                  go-module  CVE-2025-22871       Critical    
+stdlib                   go1.22.4                 1.21.12, *1.22.5                 go-module  CVE-2024-24791       High        
+stdlib                   go1.22.4                 *1.22.7, 1.23.1                  go-module  CVE-2024-34156       High        
+stdlib                   go1.22.4                 *1.22.7, 1.23.1                  go-module  CVE-2024-34158       High        
+stdlib                   go1.22.4                 *1.22.7, 1.23.1                  go-module  CVE-2024-34155       Medium      
+stdlib                   go1.22.4                 *1.22.11, 1.23.5, 1.24.0-rc.2    go-module  CVE-2024-45336       Medium      
+stdlib                   go1.22.4                 *1.22.11, 1.23.5, 1.24.0-rc.2    go-module  CVE-2024-45341       Medium      
+stdlib                   go1.22.4                 *1.22.12, 1.23.6, 1.24.0-rc.3    go-module  CVE-2025-22866       Medium      
+tar                      1.34+dfsg-1.2+deb12u1    1.34+dfsg-1.3                    deb        CVE-2023-39804       Medium      
+tar                      1.34+dfsg-1.2+deb12u1    1.34+dfsg-1.4                    deb        CVE-2022-48303       Negligible  
+util-linux               2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+util-linux-extra         2.38.1-5+deb12u3         2.39.3-11                        deb        CVE-2024-28085       Low         
+wget                     1.21.3-1+deb12u1         1.24.5-2                         deb        CVE-2024-38428       Critical    
+wget                     1.21.3-1+deb12u1         1.25.0-1                         deb        CVE-2024-10524       Medium
+>>> ghcr.io/kashalls/kromgo:v0.5.1@sha256:1f86c6151c676fa6d368230f1b228d67ed030fd4409ae0a53763c60d522ea425
+NAME    INSTALLED  FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.24.1   1.23.8, *1.24.2  go-module  CVE-2025-22871  Critical
+>>> ghcr.io/koenkk/zigbee2mqtt:2.2.1@sha256:5c1f0ca9669292b1bdabc7b6d9927642049bc2c1ee53f42b7299181e93dd7d8f
+NAME         INSTALLED  FIXED-IN         TYPE       VULNERABILITY        SEVERITY 
+c-ares       1.34.3-r0  1.34.5-r0        apk        CVE-2025-31498       High      
+sqlite-libs  3.48.0-r0  3.48.0-r1        apk        CVE-2025-29087       Low       
+stdlib       go1.23.7   *1.23.8, 1.24.2  go-module  CVE-2025-22871       Critical  
+vite         6.2.3      6.2.6            npm        GHSA-356w-63v5-8wf4  Medium    
+vite         6.2.3      6.2.4            npm        GHSA-4r4m-qw57-chr8  Medium    
+vite         6.2.3      6.2.5            npm        GHSA-xcj6-pq6g-qj4x  Medium    
+xz-libs      5.6.3-r0   5.6.3-r1         apk        CVE-2025-31115       High
+>>> ghcr.io/open-webui/open-webui:0.5.7
+NAME               INSTALLED              FIXED-IN                                             TYPE    VULNERABILITY        SEVERITY 
+cryptography       44.0.0                 44.0.1                                               python  GHSA-79v4-65xg-pq4g  Low       
+curl               7.88.1-10+deb12u8      7.88.1-10+deb12u9                                    deb     CVE-2024-9681        Medium    
+curl               7.88.1-10+deb12u8      7.88.1-10+deb12u10                                   deb     CVE-2024-11053       Low       
+curl               7.88.1-10+deb12u8      7.88.1-10+deb12u11                                   deb     CVE-2025-0167        Low       
+git                1:2.39.5-0+deb12u1     1:2.39.5-0+deb12u2                                   deb     CVE-2024-50349       Low       
+git                1:2.39.5-0+deb12u1     1:2.39.5-0+deb12u2                                   deb     CVE-2024-52006       Low       
+git-man            1:2.39.5-0+deb12u1     1:2.39.5-0+deb12u2                                   deb     CVE-2024-50349       Low       
+git-man            1:2.39.5-0+deb12u1     1:2.39.5-0+deb12u2                                   deb     CVE-2024-52006       Low       
+jinja2             3.1.3                  3.1.6                                                python  GHSA-cpwx-vrp4-4pq7  Medium    
+jinja2             3.1.3                  3.1.5                                                python  GHSA-gmj6-6f8f-6699  Medium    
+jinja2             3.1.3                  3.1.4                                                python  GHSA-h75v-3vvj-5mfj  Medium    
+jinja2             3.1.3                  3.1.5                                                python  GHSA-q2x7-8rv6-6q7h  Medium    
+libc-bin           2.36-9+deb12u9         2.36-9+deb12u10                                      deb     CVE-2025-0395        High      
+libc-dev-bin       2.36-9+deb12u9         2.36-9+deb12u10                                      deb     CVE-2025-0395        High      
+libc6              2.36-9+deb12u9         2.36-9+deb12u10                                      deb     CVE-2025-0395        High      
+libc6-dev          2.36-9+deb12u9         2.36-9+deb12u10                                      deb     CVE-2025-0395        High      
+libcurl3-gnutls    7.88.1-10+deb12u8      7.88.1-10+deb12u9                                    deb     CVE-2024-9681        Medium    
+libcurl3-gnutls    7.88.1-10+deb12u8      7.88.1-10+deb12u10                                   deb     CVE-2024-11053       Low       
+libcurl3-gnutls    7.88.1-10+deb12u8      7.88.1-10+deb12u11                                   deb     CVE-2025-0167        Low       
+libcurl4           7.88.1-10+deb12u8      7.88.1-10+deb12u9                                    deb     CVE-2024-9681        Medium    
+libcurl4           7.88.1-10+deb12u8      7.88.1-10+deb12u10                                   deb     CVE-2024-11053       Low       
+libcurl4           7.88.1-10+deb12u8      7.88.1-10+deb12u11                                   deb     CVE-2025-0167        Low       
+libfreetype6       2.12.1+dfsg-5+deb12u3  2.12.1+dfsg-5+deb12u4                                deb     CVE-2025-27363       High      
+libgnutls30        3.7.9-2+deb12u3        3.7.9-2+deb12u4                                      deb     CVE-2024-12243       Medium    
+liblzma5           5.4.1-0.2              5.4.1-1                                              deb     CVE-2025-31115       High      
+libopenjp2-7       2.5.0-2                2.5.0-2+deb12u1                                      deb     CVE-2021-3575        High      
+libopenjp2-7       2.5.0-2                2.5.0-2+deb12u1                                      deb     CVE-2024-56826       Medium    
+libopenjp2-7       2.5.0-2                2.5.0-2+deb12u1                                      deb     CVE-2024-56827       Medium    
+libperl5.36        5.36.0-7+deb12u1       5.36.0-7+deb12u2                                     deb     CVE-2024-56406       High      
+librabbitmq4       0.11.0-1+b1            0.11.0-1+deb12u1                                     deb     CVE-2023-35789       Medium    
+libtasn1-6         4.19.0-2               4.19.0-2+deb12u1                                     deb     CVE-2024-12133       Medium    
+perl               5.36.0-7+deb12u1       5.36.0-7+deb12u2                                     deb     CVE-2024-56406       High      
+perl-base          5.36.0-7+deb12u1       5.36.0-7+deb12u2                                     deb     CVE-2024-56406       High      
+perl-modules-5.36  5.36.0-7+deb12u1       5.36.0-7+deb12u2                                     deb     CVE-2024-56406       High      
+pillow             10.2.0                 10.3.0                                               python  GHSA-44wm-f244-xhp3  High      
+python             3.11.11                3.9.22, 3.10.17, *3.11.12, 3.12.9, 3.13.2, 3.14.0a5  binary  CVE-2025-0938        Medium    
+python             3.11.11                3.14.0                                               binary  CVE-2024-3220        Low       
+python-jose        3.3.0                  3.4.0                                                python  GHSA-6c5p-j8vq-pqhj  Critical  
+python-jose        3.3.0                  3.4.0                                                python  GHSA-cjwg-qfpm-7377  Medium    
+starlette          0.37.2                 0.40.0                                               python  GHSA-f96h-pmfr-66vw  High      
+torch              2.5.1                  2.6.0                                                python  GHSA-53q9-r3pm-6pq6  Critical  
+xz-utils           5.4.1-0.2              5.4.1-1                                              deb     CVE-2025-31115       High
+>>> ghcr.io/paperless-ngx/paperless-ngx:2.15.3@sha256:39b337e73c978238f0b529baf42f1b59b65d17eed35cd61bc1ccbbf779b5d58b
+NAME    INSTALLED  FIXED-IN                       TYPE       VULNERABILITY        SEVERITY 
+django  5.1.7      5.1.8                          python     GHSA-wqfg-m96j-85vm  Medium    
+jinja2  3.1.5      3.1.6                          python     GHSA-cpwx-vrp4-4pq7  Medium    
+python  3.12.9     3.14.0                         binary     CVE-2024-3220        Low       
+stdlib  go1.19.8   1.21.0-0                       go-module  CVE-2023-24531       Critical  
+stdlib  go1.19.8   *1.19.9, 1.20.4                go-module  CVE-2023-24540       Critical  
+stdlib  go1.19.8   *1.19.10, 1.20.5               go-module  CVE-2023-29402       Critical  
+stdlib  go1.19.8   *1.19.10, 1.20.5               go-module  CVE-2023-29404       Critical  
+stdlib  go1.19.8   *1.19.10, 1.20.5               go-module  CVE-2023-29405       Critical  
+stdlib  go1.19.8   *1.21.11, 1.22.4               go-module  CVE-2024-24790       Critical  
+stdlib  go1.19.8   *1.23.8, 1.24.2                go-module  CVE-2025-22871       Critical  
+stdlib  go1.19.8   *1.19.9, 1.20.4                go-module  CVE-2023-24539       High      
+stdlib  go1.19.8   *1.19.9, 1.20.4                go-module  CVE-2023-29400       High      
+stdlib  go1.19.8   *1.19.10, 1.20.5               go-module  CVE-2023-29403       High      
+stdlib  go1.19.8   *1.20.9, 1.21.2                go-module  CVE-2023-39323       High      
+stdlib  go1.19.8   *1.20.10, 1.21.3               go-module  CVE-2023-44487       High      
+stdlib  go1.19.8   *1.20.12, 1.21.5               go-module  CVE-2023-45285       High      
+stdlib  go1.19.8   1.20.0                         go-module  CVE-2023-45287       High      
+stdlib  go1.19.8   *1.21.9, 1.22.2                go-module  CVE-2023-45288       High      
+stdlib  go1.19.8   *1.21.8, 1.22.1                go-module  CVE-2024-24784       High      
+stdlib  go1.19.8   *1.21.12, 1.22.5               go-module  CVE-2024-24791       High      
+stdlib  go1.19.8   *1.22.7, 1.23.1                go-module  CVE-2024-34156       High      
+stdlib  go1.19.8   *1.22.7, 1.23.1                go-module  CVE-2024-34158       High      
+stdlib  go1.19.8   *1.19.11, 1.20.6               go-module  CVE-2023-29406       Medium    
+stdlib  go1.19.8   *1.19.12, 1.20.7               go-module  CVE-2023-29409       Medium    
+stdlib  go1.19.8   *1.20.8, 1.21.1                go-module  CVE-2023-39318       Medium    
+stdlib  go1.19.8   *1.20.8, 1.21.1                go-module  CVE-2023-39319       Medium    
+stdlib  go1.19.8   *1.20.12, 1.21.5               go-module  CVE-2023-39326       Medium    
+stdlib  go1.19.8   *1.21.8, 1.22.1                go-module  CVE-2023-45289       Medium    
+stdlib  go1.19.8   *1.21.8, 1.22.1                go-module  CVE-2023-45290       Medium    
+stdlib  go1.19.8   *1.21.8, 1.22.1                go-module  CVE-2024-24783       Medium    
+stdlib  go1.19.8   *1.21.8, 1.22.1                go-module  CVE-2024-24785       Medium    
+stdlib  go1.19.8   *1.21.10, 1.22.3               go-module  CVE-2024-24787       Medium    
+stdlib  go1.19.8   *1.21.11, 1.22.4               go-module  CVE-2024-24789       Medium    
+stdlib  go1.19.8   *1.22.7, 1.23.1                go-module  CVE-2024-34155       Medium    
+stdlib  go1.19.8   *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45336       Medium    
+stdlib  go1.19.8   *1.22.11, 1.23.5, 1.24.0-rc.2  go-module  CVE-2024-45341       Medium    
+stdlib  go1.19.8   *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866       Medium
+>>> ghcr.io/paperless-ngx/tika:2.9.1-minimal@sha256:20db3df89eaeb1b271dd840888fe909b88b12f4b86ef641ec07a1d45d4c5168f
+NAME                     INSTALLED                FIXED-IN                   TYPE          VULNERABILITY        SEVERITY   
+apache-mime4j-core       0.8.9                    0.8.10                     java-archive  GHSA-jw7r-rxff-gv24  Medium      
+commons-compress         1.24.0                   1.26.0                     java-archive  GHSA-4265-ccf5-phj5  Medium      
+commons-compress         1.24.0                   1.26.0                     java-archive  GHSA-4g9r-vxhx-9pgx  Medium      
+cxf-core                 3.5.6                    3.5.8                      java-archive  GHSA-qmgx-j96g-4428  Critical    
+cxf-core                 3.5.6                    3.5.10                     java-archive  GHSA-fh5r-crhr-qrrq  High        
+gpgv                     2.2.27-3ubuntu2.1        2.2.27-3ubuntu2.3          deb           CVE-2025-30258       Medium      
+gzip                     1.10                     1.12                       binary        CVE-2022-1271        High        
+jetty-http               9.4.53.v20231009         12.0.12                    java-archive  GHSA-qh8g-58pp-2wxh  Medium      
+jetty-server             9.4.53.v20231009         9.4.56                     java-archive  GHSA-g8m5-722r-8whq  Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.7            deb           CVE-2024-2961        Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33599       Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33600       Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33601       Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33602       Medium      
+libc-bin                 2.35-0ubuntu3.6          2.35-0ubuntu3.9            deb           CVE-2025-0395        Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.7            deb           CVE-2024-2961        Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33599       Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33600       Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33601       Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.8            deb           CVE-2024-33602       Medium      
+libc6                    2.35-0ubuntu3.6          2.35-0ubuntu3.9            deb           CVE-2025-0395        Medium      
+libcap2                  1:2.44-1ubuntu0.22.04.1  1:2.44-1ubuntu0.22.04.2    deb           CVE-2025-1390        Medium      
+libcups2                 2.4.1op1-1ubuntu4.8      2.4.1op1-1ubuntu4.9        deb           CVE-2024-35235       Medium      
+libcups2                 2.4.1op1-1ubuntu4.8      2.4.1op1-1ubuntu4.11       deb           CVE-2024-47175       Medium      
+libexpat1                2.4.7-1ubuntu0.3         2.4.7-1ubuntu0.4           deb           CVE-2024-45490       Medium      
+libexpat1                2.4.7-1ubuntu0.3         2.4.7-1ubuntu0.4           deb           CVE-2024-45491       Medium      
+libexpat1                2.4.7-1ubuntu0.3         2.4.7-1ubuntu0.4           deb           CVE-2024-45492       Medium      
+libexpat1                2.4.7-1ubuntu0.3         2.4.7-1ubuntu0.5           deb           CVE-2024-50602       Medium      
+libexpat1                2.4.7-1ubuntu0.3         2.4.7-1ubuntu0.6           deb           CVE-2024-8176        Medium      
+libfreetype6             2.11.1+dfsg-1ubuntu0.2   2.11.1+dfsg-1ubuntu0.3     deb           CVE-2025-27363       Medium      
+libglib2.0-0             2.72.4-0ubuntu2.2        2.72.4-0ubuntu2.3          deb           CVE-2024-34397       Medium      
+libglib2.0-0             2.72.4-0ubuntu2.2        2.72.4-0ubuntu2.4          deb           CVE-2024-52533       Medium      
+libgnutls30              3.7.3-4ubuntu1.5         3.7.3-4ubuntu1.6           deb           CVE-2024-12243       Medium      
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.5          deb           CVE-2024-3596        Medium      
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37370       Medium      
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37371       Medium      
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2025-24528       Medium      
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26461       Low         
+libgssapi-krb5-2         1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26458       Negligible  
+libharfbuzz0b            2.7.4-1ubuntu3.1         2.7.4-1ubuntu3.2           deb           CVE-2023-25193       Low         
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.5          deb           CVE-2024-3596        Medium      
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37370       Medium      
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37371       Medium      
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2025-24528       Medium      
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26461       Low         
+libk5crypto3             1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26458       Negligible  
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.5          deb           CVE-2024-3596        Medium      
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37370       Medium      
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37371       Medium      
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2025-24528       Medium      
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26461       Low         
+libkrb5-3                1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26458       Negligible  
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.5          deb           CVE-2024-3596        Medium      
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37370       Medium      
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.4          deb           CVE-2024-37371       Medium      
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2025-24528       Medium      
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26461       Low         
+libkrb5support0          1.19.2-2ubuntu0.3        1.19.2-2ubuntu0.6          deb           CVE-2024-26458       Negligible  
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.16          deb           CVE-2022-40735       Medium      
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.18          deb           CVE-2024-6119        Medium      
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.19          deb           CVE-2024-13176       Low         
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-2511        Low         
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-4603        Low         
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-4741        Low         
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-5535        Low         
+libssl3                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.19          deb           CVE-2024-9143        Low         
+libtasn1-6               4.18.0-4build1           4.18.0-4ubuntu0.1          deb           CVE-2024-12133       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.11+9-1~22.04.1        deb           CVE-2024-21011       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.11+9-1~22.04.1        deb           CVE-2024-21012       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.11+9-1~22.04.1        deb           CVE-2024-21068       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.11+9-1~22.04.1        deb           CVE-2024-21094       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.12+7-1ubuntu2~22.04   deb           CVE-2024-21131       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.12+7-1ubuntu2~22.04   deb           CVE-2024-21138       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.12+7-1ubuntu2~22.04   deb           CVE-2024-21140       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.12+7-1ubuntu2~22.04   deb           CVE-2024-21145       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.12+7-1ubuntu2~22.04   deb           CVE-2024-21147       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.13+11-2ubuntu1~22.04  deb           CVE-2024-21235       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.14+7-1~22.04.1        deb           CVE-2025-21502       Medium      
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.13+11-2ubuntu1~22.04  deb           CVE-2024-21208       Low         
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.13+11-2ubuntu1~22.04  deb           CVE-2024-21210       Low         
+openjdk-17-jre-headless  17.0.10+7-1~22.04.1      17.0.13+11-2ubuntu1~22.04  deb           CVE-2024-21217       Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.16          deb           CVE-2022-40735       Medium      
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.18          deb           CVE-2024-6119        Medium      
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.19          deb           CVE-2024-13176       Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-2511        Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-4603        Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-4741        Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.17          deb           CVE-2024-5535        Low         
+openssl                  3.0.2-0ubuntu1.15        3.0.2-0ubuntu1.19          deb           CVE-2024-9143        Low         
+perl-base                5.34.0-3ubuntu1.3        5.34.0-3ubuntu1.4          deb           CVE-2024-56406       Medium
+>>> ghcr.io/recyclarr/recyclarr:7.4.1@sha256:759540877f95453eca8a26c1a93593e783a7a824c324fbd57523deffb67f48e1
+NAME      INSTALLED  FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+c-ares    1.34.3-r0  1.34.5-r0        apk        CVE-2025-31498  High      
+libexpat  2.6.4-r0   2.7.0-r0         apk        CVE-2024-8176   High      
+stdlib    go1.23.6   *1.23.8, 1.24.2  go-module  CVE-2025-22871  Critical
+>>> ghcr.io/renovatebot/renovate:39.253.3@sha256:cae40c7895fb36c3ecc677b869ca4d084c01aa7e755f2a2721e7401ca076d532
+NAME    INSTALLED  FIXED-IN                       TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.11  *1.23.8, 1.24.2                go-module  CVE-2025-22871  Critical  
+stdlib  go1.22.11  *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866  Medium
+>>> ghcr.io/renovatebot/renovate:39.253.4@sha256:af7aea8c800803c15b8a23167e651804f47012045598e445506efa8328daac97
+NAME    INSTALLED  FIXED-IN                       TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.11  *1.23.8, 1.24.2                go-module  CVE-2025-22871  Critical  
+stdlib  go1.22.11  *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866  Medium
+>>> ghcr.io/renovatebot/renovate:39.254.2@sha256:4555b6ffd4db6de3110779c137bf1ee03a4c0be03e7de89db6a30ade94980c8a
+NAME    INSTALLED  FIXED-IN                       TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.11  *1.23.8, 1.24.2                go-module  CVE-2025-22871  Critical  
+stdlib  go1.22.11  *1.22.12, 1.23.6, 1.24.0-rc.3  go-module  CVE-2025-22866  Medium
+>>> ghcr.io/vaskozl/buildkit:0.20.1@sha256:ca1d10ff6d0c234a023c6525d86a706f8e2d3cf919d8873105962911cdcc55b0
+NAME                                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+github.com/containerd/containerd/v2  v2.0.3     2.0.4     go-module  GHSA-265r-hfxg-fhmg  Medium    
+github.com/go-jose/go-jose/v4        v4.0.4     4.0.5     go-module  GHSA-c6gw-w398-hv78  Medium    
+github.com/golang-jwt/jwt/v5         v5.2.1     5.2.2     go-module  GHSA-mh63-6h87-95cp  High      
+golang.org/x/crypto                  v0.31.0    0.35.0    go-module  GHSA-hcg3-q754-cr77  High      
+golang.org/x/net                     v0.33.0    0.36.0    go-module  GHSA-qxp5-gwg8-xv66  Medium    
+golang.org/x/net                     v0.33.0    0.38.0    go-module  GHSA-vvgc-356p-c3xw  Medium
+>>> ghcr.io/vaskozl/calibre-web:0.6.24@sha256:f24dc3a4da943ba50e95ef98e6a162bbca3d8d812e16a06f03c02a9678c89819
+
+>>> ghcr.io/vaskozl/calibre:8.0.1@sha256:ee839478cb1ce7c9382533d61a3e80df2c1efd5f39054dca0dc7ccebe9aa8072
+
+>>> ghcr.io/vaskozl/cyberchef-web:10.19.4@sha256:42cb2b4b52c7a2ecf5b3c45330043f3c510b7794a281046d9b2c0a9d1af926df
+
+>>> ghcr.io/vaskozl/homer-web:25.04.1@sha256:54dc28ccc74cea6b64f1e9db3696b56c8e21dd336b5d9eea22f9667e53fcf75e
+
+>>> ghcr.io/vaskozl/jellyfin:10.10.7@sha256:8703712b67c306ca21074baec6b9f4c3cbc390d2688d636b130e8f6a4365c828
+
+>>> ghcr.io/vaskozl/kcc:latest
+
+>>> ghcr.io/vaskozl/kube-network-policies:v0.5.1
+
+>>> ghcr.io/vaskozl/kubectl:1.32.3@sha256:8c5bd5d456d37a697b7c551e50e3b4e9c6011c033af9e3273615a69ce55adf31
+

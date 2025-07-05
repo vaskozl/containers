@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - kubectl=1.33.1-r0 # repo=community
+    - kubectl=kubectl-1.33.2-r0 # repo=wolfi
 entrypoint:
-   command: catatonit -- kubectl
+   command: tini -- kubectl
 vcs-url: https://github.com/kubernetes/kubectl
 archs:
   - arm64

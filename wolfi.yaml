@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+contents:
+  keyring:
+    - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+  repositories:
+    - https://packages.wolfi.dev/os
+  packages:
+    - busybox # repo=wolfi
+    - wolfi-baselayout
+    - ca-certificates-bundle
+    - tini
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 568
+  users:
+    - username: nonroot
+      uid: 568
+  run-as: nonroot
+archs:
+  - arm64
+  - amd64
