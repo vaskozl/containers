@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - nginx-mainline=1.29.0-r0 # repo=wolfi
+    - nginx=1.29.0-r0 # repo=wolfi
 entrypoint:
    command: tini -- /usr/sbin/nginx
 cmd: -e /dev/stderr -g "daemon off;"

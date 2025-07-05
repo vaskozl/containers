@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - valkey=8.1.1-r1 # repo=main
+    - valkey=8.1.2-r1 # repo=wolfi
     - valkey-cli
 entrypoint:
-  command: catatonit -- valkey-server
+  command: tini -- valkey-server
 cmd: --save "" --appendonly "no" --protected-mode "no"
 vcs-url: https://github.com/valkey-io/valkey
 archs:
