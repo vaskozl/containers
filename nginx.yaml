@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - nginx=1.28.0-r4 # repo=main
+    - nginx-mainline=1.29.0-r0 # repo=wolfi
 entrypoint:
-   command: catatonit -- /usr/sbin/nginx
+   command: tini -- /usr/sbin/nginx
 cmd: -e /dev/stderr -g "daemon off;"
 stop-signal: SIGQUIT
 accounts:
