@@ -1,13 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - ripgrep=14.1.1-r0 # repo=community
+    - ripgrep=14.1.1-r0 # repo=wolfi
     - gzip
-    - gron
     - jq
 entrypoint:
-   command: catatonit -- rg
+   command: tini -- rg
 vcs-url: https://github.com/BurntSushi/ripgrep
 archs:
   - arm64
