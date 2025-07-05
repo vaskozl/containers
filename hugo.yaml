@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
     - hugo=0.147.9-r0 # repo=community
 entrypoint:
-   command: catatonit -- hugo
+   command: tini -- hugo
 vcs-url: https://github.com/gohugoio/hugo
 archs:
   - arm64
