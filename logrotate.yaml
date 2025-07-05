@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - logrotate=3.22.0-r0 # repo=main
+    - logrotate=3.22.0-r40 # repo=wolfi
 entrypoint:
-   command: catatonit -- logrotate
+   command: tini -- logrotate
 vcs-url: https://github.com/logrotate/logrotate
 archs:
   - arm64
