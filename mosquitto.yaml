@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - mosquitto=2.0.21-r0 # repo=main
+    - mosquitto=2.0.21-r41 # repo=wolfi
 entrypoint:
-   command: catatonit -- /usr/sbin/mosquitto
+   command: tini -- /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto
 archs:
   - arm64
