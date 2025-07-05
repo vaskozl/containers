@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - jellyfin=10.10.7-r0 # repo=comunity
+    - jellyfin=10.10.7-r0 # repo=community
     - jellyfin-web
     - intel-media-driver
     - intel-media-sdk
