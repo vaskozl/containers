@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - docker=28.2.2-r0 # repo=community
+    - docker=28.3.0-r0 # repo=community
     - docker-cli-buildx
     - sed
     - jq
