@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  repositories:
+    - https://apk.cgr.dev/chainguard
+  packages:
+    - git=2.50.0-r3
+    - git-lfs
+    - dash-binsh
+    - dash=0.5.12-r30
+entrypoint:
+  command: /usr/bin/git
+work-dir: /home/git
+accounts:
+  run-as: "65532"
+  users:
+    - username: git
+      uid: 65532
+      gid: 65532
+      homedir: /home/git
+  groups:
+    - groupname: git
+      gid: 65532
