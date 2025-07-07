@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - minio=0.20250613.113347-r0 # repo=wolfi
+    - mc
+entrypoint:
+   command: tini -- minio
+vcs-url: https://github.com/minio/minio
+archs:
+  - arm64
+  - amd64
