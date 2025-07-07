@@ -4,8 +4,10 @@ contents:
   packages:
     - flannel=0.27.0-r1 # repo=wolfi
 entrypoint:
-   command: tini -- /opt/bin/flanneld
+   command: flanneld
 vcs-url: https://github.com/flannel-io/cni-plugin
+accounts:
+  run-as: "0"
 archs:
   - arm64
   - amd64
