@@ -8,6 +8,20 @@ entrypoint:
   command: tini -- valkey-server
 cmd: --save "" --appendonly "no" --protected-mode "no"
 vcs-url: https://github.com/valkey-io/valkey
-archs:
-  - arm64
-  - amd64
+work-dir: /data
+accounts:
+  run-as: "65532"
+  users:
+    - username: valkey
+      uid: 65532
+      gid: 65532
+      homedir: /home/valkey
+  groups:
+    - groupname: valkey
+      gid: 65532
+paths:
+  - path: /data
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
