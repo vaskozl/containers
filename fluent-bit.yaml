@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - logrotate=4.0.3-r0 # repo=wolfi
+entrypoint:
+   command: tini -- fluent-bit
+cmd: --config=/fluent-bit/etc/fluent-bit.conf
+vcs-url: https://github.com/fluent/fluent-bit
+archs:
+  - arm64
+  - amd64
