@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - postgresql=17.5-r3 # repo=wolfi
+    - postgresql-oci-entrypoint
+    - postegresql-client
+archs:
+  - arm64
+  - amd64
+entrypoint:
+  command: /usr/bin/docker-entrypoint.sh postgres
+work-dir: /home/postgres
+accounts:
+  run-as: "0"
+  users:
+    - username: postgres
+      uid: 70
+      gid: 70
+      homedir: /home/postgres
+  groups:
+    - groupname: postgres
+      gid: 70
+environment:
+  LANG: en_US.UTF-8
+  PGDATA: /var/lib/postgresql/data
+paths:
+  - path: /var/lib/postgresql/data
+    type: directory
+    uid: 70
+    gid: 70
+    permissions: 511
+  - path: /var/run/postgresql
+    type: directory
+    uid: 70
+    gid: 70
+    permissions: 511
