@@ -4,7 +4,7 @@ contents:
   packages:
     - postgresql=17.5-r3 # repo=wolfi
     - postgresql-oci-entrypoint
-    - postegresql-client
+    - postgresql-client
 archs:
   - arm64
   - amd64
