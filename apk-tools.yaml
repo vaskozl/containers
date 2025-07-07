@@ -9,3 +9,5 @@ cmd: /bin/sh -l
 archs:
   - arm64
   - amd64
+accounts:
+  run-as: "0"
