@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - perl-mojolicious=9.39-r0 # repo=community
+    - perl-mojolicious=9.41-r0 # repo=community
     - perl-io-socket-ssl
     - perl-mime-lite
     - perl-json-xs
