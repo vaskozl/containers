@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - rakudo==2025.04-r0 # repo=community
+    - rakudo==2025.04-r0 # repo=alpine
     - zef
     - alpine-sdk
     - openssl-dev

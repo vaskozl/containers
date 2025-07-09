@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - net-tools=2.10-r3 # repo=main
+    - net-tools=2.10-r3 # repo=alpine
     - apache2-utils
     - apk
     - bash

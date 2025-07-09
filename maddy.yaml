@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - maddy=0.8.1-r3 # repo=testing
+    - maddy=0.8.1-r3 # repo=alpine
 entrypoint:
   command: catatonit -- maddy
 cmd: run

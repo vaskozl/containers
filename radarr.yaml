@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - radarr=5.26.2.10099-r0 # repo=testing
+    - radarr=5.26.2.10099-r0 # repo=alpine
 entrypoint:
    command: catatonit -- /usr/lib/radarr/bin/Radarr
 cmd: -nobrowser -data=/config
