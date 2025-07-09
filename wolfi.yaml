@@ -5,8 +5,8 @@ contents:
   repositories:
     - https://packages.wolfi.dev/os
   packages:
-    - busybox # repo=wolfi
-    - wolfi-baselayout
+    - wolfi-baselayout # repo=wolfi
+    - busybox
     - ca-certificates-bundle
     - tini
 
