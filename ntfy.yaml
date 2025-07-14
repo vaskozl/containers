@@ -2,7 +2,7 @@
 include: busybox.yaml
 contents:
   packages:
-    - ntfy=2.12.0-r1 # repo=alpine
+    - ntfy=2.13.0-r0 # repo=alpine
 entrypoint:
   command: catatonit -- ntfy
 cmd: serve --no-log-dates
