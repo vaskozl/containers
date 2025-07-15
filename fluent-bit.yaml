@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - fluent-bit=4.0.4-r0 # repo=wolfi
+    - fluent-bit=4.0.4-r1 # repo=wolfi
 entrypoint:
    command: tini -- fluent-bit
 cmd: --config=/fluent-bit/etc/fluent-bit.conf
