@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - valkey=8.1.3-r0 # repo=wolfi
+    - valkey=8.1.3-r1 # repo=wolfi
     - valkey-cli
 entrypoint:
   command: tini -- valkey-server
