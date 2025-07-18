@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - nginx=1.29.0-r0 # repo=wolfi
+    - nginx=1.29.0-r3 # repo=wolfi
     - nginx-package-config
 entrypoint:
    command: tini -- /usr/sbin/nginx
