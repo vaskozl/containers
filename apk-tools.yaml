@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - apk-tools=2.14.10-r5 # repo=wolfi
+    - apk-tools=2.14.10-r6 # repo=wolfi
 entrypoint:
    command: tini --
 cmd: /bin/sh -l
