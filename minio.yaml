@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - minio=0.20250613.113347-r0 # repo=wolfi
+    - minio=0.20250718.215631-r0 # repo=wolfi
     - mc
 entrypoint:
    command: tini -- minio
