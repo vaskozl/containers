@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - flannel=0.27.0-r2 # repo=wolfi
+    - flannel=0.27.2-r0 # repo=wolfi
 entrypoint:
    command: flanneld
 vcs-url: https://github.com/flannel-io/cni-plugin
