@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - mosquitto=2.0.22-r1 # repo=wolfi
+    - mosquitto=2.0.22-r2 # repo=wolfi
 entrypoint:
    command: tini -- /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto
