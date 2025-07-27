@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - haproxy-ingress=0.14.8-r4 # repo=wolfi
+    - haproxy-ingress-compat
+entrypoint:
+   command: tini -- /usr/bin/start.sh
+accounts:
+  run-as: "65532"
+  users:
+    - username: haproxy
+      uid: 65532
+      gid: 65532
+      homedir: /home/haproxy
+  groups:
+    - groupname: haproxy
+      gid: 65532
+vcs-url: https://github.com/haproxytech/kubernetes-ingress
