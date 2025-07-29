@@ -4,7 +4,7 @@ contents:
   packages:
     - redis=8.0.3-r0 # repo=alpine
 entrypoint:
-  command: tini -- /usr/bin/redis-server
+  command: /usr/bin/redis-server
 cmd: --save "" --appendonly "no" --protected-mode "no"
 vcs-url: https://github.com/redis/redis
 work-dir: /data
