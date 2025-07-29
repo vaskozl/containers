@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - cert-manager-webhook=1.18.2-r1 # repo=wolfi
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 65532
+  users:
+    - username: nonroot
+      uid: 65532
+      gid: 65532
+  run-as: nonroot
+
+entrypoint:
+  command: /usr/bin/webhook
