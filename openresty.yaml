@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - openresty=1.27.1.2-r3 # repo=wolfi
+entrypoint:
+   command: /usr/bin/openresty
+cmd: -e /dev/stderr -g "daemon off;"
+stop-signal: SIGQUIT
+accounts:
+  run-as: "0"
+vcs-url: https://github.com/openresty
+archs:
+  - arm64
+  - amd64
