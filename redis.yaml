@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - redis=8.0.3-r0 # repo=alpine
+entrypoint:
+  command: tini -- /usr/bin/redis-server
+cmd: --save "" --appendonly "no" --protected-mode "no"
+vcs-url: https://github.com/redis/redis
+work-dir: /data
+accounts:
+  run-as: "65532"
+  users:
+    - username: redis
+      uid: 65532
+      gid: 65532
+      homedir: /home/redis
+  groups:
+    - groupname: redis
+      gid: 65532
+paths:
+  - path: /data
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
