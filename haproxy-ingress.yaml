@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - haproxy-ingress=0.14.8-r4 # repo=wolfi
+    - haproxy-ingress=0.14.9-r0 # repo=wolfi
     - haproxy-ingress-compat
 entrypoint:
    command: tini -- /usr/bin/start.sh
