@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - chromium=138.0.7204.183-r0 # repo=wolfi
+    - chromium=138.0.7204.183-r2 # repo=wolfi
 entrypoint:
    command: tini -- chromium-browser
 cmd: --headless --no-sandbox --disable-gpu
