@@ -22,7 +22,7 @@ stages:
 EOF
 
 # Process YAML files
-for file in *.yaml; do
+for file in **/*.yaml; do
   [ -f "$file" ] || continue  # Skip if not a file
 
   # Extract package and version
