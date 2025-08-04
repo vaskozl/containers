@@ -9,4 +9,9 @@ environment:
   CONFIG_DIRECTORY: /etc/gitlab-exporter
   CONFIG_FILENAME: gitlab-exporter.yml
   CONFIG_TEMPLATE_DIRECTORY: /etc/gitlab-exporter
-
+paths:
+  - path: /etc/gitlab-exporter
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755

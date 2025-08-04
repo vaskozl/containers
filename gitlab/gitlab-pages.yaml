@@ -7,4 +7,9 @@ contents:
 cmd: /scripts/start-pages
 environment:
   CONFIG_TEMPLATE_DIRECTORY: /etc/gitlab-pages
-
+paths:
+  - path: /etc/gitlab-pages
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755

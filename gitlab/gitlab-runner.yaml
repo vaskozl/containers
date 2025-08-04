@@ -19,3 +19,9 @@ accounts:
     - username: gitlab-runner
       uid: 100
   run-as: gitlab-runner
+paths:
+  - path: /home/gitlab-runner
+    type: directory
+    uid: 100
+    gid: 65533
+    permissions: 0o755

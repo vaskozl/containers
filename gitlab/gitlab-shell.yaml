@@ -10,4 +10,9 @@ environment:
   CONFIG_TEMPLATE_DIRECTORY: /srv/gitlab-shell
   HOME: /home/git
   LANG: C.UTF-8
-
+paths:
+  - path: /srv/gitlab-shell
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
