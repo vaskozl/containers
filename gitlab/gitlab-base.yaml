@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - gitlab-base=18.2.1-r0 # repo=wolfi
+entrypoint:
+   command: /scripts/entrypoint.sh
+vcs-url: https://gitlab.com/gitlab-org/build/CNG
+accounts:
+  groups:
+    - groupname: git
+      gid: 1000
+  users:
+    - username: git
+      uid: 1000
+  run-as: git
+environment:
+  CONFIG_TEMPLATE_DIRECTORY: /etc
+

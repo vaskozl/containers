@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: gitlab/gitlab-base.yaml
+contents:
+  packages:
+    - gitlab-exporter=18.2.1-r0 # repo=wolfi
+    - gitlab-exporter-scripts
+cmd: /scripts/process-wrapper
+environment:
+  CONFIG_DIRECTORY: /etc/gitlab-exporter
+  CONFIG_FILENAME: gitlab-exporter.yml
+  CONFIG_TEMPLATE_DIRECTORY: /etc/gitlab-exporter
+

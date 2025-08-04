@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: gitlab/gitlab-base.yaml
+contents:
+  packages:
+    - gitaly=18.2.1-r0 # repo=wolfi
+    - gitaly-backup
+    - gitaly-compat
+    - gitaly-config
+    - gitaly-git
+    - gitlab-gitaly-scripts
+cmd: "/scripts/process-wrapper"
+environment:
+  CONFIG_TEMPLATE_DIRECTORY: /etc/gitaly
+  LANG: C.UTF-8

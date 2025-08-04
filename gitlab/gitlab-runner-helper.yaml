@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - gitlab-runner-helper=18.2.1-r0 # repo=wolfi
+    - gitlab-runner-helper-oci-entrypoint
+    - gitlab-runner-helper-compat
+    - git-lfs
+    - git-lfs-config
+    - miniperl
+entrypoint:
+   command: tini -- /entrypoint
+cmd: sh
+vcs-url: https://gitlab.com/gitlab-org/build/CNG

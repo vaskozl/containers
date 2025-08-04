@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: gitlab/gitlab-base.yaml
+contents:
+  packages:
+    - gitlab-pages=18.2.1-r0 # repo=wolfi
+    - gitlab-pages-scripts
+cmd: /scripts/start-pages
+environment:
+  CONFIG_TEMPLATE_DIRECTORY: /etc/gitlab-pages
+

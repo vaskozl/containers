@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: gitlab/gitlab-base.yaml
+contents:
+  packages:
+    - gitlab-shell=18.2.1-r0 # repo=wolfi
+    - gitlab-shell-scripts-compat
+    - gitlab-shell-scripts
+cmd: "/scripts/process-wrapper"
+environment:
+  CONFIG_TEMPLATE_DIRECTORY: /srv/gitlab-shell
+  HOME: /home/git
+  LANG: C.UTF-8
+
