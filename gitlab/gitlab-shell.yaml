@@ -21,3 +21,8 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o755
+  - path: /etc/ssh
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
