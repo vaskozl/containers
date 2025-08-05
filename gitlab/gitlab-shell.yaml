@@ -28,3 +28,8 @@ paths:
     uid: 1000
     gid: 1000
     permissions: 0o755
+  - path: /srv/sshd
+    type: directory
+    uid: 1000
+    gid: 1000
+    permissions: 0o755
