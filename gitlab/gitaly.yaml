@@ -7,6 +7,8 @@ contents:
     - gitaly-compat
     - gitaly-config
     - gitaly-git
+    - gitlab-logger
+    - gitlab-logger-compat
     - gitlab-gitaly-scripts
 cmd: "/scripts/process-wrapper"
 environment:
