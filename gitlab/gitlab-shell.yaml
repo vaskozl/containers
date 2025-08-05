@@ -5,6 +5,8 @@ contents:
     - gitlab-shell=18.2.1-r0 # repo=wolfi
     - gitlab-shell-scripts-compat
     - gitlab-shell-scripts
+    - gitlab-logger
+    - gitlab-logger-compat
 cmd: "/scripts/process-wrapper"
 environment:
   CONFIG_TEMPLATE_DIRECTORY: /srv/gitlab-shell
