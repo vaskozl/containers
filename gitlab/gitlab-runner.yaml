@@ -7,8 +7,9 @@ contents:
     - gitlab-docker-machine
     - git-lfs
     - git-lfs-config
+    - dumb-init
 entrypoint:
-   command: tini -- /entrypoint
+   command: dumb-init -- /entrypoint
 cmd: run --user=gitlab-runner --working-directory=/home/gitlab-runner
 vcs-url: https://gitlab.com/gitlab-org/build/CNG
 accounts:

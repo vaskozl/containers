@@ -8,7 +8,8 @@ contents:
     - git-lfs
     - git-lfs-config
     - miniperl
+    - dumb-init
 entrypoint:
-   command: tini -- /entrypoint
+   command: dumb-init -- /entrypoint
 cmd: sh
 vcs-url: https://gitlab.com/gitlab-org/build/CNG
