@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - buildkitd=0.23.2-r2 # repo=wolfi
+    - buildkitd=0.23.2-r3 # repo=wolfi
     - git
 entrypoint:
   command: tini -- buildkitd
