@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - cert-manager-acmesolver=1.18.2-r1 # repo=wolfi
+    - cert-manager-acmesolver=1.18.2-r2 # repo=wolfi
 
 accounts:
   groups:
