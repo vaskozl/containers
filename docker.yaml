@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - docker=28.3.3-r1 # repo=wolfi
+    - docker=28.3.3-r2 # repo=wolfi
     - docker-cli-buildx
     - sed
     - jq
