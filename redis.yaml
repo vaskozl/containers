@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - redis=8.0.3-r0 # repo=alpine
+    - redis=8.2.0-r0 # repo=apks
 entrypoint:
   command: /usr/bin/redis-server
 cmd: --save "" --appendonly "no" --protected-mode "no"

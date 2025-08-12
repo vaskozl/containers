@@ -2,8 +2,10 @@
 contents:
   keyring:
     - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+    - https://apks.sko.ai/melange.rsa.pub
   repositories:
     - https://packages.wolfi.dev/os
+    - https://apks.sko.ai/
   packages:
     - wolfi-baselayout # repo=wolfi
     - busybox

@@ -29,6 +29,9 @@
     },
     "alpine": {
       "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
+    },
+    "apks": {
+      "defaultRegistryUrlTemplate": "http://apk-index:3000/{{packageName}}"
     }
   }
 }
