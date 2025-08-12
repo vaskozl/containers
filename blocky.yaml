@@ -4,5 +4,5 @@ contents:
   packages:
     - blocky=0.26.2-r0 # repo=apks
 entrypoint:
-   command: catatonit -- blocky
+   command: blocky
 vcs-url: https://github.com/0xERR0R/blocky

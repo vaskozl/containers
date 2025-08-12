@@ -4,5 +4,5 @@ contents:
   packages:
     - anubis=1.21.3-r0 # repo=apks
 entrypoint:
-   command: catatonit -- anubis
+   command: anubis
 vcs-url: https://github.com/TecharoHQ/anubis
