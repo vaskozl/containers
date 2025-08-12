@@ -2,7 +2,7 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitlab-exporter=18.2.1-r0 # repo=wolfi
+    - gitlab-exporter=18.2.1-r1 # repo=wolfi
     - gitlab-exporter-scripts
 cmd: /scripts/process-wrapper
 environment:
