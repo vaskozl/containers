@@ -1,4 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+layering:
+  strategy: origin
+  budget: 16
 contents:
   keyring:
     - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub

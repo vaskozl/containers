@@ -1,12 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
     - sonarr=4.0.15.2941-r0 # repo=alpine
 entrypoint:
-   command: catatonit -- /usr/lib/sonarr/bin/Sonarr
+   command: tini -- /usr/lib/sonarr/bin/Sonarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Sonarr/Sonarr
-archs:
-  - arm64
-  - amd64
