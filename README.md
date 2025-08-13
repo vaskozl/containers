@@ -4,48 +4,33 @@
 
 This repository provides Wolfi based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and custom packages built with melange. Containers are versioned based on package versions, similar to official Docker images.
 
-## Tagging Scheme
-
-We follow a versioning scheme of upstream archlinux packages. For example `ghcr.io/vaskozl/kubectl:1.28.2-1` is available as:
-
-* `ghcr.io/vaskozl/kubectl:latest`
-* `ghcr.io/vaskozl/kubectl:1.28.2-1`
-* `ghcr.io/vaskozl/kubectl:1.28.2`
-* `ghcr.io/vaskozl/kubectl:1.28`
-* `ghcr.io/vaskozl/kubectl:1`
-
-You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even releases pinned tags are not guarranteed to be immutable as the base is rebuilt weekly.
-
-The best and intenteded way to achieve immutability is to just pin the images by by sha256 digest.
-
 ## Features
 
-- **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`, thanks to the Arch Linux ARM project.
-
+- **Minimalist & Secure**: Built from scratch using apko with a focus on security and small footprint.
+- **Continuous Updates**: Regularly updated with the latest security patches.
+- **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`.
 - **Renovate compatible**: Containers have the `org.opencontainers.image.source` label to facilitate changelog population.
+- **Versioned Images**: The container images are versioned based on the package versions, making it easy to pin your application to a specific version.
+- **Busybox included**: Busybox is included for debugging and utility reasons in all images, while keeping them tiny.
 
-- **Consistent Builds**: To ensure consistency and avoid partial upgrades, we build all containers [apko](https://github.com/chainguard-dev/apko). All files in the containers are packaged and compatible with security scanners.
+## Tagging Scheme
 
-- **Minimal Footprint**: The containers are designed to be minimal and lightweight, only what's need is included.
+We follow a versioning scheme of upstream wolfi packages. For example `ghcr.io/vaskozl/kubectl:1.28.2-1` is available as:
 
-- **Versioned Images**: The container images are versioned based on the package versions, making it easy to pin your application to a specific version. This approach is similar to the way official Docker images are versioned.
+* `ghcr.io/vaskozl/kubectl:latest`
+* `ghcr.io/vaskozl/kubectl:1.33.1`
+* `ghcr.io/vaskozl/kubectl:1.33`
+* `ghcr.io/vaskozl/kubectl:1`
 
-- **Busybox included**: A minimal archlinux container has very few debugging tools installed, as such busybox is used to provide missing utils. Busybox utils are symliked in /opt/busybox/bin at the end of `$PATH` so GNU utils take presedence if installed, which you can easily do via pacman if needed!
+You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even releases pinned tags are **not** be immutable as they are rebuilt regularly to pick up the latest security fixes.
+
+The best and intenteded way to achieve immutability is to just pin the images by by sha256 digest.
 
 ## Usage
 
 ### Running the containers
 
-The containers do not provide custom entrypoint scripts, and users are expected to provide
-the command and arguments they desire.
-
-In most cases that simply means running the program that is installed with the argument that you desire.
-
-This helps keep everything simple and predictable and means you don't have to sift through a list environment variables just to figure out how to run the bespoke entrypoint. Configuration files can simply be mounted with volumes.
-```bash
-docker run -it ghcr.io/vaskozl/apk-tools bash
-docker run -it -p 1883 ghcr.io/vaskozl/mosquitto:2.0.18 mosquitto
-```
+The containers do not provide custom entrypoint scripts, and users are expected to provide the command and arguments they desire. In most cases that simply means running the program that is installed with the argument that you desire. This helps keep everything simple and predictable and means you don't have to sift through a list environment variables just to figure out how to run the bespoke entrypoint. Configuration files can simply be mounted with volumes.
 
 For more specific examples, check out [my manifests repository](https://github.com/vaskozl/home-infra).
 
