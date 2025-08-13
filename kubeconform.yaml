@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - kubeconform=0.6.6-r9 # repo=alpine
+    - kubeconform=0.6.6-r0 # repo=apks
     - kustomize
     - yq
 entrypoint:
-   command: catatonit -- kubeconform
+   command: kubeconform
 vcs-url: https://github.com/yannh/kubeconform
 archs:
   - arm64

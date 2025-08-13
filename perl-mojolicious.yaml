@@ -1,16 +1,13 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - perl-mojolicious=9.41-r0 # repo=alpine
+    - perl-mojolicious=9.41-r0 # repo=apks
     - perl-io-socket-ssl
     - perl-mime-lite
     - perl-json-xs
     - perl-path-tiny
     - kubectl
 entrypoint:
-   command: catatonit -- perl
+   command: tini -- perl
 vcs-url: https://github.com/mojolicious/mojo
-archs:
-  - arm64
-  - amd64

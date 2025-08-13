@@ -1,12 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - prowlarr=1.37.0.5076-r0 # repo=alpine
+    - prowlarr=1.37.0.5076-r0 # repo=apks
 entrypoint:
-   command: catatonit -- /usr/lib/prowlarr/bin/Prowlarr
+   command: tini -- /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Prowlarr/Prowlarr
-archs:
-  - arm64
-  - amd64

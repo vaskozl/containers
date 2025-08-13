@@ -1,10 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - perl-libwww=6.79-r0 # repo=alpine
+    - perl-libwww=6.79-r0 # repo=apks
 entrypoint:
-   command: catatonit -- perl
-archs:
-  - arm64
-  - amd64
+   command: tini -- perl
