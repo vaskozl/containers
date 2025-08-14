@@ -2,7 +2,7 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitlab-shell=18.2.1-r1 # repo=wolfi
+    - gitlab-shell=18.2.2-r0 # repo=wolfi
     - gitlab-shell-scripts-compat
     - gitlab-shell-scripts
     - gitlab-logger
