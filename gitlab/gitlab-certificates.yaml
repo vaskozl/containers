@@ -2,5 +2,5 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitlab-certificates=18.2.1-r2 # repo=wolfi
+    - gitlab-certificates=18.2.2-r0 # repo=wolfi
 cmd: /scripts/bundle-certificates
