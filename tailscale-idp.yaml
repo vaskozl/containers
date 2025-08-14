@@ -6,4 +6,4 @@ contents:
 entrypoint:
    command: tsidp
 cmd: --dir=/var/lib/tsidp
-vcs-url: https://github.com/0xERR0R/blocky
+vcs-url: https://github.com/tailscale/tailscale
