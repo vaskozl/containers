@@ -5,4 +5,4 @@ contents:
     - tailscale-operator=1.86.4-r1 # repo=apks
 entrypoint:
    command: operator
-vcs-url: https://github.com/0xERR0R/blocky
+vcs-url: https://github.com/tailscale/tailscale
