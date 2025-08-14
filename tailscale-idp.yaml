@@ -5,5 +5,5 @@ contents:
     - tailscale-idp=1.86.4-r2 # repo=apks
 entrypoint:
    command: tsidp
-cmd: --dir=/var/lib/tsidp
+cmd: -dir=/var/lib/tsidp
 vcs-url: https://github.com/tailscale/tailscale
