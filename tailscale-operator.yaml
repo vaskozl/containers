@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - tailscale-operator=1.86.4-r1 # repo=apks
+    - tailscale-operator=1.86.4-r2 # repo=apks
 entrypoint:
    command: operator
 vcs-url: https://github.com/tailscale/tailscale

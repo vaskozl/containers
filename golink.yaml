@@ -5,5 +5,5 @@ contents:
     - golink=1.0.0-r0 # repo=apks
 entrypoint:
    command: golink
-cmd: "--sqlitedb=/data/golink.db --verbose"
+cmd: "--sqlitedb=/home/nonroot/golink.db --verbose"
 vcs-url: https://github.com/tailscale/golink
