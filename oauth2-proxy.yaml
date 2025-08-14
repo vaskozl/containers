@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: busybox.yaml
+contents:
+  packages:
+    - oauth2-proxy=7.11.0-r1 # repo=wolfi
+entrypoint:
+  command: oauth2-proxy
+cmd: run
+vcs-url: https://github.com/oauth2-proxy/oauth2-proxy
