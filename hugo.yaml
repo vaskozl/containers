@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - hugo=0.148.2-r0 # repo=wolfi
+    - hugo=0.148.2-r1 # repo=wolfi
 entrypoint:
    command: tini -- hugo
 vcs-url: https://github.com/gohugoio/hugo
