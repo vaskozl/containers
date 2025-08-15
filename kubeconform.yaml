@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - kubeconform=0.6.6-r0 # repo=apks
+    - kubeconform=0.7.0-r0 # repo=apks
     - kustomize
     - yq
 entrypoint:
