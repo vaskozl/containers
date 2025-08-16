@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - renovate=41.57.1-r0 # repo=wolfi
+    - renovate=41.74.0-r0 # repo=wolfi
 entrypoint:
    command: tini -- renovate
 vcs-url: https://github.com/renovatebot/renovate
