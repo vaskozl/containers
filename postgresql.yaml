@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - postgresql=17.5-r11 # repo=wolfi
+    - postgresql=17.6-r0 # repo=wolfi
     - postgresql-oci-entrypoint
     - postgresql-client
 archs:
