@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - k8s-sidecar=1.30.9-r0 # repo=wolfi
+entrypoint:
+  command: python -u /usr/share/app/sidecar.py
+work-dir: /usr/share/grafana
+environment:
+  PYTHONUNBUFFERED: '1'
+vcs-url: https://github.com/kiwigrid/k8s-sidecar
