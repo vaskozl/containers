@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - tailscale=1.86.4-r2 # repo=apks
+    - iptables
+    - ip6tables
+    - iproute2
+entrypoint:
+   command: containerboot
+vcs-url: https://github.com/tailscale/tailscale
