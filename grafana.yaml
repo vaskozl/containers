@@ -3,6 +3,7 @@ include: wolfi.yaml
 contents:
   packages:
     - grafana=12.1.0-r13 # repo=wolfi
+    - grafana-oci-compat
 entrypoint:
   command: /opt/grafana/run.sh
 work-dir: /usr/share/grafana
