@@ -9,6 +9,8 @@ contents:
     - perl-path-tiny
     - kubectl
     - grype
+    - perl-types-serialiser
+    - perl-common-sense
 entrypoint:
    command: tini -- perl
 vcs-url: https://github.com/mojolicious/mojo
