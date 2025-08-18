@@ -8,6 +8,7 @@ contents:
     - perl-json-xs
     - perl-path-tiny
     - kubectl
+    - grype
 entrypoint:
    command: tini -- perl
 vcs-url: https://github.com/mojolicious/mojo
