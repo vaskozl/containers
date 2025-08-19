@@ -3,14 +3,17 @@ include: wolfi.yaml
 contents:
   packages:
     - perl-mojolicious=9.41-r0 # repo=apks
-    - perl-io-socket-ssl
-    - perl-mime-lite
-    - perl-json-xs
-    - perl-path-tiny
-    - kubectl
-    - grype
-    - perl-types-serialiser
     - perl-common-sense
+    - perl-email-date-format
+    - perl-io-socket-ssl
+    - perl-json-xs
+    - perl-mime-lite
+    - perl-mime-types
+    - perl-path-tiny
+    - perl-timedate
+    - perl-types-serialiser
+    - grype
+    - kubectl
 entrypoint:
    command: tini -- perl
 vcs-url: https://github.com/mojolicious/mojo
