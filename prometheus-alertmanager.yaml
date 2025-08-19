@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - prometheus-alertmanager=0.28.1-r9
+entrypoint:
+  command: alertmanager
+cmd: --config.file=/etc/alertmanager/alertmanager.yml --storage.path=/alertmanager
+work-dir: /usr/share/grafana
+vcs-url: https://github.com/prometheus/alertmanager
