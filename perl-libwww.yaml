@@ -2,6 +2,6 @@
 include: wolfi.yaml
 contents:
   packages:
-    - perl-libwww=6.79-r0 # repo=apks
+    - perl-libwww=6.79-r0 # repo=wolfi
 entrypoint:
    command: tini -- perl
