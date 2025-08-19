@@ -2,7 +2,7 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitlab-container-registry=18.2.2-r0 # repo=wolfi
+    - gitlab-container-registry=18.2.3-r0 # repo=wolfi
     - gitlab-container-registry-scripts
 cmd: /scripts/process-wrapper
 environment:
