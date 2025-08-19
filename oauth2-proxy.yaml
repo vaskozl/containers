@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
     - oauth2-proxy=7.11.0-r2 # repo=wolfi
