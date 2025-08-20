@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - grype=0.98.0-r0 # repo=wolfi
+    - grype=0.98.0-r1 # repo=wolfi
     - kubectl
 entrypoint:
    command: tini -- grype
