@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - gitlab-base=18.2.3-r0 # repo=wolfi
+    - gitlab-base=18.2.4-r0 # repo=wolfi
 entrypoint:
    command: /scripts/entrypoint.sh
 vcs-url: https://gitlab.com/gitlab-org/build/CNG
