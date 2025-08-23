@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - redis=8.2.0-r0 # repo=apks
+    - redis=8.2.1-r0 # repo=apks
 entrypoint:
   command: /usr/bin/redis-server
 cmd: --save "" --appendonly "no" --protected-mode "no"
