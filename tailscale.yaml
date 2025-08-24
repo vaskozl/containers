@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - tailscale=1.86.4-r2 # repo=apks
+    - tailscale=1.86.5-r2 # repo=apks
     - iptables
     - ip6tables
     - iproute2
