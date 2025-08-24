@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - tailscale-idp=1.86.4-r2 # repo=apks
+    - tailscale-idp=1.86.5-r2 # repo=apks
 entrypoint:
    command: tsidp
 cmd: -dir=/var/lib/tsidp
