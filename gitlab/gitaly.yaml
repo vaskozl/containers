@@ -10,6 +10,7 @@ contents:
     - gitlab-logger
     - gitlab-logger-compat
     - gitlab-gitaly-scripts
+    - openssh-client
 cmd: "/scripts/process-wrapper"
 environment:
   CONFIG_TEMPLATE_DIRECTORY: /etc/gitaly
