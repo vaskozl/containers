@@ -1,12 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: wolfi.yaml
 contents:
   packages:
-    - lidarr=2.12.4.4658-r0 # repo=alpine
+    - lidarr=2.12.4.4658-r0 # repo=apks
 entrypoint:
-   command: catatonit -- /usr/lib/lidarr/bin/Lidarr
+   command: tini -- /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Lidarr/Lidarr
-archs:
-  - arm64
-  - amd64
