@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi.yaml
+contents:
+  packages:
+    - renovate-apk-indexer=0.1.0-r0 # repo=apks
+entrypoint:
+   command: renovate-apk-indexer
+vcs-url: https://github.com/hown3d/renovate-apk-indexer
