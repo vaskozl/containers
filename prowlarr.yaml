@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - prowlarr=1.37.0.5076-r0 # repo=apks
+    - prowlarr=2.0.5.5160-r0 # repo=apks
 entrypoint:
    command: tini -- /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config
