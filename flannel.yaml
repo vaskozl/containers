@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - flannel=0.27.2-r3 # repo=apks
+    - flannel=0.27.2-r99 # repo=apks
 entrypoint:
    command: flanneld
 vcs-url: https://github.com/flannel-io/cni-plugin
