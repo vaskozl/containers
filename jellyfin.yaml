@@ -9,7 +9,7 @@ contents:
     - onevpl-intel-gpu
     - libva-intel-driver
 entrypoint:
-  command: catatonit -- jellyfin
+  command: jellyfin
 environment:
   JELLYFIN_CACHE_DIR: /cache
   JELLYFIN_CONFIG_DIR: /config/config

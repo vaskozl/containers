@@ -59,4 +59,4 @@ contents:
     - websocat
     - zsh
 entrypoint:
-   command: catatonit -- zsh
+   command: zsh

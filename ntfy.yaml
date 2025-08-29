@@ -4,6 +4,6 @@ contents:
   packages:
     - ntfy=2.14.0-r1 # repo=alpine
 entrypoint:
-  command: catatonit -- ntfy
+  command: ntfy
 cmd: serve --no-log-dates
 vcs-url: https://github.com/binwiederhier/ntfy

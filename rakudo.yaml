@@ -7,5 +7,5 @@ contents:
     - alpine-sdk
     - openssl-dev
 entrypoint:
-  command: catatonit -- raku
+  command: raku
 vcs-url: https://github.com/rakudo/rakudo

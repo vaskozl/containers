@@ -4,5 +4,5 @@ contents:
   packages:
     - v2ray=5.37.0-r1 # repo=alpine
 entrypoint:
-   command: catatonit -- v2ray
+   command: v2ray
 vcs-url: https://github.com/v2ray/v2ray-core

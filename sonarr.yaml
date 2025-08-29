@@ -4,6 +4,6 @@ contents:
   packages:
     - sonarr=4.0.15.2941-r0 # repo=apks
 entrypoint:
-   command: catatonit -- /usr/lib/sonarr/bin/Sonarr
+   command: /usr/lib/sonarr/bin/Sonarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Sonarr/Sonarr

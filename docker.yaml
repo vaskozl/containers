@@ -9,5 +9,5 @@ contents:
     - skopeo
     - git
 entrypoint:
-   command: catatonit -- sh
+   command: sh
 vcs-url: https://github.com/docker/cli

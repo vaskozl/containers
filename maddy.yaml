@@ -4,6 +4,6 @@ contents:
   packages:
     - maddy=0.8.1-r5 # repo=alpine
 entrypoint:
-  command: catatonit -- maddy
+  command: maddy
 cmd: run
 vcs-url: https://github.com/foxcpp/maddy

@@ -4,5 +4,5 @@ contents:
   packages:
     - calibre=8.7.0-r1 # repo=alpine
 entrypoint:
-   command: catatonit -- calibre-server
+   command: calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre

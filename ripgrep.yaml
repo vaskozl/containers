@@ -6,5 +6,5 @@ contents:
     - gzip
     - jq
 entrypoint:
-   command: catatonit -- rg
+   command: rg
 vcs-url: https://github.com/BurntSushi/ripgrep

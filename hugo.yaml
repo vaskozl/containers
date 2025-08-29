@@ -4,7 +4,7 @@ contents:
   packages:
     - hugo=0.148.2-r1 # repo=wolfi
 entrypoint:
-   command: catatonit -- hugo
+   command: hugo
 vcs-url: https://github.com/gohugoio/hugo
 work-dir: /hugo
 accounts:

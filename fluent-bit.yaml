@@ -4,7 +4,7 @@ contents:
   packages:
     - fluent-bit=4.0.8-r2 # repo=wolfi
 entrypoint:
-   command: catatonit -- fluent-bit
+   command: fluent-bit
 cmd: --config=/fluent-bit/etc/fluent-bit.conf
 vcs-url: https://github.com/fluent/fluent-bit
 accounts:

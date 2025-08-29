@@ -8,8 +8,6 @@ contents:
     - busybox # repo=alpine
     - alpine-baselayout
     - ca-certificates-bundle
-    - catatonit
-
 accounts:
   groups:
     - groupname: nonroot

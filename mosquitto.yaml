@@ -4,5 +4,5 @@ contents:
   packages:
     - mosquitto=2.0.22-r2 # repo=wolfi
 entrypoint:
-   command: catatonit -- /usr/sbin/mosquitto
+   command: /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto

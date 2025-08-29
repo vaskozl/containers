@@ -9,5 +9,5 @@ contents:
     - wolfi-base
     - yq
 entrypoint:
-   command: catatonit -- /bin/sh
+   command: /bin/sh
 vcs-url: https://github.com/chainguard-dev/apko

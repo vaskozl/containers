@@ -4,5 +4,5 @@ contents:
   packages:
     - logrotate=3.22.0-r40 # repo=wolfi
 entrypoint:
-   command: catatonit -- logrotate
+   command: logrotate
 vcs-url: https://github.com/logrotate/logrotate
