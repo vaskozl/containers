@@ -6,6 +6,3 @@ contents:
 entrypoint:
    command: catatonit -- calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre
-archs:
-  - arm64
-  - amd64

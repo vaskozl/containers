@@ -7,6 +7,3 @@ entrypoint:
    command: catatonit -- nice -n10 ionice -c3 qbittorrent-nox
 cmd: --webui-port='55555' --confirm-legal-notice
 vcs-url: https://github.com/qbittorrent/qBittorrent
-archs:
-  - arm64
-  - amd64

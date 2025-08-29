@@ -4,6 +4,6 @@ contents:
   packages:
     - prowlarr=2.0.5.5160-r0 # repo=apks
 entrypoint:
-   command: tini -- /usr/lib/prowlarr/bin/Prowlarr
+   command: catatonit -- /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Prowlarr/Prowlarr

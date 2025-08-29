@@ -4,5 +4,5 @@ contents:
   packages:
     - gitlab-agent=18.2.1-r0 # repo=wolfi
 entrypoint:
-   command: tini -- /usr/bin/agentk
+   command: catatonit -- /usr/bin/agentk
 vcs-url: https://gitlab.com/gitlab-org/cluster-integration/gitlab-agent

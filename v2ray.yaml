@@ -6,6 +6,3 @@ contents:
 entrypoint:
    command: catatonit -- v2ray
 vcs-url: https://github.com/v2ray/v2ray-core
-archs:
-  - arm64
-  - amd64

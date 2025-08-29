@@ -60,6 +60,3 @@ contents:
     - zsh
 entrypoint:
    command: catatonit -- zsh
-archs:
-  - arm64
-  - amd64

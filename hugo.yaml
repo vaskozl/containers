@@ -4,11 +4,8 @@ contents:
   packages:
     - hugo=0.148.2-r1 # repo=wolfi
 entrypoint:
-   command: tini -- hugo
+   command: catatonit -- hugo
 vcs-url: https://github.com/gohugoio/hugo
-archs:
-  - arm64
-  - amd64
 work-dir: /hugo
 accounts:
   run-as: "65532"

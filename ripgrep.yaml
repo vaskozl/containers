@@ -6,8 +6,5 @@ contents:
     - gzip
     - jq
 entrypoint:
-   command: tini -- rg
+   command: catatonit -- rg
 vcs-url: https://github.com/BurntSushi/ripgrep
-archs:
-  - arm64
-  - amd64

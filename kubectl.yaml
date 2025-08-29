@@ -4,8 +4,5 @@ contents:
   packages:
     - kubectl=1.33.4-r1 # repo=wolfi
 entrypoint:
-   command: tini -- kubectl
+   command: catatonit -- kubectl
 vcs-url: https://github.com/kubernetes/kubectl
-archs:
-  - arm64
-  - amd64

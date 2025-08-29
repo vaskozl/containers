@@ -4,8 +4,5 @@ contents:
   packages:
     - mosquitto=2.0.22-r2 # repo=wolfi
 entrypoint:
-   command: tini -- /usr/sbin/mosquitto
+   command: catatonit -- /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto
-archs:
-  - arm64
-  - amd64

@@ -5,7 +5,4 @@ contents:
     - grype=0.98.0-r1 # repo=wolfi
     - kubectl
 entrypoint:
-   command: tini -- grype
-archs:
-  - arm64
-  - amd64
+   command: catatonit -- grype

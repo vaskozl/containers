@@ -7,6 +7,3 @@ entrypoint:
   command: catatonit -- ntfy
 cmd: serve --no-log-dates
 vcs-url: https://github.com/binwiederhier/ntfy
-archs:
-  - arm64
-  - amd64

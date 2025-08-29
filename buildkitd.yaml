@@ -5,10 +5,7 @@ contents:
     - buildkitd=0.23.2-r3 # repo=wolfi
     - git
 entrypoint:
-  command: tini -- buildkitd
+  command: catatonit -- buildkitd
 accounts:
   run-as: root
 vcs-url: https://github.com/moby/buildkit
-archs:
-  - arm64
-  - amd64

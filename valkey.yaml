@@ -5,7 +5,7 @@ contents:
     - valkey=8.1.3-r3 # repo=wolfi
     - valkey-cli
 entrypoint:
-  command: tini -- valkey-server
+  command: catatonit -- valkey-server
 cmd: --save "" --appendonly "no" --protected-mode "no"
 vcs-url: https://github.com/valkey-io/valkey
 work-dir: /data

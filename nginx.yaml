@@ -5,7 +5,7 @@ contents:
     - nginx=1.29.1-r0 # repo=wolfi
     - nginx-package-config
 entrypoint:
-   command: tini -- /usr/sbin/nginx
+   command: catatonit -- /usr/sbin/nginx
 cmd: -c /etc/nginx/nginx.conf -e /dev/stderr -g "daemon off;"
 stop-signal: SIGQUIT
 accounts:
@@ -37,6 +37,3 @@ paths:
     gid: 65532
     permissions: 511
 vcs-url: https://github.com/nginx/nginx
-archs:
-  - arm64
-  - amd64

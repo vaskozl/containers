@@ -5,9 +5,6 @@ contents:
     - postgresql=17.6-r0 # repo=wolfi
     - postgresql-oci-entrypoint
     - postgresql-client
-archs:
-  - arm64
-  - amd64
 entrypoint:
   command: /usr/bin/docker-entrypoint.sh postgres
 work-dir: /home/postgres

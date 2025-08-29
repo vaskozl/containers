@@ -4,8 +4,5 @@ contents:
   packages:
     - chromium=139.0.7258.138-r0 # repo=wolfi
 entrypoint:
-   command: tini -- chromium-browser
+   command: catatonit -- chromium-browser
 cmd: --headless --no-sandbox --disable-gpu
-archs:
-  - arm64
-  - amd64

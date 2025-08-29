@@ -4,10 +4,7 @@ contents:
   packages:
     - apk-tools=2.14.10-r8 # repo=wolfi
 entrypoint:
-   command: tini --
+   command: catatonit --
 cmd: /bin/sh -l
-archs:
-  - arm64
-  - amd64
 accounts:
   run-as: "0"

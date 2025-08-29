@@ -4,11 +4,8 @@ contents:
   packages:
     - fluent-bit=4.0.8-r2 # repo=wolfi
 entrypoint:
-   command: tini -- fluent-bit
+   command: catatonit -- fluent-bit
 cmd: --config=/fluent-bit/etc/fluent-bit.conf
 vcs-url: https://github.com/fluent/fluent-bit
 accounts:
   run-as: "0"
-archs:
-  - arm64
-  - amd64

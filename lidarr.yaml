@@ -4,6 +4,6 @@ contents:
   packages:
     - lidarr=2.12.4.4658-r0 # repo=apks
 entrypoint:
-   command: tini -- /usr/lib/lidarr/bin/Lidarr
+   command: catatonit -- /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Lidarr/Lidarr

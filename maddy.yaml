@@ -7,6 +7,3 @@ entrypoint:
   command: catatonit -- maddy
 cmd: run
 vcs-url: https://github.com/foxcpp/maddy
-archs:
-  - arm64
-  - amd64

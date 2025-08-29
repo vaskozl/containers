@@ -4,8 +4,5 @@ contents:
   packages:
     - logrotate=3.22.0-r40 # repo=wolfi
 entrypoint:
-   command: tini -- logrotate
+   command: catatonit -- logrotate
 vcs-url: https://github.com/logrotate/logrotate
-archs:
-  - arm64
-  - amd64

@@ -17,8 +17,6 @@ accounts:
   groups:
     - groupname: mysql
       gid: 65532
-archs:
-  - arm64
 paths:
   - path: /var/lib/mysql
     type: directory

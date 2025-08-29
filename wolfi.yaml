@@ -13,8 +13,7 @@ contents:
     - wolfi-baselayout # repo=wolfi
     - busybox
     - ca-certificates-bundle
-    - tini
-
+    - catatonit
 accounts:
   groups:
     - groupname: nonroot

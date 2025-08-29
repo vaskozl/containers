@@ -9,8 +9,5 @@ contents:
     - skopeo
     - git
 entrypoint:
-   command: tini -- sh
+   command: catatonit -- sh
 vcs-url: https://github.com/docker/cli
-archs:
-  - arm64
-  - amd64

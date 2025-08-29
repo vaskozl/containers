@@ -10,6 +10,3 @@ stop-signal: SIGQUIT
 accounts:
   run-as: "0"
 vcs-url: https://github.com/openresty
-archs:
-  - arm64
-  - amd64

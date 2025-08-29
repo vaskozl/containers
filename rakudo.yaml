@@ -9,6 +9,3 @@ contents:
 entrypoint:
   command: catatonit -- raku
 vcs-url: https://github.com/rakudo/rakudo
-archs:
-  - arm64
-  - amd64
