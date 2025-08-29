@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - k8s-sidecar=1.30.9-r0 # repo=wolfi
+    - k8s-sidecar=1.30.10-r0 # repo=wolfi
 entrypoint:
   command: python -u /usr/share/app/sidecar.py
 work-dir: /usr/share/grafana
