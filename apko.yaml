@@ -1,12 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
 contents:
-  keyring:
-    - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
-  repositories:
-    - https://packages.wolfi.dev/os
   packages:
     - apko=0.30.6-r0
-    - wolfi-base
     - yq
 entrypoint:
    command: /bin/sh
