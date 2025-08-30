@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - postgresql=17.6-r0 # repo=wolfi
+    - postgresql=17.6-r0
     - postgresql-oci-entrypoint
     - postgresql-client
 entrypoint:

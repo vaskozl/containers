@@ -15,8 +15,10 @@
     {
       "customType": "regex",
       "managerFilePatterns": ["/.+\\.ya?ml$/"],
+      "matchStringsStrategy": "combination",
       "matchStrings": [
-        "- (?<apkPkg>.*?)=(?<currentValue>.*?) # repo=(?<repo>.*)"
+        "include: (?<repo>\w+).yaml",
+        "- (?<apkPkg>.*?)=(?<currentValue>.*?)"
       ],
       "depNameTemplate": "{{#if repo}}{{{apkPkg}}}{{else}}alpine_edge/{{{apkPkg}}}{{/if}}",
       "datasourceTemplate": "{{#if repo}}custom.{{{repo}}}{{else}}repology{{/if}}",
@@ -24,14 +26,11 @@
     }
   ],
   "customDatasources": {
-    "wolfi": {
+    "wolfi-base": {
       "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
     },
-    "alpine": {
+    "alpine-base": {
       "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
-    },
-    "apks": {
-      "defaultRegistryUrlTemplate": "http://apk-index:3000/{{packageName}}"
     }
   }
 }

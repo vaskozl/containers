@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - renovate=41.90.1-r0 # repo=wolfi
+    - renovate=41.90.1-r0
     - go
 entrypoint:
    command: renovate

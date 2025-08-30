@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - oauth2-proxy=7.12.0-r0 # repo=wolfi
+    - oauth2-proxy=7.12.0-r0
 entrypoint:
   command: oauth2-proxy
 cmd: run

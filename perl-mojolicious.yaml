@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - perl-mojolicious=9.41-r0 # repo=apks
+    - perl-mojolicious=9.41-r0
     - perl-common-sense
     - perl-email-date-format
     - perl-io-socket-ssl

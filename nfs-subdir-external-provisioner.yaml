@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - nfs-subdir-external-provisioner=4.0.18-r24 # repo=wolfi
+    - nfs-subdir-external-provisioner=4.0.18-r24
 
 accounts:
   run-as: '0'

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - tailscale-operator=1.86.5-r2 # repo=apks
+    - tailscale-operator=1.86.5-r2
 entrypoint:
    command: operator
 vcs-url: https://github.com/tailscale/tailscale

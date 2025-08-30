@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - prowlarr=2.0.5.5160-r0 # repo=apks
+    - prowlarr=2.0.5.5160-r0
 entrypoint:
    command: /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config

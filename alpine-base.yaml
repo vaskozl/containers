@@ -5,7 +5,7 @@ contents:
     - https://dl-cdn.alpinelinux.org/alpine/edge/community
     - https://dl-cdn.alpinelinux.org/alpine/edge/testing
   packages:
-    - busybox # repo=alpine
+    - busybox
     - alpine-baselayout
     - ca-certificates-bundle
 accounts:

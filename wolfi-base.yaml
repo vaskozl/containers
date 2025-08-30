@@ -10,7 +10,7 @@ contents:
     - https://packages.wolfi.dev/os
     - https://apks.sko.ai/
   packages:
-    - wolfi-baselayout # repo=wolfi
+    - wolfi-baselayout
     - busybox
     - ca-certificates-bundle
 accounts:

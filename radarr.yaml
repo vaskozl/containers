@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - radarr=5.26.2.10099-r0 # repo=apks
+    - radarr=5.26.2.10099-r0
 entrypoint:
    command: /usr/lib/radarr/bin/Radarr
 cmd: -nobrowser -data=/config

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - logrotate=3.22.0-r40 # repo=wolfi
+    - logrotate=3.22.0-r40
 entrypoint:
    command: logrotate
 vcs-url: https://github.com/logrotate/logrotate

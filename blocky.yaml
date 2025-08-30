@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - blocky=0.26.2-r0 # repo=apks
+    - blocky=0.26.2-r0
 entrypoint:
    command: blocky
 vcs-url: https://github.com/0xERR0R/blocky

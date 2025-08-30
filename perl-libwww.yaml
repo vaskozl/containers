@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - perl-libwww=6.79-r0 # repo=wolfi
+    - perl-libwww=6.79-r0
 entrypoint:
    command: perl

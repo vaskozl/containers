@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - apk-tools=2.14.10-r8 # repo=wolfi
+    - apk-tools=2.14.10-r8
 entrypoint:
    command: catatonit --
 cmd: /bin/sh -l

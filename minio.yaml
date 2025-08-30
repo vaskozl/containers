@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - minio=0.20250723.155402-r1 # repo=wolfi
+    - minio=0.20250723.155402-r1
     - mc
 entrypoint:
    command: minio

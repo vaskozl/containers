@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - anubis=1.21.3-r0 # repo=apks
+    - anubis=1.21.3-r0
 entrypoint:
    command: anubis
 vcs-url: https://github.com/TecharoHQ/anubis

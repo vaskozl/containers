@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - flannel=0.27.2-r99 # repo=apks
+    - flannel=0.27.2-r99
 entrypoint:
    command: flanneld
 vcs-url: https://github.com/flannel-io/cni-plugin

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - fluent-bit=4.0.8-r2 # repo=wolfi
+    - fluent-bit=4.0.8-r2
 entrypoint:
    command: fluent-bit
 cmd: --config=/fluent-bit/etc/fluent-bit.conf

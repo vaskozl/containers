@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - lidarr=2.12.4.4658-r0 # repo=apks
+    - lidarr=2.12.4.4658-r0
 entrypoint:
    command: /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config

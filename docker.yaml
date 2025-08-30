@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - docker=28.3.3-r3 # repo=wolfi
+    - docker=28.3.3-r3
     - docker-cli-buildx
     - sed
     - jq

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: busybox.yaml
+include: alpine.yaml
 contents:
   packages:
-    - rakudo==2025.04-r0 # repo=alpine
+    - rakudo==2025.04-r0
     - zef
     - alpine-sdk
     - openssl-dev

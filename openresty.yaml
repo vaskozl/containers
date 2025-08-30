@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - openresty=1.27.1.2-r3 # repo=wolfi
+    - openresty=1.27.1.2-r3
 entrypoint:
    command: /usr/bin/openresty
 cmd: -e /dev/stderr -g "daemon off;"

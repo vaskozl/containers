@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - kubectl=1.33.4-r1 # repo=wolfi
+    - kubectl=1.33.4-r1
 entrypoint:
    command: kubectl
 vcs-url: https://github.com/kubernetes/kubectl

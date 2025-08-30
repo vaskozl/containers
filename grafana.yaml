@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - grafana=12.1.1-r1 # repo=wolfi
+    - grafana=12.1.1-r1
     - grafana-oci-compat
 entrypoint:
   command: /opt/grafana/run.sh
