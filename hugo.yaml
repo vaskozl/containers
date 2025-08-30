@@ -2,7 +2,7 @@
 include: wolfi.yaml
 contents:
   packages:
-    - hugo=0.148.2-r1 # repo=wolfi
+    - hugo=0.149.0-r0 # repo=wolfi
 entrypoint:
    command: hugo
 vcs-url: https://github.com/gohugoio/hugo
