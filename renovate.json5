@@ -18,10 +18,9 @@
       "matchStringsStrategy": "combination",
       "matchStrings": [
         "include: (?<repo>\w+).yaml",
-        "- (?<apkPkg>.*?)=(?<currentValue>.*?)"
+        "- (?<depName>.*?)=(?<currentValue>.*?)"
       ],
-      "depNameTemplate": "{{#if repo}}{{{apkPkg}}}{{else}}alpine_edge/{{{apkPkg}}}{{/if}}",
-      "datasourceTemplate": "{{#if repo}}custom.{{{repo}}}{{else}}repology{{/if}}",
+      "datasourceTemplate": "custom.{{{repo}}}",
       "versioningTemplate": "loose"
     }
   ],
