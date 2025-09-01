@@ -5,4 +5,6 @@ contents:
     - kube-network-policies=0.9.1-r0
 entrypoint:
   command: kube-network-policies
+accounts:
+  run-as: "0"
 vcs-url: https://github.com/kubernetes-sigs/kube-network-policies
