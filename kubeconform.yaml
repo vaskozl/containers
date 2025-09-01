@@ -6,5 +6,5 @@ contents:
     - kustomize
     - yq
 entrypoint:
-   command: kubeconform
+  command: kubeconform
 vcs-url: https://github.com/yannh/kubeconform

@@ -13,6 +13,5 @@ paths:
   - path: /work
     type: directory
     permissions: 511
-
 accounts:
   run-as: '0'

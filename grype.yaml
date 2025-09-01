@@ -5,4 +5,4 @@ contents:
     - grype=0.98.0-r1
     - kubectl
 entrypoint:
-   command: grype
+  command: grype

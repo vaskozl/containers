@@ -58,4 +58,4 @@ contents:
     - websocat
     - zsh
 entrypoint:
-   command: zsh
+  command: zsh

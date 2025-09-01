@@ -4,4 +4,4 @@ contents:
   packages:
     - perl-libwww=6.79-r0
 entrypoint:
-   command: perl
+  command: perl

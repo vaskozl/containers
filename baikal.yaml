@@ -18,6 +18,6 @@ contents:
     - php-xmlreader
     - php-xmlwriter
 entrypoint:
-   command: catatonit -g --
+  command: catatonit -g --
 cmd: sh -c '/usr/sbin/php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
 vcs-url: https://github.com/sabre-io/Baikal

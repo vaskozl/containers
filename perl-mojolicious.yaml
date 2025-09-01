@@ -15,5 +15,5 @@ contents:
     - grype
     - kubectl
 entrypoint:
-   command: perl
+  command: perl
 vcs-url: https://github.com/mojolicious/mojo

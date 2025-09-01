@@ -4,7 +4,7 @@ contents:
   packages:
     - apk-tools=2.14.10-r8
 entrypoint:
-   command: catatonit --
+  command: catatonit --
 cmd: /bin/sh -l
 accounts:
   run-as: "0"

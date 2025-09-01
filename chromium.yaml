@@ -4,5 +4,5 @@ contents:
   packages:
     - chromium=139.0.7258.154-r0
 entrypoint:
-   command: chromium-browser
+  command: chromium-browser
 cmd: --headless --no-sandbox --disable-gpu

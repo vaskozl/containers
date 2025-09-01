@@ -4,5 +4,5 @@ contents:
   packages:
     - kubectl=1.33.4-r1
 entrypoint:
-   command: kubectl
+  command: kubectl
 vcs-url: https://github.com/kubernetes/kubectl

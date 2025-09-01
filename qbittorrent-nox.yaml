@@ -4,6 +4,6 @@ contents:
   packages:
     - qbittorrent-nox=5.1.2-r1
 entrypoint:
-   command: nice -n10 ionice -c3 qbittorrent-nox
+  command: nice -n10 ionice -c3 qbittorrent-nox
 cmd: --webui-port='55555' --confirm-legal-notice
 vcs-url: https://github.com/qbittorrent/qBittorrent

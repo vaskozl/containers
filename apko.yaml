@@ -5,5 +5,5 @@ contents:
     - apko=0.30.6-r0
     - yq
 entrypoint:
-   command: /bin/sh
+  command: /bin/sh
 vcs-url: https://github.com/chainguard-dev/apko

@@ -4,6 +4,6 @@ contents:
   packages:
     - lidarr=2.12.4.4658-r0
 entrypoint:
-   command: /usr/lib/lidarr/bin/Lidarr
+  command: /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config
 vcs-url: https://github.com/Lidarr/Lidarr

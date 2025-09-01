@@ -4,7 +4,7 @@ contents:
   packages:
     - hugo=0.149.0-r0
 entrypoint:
-   command: hugo
+  command: hugo
 vcs-url: https://github.com/gohugoio/hugo
 work-dir: /hugo
 accounts:

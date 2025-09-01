@@ -5,5 +5,5 @@ contents:
     - minio=0.20250723.155402-r1
     - mc
 entrypoint:
-   command: minio
+  command: minio
 vcs-url: https://github.com/minio/minio

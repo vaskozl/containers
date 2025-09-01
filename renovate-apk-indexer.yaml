@@ -4,5 +4,5 @@ contents:
   packages:
     - renovate-apk-indexer=0.1.0-r0
 entrypoint:
-   command: renovate-apk-indexer
+  command: renovate-apk-indexer
 vcs-url: https://github.com/hown3d/renovate-apk-indexer

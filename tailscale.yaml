@@ -7,5 +7,5 @@ contents:
     - ip6tables
     - iproute2
 entrypoint:
-   command: containerboot
+  command: containerboot
 vcs-url: https://github.com/tailscale/tailscale

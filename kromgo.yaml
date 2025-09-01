@@ -4,5 +4,5 @@ contents:
   packages:
     - kromgo=0.7.1-r0
 entrypoint:
-   command: kromgo
+  command: kromgo
 vcs-url: https://github.com/0xERR0R/blocky

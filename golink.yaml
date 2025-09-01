@@ -4,6 +4,6 @@ contents:
   packages:
     - golink=1.0.0-r0
 entrypoint:
-   command: golink
+  command: golink
 cmd: "--sqlitedb=/home/nonroot/golink.db --verbose"
 vcs-url: https://github.com/tailscale/golink

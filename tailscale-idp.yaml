@@ -4,7 +4,7 @@ contents:
   packages:
     - tailscale-idp=1.86.5-r2
 entrypoint:
-   command: tsidp
+  command: tsidp
 cmd: -dir=/var/lib/tsidp
 work-dir: /var/lib/tsidp
 vcs-url: https://github.com/tailscale/tailscale

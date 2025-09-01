@@ -5,5 +5,5 @@ contents:
     - renovate=41.90.1-r0
     - go
 entrypoint:
-   command: renovate
+  command: renovate
 vcs-url: https://github.com/renovatebot/renovate
