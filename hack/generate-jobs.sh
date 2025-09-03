@@ -44,17 +44,18 @@ publish:$PKG:
       - hack/generate-jobs.sh
       - $file
   variables:
-    TAG: $VERSION
+    VERSION: $VERSION
   script:
+    - TAG="${VERSION%-r[0-9]*}"
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
     - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
     - |
       IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
-      if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+r[0-9]+';then
+      if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+';then
         # Strip version segments from right to left
         while [ -n "\$TAG" ]; do
           IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
-          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?r?[0-9]+$//')
+          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?[0-9]+$//')
         done
       fi
     - apko publish --sbom=false "$file" \$IMAGES
