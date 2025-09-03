@@ -6,3 +6,4 @@ contents:
     - kubectl
 entrypoint:
   command: grype
+vcs-url: https://github.com/anchore/grype

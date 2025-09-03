@@ -22,3 +22,4 @@ accounts:
     - username: coder
       uid: 1000
       shell: /bin/zsh
+vcs-url: https://github.com/coder/code-server
