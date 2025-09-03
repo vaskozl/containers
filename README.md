@@ -41,6 +41,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [lidarr](./lidarr.yaml)                                      | `docker pull ghcr.io/vaskozl/lidarr`                             |
 | [v2ray](./v2ray.yaml)                                        | `docker pull ghcr.io/vaskozl/v2ray`                              |
 | [renovate](./renovate.yaml)                                  | `docker pull ghcr.io/vaskozl/renovate`                           |
+| [code-server](./code-server.yaml)                            | `docker pull ghcr.io/vaskozl/code-server`                        |
 | [k8s-sidecar](./k8s-sidecar.yaml)                            | `docker pull ghcr.io/vaskozl/k8s-sidecar`                        |
 | [rakudo](./rakudo.yaml)                                      | `docker pull ghcr.io/vaskozl/rakudo`                             |
 | [prowlarr](./prowlarr.yaml)                                  | `docker pull ghcr.io/vaskozl/prowlarr`                           |
@@ -58,6 +59,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [gitlab-pages](./gitlab/gitlab-pages.yaml)                   | `docker pull ghcr.io/vaskozl/gitlab-pages`                       |
 | [blocky](./blocky.yaml)                                      | `docker pull ghcr.io/vaskozl/blocky`                             |
 | [anubis](./anubis.yaml)                                      | `docker pull ghcr.io/vaskozl/anubis`                             |
+| [kube-ip-tracker](./kube-ip-tracker.yaml)                    | `docker pull ghcr.io/vaskozl/kube-ip-tracker`                    |
 | [sonarr](./sonarr.yaml)                                      | `docker pull ghcr.io/vaskozl/sonarr`                             |
 | [calibre](./calibre.yaml)                                    | `docker pull ghcr.io/vaskozl/calibre`                            |
 | [apko](./apko.yaml)                                          | `docker pull ghcr.io/vaskozl/apko`                               |
@@ -92,6 +94,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [grype](./grype.yaml)                                        | `docker pull ghcr.io/vaskozl/grype`                              |
 | [git](./git.yaml)                                            | `docker pull ghcr.io/vaskozl/git`                                |
 | [flannel](./flannel.yaml)                                    | `docker pull ghcr.io/vaskozl/flannel`                            |
+| [kube-network-policies](./kube-network-policies.yaml)        | `docker pull ghcr.io/vaskozl/kube-network-policies`              |
 | [logrotate](./logrotate.yaml)                                | `docker pull ghcr.io/vaskozl/logrotate`                          |
 | [ntfy](./ntfy.yaml)                                          | `docker pull ghcr.io/vaskozl/ntfy`                               |
 | [melange](./melange.yaml)                                    | `docker pull ghcr.io/vaskozl/melange`                            |
