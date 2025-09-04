@@ -5,6 +5,8 @@ contents:
     - code-server=4.103.2-r0
     - code-server-compat
     - zsh
+    - apk-tools
+    - docker
 entrypoint:
   command: /usr/bin/entrypoint.sh
 cmd: --bind-addr 0.0.0.0:8080 .
