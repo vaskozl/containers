@@ -17,8 +17,8 @@
       "managerFilePatterns": ["/.+\\.ya?ml$/"],
       "matchStringsStrategy": "combination",
       "matchStrings": [
-        "include: (?<repo>\w+).yaml",
-        "- (?<depName>.*?)=(?<currentValue>.*?)"
+        "include: (?<repo>[\\w-]+)\\.ya?ml",
+        "- (?<depName>.+?)=(?<currentValue>.+)"
       ],
       "datasourceTemplate": "custom.{{{repo}}}",
       "versioningTemplate": "loose"
