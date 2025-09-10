@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - flannel=0.27.2-r99
+    - flannel=0.27.3-r99
 entrypoint:
   command: flanneld
 vcs-url: https://github.com/flannel-io/cni-plugin
