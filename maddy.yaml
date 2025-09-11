@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - maddy=0.8.1-r5
+    - maddy=0.8.1-r6
 entrypoint:
   command: maddy
 cmd: run
