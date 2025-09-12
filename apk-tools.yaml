@@ -3,8 +3,9 @@ include: wolfi-base.yaml
 contents:
   packages:
     - apk-tools=2.14.10-r8
+    - catatonit
 entrypoint:
-  command: catatonit --
+  command: catatonit -g --
 cmd: /bin/sh -l
 accounts:
   run-as: "0"
