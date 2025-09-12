@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - ntfy=2.14.0-r1
+    - ntfy=2.14.0-r2
 entrypoint:
   command: ntfy
 cmd: serve --no-log-dates
