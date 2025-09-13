@@ -20,7 +20,7 @@
         "include: (?<repo>[\\w-]+)\\.ya?ml",
         "- (?<depName>.+?)=(?<currentValue>.+)"
       ],
-      "datasourceTemplate": "custom.{{{repo}}}",
+      "datasourceTemplate": "custom.{{#if repo}}{{repo}}{{else}}wolfi-base{{/if}}",
       "versioningTemplate": "loose"
     }
   ],
@@ -30,6 +30,9 @@
     },
     "alpine-base": {
       "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
-    }
+    },
+    "": {
+      "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
+    },
   }
 }
