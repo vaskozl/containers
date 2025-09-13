@@ -1,10 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
+include: nginx.yaml
 contents:
   packages:
     - baikal=0.10.1-r1
-    - nginx
-    - nginx-package-config
     - php-cgi
     - php-ctype
     - php-dom
@@ -21,34 +19,5 @@ contents:
     - php-xmlwriter
 entrypoint:
   command: catatonit -g --
-accounts:
-  run-as: "65532"
-  users:
-    - username: nginx
-      uid: 65532
-      gid: 65532
-      homedir: /home/nginx
-  groups:
-    - groupname: nginx
-      gid: 65532
-paths:
-  - path: /var/lib/nginx
-    type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 493
-    recursive: true
-  - path: /var/lib/nginx/tmp
-    type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 511
-    recursive: true
-  - path: /var/run
-    type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 511
 cmd: sh -c '/usr/sbin/php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
-stop-signal: SIGQUIT
 vcs-url: https://github.com/sabre-io/Baikal
