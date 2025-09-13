@@ -25,14 +25,11 @@
     }
   ],
   "customDatasources": {
-    "alpine-base": {
-      "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
-    },
     "wolfi-base": {
       "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
     },
-    "gitlab-base": {
-      "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
+    "alpine-base": {
+      "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
     }
   }
 }

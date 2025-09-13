@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: gitlab-base.yaml
+include: gitlab/gitlab-base.yaml
 contents:
   packages:
     - gitaly=18.3.2-r0
