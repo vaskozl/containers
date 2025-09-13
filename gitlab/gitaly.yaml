@@ -2,7 +2,7 @@
 include: gitlab-base.yaml
 contents:
   packages:
-    - gitaly=18.3.1-r0
+    - gitaly=18.3.2-r0
     - gitaly-backup
     - gitaly-compat
     - gitaly-config
