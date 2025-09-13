@@ -2,7 +2,7 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitaly=18.3.1-r0 # repo=wolfi
+    - gitaly=18.3.1-r0
     - gitaly-backup
     - gitaly-compat
     - gitaly-config
