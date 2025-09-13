@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - qbittorrent-nox=5.1.2-r1
+    - qbittorrent-nox=5.1.2-r2
 entrypoint:
   command: nice -n10 ionice -c3 qbittorrent-nox
 cmd: --webui-port='55555' --confirm-legal-notice
