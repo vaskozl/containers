@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - tailscale-operator=1.86.5-r1
+    - tailscale-operator=1.88.1-r3
 entrypoint:
   command: operator
 vcs-url: https://github.com/tailscale/tailscale
