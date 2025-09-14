@@ -34,5 +34,15 @@
     "": {
       "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
     },
-  }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["custom.wolfi-base"],
+      "groupName": "wolfi-packages",
+    },
+    {
+      "matchDatasources": ["custom.alpine-base"],
+      "groupName": "alpine-packages",
+    }
+  ]
 }
