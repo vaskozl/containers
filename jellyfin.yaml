@@ -1,13 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - jellyfin=10.10.7-r0
+    - jellyfin=10.10.7-r3
     - jellyfin-web
-    - intel-media-driver
-    - intel-media-sdk
-    - onevpl-intel-gpu
-    - libva-intel-driver
+    - libva
 entrypoint:
   command: jellyfin
 environment:
@@ -16,7 +13,7 @@ environment:
   JELLYFIN_DATA_DIR: /config
   JELLYFIN_FFMPEG: /usr/lib/jellyfin-ffmpeg/ffmpeg
   JELLYFIN_LOG_DIR: /config/log
-  JELLYFIN_WEB_DIR: /usr/share/webapps/jellyfin-web
+  JELLYFIN_WEB_DIR: /usr/lib/jellyfin/jellyfin-web
   DOTNET_SYSTEM_IO_DISABLEFILELOCKING: 'true'
 vcs-url: https://github.com/jellyfin/jellyfin
 archs:
