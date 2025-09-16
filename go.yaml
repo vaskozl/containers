@@ -1,8 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
 include: wolfi-base.yaml
 contents:
-  repositories:
-    - https://apk.cgr.dev/chainguard
   packages:
     - go=1.25.1-r0
 entrypoint:
