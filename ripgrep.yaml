@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - ripgrep=14.1.1-r1
+    - ripgrep=14.1.1-r2
     - gzip
     - jq
 entrypoint:

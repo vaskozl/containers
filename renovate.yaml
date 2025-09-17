@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - renovate=41.113.2-r0
+    - renovate=41.115.2-r0
     - go
     - npm
 entrypoint:
