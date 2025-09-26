@@ -2,7 +2,7 @@
 include: gitlab/gitlab-base.yaml
 contents:
   packages:
-    - gitlab-pages=18.3.2-r0
+    - gitlab-pages=18.4.1-r0
     - gitlab-pages-scripts
 cmd: /scripts/start-pages
 environment:
