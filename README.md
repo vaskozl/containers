@@ -6,12 +6,12 @@ This repository provides Wolfi based OCI/Docker containers which are built with 
 
 ## Features
 
-- **Minimalist & Secure**: Built from scratch using apko with a focus on security and small footprint.
-- **Continuous Updates**: Regularly updated with the latest security patches.
-- **Multi-Arch Support**: These containers are built with support for `linux/amd64` and `linux/arm64`.
-- **Renovate compatible**: Containers have the `org.opencontainers.image.source` label to facilitate changelog population.
-- **Versioned Images**: The container images are versioned based on the package versions, making it easy to pin your application to a specific version.
-- **Busybox included**: Busybox is included for debugging and utility reasons in all images, while keeping them tiny.
+- Distroless & Secure: Built from scratch using apko with a focus on security and small footprint.
+- Continuous Updates: Regularly updated with the latest security patches.
+- Multi-Arch Support: These containers are built with support for `linux/amd64` and `linux/arm64`.
+- Renovate compatible: Containers have the `org.opencontainers.image.source` label to facilitate changelog population.
+- Versioned Images: The container images are versioned based on the package versions, making it easy to pin your application to a specific version.
+- Busybox included: Busybox is included for debugging and utility reasons in all images, while keeping them tiny.
 
 ## Tagging Scheme
 
