@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - wolfictl=0.38.18-r0
+    - ca-certificates-bundle
+    - wolfi-baselayout
+    - coreutils
+    - bash
+    - busybox
+    - gitsign
+    - make
+    - graphviz
+entrypoint:
+  command: /usr/bin/wolfictl
+cmd: --help
+work-dir: /work
+paths:
+  - path: /work
+    type: directory
+    permissions: 511
+accounts:
+  run-as: '0'
