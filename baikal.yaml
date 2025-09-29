@@ -1,8 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: nginx.yaml
+include: alpine-base.yaml
 contents:
   packages:
     - baikal=0.10.1-r1
+    - nginx
     - php-cgi
     - php-ctype
     - php-dom
@@ -21,3 +22,30 @@ entrypoint:
   command: catatonit -g --
 cmd: sh -c '/usr/sbin/php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
 vcs-url: https://github.com/sabre-io/Baikal
+accounts:
+  groups:
+    - groupname: http
+      gid: 33
+  users:
+    - username: http
+      uid: 33
+  run-as: http
+paths:
+  - path: /run/nginx
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o777
+  - path: /var/lib/nginx
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+    recursive: true
+  - path: /var/log
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+    recursive: true
+stop-signal: SIGQUIT
