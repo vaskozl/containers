@@ -45,6 +45,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [k8s-sidecar](./k8s-sidecar.yaml)                            | `docker pull ghcr.io/vaskozl/k8s-sidecar`                        |
 | [rakudo](./rakudo.yaml)                                      | `docker pull ghcr.io/vaskozl/rakudo`                             |
 | [prowlarr](./prowlarr.yaml)                                  | `docker pull ghcr.io/vaskozl/prowlarr`                           |
+| [tsidp](./tsidp.yaml)                                        | `docker pull ghcr.io/vaskozl/tsidp`                              |
 | [renovate-apk-indexer](./renovate-apk-indexer.yaml)          | `docker pull ghcr.io/vaskozl/renovate-apk-indexer`               |
 | [apk-tools](./apk-tools.yaml)                                | `docker pull ghcr.io/vaskozl/apk-tools`                          |
 | [nfs-subdir-external-provisioner](./nfs-subdir-external-provisioner.yaml) | `docker pull ghcr.io/vaskozl/nfs-subdir-external-provisioner`    |
@@ -87,6 +88,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [buildkitd](./buildkitd.yaml)                                | `docker pull ghcr.io/vaskozl/buildkitd`                          |
 | [perl-mojolicious](./perl-mojolicious.yaml)                  | `docker pull ghcr.io/vaskozl/perl-mojolicious`                   |
 | [nginx](./nginx.yaml)                                        | `docker pull ghcr.io/vaskozl/nginx`                              |
+| [alpine-base](./alpine-base.yaml)                            | `docker pull ghcr.io/vaskozl/alpine-base`                        |
 | [ghcr-io-cleanup](./.github/workflows/ghcr-io-cleanup.yaml)  | `docker pull ghcr.io/vaskozl/ghcr-io-cleanup`                    |
 | [fluent-bit](./fluent-bit.yaml)                              | `docker pull ghcr.io/vaskozl/fluent-bit`                         |
 | [docker](./docker.yaml)                                      | `docker pull ghcr.io/vaskozl/docker`                             |
@@ -104,6 +106,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [redis](./redis.yaml)                                        | `docker pull ghcr.io/vaskozl/redis`                              |
 | [mariadb](./mariadb.yaml)                                    | `docker pull ghcr.io/vaskozl/mariadb`                            |
 | [maddy](./maddy.yaml)                                        | `docker pull ghcr.io/vaskozl/maddy`                              |
+| [wolfi-base](./wolfi-base.yaml)                              | `docker pull ghcr.io/vaskozl/wolfi-base`                         |
 | [kubeconform](./kubeconform.yaml)                            | `docker pull ghcr.io/vaskozl/kubeconform`                        |
 | [jellyfin](./jellyfin.yaml)                                  | `docker pull ghcr.io/vaskozl/jellyfin`                           |
 | [tailscale-operator](./tailscale-operator.yaml)              | `docker pull ghcr.io/vaskozl/tailscale-operator`                 |
