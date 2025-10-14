@@ -3,6 +3,7 @@ include: alpine-base.yaml
 contents:
   packages:
     - baikal=0.10.1-r1
+    - catatonit
     - nginx
     - php-cgi
     - php-ctype
