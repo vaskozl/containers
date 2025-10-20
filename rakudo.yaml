@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - rakudo=2025.08-r0
+    - rakudo=2025.10-r0
     - zef
     - alpine-sdk
     - openssl-dev
