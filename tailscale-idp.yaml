@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - tailscale-idp=1.88.4-r0
+    - tailscale-idp=1.90.0-r0
 entrypoint:
   command: tsidp
 cmd: -dir=/var/lib/tsidp
