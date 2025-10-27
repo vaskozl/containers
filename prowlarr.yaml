@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - prowlarr=2.0.5.5160-r0
+    - prowlarr=2.1.5.5216-r0
 entrypoint:
   command: /usr/lib/prowlarr/bin/Prowlarr
 cmd: -nobrowser -data=/config
