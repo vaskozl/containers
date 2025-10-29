@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - tsidp=0.0.4-r0
+    - tsidp=0.0.5-r0
 entrypoint:
   command: tsidp
 cmd: -dir=/var/lib/tsidp
