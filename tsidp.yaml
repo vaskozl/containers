@@ -4,7 +4,7 @@ contents:
   packages:
     - tsidp=0.0.5-r0
 entrypoint:
-  command: tsidp
+  command: tsidp-server
 cmd: -dir=/var/lib/tsidp
 work-dir: /var/lib/tsidp
 vcs-url: https://github.com/tailscale/tsidp
