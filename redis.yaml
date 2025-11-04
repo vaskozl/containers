@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - redis=8.2.2-r0
+    - redis=8.2.3-r0
 entrypoint:
   command: /usr/bin/redis-server
 cmd: --save "" --appendonly "no" --protected-mode "no"

@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - prometheus-alertmanager=0.28.1-r9
+    - prometheus-alertmanager=0.29.0-r0
 entrypoint:
   command: alertmanager
 cmd: --config.file=/etc/alertmanager/alertmanager.yml --storage.path=/alertmanager
