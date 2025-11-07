@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - logrotate=3.22.0-r40
+    - logrotate=3.22.0-r41
 entrypoint:
   command: logrotate
 vcs-url: https://github.com/logrotate/logrotate
