@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - kube-ip-tracker=0.9.2-r0
+    - kube-ip-tracker=1.0.0-r0
 entrypoint:
   command: kube-ip-tracker
 accounts:
