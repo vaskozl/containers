@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - postgresql=18.0-r1
+    - postgresql=18.0-r2
     - postgresql-oci-entrypoint
     - postgresql-client
 entrypoint:
