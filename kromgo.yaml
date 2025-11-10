@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - kromgo=0.7.2-r0
+    - kromgo=0.7.4-r0
 entrypoint:
   command: kromgo
 vcs-url: https://github.com/0xERR0R/blocky
