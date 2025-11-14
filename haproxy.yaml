@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - haproxy=3.2.8-r1
+    - haproxy-oci-entrypoint
+entrypoint:
+  command: /usr/local/bin/docker-entrypoint.sh
+cmd: haproxy -f /usr/local/etc/haproxy/haproxy.cfg
+vcs-url: https://github.com/haproxy/haproxy
+work-dir: /var/lib/haproxy
+accounts:
+  run-as: "65532"
+  users:
+    - username: haproxy
+      uid: 65532
+      gid: 65532
+      homedir: /home/haproxy
+  groups:
+    - groupname: haproxy
+      gid: 65532
+paths:
+  - path: /var/lib/haproxy
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
