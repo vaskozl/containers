@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - haproxy-ingress=0.15.0-r0
+    - haproxy-ingress-compat
+    - haproxy
+    - catatonit
+entrypoint:
+  command: catatonit -- /usr/bin/start.sh
+vcs-url: https://github.com/jcmoraisjr/haproxy-ingress
+work-dir: /var/lib/haproxy
+accounts:
+  run-as: "65532"
+  users:
+    - username: haproxy
+      uid: 65532
+      gid: 65532
+      homedir: /home/haproxy
+  groups:
+    - groupname: haproxy
+      gid: 65532
+paths:
+  - path: /var/lib/haproxy
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
+  - path: /var/run/haproxy
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
+  - path: /etc/haproxy
+    type: directory
+    uid: 65532
+    gid: 65532
+    permissions: 493
