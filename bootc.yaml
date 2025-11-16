@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - bootc=1.10.0-r0
+    - bind-tools
+    - binutils
+    - bootc
+    - btrfs-progs
+    - composefs
+    - conmon
+    - coreutils
+    - cpio
+    - crun
+    - dbus
+    - dbus-glib
+    - dosfstools
+    - dracut
+    - e2fsprogs
+    - findmnt
+    - findutils
+    - glib
+    - iproute2
+    - kernel
+    - kernel-initramfs
+    - libselinux
+    - losetup
+    - lsblk
+    - net-tools
+    - netavark
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - ostree
+    - posix-libc-utils
+    - sfdisk
+    - shadow
+    - skopeo
+    - strace
+    - systemd
+    - systemd-boot
+    - systemd-init
+    - systemd-logind-service
+    - udev
+    - util-linux-login
+    - wipefs
+    - wolfi-base
+    - xfsprogs
+    - zstd
+entrypoint:
+  command: bootc
+cmd: container lint
+accounts:
+  run-as: root
+annotations:
+  containers.bootable: "1"
+layering:
+  strategy: origin
+  budget: 64
