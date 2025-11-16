@@ -3,10 +3,10 @@ include: wolfi-base.yaml
 contents:
   packages:
     - bootc=1.10.0-r0
-    - bootc-baselayout
     - bind-tools
     - binutils
     - bootc
+    - bootc-baselayout
     - btrfs-progs
     - composefs
     - conmon
@@ -27,7 +27,6 @@ contents:
     - libselinux
     - losetup
     - lsblk
-    - net-tools
     - netavark
     - openssh
     - openssh-server-config
@@ -38,6 +37,7 @@ contents:
     - shadow
     - skopeo
     - strace
+    - sudo
     - systemd
     - systemd-boot
     - systemd-init
