@@ -48,9 +48,8 @@ contents:
     - wolfi-base
     - xfsprogs
     - zstd
-entrypoint:
-  command: bootc
-cmd: container lint
+cmd: init
+stop-signal: SIGRTMIN+3
 accounts:
   run-as: root
 annotations:
