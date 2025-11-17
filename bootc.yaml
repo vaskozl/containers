@@ -5,8 +5,6 @@ contents:
     - bootc=1.10.0-r0
     - bind-tools
     - binutils
-    - bootc
-    - bootc-baselayout
     - btrfs-progs
     - composefs
     - conmon
