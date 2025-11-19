@@ -26,9 +26,6 @@ contents:
     - losetup
     - lsblk
     - netavark
-    - openssh
-    - openssh-server-config
-    - openssh-service
     - ostree
     - posix-libc-utils
     - sfdisk
