@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - synology-csi=1.2.1-r0
+    - e2fsprogs
+    - e2fsprogs-extra
+    - xfsprogs
+    - xfsprogs-extra
+    - blkid
+    - util-linux
+    - iproute2
+    - bash
+    - btrfs-progs
+    - ca-certificates
+    - cifs-utils
+    - nfs-utils
+
+entrypoint:
+  command: synology-csi-driver
+vcs-url: https://github.com/tailscale/golink
