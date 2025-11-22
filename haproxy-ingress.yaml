@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - haproxy-ingress=0.15.0-r0
+    - haproxy-ingress=0.15.0-r1
     - haproxy-ingress-compat
     - haproxy
     - catatonit
