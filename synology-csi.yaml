@@ -15,7 +15,8 @@ contents:
     - ca-certificates
     - cifs-utils
     - nfs-utils
-
+accounts:
+  run-as: "0"
 entrypoint:
   command: synology-csi-driver
-vcs-url: https://github.com/tailscale/golink
+vcs-url: https://github.com/SynologyOpenSource/synology-csi
