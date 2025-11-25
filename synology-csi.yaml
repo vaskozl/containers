@@ -12,6 +12,7 @@ contents:
     - e2fsprogs-extra
     - iproute2
     - mount
+    - umount
     - nfs-utils
     - util-linux
     - xfsprogs
