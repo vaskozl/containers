@@ -3,18 +3,19 @@ include: wolfi-base.yaml
 contents:
   packages:
     - synology-csi=1.2.1-r0
-    - e2fsprogs
-    - e2fsprogs-extra
-    - xfsprogs
-    - xfsprogs-extra
-    - blkid
-    - util-linux
-    - iproute2
     - bash
+    - blkid
     - btrfs-progs
     - ca-certificates
     - cifs-utils
+    - e2fsprogs
+    - e2fsprogs-extra
+    - iproute2
+    - mount
     - nfs-utils
+    - util-linux
+    - xfsprogs
+    - xfsprogs-extra
 accounts:
   run-as: "0"
 entrypoint:
