@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - envoy-gateway=1.6.0-r1
+    - envoy-gateway-compat
+entrypoint:
+  command: /usr/local/bin/envoy-gateway
+vcs-url: https://github.com/envoyproxy/gateway
