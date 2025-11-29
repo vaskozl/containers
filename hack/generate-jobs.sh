@@ -32,6 +32,8 @@ $FIRST
 EOF
 
 
+  basename=$(basename "$file")
+  [ -z "$VERSION" ] && PKG="${basename%.yaml}"
   echo "Creating job for $file as $PKG:${VERSION:-latest}"
 
   # Append job to config

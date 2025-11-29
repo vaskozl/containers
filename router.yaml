@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: bootc.yaml
+contents:
+  packages:
+    - avahi
+    - bind-tools
+    - bird
+    - blocky
+    - conntrack-tools
+    - dnsmasq
+    - ethtool
+    - htop
+    - iftop
+    - iperf3
+    - nftables
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - openssl
+    - prometheus-node-exporter
+    - tailscale
+    - tcpdump
+    - curl
