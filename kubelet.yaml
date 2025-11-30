@@ -8,3 +8,6 @@ contents:
     - containerd-service
     - nfs-utils
     - nerdctl
+    - openssh-server-config
+    - openssh-service
+    - openssl
