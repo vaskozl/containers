@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - envoy=1.36.2-r0
+    - envoy=1.36.3-r0
     - envoy-config
     - envoy-oci-entrypoint
     - su-exec
