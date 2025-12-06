@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - envoy-gateway=1.6.0-r2
+    - envoy-gateway=1.6.1-r0
     - envoy-gateway-compat
 entrypoint:
   command: /usr/local/bin/envoy-gateway
