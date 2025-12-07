@@ -8,6 +8,7 @@ contents:
     - https://apks.sko.ai/melange.rsa.pub
   repositories:
     - https://packages.wolfi.dev/os
+  build_repositories:
     - https://apks.sko.ai/
   packages:
     - wolfi-baselayout
