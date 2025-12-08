@@ -4,9 +4,9 @@ contents:
   packages:
     - avahi
     - bind-tools
-    - bird
     - blocky
     - conntrack-tools
+    - curl
     - dnsmasq
     - ethtool
     - htop
@@ -20,4 +20,3 @@ contents:
     - prometheus-node-exporter
     - tailscale
     - tcpdump
-    - curl
