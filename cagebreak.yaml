@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: bootc.yaml
+contents:
+  packages:
+    - cagebreak=3.1.0-r0
+    - chromium
+    - wlroots
+    - mesa
+    - mesa-egl
+    - foot
+    - foot-terminfo
+    - ttf-dejavu
+    - bind-tools
+    - conntrack-tools
+    - ethtool
+    - htop
+    - nftables
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - openssl
+    - tailscale
+    - curl
