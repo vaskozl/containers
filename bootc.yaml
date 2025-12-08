@@ -3,6 +3,7 @@ include: wolfi-base.yaml
 contents:
   packages:
     - bootc=1.11.0-r0
+    - bootc-baselayout
     - bind-tools
     - binutils
     - btrfs-progs
