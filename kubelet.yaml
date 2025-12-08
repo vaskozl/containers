@@ -3,6 +3,8 @@ include: bootc.yaml
 contents:
   packages:
     - kubelet-1.34=1.34.2-r1
+    - nori-user
+    - systemd-default-network
     - kubectl-default
     - containerd
     - containerd-service

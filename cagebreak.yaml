@@ -3,6 +3,8 @@ include: bootc.yaml
 contents:
   packages:
     - cagebreak=3.1.0-r0
+    - nori-user
+    - systemd-default-network
     - chromium
     - wlroots
     - mesa
