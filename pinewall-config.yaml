@@ -2,7 +2,7 @@
 include: bootc.yaml
 contents:
   packages:
-    - pinewall-config=0.0.1-r2
+    - pinewall-config=0.0.2-r0
     - avahi
     - bind-tools
     - blocky
