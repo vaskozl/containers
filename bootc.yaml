@@ -52,4 +52,4 @@ annotations:
   containers.bootable: "1"
 layering:
   strategy: origin
-  budget: 64
+  budget: 96
