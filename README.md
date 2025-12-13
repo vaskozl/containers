@@ -36,11 +36,14 @@ For more specific examples, check out [my manifests repository](https://github.c
 
 | Image Name | Pull |
 | ------------------------------------------------------------ | ---------------------------------------------------------------  |
+| [wolfi-scanner](./wolfi-scanner.yaml)                        | `docker pull ghcr.io/vaskozl/wolfi-scanner`                      |
 | [thelounge](./thelounge.yaml)                                | `docker pull ghcr.io/vaskozl/thelounge`                          |
+| [haproxy-ingress](./haproxy-ingress.yaml)                    | `docker pull ghcr.io/vaskozl/haproxy-ingress`                    |
 | [kubectl](./kubectl.yaml)                                    | `docker pull ghcr.io/vaskozl/kubectl`                            |
 | [lidarr](./lidarr.yaml)                                      | `docker pull ghcr.io/vaskozl/lidarr`                             |
 | [v2ray](./v2ray.yaml)                                        | `docker pull ghcr.io/vaskozl/v2ray`                              |
 | [renovate](./renovate.yaml)                                  | `docker pull ghcr.io/vaskozl/renovate`                           |
+| [bootc](./bootc.yaml)                                        | `docker pull ghcr.io/vaskozl/bootc`                              |
 | [code-server](./code-server.yaml)                            | `docker pull ghcr.io/vaskozl/code-server`                        |
 | [k8s-sidecar](./k8s-sidecar.yaml)                            | `docker pull ghcr.io/vaskozl/k8s-sidecar`                        |
 | [rakudo](./rakudo.yaml)                                      | `docker pull ghcr.io/vaskozl/rakudo`                             |
@@ -58,6 +61,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [gitaly](./gitlab/gitaly.yaml)                               | `docker pull ghcr.io/vaskozl/gitaly`                             |
 | [gitlab-certificates](./gitlab/gitlab-certificates.yaml)     | `docker pull ghcr.io/vaskozl/gitlab-certificates`                |
 | [gitlab-pages](./gitlab/gitlab-pages.yaml)                   | `docker pull ghcr.io/vaskozl/gitlab-pages`                       |
+| [envoy](./envoy.yaml)                                        | `docker pull ghcr.io/vaskozl/envoy`                              |
 | [blocky](./blocky.yaml)                                      | `docker pull ghcr.io/vaskozl/blocky`                             |
 | [anubis](./anubis.yaml)                                      | `docker pull ghcr.io/vaskozl/anubis`                             |
 | [kube-ip-tracker](./kube-ip-tracker.yaml)                    | `docker pull ghcr.io/vaskozl/kube-ip-tracker`                    |
@@ -71,29 +75,34 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [cert-manager-acmesolver](./cert-manager/cert-manager-acmesolver.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-acmesolver`            |
 | [cert-manager-webhook](./cert-manager/cert-manager-webhook.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-webhook`               |
 | [cert-manager-controller](./cert-manager/cert-manager-controller.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-controller`            |
-| [tailscale-idp](./tailscale-idp.yaml)                        | `docker pull ghcr.io/vaskozl/tailscale-idp`                      |
 | [tailscale](./tailscale.yaml)                                | `docker pull ghcr.io/vaskozl/tailscale`                          |
 | [openresty](./openresty.yaml)                                | `docker pull ghcr.io/vaskozl/openresty`                          |
 | [baikal](./baikal.yaml)                                      | `docker pull ghcr.io/vaskozl/baikal`                             |
+| [kubelet](./kubelet.yaml)                                    | `docker pull ghcr.io/vaskozl/kubelet`                            |
 | [go](./go.yaml)                                              | `docker pull ghcr.io/vaskozl/go`                                 |
 | [prometheus-alertmanager](./prometheus-alertmanager.yaml)    | `docker pull ghcr.io/vaskozl/prometheus-alertmanager`            |
 | [perl-libwww](./perl-libwww.yaml)                            | `docker pull ghcr.io/vaskozl/perl-libwww`                        |
 | [golink](./golink.yaml)                                      | `docker pull ghcr.io/vaskozl/golink`                             |
 | [chromium](./chromium.yaml)                                  | `docker pull ghcr.io/vaskozl/chromium`                           |
 | [ripgrep](./ripgrep.yaml)                                    | `docker pull ghcr.io/vaskozl/ripgrep`                            |
+| [haproxy](./haproxy.yaml)                                    | `docker pull ghcr.io/vaskozl/haproxy`                            |
 | [grafana](./grafana.yaml)                                    | `docker pull ghcr.io/vaskozl/grafana`                            |
 | [net-tools](./net-tools.yaml)                                | `docker pull ghcr.io/vaskozl/net-tools`                          |
 | [kromgo](./kromgo.yaml)                                      | `docker pull ghcr.io/vaskozl/kromgo`                             |
 | [radarr](./radarr.yaml)                                      | `docker pull ghcr.io/vaskozl/radarr`                             |
+| [synology-csi](./synology-csi.yaml)                          | `docker pull ghcr.io/vaskozl/synology-csi`                       |
 | [buildkitd](./buildkitd.yaml)                                | `docker pull ghcr.io/vaskozl/buildkitd`                          |
 | [perl-mojolicious](./perl-mojolicious.yaml)                  | `docker pull ghcr.io/vaskozl/perl-mojolicious`                   |
 | [nginx](./nginx.yaml)                                        | `docker pull ghcr.io/vaskozl/nginx`                              |
+| [wolfictl](./wolfictl.yaml)                                  | `docker pull ghcr.io/vaskozl/wolfictl`                           |
 | [alpine-base](./alpine-base.yaml)                            | `docker pull ghcr.io/vaskozl/alpine-base`                        |
 | [ghcr-io-cleanup](./.github/workflows/ghcr-io-cleanup.yaml)  | `docker pull ghcr.io/vaskozl/ghcr-io-cleanup`                    |
 | [fluent-bit](./fluent-bit.yaml)                              | `docker pull ghcr.io/vaskozl/fluent-bit`                         |
 | [docker](./docker.yaml)                                      | `docker pull ghcr.io/vaskozl/docker`                             |
+| [envoy-gateway](./envoy-gateway.yaml)                        | `docker pull ghcr.io/vaskozl/envoy-gateway`                      |
 | [qbittorrent-nox](./qbittorrent-nox.yaml)                    | `docker pull ghcr.io/vaskozl/qbittorrent-nox`                    |
 | [grype](./grype.yaml)                                        | `docker pull ghcr.io/vaskozl/grype`                              |
+| [minilb](./minilb.yaml)                                      | `docker pull ghcr.io/vaskozl/minilb`                             |
 | [git](./git.yaml)                                            | `docker pull ghcr.io/vaskozl/git`                                |
 | [flannel](./flannel.yaml)                                    | `docker pull ghcr.io/vaskozl/flannel`                            |
 | [kube-network-policies](./kube-network-policies.yaml)        | `docker pull ghcr.io/vaskozl/kube-network-policies`              |
