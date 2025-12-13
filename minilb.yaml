@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - minilb=0.0.7-r0
+entrypoint:
+  command: minilb
+vcs-url: https://github.com/vaskozl/minilb
