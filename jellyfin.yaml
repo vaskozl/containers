@@ -5,7 +5,6 @@ contents:
     - jellyfin=10.11.5-r0
     - jellyfin-web
     - intel-media-driver
-    - intel-media-sdk
     - onevpl-intel-gpu
     - libva-intel-driver
 entrypoint:
