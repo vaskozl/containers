@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - lidarr=2.13.3.4711-r0
+    - lidarr=3.1.0.4875-r1
 entrypoint:
   command: /usr/lib/lidarr/bin/Lidarr
 cmd: -nobrowser -data=/config
