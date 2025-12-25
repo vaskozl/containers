@@ -61,7 +61,6 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [gitaly](./gitlab/gitaly.yaml)                               | `docker pull ghcr.io/vaskozl/gitaly`                             |
 | [gitlab-certificates](./gitlab/gitlab-certificates.yaml)     | `docker pull ghcr.io/vaskozl/gitlab-certificates`                |
 | [gitlab-pages](./gitlab/gitlab-pages.yaml)                   | `docker pull ghcr.io/vaskozl/gitlab-pages`                       |
-| [envoy](./envoy.yaml)                                        | `docker pull ghcr.io/vaskozl/envoy`                              |
 | [blocky](./blocky.yaml)                                      | `docker pull ghcr.io/vaskozl/blocky`                             |
 | [anubis](./anubis.yaml)                                      | `docker pull ghcr.io/vaskozl/anubis`                             |
 | [kube-ip-tracker](./kube-ip-tracker.yaml)                    | `docker pull ghcr.io/vaskozl/kube-ip-tracker`                    |
@@ -99,7 +98,6 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [ghcr-io-cleanup](./.github/workflows/ghcr-io-cleanup.yaml)  | `docker pull ghcr.io/vaskozl/ghcr-io-cleanup`                    |
 | [fluent-bit](./fluent-bit.yaml)                              | `docker pull ghcr.io/vaskozl/fluent-bit`                         |
 | [docker](./docker.yaml)                                      | `docker pull ghcr.io/vaskozl/docker`                             |
-| [envoy-gateway](./envoy-gateway.yaml)                        | `docker pull ghcr.io/vaskozl/envoy-gateway`                      |
 | [qbittorrent-nox](./qbittorrent-nox.yaml)                    | `docker pull ghcr.io/vaskozl/qbittorrent-nox`                    |
 | [grype](./grype.yaml)                                        | `docker pull ghcr.io/vaskozl/grype`                              |
 | [minilb](./minilb.yaml)                                      | `docker pull ghcr.io/vaskozl/minilb`                             |
