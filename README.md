@@ -38,7 +38,6 @@ For more specific examples, check out [my manifests repository](https://github.c
 | ------------------------------------------------------------ | ---------------------------------------------------------------  |
 | [wolfi-scanner](./wolfi-scanner.yaml)                        | `docker pull ghcr.io/vaskozl/wolfi-scanner`                      |
 | [thelounge](./thelounge.yaml)                                | `docker pull ghcr.io/vaskozl/thelounge`                          |
-| [haproxy-ingress](./haproxy-ingress.yaml)                    | `docker pull ghcr.io/vaskozl/haproxy-ingress`                    |
 | [kubectl](./kubectl.yaml)                                    | `docker pull ghcr.io/vaskozl/kubectl`                            |
 | [lidarr](./lidarr.yaml)                                      | `docker pull ghcr.io/vaskozl/lidarr`                             |
 | [v2ray](./v2ray.yaml)                                        | `docker pull ghcr.io/vaskozl/v2ray`                              |
