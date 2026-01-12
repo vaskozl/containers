@@ -5,12 +5,15 @@ contents:
     - containerd=2.2.1-r0
     - containerd-service
     - cni-plugins-bridge-compat
+    - cni-plugins-firewall-compa
     - cni-plugins-host-local-compat
     - cni-plugins-loopback-compat
     - cni-plugins-portmap-compat
-    - systemd-default-network
+    - cni-plugins-tuning-compat
+    - iptables-nft
     - nerdctl
     - nfs-utils
     - openssh-server-config
     - openssh-service
     - openssl
+    - systemd-default-network
