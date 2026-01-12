@@ -13,6 +13,7 @@ contents:
     - htop
     - iftop
     - iperf3
+    - iproute2
     - nftables
     - openssh
     - openssh-server-config

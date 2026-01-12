@@ -21,13 +21,13 @@ contents:
     - findmnt
     - findutils
     - glib
-    - iproute2
     - kernel
     - kernel-initramfs
     - libselinux
     - losetup
     - lsblk
     - netavark
+    - nori-user
     - ostree
     - posix-libc-utils
     - sfdisk

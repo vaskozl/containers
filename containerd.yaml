@@ -3,10 +3,14 @@ include: bootc.yaml
 contents:
   packages:
     - containerd
-    - systemd-default-network
     - containerd-service
-    - nfs-utils
+    - cni-plugins-bridge
+    - cni-plugins-host-local
+    - cni-plugins-loopback
+    - cni-plugins-portmap
     - nerdctl
+    - nfs-utils
     - openssh-server-config
     - openssh-service
     - openssl
+    - systemd-default-network
