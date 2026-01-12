@@ -4,10 +4,10 @@ contents:
   packages:
     - containerd=2.2.1-r0
     - containerd-service
-    - cni-plugins-bridge
-    - cni-plugins-host-local
-    - cni-plugins-loopback
-    - cni-plugins-portmap
+    - cni-plugins-bridge-compat
+    - cni-plugins-host-local-compat
+    - cni-plugins-loopback-compat
+    - cni-plugins-portmap-compat
     - systemd-default-network
     - nerdctl
     - nfs-utils
