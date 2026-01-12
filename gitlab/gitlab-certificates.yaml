@@ -1,6 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: gitlab/gitlab-base.yaml
-contents:
-  packages:
-    - gitlab-certificates=18.2.4-r0
-cmd: /scripts/bundle-certificates
