@@ -2,23 +2,11 @@
 include: bootc.yaml
 contents:
   packages:
-    - cagebreak=3.1.0-r0
+    - containerd
     - systemd-default-network
-    - chromium
-    - wlroots
-    - mesa
-    - mesa-egl
-    - foot
-    - foot-terminfo
-    - ttf-dejavu
-    - bind-tools
-    - conntrack-tools
-    - ethtool
-    - htop
-    - nftables
-    - openssh
+    - containerd-service
+    - nfs-utils
+    - nerdctl
     - openssh-server-config
     - openssh-service
     - openssl
-    - tailscale
-    - curl

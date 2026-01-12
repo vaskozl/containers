@@ -1,15 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: bootc.yaml
+include: containerd.yaml
 contents:
   packages:
-    - kubelet-1.34=1.34.2-r1
-    - nori-user
-    - systemd-default-network
+    - kubelet
     - kubectl-default
-    - containerd
-    - containerd-service
-    - nfs-utils
-    - nerdctl
-    - openssh-server-config
-    - openssh-service
-    - openssl
