@@ -31,6 +31,9 @@
     "alpine-base": {
       "defaultRegistryUrlTemplate": "http://apk-alpine:3000/{{packageName}}"
     },
+    "bootc": {
+      "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
+    },
     "": {
       "defaultRegistryUrlTemplate": "http://apk-wolfi:3000/{{packageName}}"
     },
