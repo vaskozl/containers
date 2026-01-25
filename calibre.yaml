@@ -6,3 +6,5 @@ contents:
 entrypoint:
   command: calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre
+archs:
+  - amd64
