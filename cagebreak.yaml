@@ -20,5 +20,4 @@ contents:
     - openssh-server-config
     - openssh-service
     - openssl
-    - tailscale
     - curl

@@ -20,5 +20,4 @@ contents:
     - openssh-service
     - openssl
     - prometheus-node-exporter
-    - tailscale
     - tcpdump
