@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - buildkitd=0.27.0-r0
+    - buildkitd=0.27.0-r1
     - git
 entrypoint:
   command: buildkitd
