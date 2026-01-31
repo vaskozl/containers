@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - mosquitto=2.0.22-r4
+    - mosquitto=2.0.22-r5
 entrypoint:
   command: /usr/sbin/mosquitto
 vcs-url: https://github.com/eclipse/mosquitto
