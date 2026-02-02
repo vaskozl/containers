@@ -2,6 +2,6 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - perl-libwww=6.81-r0
+    - perl-libwww=6.81-r1
 entrypoint:
   command: perl
