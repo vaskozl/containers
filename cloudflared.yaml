@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - cloudflared=2026.1.2-r1
+entrypoint:
+  command: cloudflared --no-autoupdate
+cmd: version
+vcs-url: https://github.com/cloudflare/cloudflared
