@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - git=2.52.0-r2
+    - git=2.53.0-r0
     - git-lfs
     - dash-binsh
     - dash

@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - cert-manager-controller=1.19.2-r2
+    - cert-manager-controller=1.19.3-r0
 
 accounts:
   groups:
