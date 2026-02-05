@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - nginx=1.29.4-r4
+    - nginx=1.29.5-r0
     - nginx-package-config
 entrypoint:
   command: /usr/sbin/nginx
