@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - v2ray=5.42.0-r1
+    - v2ray=5.42.0-r2
 entrypoint:
   command: v2ray
 vcs-url: https://github.com/v2ray/v2ray-core
