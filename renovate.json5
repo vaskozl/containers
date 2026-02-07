@@ -1,16 +1,13 @@
 {
-  "enabled": true,
-  "semanticCommits": "disabled",
-  "dependencyDashboard": true,
-  "dependencyDashboardTitle": "Renovate Dashboard",
-  "suppressNotifications": ["prIgnoreNotification"],
-  "rebaseWhen": "conflicted",
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":automergeAll",
+    ":skipStatusChecks",
+    ":disableRateLimiting",
+  ],
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-  "automerge": true,
-  "ignoreTests": true,
   "customManagers": [
     {
       "customType": "regex",
