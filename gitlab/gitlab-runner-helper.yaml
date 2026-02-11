@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - gitlab-runner-helper=18.8.0-r0
+    - gitlab-runner-helper=18.8.0-r1
     - gitlab-runner-helper-oci-entrypoint
     - gitlab-runner-helper-compat
     - git-lfs
