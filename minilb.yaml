@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - minilb=0.1.0-r0
+    - minilb=0.2.0-r0
 entrypoint:
   command: minilb
 vcs-url: https://github.com/vaskozl/minilb
