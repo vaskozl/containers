@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - wolfi-scanner=0.0.3-r0
+    - wolfi-scanner=0.0.4-r0
 entrypoint:
   command: wolfi-scanner -only-fixed -daemon
 vcs-url: https://github.com/vaskozl/wolfi-scanner
