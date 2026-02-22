@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - kromgo=0.7.5-r0
+    - kromgo=0.7.5-r1
     - ttf-dejavu
 entrypoint:
   command: kromgo
