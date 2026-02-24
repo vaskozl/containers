@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - sonarr=4.0.16.2944-r0
+    - sonarr=5.0.0_alpha-r1
 entrypoint:
   command: /usr/lib/sonarr/bin/Sonarr
 cmd: -nobrowser -data=/config
