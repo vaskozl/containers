@@ -57,7 +57,7 @@ publish:$PKG:
         # Strip version segments from right to left
         while [ -n "\$TAG" ]; do
           IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
-          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-]?[0-9]+$//')
+          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\_\\-]?(r|alpha|beta)?[0-9]+$//')
         done
       fi
     - apko publish --sbom=false "$file" \$IMAGES
