@@ -52,14 +52,16 @@ publish:$PKG:
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
     - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
     - |
-      IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
-      if echo "\$TAG" | grep -qE '^v?([0-9]+[\\.\\-])+';then
-        # Strip version segments from right to left
-        while [ -n "\$TAG" ]; do
-          IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
-          TAG=\$(echo \$TAG | sed -r 's/[v\\.\\_\\-]?(r|alpha|beta)?[0-9]+$//')
-        done
-      fi
+      # Strip version segments from right to left
+      while [ -n "\$TAG" ]; do
+        IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
+        NEW_TAG=\$(echo \$TAG | sed -r 's/[v\\.\\-\\_]?[A-Za-z0-9]+$//')
+        # Stop if tag becomes empty or doesn't change
+        if [ -z "\$NEW_TAG" ] || [ "\$NEW_TAG" = "\$TAG" ]; then
+          break
+        fi
+        TAG=\$NEW_TAG
+      done
     - apko publish --sbom=false "$file" \$IMAGES
 EOF
 done
