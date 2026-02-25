@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - minio=0.20251015.172955-r4
+    - minio=0.20251015.172955-r5
     - mc
 entrypoint:
   command: minio
