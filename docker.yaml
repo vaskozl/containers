@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - docker=28.5.2-r14
+    - docker=28.5.2-r15
     - docker-cli-buildx
     - sed
     - jq
