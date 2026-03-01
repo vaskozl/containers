@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - trusttunnel=1.0.9-r0
+entrypoint:
+  command: trusttunnel
+vcs-url: https://github.com/TrustTunnel/TrustTunnel
