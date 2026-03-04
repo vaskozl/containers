@@ -16,7 +16,6 @@ contents:
     - dbus
     - dbus-glib
     - dosfstools
-    - dracut
     - e2fsprogs
     - findmnt
     - findutils
