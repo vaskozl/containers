@@ -52,6 +52,7 @@ publish:$PKG:
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
     - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
     - |
+      IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
       # Strip version segments from right to left
       while [ -n "\$TAG" ]; do
         IMAGES="\$IMAGES ${REPO}${PKG}:\$TAG vszl/${PKG}:\$TAG"
