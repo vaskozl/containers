@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository provides Wolfi based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and custom packages built with melange. Containers are versioned based on package versions, similar to official Docker images.
+This repository provides Wolfi based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and [custom packages built with melange](https://github.com/vaskozl/wolfi-packages). Containers are versioned based on package versions, similar to official Docker images.
 
 ## Features
 
