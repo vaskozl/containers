@@ -4,6 +4,7 @@ contents:
   packages:
     - pinewall-config=0.0.9-r0
     - kernel=6.6.127
+    - kernel-initramfs=6.6.127
     - avahi
     - bind-tools
     - blocky
