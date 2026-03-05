@@ -3,6 +3,8 @@ include: bootc.yaml
 contents:
   packages:
     - pinewall-config=0.0.9-r0
+    - kernel=6.12.74
+    - kernel-initramfs=6.12.74
     - avahi
     - bind-tools
     - blocky
