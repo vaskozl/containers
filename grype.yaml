@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - grype=0.109.0-r2
+    - grype=0.109.1-r1
     - kubectl
 entrypoint:
   command: grype
