@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - cert-manager-webhook=1.19.4-r0
+    - cert-manager-webhook=1.20.0-r1
 
 accounts:
   groups:

@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - trusttunnel=1.0.13-r0
+    - trusttunnel=1.0.16-r0
 entrypoint:
   command: trusttunnel
 vcs-url: https://github.com/TrustTunnel/TrustTunnel
