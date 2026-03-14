@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - claude=2.1.76-r0
+    - apk-tools
+    - apko
+    - bash
+    - bind-tools
+    - busybox
+    - busybox-full
+    - chromium
+    - conntrack-tools
+    - curl
+    - ethtool
+    - fzf
+    - gh
+    - git
+    - glab
+    - go
+    - gofumpt
+    - golangci-lint
+    - htop
+    - iftop
+    - iproute2
+    - kubectl
+    - kubectl-default
+    - melange
+    - wget
+entrypoint:
+  command: claude
+cmd: --help
