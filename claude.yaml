@@ -1,5 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
 include: wolfi-base.yaml
+environment:
+  CLAUDE_CODE_ATTRIBUTION_HEADER: "0"
 contents:
   packages:
     - claude=2.1.76-r0
