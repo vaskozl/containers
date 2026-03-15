@@ -38,3 +38,4 @@ contents:
 entrypoint:
   command: claude
 cmd: --help
+work-dir: /home/nonroot
