@@ -2,6 +2,8 @@
 include: wolfi-base.yaml
 environment:
   CLAUDE_CODE_ATTRIBUTION_HEADER: "0"
+  HOMEBREW_NO_AUTO_UPDATE: "1"
+  PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
 contents:
   packages:
     - claude=2.1.76-r0
@@ -30,6 +32,9 @@ contents:
     - kubectl-default
     - melange
     - wget
+    - xkbcomp
+    - xkeyboard-config
+    - xvfb-run
 entrypoint:
   command: claude
 cmd: --help
