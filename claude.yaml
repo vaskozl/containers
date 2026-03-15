@@ -28,6 +28,7 @@ contents:
     - htop
     - iftop
     - iproute2
+    - jq
     - kubectl
     - kubectl-default
     - melange
