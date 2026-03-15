@@ -9,6 +9,7 @@ contents:
     - apko
     - bash
     - bind-tools
+    - brew
     - busybox
     - busybox-full
     - chromium
@@ -28,6 +29,7 @@ contents:
     - kubectl
     - kubectl-default
     - melange
+    - msmtp
     - wget
 entrypoint:
   command: claude
