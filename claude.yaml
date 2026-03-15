@@ -29,7 +29,6 @@ contents:
     - kubectl
     - kubectl-default
     - melange
-    - msmtp
     - wget
 entrypoint:
   command: claude
