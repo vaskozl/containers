@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - melange=0.45.4-r1
+    - melange=0.46.0-r0
     - wolfi-keys
 entrypoint:
   command: /usr/bin/melange
