@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - qbittorrent-nox=5.1.4-r2
+    - qbittorrent-nox
 entrypoint:
   command: nice -n10 ionice -c3 qbittorrent-nox
 cmd: --webui-port='55555' --confirm-legal-notice

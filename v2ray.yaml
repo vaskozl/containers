@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - v2ray=5.47.0-r0
+    - v2ray
 entrypoint:
   command: v2ray
 vcs-url: https://github.com/v2ray/v2ray-core

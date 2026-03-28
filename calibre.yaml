@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - calibre=8.16.2-r1
+    - calibre
 entrypoint:
   command: calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre
