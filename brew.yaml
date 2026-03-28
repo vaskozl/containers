@@ -1,17 +1,15 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
 include: wolfi-base.yaml
 environment:
-  CLAUDE_CODE_ATTRIBUTION_HEADER: "0"
   HOMEBREW_NO_AUTO_UPDATE: "1"
   PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
 contents:
   packages:
-    - claude=2.1.76-r0
+    - brew=5.1.0
     - apk-tools
     - apko
     - bash
     - bind-tools
-    - brew
     - busybox
     - busybox-full
     - chromium
@@ -36,7 +34,4 @@ contents:
     - xkbcomp
     - xkeyboard-config
     - xvfb-run
-entrypoint:
-  command: claude
-cmd: --help
 work-dir: /home/nonroot
