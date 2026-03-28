@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
     - qbittorrent-nox=5.1.4-r2
