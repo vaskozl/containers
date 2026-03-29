@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - ntfy=2.17.0-r1
+    - ntfy=2.20.1-r0
 entrypoint:
   command: ntfy
 cmd: serve --no-log-dates
