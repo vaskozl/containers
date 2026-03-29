@@ -6,6 +6,7 @@ environment:
 contents:
   packages:
     - brew=5.1.0
+    - gettext
     - apk-tools
     - apko
     - bash
