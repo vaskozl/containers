@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
+include: alpine-base.yaml
 contents:
   packages:
-    - calibre
+    - calibre=8.16.2-r1
 entrypoint:
   command: calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre

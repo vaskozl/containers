@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
+include: alpine-base.yaml
 contents:
   packages:
-    - jellyfin=10.11.6-r1
+    - jellyfin=10.11.6-r4
     - jellyfin-web
     - intel-media-driver
     - onevpl-intel-gpu

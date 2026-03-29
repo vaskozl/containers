@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
+include: alpine-base.yaml
 contents:
   packages:
-    - rakudo
+    - rakudo=2025.11-r0
     - zef
-    - build-base
+    - alpine-sdk
     - openssl-dev
 entrypoint:
   command: raku
