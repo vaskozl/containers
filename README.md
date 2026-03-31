@@ -97,6 +97,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [radarr](./radarr.yaml)                                      | `docker pull ghcr.io/vaskozl/radarr`                             |
 | [rakudo](./rakudo.yaml)                                      | `docker pull ghcr.io/vaskozl/rakudo`                             |
 | [redis](./redis.yaml)                                        | `docker pull ghcr.io/vaskozl/redis`                              |
+| [rust](./rust.yaml)                                          | `docker pull ghcr.io/vaskozl/rust`                               |
 | [renovate-apk-indexer](./renovate-apk-indexer.yaml)          | `docker pull ghcr.io/vaskozl/renovate-apk-indexer`               |
 | [renovate](./renovate.yaml)                                  | `docker pull ghcr.io/vaskozl/renovate`                           |
 | [ripgrep](./ripgrep.yaml)                                    | `docker pull ghcr.io/vaskozl/ripgrep`                            |
