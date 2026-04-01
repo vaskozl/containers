@@ -1,24 +1,22 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
     - baikal=0.11.1-r0
-    - catatonit
+    - catatonit=0.2.1-r0
     - nginx
-    - php-cgi
-    - php-ctype
-    - php-dom
-    - php-fpm
-    - php-iconv
-    - php-json
-    - php-mbstring
-    - php-openssl
-    - php-pdo_sqlite
-    - php-session
-    - php-simplexml
-    - php-xml
-    - php-xmlreader
-    - php-xmlwriter
+    - php-8.5-cgi
+    - php-8.5-ctype
+    - php-8.5-dom
+    - php-8.5-fpm
+    - php-8.5-iconv
+    - php-8.5-mbstring
+    - php-8.5-openssl
+    - php-8.5-pdo_sqlite
+    - php-8.5-simplexml
+    - php-8.5-xml
+    - php-8.5-xmlreader
+    - php-8.5-xmlwriter
 entrypoint:
   command: catatonit -g --
 cmd: sh -c '/usr/sbin/php-fpm* -F & exec /usr/sbin/nginx -e /dev/stderr -g "daemon off;"'
