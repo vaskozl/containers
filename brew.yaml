@@ -32,6 +32,7 @@ contents:
     - kubectl
     - kubectl-default
     - melange
+    - rust
     - wget
     - xkbcomp
     - xkeyboard-config
