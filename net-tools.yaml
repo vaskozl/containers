@@ -1,14 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
-    - net-tools=2.10-r3
+    - net-tools=2.10-r32
     - apache2-utils
     - bash
     - bind-tools
     - bird
-    - bridge-utils
-    - busybox-extras
     - conntrack-tools
     - curl
     - dhcping
@@ -24,11 +22,9 @@ contents:
     - iproute2
     - ipset
     - iptables
-    - iptraf-ng
     - iputils
     - ipvsadm
     - jq
-    - libc6-compat
     - liboping
     - ltrace
     - mtr
@@ -37,25 +33,19 @@ contents:
     - nftables
     - ngrep
     - nmap
-    - nmap-nping
-    - nmap-scripts
     - openssh
     - openssl
-    - perl-crypt-ssleay
     - perl-net-ssleay
     - py3-pip
     - py3-setuptools
-    - scapy
     - socat
-    - speedtest-cli
     - strace
     - swaks
     - tcpdump
     - tcptraceroute
-    - tshark
+    - tshark-4.4
     - util-linux
     - vim
-    - websocat
     - zsh
 entrypoint:
   command: zsh
