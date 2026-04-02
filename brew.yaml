@@ -16,6 +16,8 @@ contents:
     - chromium
     - conntrack-tools
     - curl
+    - docker
+    - docker-cli-buildx
     - ethtool
     - fzf
     - gh
