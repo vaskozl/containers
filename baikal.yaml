@@ -1,20 +1,18 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: alpine-base.yaml
+include: wolfi-base.yaml
 contents:
   packages:
     - baikal=0.11.1-r0
-    - catatonit
+    - catatonit=0.2.1-r0
     - nginx
     - php-cgi
     - php-ctype
     - php-dom
     - php-fpm
     - php-iconv
-    - php-json
     - php-mbstring
     - php-openssl
     - php-pdo_sqlite
-    - php-session
     - php-simplexml
     - php-xml
     - php-xmlreader
