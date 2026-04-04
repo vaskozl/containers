@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - openresty=1.29.2.3-r0
+    - openresty=1.29.2.3-r1
 entrypoint:
   command: /usr/bin/openresty
 cmd: -e /dev/stderr -g "daemon off;"
