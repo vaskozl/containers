@@ -5,7 +5,7 @@ generate:
   stage: generate
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  image: ghcr.io/vaskozl/apko@sha256:5a732b416ccbf691a5dc392cbaa87906af75f517ef3454b7173be065fcf3af7d
+  image: ghcr.io/vaskozl/apko@sha256:0d1a23e57497cb5aa1cc1ee5f115c98d46c0c2ee300daa3a9daa48665b48a340
   script:
     - hack/generate-jobs.sh
   variables:
