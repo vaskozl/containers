@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - net-tools=2.10-r36
+    - net-tools=2.10-r37
     - apache2-utils
     - bash
     - bind-tools
