@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - hugo=0.159.2-r2
+    - hugo=0.160.0-r0
 entrypoint:
   command: hugo
 vcs-url: https://github.com/gohugoio/hugo
