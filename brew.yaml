@@ -5,7 +5,7 @@ environment:
   PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
 contents:
   packages:
-    - brew=5.1.4-r1
+    - brew=5.1.5-r0
     - gettext
     - apk-tools
     - apko
