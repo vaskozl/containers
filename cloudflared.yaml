@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - cloudflared=2026.3.0-r7
+    - cloudflared=2026.3.0-r8
 entrypoint:
   command: cloudflared --no-autoupdate
 cmd: version
