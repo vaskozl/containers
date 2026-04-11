@@ -6,7 +6,6 @@ environment:
 contents:
   packages:
     - brew=5.1.5-r0
-    - gettext
     - apk-tools
     - apko
     - bash
@@ -20,6 +19,7 @@ contents:
     - docker-cli-buildx
     - ethtool
     - fzf
+    - gettext
     - gh
     - git
     - glab
@@ -34,6 +34,8 @@ contents:
     - kubectl
     - kubectl-default
     - melange
+    - perl
+    - perl-json-xs
     - rust
     - wget
     - xkbcomp
