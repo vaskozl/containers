@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - nfs-subdir-external-provisioner=4.0.18-r36
+    - nfs-subdir-external-provisioner=4.0.18-r37
 accounts:
   run-as: '0'
 entrypoint:
