@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - calibre=9.6.0-r0
+    - calibre=9.6.0-r1
 entrypoint:
   command: calibre-server
 vcs-url: https://github.com/kovidgoyal/calibre
