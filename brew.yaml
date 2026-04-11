@@ -36,6 +36,7 @@ contents:
     - melange
     - perl
     - perl-json-xs
+    - perl-common-sense
     - rust
     - wget
     - xkbcomp
