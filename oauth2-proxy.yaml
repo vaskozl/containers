@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - oauth2-proxy=7.15.1-r7
+    - oauth2-proxy=7.15.1-r8
 entrypoint:
   command: oauth2-proxy
 cmd: run
