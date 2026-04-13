@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - wolfictl=0.39.8-r3
+    - wolfictl=0.39.9-r0
     - ca-certificates-bundle
     - wolfi-baselayout
     - coreutils
