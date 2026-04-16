@@ -2,7 +2,7 @@
 include: bootc.yaml
 contents:
   packages:
-    - containerd=2.2.2-r9
+    - containerd=2.2.3-r0
     - containerd-service
     - cni-plugins-bridge-compat
     - cni-plugins-firewall-compat
