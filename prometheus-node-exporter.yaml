@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-  - prometheus-node-exporter=1.11.1-r0
+  - prometheus-node-exporter=1.11.1-r6
 entrypoint:
   command: /usr/bin/node_exporter
 vcs-url: https://github.com/prometheus/node_exporter
