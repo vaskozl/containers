@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - code-server=4.112.0-r2
+    - code-server=4.112.0-r3
     - code-server-compat
     - zsh
     - apk-tools
