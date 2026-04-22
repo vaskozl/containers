@@ -34,6 +34,16 @@ contents:
     - kubectl-default
     - melange
     - perl
+    - perl-common-sense
+    - perl-email-date-format
+    - perl-io-socket-ssl
+    - perl-json-xs
+    - perl-mime-lite
+    - perl-mime-types
+    - perl-mojolicious
+    - perl-path-tiny
+    - perl-timedate
+    - perl-types-serialiser
     - rust
     - wget
     - xkbcomp
