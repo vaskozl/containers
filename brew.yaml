@@ -12,7 +12,6 @@ contents:
     - bind-tools
     - busybox
     - busybox-full
-    - chromium
     - conntrack-tools
     - curl
     - docker
