@@ -6,6 +6,7 @@ contents:
     - jellyfin-web
     - intel-media-driver
     - libva-intel-driver
+    - intel-compute-runtime
 entrypoint:
   command: jellyfin
 environment:
