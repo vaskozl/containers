@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - perl-mojolicious=9.41-r0
+    - perl-mojolicious=9.42-r0
     - perl-common-sense
     - perl-email-date-format
     - perl-io-socket-ssl
