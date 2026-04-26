@@ -54,7 +54,8 @@ contents:
 work-dir: /home/nonroot
 paths:
   - path: /home/linuxbrew/.linuxbrew
-    type: permissions
+    type: directory
     uid: 568
     gid: 568
+    permissions: 0o755
     recursive: true
