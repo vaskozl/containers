@@ -4,6 +4,7 @@ contents:
   packages:
     - jellyfin=10.11.8-r0
     - jellyfin-web
+    - jellyfin-ffmpeg
     - intel-media-driver
     - libva-intel-driver
     - intel-compute-runtime
@@ -15,7 +16,7 @@ environment:
   JELLYFIN_DATA_DIR: /config
   JELLYFIN_FFMPEG: /usr/lib/jellyfin-ffmpeg/ffmpeg
   JELLYFIN_LOG_DIR: /config/log
-  JELLYFIN_WEB_DIR: /usr/share/webapps/jellyfin-web
+  JELLYFIN_WEB_DIR: /usr/lib/jellyfin/jellyfin-web
   DOTNET_SYSTEM_IO_DISABLEFILELOCKING: 'true'
 vcs-url: https://github.com/jellyfin/jellyfin
 archs:
