@@ -7,47 +7,13 @@ contents:
   packages:
     - brew=5.1.6-r0
     - apk-tools
-    - apko
-    - bash
-    - bind-tools
     - busybox
     - busybox-full
-    - conntrack-tools
-    - curl
-    - docker
-    - docker-cli-buildx
-    - ethtool
-    - fzf
-    - gettext
-    - gh
-    - git
-    - glab
-    - go
-    - gofumpt
-    - golangci-lint
-    - htop
-    - iftop
-    - iproute2
-    - jq
-    - just
-    - kubectl
-    - kubectl-default
-    - melange
-    - perl
-    - perl-common-sense
-    - perl-email-date-format
-    - perl-io-socket-ssl
-    - perl-json-xs
-    - perl-mime-lite
-    - perl-mime-types
-    - perl-mojolicious
-    - perl-path-tiny
-    - perl-timedate
-    - perl-types-serialiser
-    - rust
-    - wget
-    - xkbcomp
-    - xkeyboard-config
-    - xvfb-run
-    - zlib-dev
+    - bash
 work-dir: /home/nonroot
+paths:
+  - path: /home/linuxbrew/.linuxbrew
+    type: permissions
+    uid: 65532
+    gid: 65532
+    recursive: true

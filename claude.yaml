@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+environment:
+  HOMEBREW_NO_AUTO_UPDATE: "1"
+  PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
+contents:
+  packages:
+    - claude=2.1.113-r0
+    - apk-tools
+    - apko
+    - bash
+    - bind-tools
+    - brew
+    - busybox
+    - busybox-full
+    - conntrack-tools
+    - curl
+    - docker
+    - docker-cli-buildx
+    - ethtool
+    - fzf
+    - gettext
+    - gh
+    - git
+    - glab
+    - go
+    - gofumpt
+    - golangci-lint
+    - htop
+    - iftop
+    - iproute2
+    - jq
+    - just
+    - kubectl
+    - kubectl-default
+    - melange
+    - perl
+    - perl-common-sense
+    - perl-email-date-format
+    - perl-io-socket-ssl
+    - perl-json-xs
+    - perl-mime-lite
+    - perl-mime-types
+    - perl-mojolicious
+    - perl-path-tiny
+    - perl-timedate
+    - perl-types-serialiser
+    - rust
+    - wget
+    - xkbcomp
+    - xkeyboard-config
+    - xvfb-run
+    - zlib-dev
+work-dir: /home/nonroot
+paths:
+  - path: /home/linuxbrew/.linuxbrew
+    type: permissions
+    uid: 65532
+    gid: 65532
+    recursive: true
