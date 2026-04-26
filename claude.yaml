@@ -45,7 +45,7 @@ contents:
     - perl-path-tiny
     - perl-timedate
     - perl-types-serialiser
-    - rust
+    - rustup
     - wget
     - xkbcomp
     - xkeyboard-config
