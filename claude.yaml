@@ -15,8 +15,6 @@ contents:
     - busybox-full
     - conntrack-tools
     - curl
-    - docker
-    - docker-cli-buildx
     - ethtool
     - fzf
     - gettext
