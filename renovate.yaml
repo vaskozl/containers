@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - renovate=43.141.5-r0
+    - renovate=43.141.6-r0
     - flux
     - go
     - npm
