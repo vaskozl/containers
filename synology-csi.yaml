@@ -16,7 +16,6 @@ contents:
     - nfs-utils
     - util-linux
     - xfsprogs
-    - xfsprogs-extra
 accounts:
   run-as: "0"
 entrypoint:
