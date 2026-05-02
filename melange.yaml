@@ -4,6 +4,7 @@ contents:
   packages:
     - melange=0.50.4-r0
     - wolfi-keys
+    - util-linux-misc
 entrypoint:
   command: /usr/bin/melange
 cmd: --help

@@ -44,10 +44,8 @@ contents:
     - perl-timedate
     - perl-types-serialiser
     - rustup
+    - util-linux-misc
     - wget
-    - xkbcomp
-    - xkeyboard-config
-    - xvfb-run
     - zlib-dev
 work-dir: /home/nonroot
 paths:
