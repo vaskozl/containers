@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - coredns=1.14.3-r0
+    - coredns-compat
+entrypoint:
+  command: /usr/bin/coredns -dns.port=53
+vcs-url: https://github.com/coredns/coredns
