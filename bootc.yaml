@@ -3,11 +3,11 @@ include: wolfi-base.yaml
 contents:
   packages:
     - bootc=1.15.2-r1
-    - bootc-baselayout
-    - nori-user
     - bind-tools
     - binutils
+    - bootc-baselayout
     - btrfs-progs
+    - busybox-full
     - composefs
     - conmon
     - coreutils
@@ -26,6 +26,7 @@ contents:
     - losetup
     - lsblk
     - netavark
+    - nori-user
     - nori-user
     - ostree
     - posix-libc-utils
