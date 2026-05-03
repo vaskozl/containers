@@ -20,7 +20,6 @@ contents:
     - findmnt
     - findutils
     - glib
-    - journal-acl-fixup
     - libselinux
     - linux-lts
     - linux-lts-initramfs
