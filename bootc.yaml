@@ -20,6 +20,7 @@ contents:
     - findmnt
     - findutils
     - glib
+    - journal-acl-fixup
     - libselinux
     - linux-lts
     - linux-lts-initramfs
@@ -51,15 +52,6 @@ accounts:
   run-as: root
 annotations:
   containers.bootc: "1"
-paths:
-  # Remove the shipped SCHILY.xattr POSIX ACL from the systemd apk
-  # composefs rejects it with "malformed pax extensions"
-  - path: /var/log/journal
-    type: directory
-    permissions: 0o755
-    uid: 0
-    gid: 0
-    recursive: false
 layering:
   strategy: origin
   budget: 96
