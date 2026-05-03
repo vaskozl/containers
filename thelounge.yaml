@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - thelounge=4.4.3-r2
+    - thelounge=4.4.3-r3
 entrypoint:
   command: thelounge
 cmd: start
