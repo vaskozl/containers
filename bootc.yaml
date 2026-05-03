@@ -50,7 +50,7 @@ stop-signal: SIGRTMIN+3
 accounts:
   run-as: root
 annotations:
-  containers.bootable: "1"
+  containers.bootc: "1"
 layering:
   strategy: origin
   budget: 96
