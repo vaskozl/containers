@@ -20,9 +20,9 @@ contents:
     - findmnt
     - findutils
     - glib
-    - kernel
-    - kernel-initramfs
     - libselinux
+    - linux-lts
+    - linux-lts-initramfs
     - losetup
     - lsblk
     - netavark
