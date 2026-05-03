@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - golink=1.0.0-r0
+    - golink=1.0.0-r1
 entrypoint:
   command: golink
 cmd: "--sqlitedb=/home/nonroot/golink.db --verbose"

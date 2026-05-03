@@ -3,7 +3,7 @@ include: wolfi-base.yaml
 contents:
   packages:
     - baikal=0.11.1-r0
-    - catatonit=0.2.1-r0
+    - catatonit=0.2.1-r1
     - nginx
     - php-cgi
     - php-ctype
