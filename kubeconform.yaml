@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - kubeconform=0.7.0-r0
+    - kubeconform=0.7.0-r1
     - kustomize
     - yq
 entrypoint:
