@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - apko=1.2.9-r0
+    - apko=1.2.10-r0
     - yq
 entrypoint:
   command: /bin/sh
