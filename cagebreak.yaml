@@ -12,6 +12,8 @@ contents:
     - foot-terminfo
     - htop
     - iproute2
+    - libva
+    - linux-firmware-amdgpu
     - mesa
     - mesa-egl
     - nftables
@@ -19,6 +21,12 @@ contents:
     - openssh-server-config
     - openssh-service
     - openssl
+    - pciutils
+    - pulseaudio
+    - pulseaudio-alsa
+    - pulseaudio-utils
     - systemd-default-network
     - ttf-dejavu
+    - vulkan-loader-libs
+    - wl-clipboard
     - wlroots
