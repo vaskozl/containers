@@ -8,8 +8,10 @@ contents:
     - conntrack-tools
     - curl
     - ethtool
+    - fastfetch
     - foot
     - foot-terminfo
+    - grype
     - htop
     - iproute2
     - libva
