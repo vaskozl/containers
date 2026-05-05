@@ -20,6 +20,7 @@ contents:
     - findmnt
     - findutils
     - glib
+    - kmod-libs
     - libselinux
     - linux-lts
     - linux-lts-initramfs
