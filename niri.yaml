@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: bootc.yaml
+contents:
+  packages:
+    - niri=26.04-r0
+    - bind-tools
+    - cairo
+    - chromium
+    - conntrack-tools
+    - curl
+    - ethtool
+    - fastfetch
+    - foot
+    - foot-terminfo
+    - grype
+    - htop
+    - iproute2
+    - libinput
+    - libseat
+    - libva
+    - libxkbcommon
+    - linux-firmware-amdgpu
+    - mesa
+    - mesa-egl
+    - nftables
+    - niri-bash-completion
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - openssl
+    - pango
+    - pciutils
+    - pixman
+    - pulseaudio
+    - pulseaudio-alsa
+    - pulseaudio-utils
+    - systemd-default-network
+    - ttf-dejavu
+    - vulkan-loader-libs
+    - wl-clipboard
