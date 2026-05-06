@@ -96,6 +96,7 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [fluent-bit](./fluent-bit.yaml)                              | `docker pull ghcr.io/vaskozl/fluent-bit`                         |
 | [docker](./docker.yaml)                                      | `docker pull ghcr.io/vaskozl/docker`                             |
 | [cagebreak](./cagebreak.yaml)                                | `docker pull ghcr.io/vaskozl/cagebreak`                          |
+| [niri](./niri.yaml)                                          | `docker pull ghcr.io/vaskozl/niri`                               |
 | [qbittorrent-nox](./qbittorrent-nox.yaml)                    | `docker pull ghcr.io/vaskozl/qbittorrent-nox`                    |
 | [grype](./grype.yaml)                                        | `docker pull ghcr.io/vaskozl/grype`                              |
 | [minilb](./minilb.yaml)                                      | `docker pull ghcr.io/vaskozl/minilb`                             |
