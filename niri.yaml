@@ -39,6 +39,5 @@ contents:
     - ttf-dejavu
     - vulkan-loader-libs
     # TODO: remove on next niri release (missing dep workaround)
-    - wayland-libs-client
     - wayland-libs-server
     - wl-clipboard
