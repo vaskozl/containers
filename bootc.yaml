@@ -57,6 +57,8 @@ layering:
   strategy: origin
   budget: 96
 paths:
+  # Wolfi ships with legacy /usr/bin/iptables
+  # symlink it to to the iptables-nft
   - path: /usr/bin/iptables
     type: symlink
     source: xtables-nft-multi
@@ -75,4 +77,14 @@ paths:
   - path: /usr/bin/ip6tables-restore
     type: symlink
     source: xtables-nft-multi
+  # Strip POSIX ACL xattrs that bootc rejects on amd64 (Wolfi systemd quirk).
+  # `hardlink` is abused here because it's the only mutator that can remove them
+  - path: /var/log/journal-stub
+    type: directory
+    permissions: 0o755
+  - path: /var/log/journal
+    type: hardlink
+    source: /var/log/journal-stub
+    permissions: 0o755
+
 
