@@ -20,6 +20,7 @@ contents:
     - findmnt
     - findutils
     - glib
+    - iptables-nft
     - kmod-libs
     - libselinux
     - linux-lts
@@ -55,4 +56,23 @@ annotations:
 layering:
   strategy: origin
   budget: 96
+paths:
+  - path: /usr/bin/iptables
+    type: symlink
+    source: xtables-nft-multi
+  - path: /usr/bin/iptables-save
+    type: symlink
+    source: xtables-nft-multi
+  - path: /usr/bin/iptables-restore
+    type: symlink
+    source: xtables-nft-multi
+  - path: /usr/bin/ip6tables
+    type: symlink
+    source: xtables-nft-multi
+  - path: /usr/bin/ip6tables-save
+    type: symlink
+    source: xtables-nft-multi
+  - path: /usr/bin/ip6tables-restore
+    type: symlink
+    source: xtables-nft-multi
 

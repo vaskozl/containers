@@ -31,10 +31,14 @@ contents:
     - pango
     - pciutils
     - pixman
+    - podman
     - pulseaudio
     - pulseaudio-alsa
     - pulseaudio-utils
     - systemd-default-network
     - ttf-dejavu
     - vulkan-loader-libs
+    # TODO: remove on next niri release (missing dep workaround)
+    - wayland-libs-client
+    - wayland-libs-server
     - wl-clipboard
