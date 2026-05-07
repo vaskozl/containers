@@ -58,25 +58,25 @@ layering:
   budget: 96
 paths:
   # Wolfi ships with legacy /usr/bin/iptables
-  # symlink it to to the iptables-nft
+  # link it to the nft version instead
   - path: /usr/bin/iptables
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   - path: /usr/bin/iptables-save
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   - path: /usr/bin/iptables-restore
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   - path: /usr/bin/ip6tables
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   - path: /usr/bin/ip6tables-save
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   - path: /usr/bin/ip6tables-restore
-    type: symlink
-    source: xtables-nft-multi
+    type: hardlink
+    source: /usr/bin/xtables-nft-multi
   # Strip POSIX ACL xattrs that bootc rejects on amd64 (Wolfi systemd quirk).
   # `hardlink` is abused here because it's the only mutator that can remove them
   - path: /var/log/journal-stub
