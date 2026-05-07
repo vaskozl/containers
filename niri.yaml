@@ -10,6 +10,10 @@ contents:
     - curl
     - ethtool
     - fastfetch
+    - font-liberation
+    - font-noto
+    - font-noto-cjk
+    - font-noto-emoji
     - foot
     - foot-terminfo
     - grype
@@ -38,6 +42,5 @@ contents:
     - systemd-default-network
     - ttf-dejavu
     - vulkan-loader-libs
-    # TODO: remove on next niri release (missing dep workaround)
-    - wayland-libs-server
+    - wayland-libs-server # TODO: remove on next niri release
     - wl-clipboard
