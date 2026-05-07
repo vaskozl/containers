@@ -29,7 +29,6 @@ contents:
     - lsblk
     - netavark
     - nori-user
-    - nori-user
     - ostree
     - posix-libc-utils
     - sfdisk
