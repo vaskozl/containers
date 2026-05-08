@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - fluent-bit=5.0.4-r0
+    - fluent-bit=5.0.5-r0
 entrypoint:
   command: fluent-bit
 cmd: --config=/fluent-bit/etc/fluent-bit.conf
