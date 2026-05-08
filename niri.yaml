@@ -2,7 +2,7 @@
 include: bootc.yaml
 contents:
   packages:
-    - niri=26.04-r0
+    - niri=26.04-r1
     - bind-tools
     - cairo
     - chromium
