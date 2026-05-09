@@ -46,6 +46,7 @@ contents:
     - rustup
     - util-linux-misc
     - wget
+    - yq
     - zlib-dev
 work-dir: /home/nonroot
 paths:
