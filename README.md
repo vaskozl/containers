@@ -118,3 +118,4 @@ For more specific examples, check out [my manifests repository](https://github.c
 | [kubeconform](./kubeconform.yaml)                            | `docker pull ghcr.io/vaskozl/kubeconform`                        |
 | [jellyfin](./jellyfin.yaml)                                  | `docker pull ghcr.io/vaskozl/jellyfin`                           |
 | [tailscale-operator](./tailscale-operator.yaml)              | `docker pull ghcr.io/vaskozl/tailscale-operator`                 |
+| [syncthing](./syncthing.yaml)                                | `docker pull ghcr.io/vaskozl/syncthing`                          |

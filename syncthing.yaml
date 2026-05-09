@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: alpine-base.yaml
+contents:
+  packages:
+    - syncthing=2.0.16-r1
+entrypoint:
+  command: syncthing
+vcs-url: https://github.com/syncthing/syncthing
