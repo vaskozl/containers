@@ -20,7 +20,6 @@ contents:
     - findmnt
     - findutils
     - glib
-    - iptables-nft
     - kmod-libs
     - libselinux
     - linux-lts
@@ -56,26 +55,6 @@ layering:
   strategy: origin
   budget: 96
 paths:
-  # Wolfi ships with legacy /usr/bin/iptables
-  # link it to the nft version instead
-  - path: /usr/bin/iptables
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
-  - path: /usr/bin/iptables-save
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
-  - path: /usr/bin/iptables-restore
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
-  - path: /usr/bin/ip6tables
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
-  - path: /usr/bin/ip6tables-save
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
-  - path: /usr/bin/ip6tables-restore
-    type: hardlink
-    source: /usr/bin/xtables-nft-multi
   # Strip POSIX ACL xattrs that bootc rejects on amd64 (Wolfi systemd quirk).
   # `hardlink` is abused here because it's the only mutator that can remove them
   - path: /var/log/journal-stub
