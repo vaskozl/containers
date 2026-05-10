@@ -30,11 +30,11 @@ accounts:
       uid: 33
   run-as: http
 paths:
-  - path: /run/nginx
+  - path: /run
     type: directory
     uid: 33
     gid: 33
-    permissions: 0o777
+    permissions: 0o755
   - path: /var/lib/nginx
     type: directory
     uid: 33
