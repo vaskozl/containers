@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - rest-server=0.14.0-r0
+entrypoint:
+  command: rest-server
+vcs-url: https://github.com/restic/rest-server
