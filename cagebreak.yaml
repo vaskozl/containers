@@ -2,7 +2,7 @@
 include: bootc.yaml
 contents:
   packages:
-    - cagebreak=3.1.0-r0
+    - cagebreak=3.2.0-r5
     - bind-tools
     - chromium
     - conntrack-tools
