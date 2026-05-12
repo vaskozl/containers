@@ -5,7 +5,7 @@ environment:
   PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
 contents:
   packages:
-    - brew=5.1.10-r0
+    - brew=5.1.11-r0
     - apk-tools
     - busybox
     - busybox-full
