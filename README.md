@@ -1,121 +1,126 @@
-# Wolfi Base Images
+# apkontainers
 
-## Introduction
+[Wolfi](https://github.com/wolfi-dev) is a rolling-release Linux undistro: Alpine's packaging conventions, `glibc` instead of `musl`, no kernel. [Chainguard Containers](https://edu.chainguard.dev/chainguard/chainguard-images/overview/) are built on it. This repo is the same idea but for things Chainguard doesn't ship, plus a few opinions of my own.
 
-This repository provides Wolfi based OCI/Docker containers which are built with consistency, minimalism, security and multi-architecture support in mind. The containers leverage both official packages and [custom packages built with melange](https://github.com/vaskozl/wolfi-packages). Containers are versioned based on package versions, similar to official Docker images.
+Every image is a declarative [`apko`](https://github.com/chainguard-dev/apko) YAML. No `RUN curl $DODGY_URL | sh`, no layer cache busting, no recompiling the world when the base changes. The build is reproducible and every file in the image is owned by an APK with a version, a license, and a recipe you can read.
 
-## Features
+Two properties fall out of this for free:
 
-- Distroless & Secure: Built from scratch using apko with a focus on security and small footprint.
-- Continuous Updates: Regularly updated with the latest security patches.
-- Multi-Arch Support: These containers are built with support for `linux/amd64` and `linux/arm64`.
-- Renovate compatible: Containers have the `org.opencontainers.image.source` label to facilitate changelog population.
-- Versioned Images: The container images are versioned based on the package versions, making it easy to pin your application to a specific version.
-- Busybox included: Busybox is included for debugging and utility reasons in all images, while keeping them tiny.
+- **Composability.** Bump one package, rebuild one layer. Nothing else recompiles.
+- **Accountability.** Every file lives in `/usr/bin`, `/usr/lib`, `/etc` — not `/app/` or whatever cursed directory the upstream `Dockerfile` invented.
 
-## Tagging Scheme
+Custom packages that aren't in Wolfi yet are built with [`melange`](https://github.com/chainguard-dev/melange) and live in [`packages/`](./packages/). Built APKs are published to `https://apks.sko.ai`.
 
-We follow a versioning scheme of upstream wolfi packages. For example `ghcr.io/vaskozl/kubectl:1.28.2-1` is available as:
+A subset — `bootc`, `containerd`, `niri`, `cagebreak`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
 
-* `ghcr.io/vaskozl/kubectl:latest`
-* `ghcr.io/vaskozl/kubectl:1.33.1`
-* `ghcr.io/vaskozl/kubectl:1.33`
-* `ghcr.io/vaskozl/kubectl:1`
+## Tagging
 
-You can choose the tag that best fits your needs, whether you want the latest version, a specific version, or even a particular release of a version. Do note that even releases pinned tags are **not** be immutable as they are rebuilt regularly to pick up the latest security fixes.
+Tags follow the upstream Wolfi package version. `ghcr.io/vaskozl/kubectl:1.33.1-r0` is also available as:
 
-The best and intenteded way to achieve immutability is to just pin the images by by sha256 digest.
+- `ghcr.io/vaskozl/kubectl:1.33.1`
+- `ghcr.io/vaskozl/kubectl:1.33`
+- `ghcr.io/vaskozl/kubectl:1`
+- `ghcr.io/vaskozl/kubectl:latest`
+
+Even pinned tags are rebuilt nightly to pick up security fixes, so they're not immutable. Pin by digest if you need that guarantee.
+
+[Renovate](https://github.com/renovatebot/renovate) keeps the `=version` pins in the YAML files fresh via a custom [`renovate-apk-indexer`](https://github.com/hown3d/renovate-apk-indexer) datasource that reads `APKINDEX.tar.gz`.
 
 ## Usage
 
-### Running the containers
+Images have no custom entrypoint scripts. Pass the command and arguments directly. Configuration goes in via volume mounts. For real-world examples see [`vaskozl/home-infra`](https://github.com/vaskozl/home-infra).
 
-The containers do not provide custom entrypoint scripts, and users are expected to provide the command and arguments they desire. In most cases that simply means running the program that is installed with the argument that you desire. This helps keep everything simple and predictable and means you don't have to sift through a list environment variables just to figure out how to run the bespoke entrypoint. Configuration files can simply be mounted with volumes.
+## Images
 
-For more specific examples, check out [my manifests repository](https://github.com/vaskozl/home-infra).
+| Image | Pull |
+| --- | --- |
+| [anubis](./anubis.yaml) | [`ghcr.io/vaskozl/anubis`](https://github.com/vaskozl/containers/pkgs/container/anubis) |
+| [apk-tools](./apk-tools.yaml) | [`ghcr.io/vaskozl/apk-tools`](https://github.com/vaskozl/containers/pkgs/container/apk-tools) |
+| [apko](./apko.yaml) | [`ghcr.io/vaskozl/apko`](https://github.com/vaskozl/containers/pkgs/container/apko) |
+| [baikal](./baikal.yaml) | [`ghcr.io/vaskozl/baikal`](https://github.com/vaskozl/containers/pkgs/container/baikal) |
+| [blocky](./blocky.yaml) | [`ghcr.io/vaskozl/blocky`](https://github.com/vaskozl/containers/pkgs/container/blocky) |
+| [bootc](./bootc.yaml) | [`ghcr.io/vaskozl/bootc`](https://github.com/vaskozl/containers/pkgs/container/bootc) |
+| [brew](./brew.yaml) | [`ghcr.io/vaskozl/brew`](https://github.com/vaskozl/containers/pkgs/container/brew) |
+| [buildkitd](./buildkitd.yaml) | [`ghcr.io/vaskozl/buildkitd`](https://github.com/vaskozl/containers/pkgs/container/buildkitd) |
+| [cagebreak](./cagebreak.yaml) | [`ghcr.io/vaskozl/cagebreak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak) |
+| [calibre](./calibre.yaml) | [`ghcr.io/vaskozl/calibre`](https://github.com/vaskozl/containers/pkgs/container/calibre) |
+| [cert-manager-acmesolver](./cert-manager/cert-manager-acmesolver.yaml) | [`ghcr.io/vaskozl/cert-manager-acmesolver`](https://github.com/vaskozl/containers/pkgs/container/cert-manager-acmesolver) |
+| [cert-manager-cainjector](./cert-manager/cert-manager-cainjector.yaml) | [`ghcr.io/vaskozl/cert-manager-cainjector`](https://github.com/vaskozl/containers/pkgs/container/cert-manager-cainjector) |
+| [cert-manager-controller](./cert-manager/cert-manager-controller.yaml) | [`ghcr.io/vaskozl/cert-manager-controller`](https://github.com/vaskozl/containers/pkgs/container/cert-manager-controller) |
+| [cert-manager-webhook](./cert-manager/cert-manager-webhook.yaml) | [`ghcr.io/vaskozl/cert-manager-webhook`](https://github.com/vaskozl/containers/pkgs/container/cert-manager-webhook) |
+| [chromium](./chromium.yaml) | [`ghcr.io/vaskozl/chromium`](https://github.com/vaskozl/containers/pkgs/container/chromium) |
+| [claude](./claude.yaml) | [`ghcr.io/vaskozl/claude`](https://github.com/vaskozl/containers/pkgs/container/claude) |
+| [cloudflared](./cloudflared.yaml) | [`ghcr.io/vaskozl/cloudflared`](https://github.com/vaskozl/containers/pkgs/container/cloudflared) |
+| [code-server](./code-server.yaml) | [`ghcr.io/vaskozl/code-server`](https://github.com/vaskozl/containers/pkgs/container/code-server) |
+| [containerd](./containerd.yaml) | [`ghcr.io/vaskozl/containerd`](https://github.com/vaskozl/containers/pkgs/container/containerd) |
+| [coredns](./coredns.yaml) | [`ghcr.io/vaskozl/coredns`](https://github.com/vaskozl/containers/pkgs/container/coredns) |
+| [docker](./docker.yaml) | [`ghcr.io/vaskozl/docker`](https://github.com/vaskozl/containers/pkgs/container/docker) |
+| [flannel](./flannel.yaml) | [`ghcr.io/vaskozl/flannel`](https://github.com/vaskozl/containers/pkgs/container/flannel) |
+| [fluent-bit](./fluent-bit.yaml) | [`ghcr.io/vaskozl/fluent-bit`](https://github.com/vaskozl/containers/pkgs/container/fluent-bit) |
+| [git](./git.yaml) | [`ghcr.io/vaskozl/git`](https://github.com/vaskozl/containers/pkgs/container/git) |
+| [gitlab-runner-helper](./gitlab/gitlab-runner-helper.yaml) | [`ghcr.io/vaskozl/gitlab-runner-helper`](https://github.com/vaskozl/containers/pkgs/container/gitlab-runner-helper) |
+| [gitlab-runner](./gitlab/gitlab-runner.yaml) | [`ghcr.io/vaskozl/gitlab-runner`](https://github.com/vaskozl/containers/pkgs/container/gitlab-runner) |
+| [go](./go.yaml) | [`ghcr.io/vaskozl/go`](https://github.com/vaskozl/containers/pkgs/container/go) |
+| [golink](./golink.yaml) | [`ghcr.io/vaskozl/golink`](https://github.com/vaskozl/containers/pkgs/container/golink) |
+| [grafana](./grafana.yaml) | [`ghcr.io/vaskozl/grafana`](https://github.com/vaskozl/containers/pkgs/container/grafana) |
+| [grype](./grype.yaml) | [`ghcr.io/vaskozl/grype`](https://github.com/vaskozl/containers/pkgs/container/grype) |
+| [haproxy](./haproxy.yaml) | [`ghcr.io/vaskozl/haproxy`](https://github.com/vaskozl/containers/pkgs/container/haproxy) |
+| [hugo](./hugo.yaml) | [`ghcr.io/vaskozl/hugo`](https://github.com/vaskozl/containers/pkgs/container/hugo) |
+| [jellyfin](./jellyfin.yaml) | [`ghcr.io/vaskozl/jellyfin`](https://github.com/vaskozl/containers/pkgs/container/jellyfin) |
+| [k8s-sidecar](./k8s-sidecar.yaml) | [`ghcr.io/vaskozl/k8s-sidecar`](https://github.com/vaskozl/containers/pkgs/container/k8s-sidecar) |
+| [kromgo](./kromgo.yaml) | [`ghcr.io/vaskozl/kromgo`](https://github.com/vaskozl/containers/pkgs/container/kromgo) |
+| [kube-ip-tracker](./kube-ip-tracker.yaml) | [`ghcr.io/vaskozl/kube-ip-tracker`](https://github.com/vaskozl/containers/pkgs/container/kube-ip-tracker) |
+| [kube-network-policies](./kube-network-policies.yaml) | [`ghcr.io/vaskozl/kube-network-policies`](https://github.com/vaskozl/containers/pkgs/container/kube-network-policies) |
+| [kubeconform](./kubeconform.yaml) | [`ghcr.io/vaskozl/kubeconform`](https://github.com/vaskozl/containers/pkgs/container/kubeconform) |
+| [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
+| [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
+| [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
+| [logrotate](./logrotate.yaml) | [`ghcr.io/vaskozl/logrotate`](https://github.com/vaskozl/containers/pkgs/container/logrotate) |
+| [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
+| [mariadb](./mariadb.yaml) | [`ghcr.io/vaskozl/mariadb`](https://github.com/vaskozl/containers/pkgs/container/mariadb) |
+| [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
+| [minilb](./minilb.yaml) | [`ghcr.io/vaskozl/minilb`](https://github.com/vaskozl/containers/pkgs/container/minilb) |
+| [minio](./minio.yaml) | [`ghcr.io/vaskozl/minio`](https://github.com/vaskozl/containers/pkgs/container/minio) |
+| [mosquitto](./mosquitto.yaml) | [`ghcr.io/vaskozl/mosquitto`](https://github.com/vaskozl/containers/pkgs/container/mosquitto) |
+| [net-tools](./net-tools.yaml) | [`ghcr.io/vaskozl/net-tools`](https://github.com/vaskozl/containers/pkgs/container/net-tools) |
+| [nfs-subdir-external-provisioner](./nfs-subdir-external-provisioner.yaml) | [`ghcr.io/vaskozl/nfs-subdir-external-provisioner`](https://github.com/vaskozl/containers/pkgs/container/nfs-subdir-external-provisioner) |
+| [nginx](./nginx.yaml) | [`ghcr.io/vaskozl/nginx`](https://github.com/vaskozl/containers/pkgs/container/nginx) |
+| [niri](./niri.yaml) | [`ghcr.io/vaskozl/niri`](https://github.com/vaskozl/containers/pkgs/container/niri) |
+| [ntfy](./ntfy.yaml) | [`ghcr.io/vaskozl/ntfy`](https://github.com/vaskozl/containers/pkgs/container/ntfy) |
+| [oauth2-proxy](./oauth2-proxy.yaml) | [`ghcr.io/vaskozl/oauth2-proxy`](https://github.com/vaskozl/containers/pkgs/container/oauth2-proxy) |
+| [openresty](./openresty.yaml) | [`ghcr.io/vaskozl/openresty`](https://github.com/vaskozl/containers/pkgs/container/openresty) |
+| [perl-libwww](./perl-libwww.yaml) | [`ghcr.io/vaskozl/perl-libwww`](https://github.com/vaskozl/containers/pkgs/container/perl-libwww) |
+| [perl-mojolicious](./perl-mojolicious.yaml) | [`ghcr.io/vaskozl/perl-mojolicious`](https://github.com/vaskozl/containers/pkgs/container/perl-mojolicious) |
+| [pinewall-config](./pinewall-config.yaml) | [`ghcr.io/vaskozl/pinewall-config`](https://github.com/vaskozl/containers/pkgs/container/pinewall-config) |
+| [postgresql](./postgresql.yaml) | [`ghcr.io/vaskozl/postgresql`](https://github.com/vaskozl/containers/pkgs/container/postgresql) |
+| [prometheus-alertmanager](./prometheus-alertmanager.yaml) | [`ghcr.io/vaskozl/prometheus-alertmanager`](https://github.com/vaskozl/containers/pkgs/container/prometheus-alertmanager) |
+| [prometheus-node-exporter](./prometheus-node-exporter.yaml) | [`ghcr.io/vaskozl/prometheus-node-exporter`](https://github.com/vaskozl/containers/pkgs/container/prometheus-node-exporter) |
+| [prowlarr](./prowlarr.yaml) | [`ghcr.io/vaskozl/prowlarr`](https://github.com/vaskozl/containers/pkgs/container/prowlarr) |
+| [qbittorrent-nox](./qbittorrent-nox.yaml) | [`ghcr.io/vaskozl/qbittorrent-nox`](https://github.com/vaskozl/containers/pkgs/container/qbittorrent-nox) |
+| [radarr](./radarr.yaml) | [`ghcr.io/vaskozl/radarr`](https://github.com/vaskozl/containers/pkgs/container/radarr) |
+| [rakudo](./rakudo.yaml) | [`ghcr.io/vaskozl/rakudo`](https://github.com/vaskozl/containers/pkgs/container/rakudo) |
+| [redis](./redis.yaml) | [`ghcr.io/vaskozl/redis`](https://github.com/vaskozl/containers/pkgs/container/redis) |
+| [renovate-apk-indexer](./renovate-apk-indexer.yaml) | [`ghcr.io/vaskozl/renovate-apk-indexer`](https://github.com/vaskozl/containers/pkgs/container/renovate-apk-indexer) |
+| [renovate](./renovate.yaml) | [`ghcr.io/vaskozl/renovate`](https://github.com/vaskozl/containers/pkgs/container/renovate) |
+| [rest-server](./rest-server.yaml) | [`ghcr.io/vaskozl/rest-server`](https://github.com/vaskozl/containers/pkgs/container/rest-server) |
+| [restic](./restic.yaml) | [`ghcr.io/vaskozl/restic`](https://github.com/vaskozl/containers/pkgs/container/restic) |
+| [ripgrep](./ripgrep.yaml) | [`ghcr.io/vaskozl/ripgrep`](https://github.com/vaskozl/containers/pkgs/container/ripgrep) |
+| [rust](./rust.yaml) | [`ghcr.io/vaskozl/rust`](https://github.com/vaskozl/containers/pkgs/container/rust) |
+| [sing-box](./sing-box.yaml) | [`ghcr.io/vaskozl/sing-box`](https://github.com/vaskozl/containers/pkgs/container/sing-box) |
+| [sonarr](./sonarr.yaml) | [`ghcr.io/vaskozl/sonarr`](https://github.com/vaskozl/containers/pkgs/container/sonarr) |
+| [syncthing](./syncthing.yaml) | [`ghcr.io/vaskozl/syncthing`](https://github.com/vaskozl/containers/pkgs/container/syncthing) |
+| [synology-csi](./synology-csi.yaml) | [`ghcr.io/vaskozl/synology-csi`](https://github.com/vaskozl/containers/pkgs/container/synology-csi) |
+| [tailscale-operator](./tailscale-operator.yaml) | [`ghcr.io/vaskozl/tailscale-operator`](https://github.com/vaskozl/containers/pkgs/container/tailscale-operator) |
+| [tailscale](./tailscale.yaml) | [`ghcr.io/vaskozl/tailscale`](https://github.com/vaskozl/containers/pkgs/container/tailscale) |
+| [thelounge](./thelounge.yaml) | [`ghcr.io/vaskozl/thelounge`](https://github.com/vaskozl/containers/pkgs/container/thelounge) |
+| [trusttunnel](./trusttunnel.yaml) | [`ghcr.io/vaskozl/trusttunnel`](https://github.com/vaskozl/containers/pkgs/container/trusttunnel) |
+| [tsidp](./tsidp.yaml) | [`ghcr.io/vaskozl/tsidp`](https://github.com/vaskozl/containers/pkgs/container/tsidp) |
+| [v2ray](./v2ray.yaml) | [`ghcr.io/vaskozl/v2ray`](https://github.com/vaskozl/containers/pkgs/container/v2ray) |
+| [valkey](./valkey.yaml) | [`ghcr.io/vaskozl/valkey`](https://github.com/vaskozl/containers/pkgs/container/valkey) |
+| [wolfi-scanner](./wolfi-scanner.yaml) | [`ghcr.io/vaskozl/wolfi-scanner`](https://github.com/vaskozl/containers/pkgs/container/wolfi-scanner) |
+| [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
+## Related
 
-| Image Name | Pull |
-| ------------------------------------------------------------ | ---------------------------------------------------------------  |
-| [wolfi-scanner](./wolfi-scanner.yaml)                        | `docker pull ghcr.io/vaskozl/wolfi-scanner`                      |
-| [thelounge](./thelounge.yaml)                                | `docker pull ghcr.io/vaskozl/thelounge`                          |
-| [kubectl](./kubectl.yaml)                                    | `docker pull ghcr.io/vaskozl/kubectl`                            |
-| [lidarr](./lidarr.yaml)                                      | `docker pull ghcr.io/vaskozl/lidarr`                             |
-| [v2ray](./v2ray.yaml)                                        | `docker pull ghcr.io/vaskozl/v2ray`                              |
-| [renovate](./renovate.yaml)                                  | `docker pull ghcr.io/vaskozl/renovate`                           |
-| [bootc](./bootc.yaml)                                        | `docker pull ghcr.io/vaskozl/bootc`                              |
-| [code-server](./code-server.yaml)                            | `docker pull ghcr.io/vaskozl/code-server`                        |
-| [k8s-sidecar](./k8s-sidecar.yaml)                            | `docker pull ghcr.io/vaskozl/k8s-sidecar`                        |
-| [rakudo](./rakudo.yaml)                                      | `docker pull ghcr.io/vaskozl/rakudo`                             |
-| [prowlarr](./prowlarr.yaml)                                  | `docker pull ghcr.io/vaskozl/prowlarr`                           |
-| [tsidp](./tsidp.yaml)                                        | `docker pull ghcr.io/vaskozl/tsidp`                              |
-| [renovate-apk-indexer](./renovate-apk-indexer.yaml)          | `docker pull ghcr.io/vaskozl/renovate-apk-indexer`               |
-| [trusttunnel](./trusttunnel.yaml)                            | `docker pull ghcr.io/vaskozl/trusttunnel`                        |
-| [apk-tools](./apk-tools.yaml)                                | `docker pull ghcr.io/vaskozl/apk-tools`                          |
-| [nfs-subdir-external-provisioner](./nfs-subdir-external-provisioner.yaml) | `docker pull ghcr.io/vaskozl/nfs-subdir-external-provisioner`    |
-| [gitlab-runner](./gitlab/gitlab-runner.yaml)                 | `docker pull ghcr.io/vaskozl/gitlab-runner`                      |
-| [gitlab-runner-helper](./gitlab/gitlab-runner-helper.yaml)   | `docker pull ghcr.io/vaskozl/gitlab-runner-helper`               |
-| [cloudflared](./cloudflared.yaml)                            | `docker pull ghcr.io/vaskozl/cloudflared`                        |
-| [blocky](./blocky.yaml)                                      | `docker pull ghcr.io/vaskozl/blocky`                             |
-| [anubis](./anubis.yaml)                                      | `docker pull ghcr.io/vaskozl/anubis`                             |
-| [kube-ip-tracker](./kube-ip-tracker.yaml)                    | `docker pull ghcr.io/vaskozl/kube-ip-tracker`                    |
-| [prometheus-node-exporter](./prometheus-node-exporter.yaml)  | `docker pull ghcr.io/vaskozl/prometheus-node-exporter`           |
-| [sonarr](./sonarr.yaml)                                      | `docker pull ghcr.io/vaskozl/sonarr`                             |
-| [calibre](./calibre.yaml)                                    | `docker pull ghcr.io/vaskozl/calibre`                            |
-| [apko](./apko.yaml)                                          | `docker pull ghcr.io/vaskozl/apko`                               |
-| [oauth2-proxy](./oauth2-proxy.yaml)                          | `docker pull ghcr.io/vaskozl/oauth2-proxy`                       |
-| [hugo](./hugo.yaml)                                          | `docker pull ghcr.io/vaskozl/hugo`                               |
-| [mosquitto](./mosquitto.yaml)                                | `docker pull ghcr.io/vaskozl/mosquitto`                          |
-| [pinewall-config](./pinewall-config.yaml)                    | `docker pull ghcr.io/vaskozl/pinewall-config`                    |
-| [cert-manager-cainjector](./cert-manager/cert-manager-cainjector.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-cainjector`            |
-| [cert-manager-acmesolver](./cert-manager/cert-manager-acmesolver.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-acmesolver`            |
-| [cert-manager-webhook](./cert-manager/cert-manager-webhook.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-webhook`               |
-| [cert-manager-controller](./cert-manager/cert-manager-controller.yaml) | `docker pull ghcr.io/vaskozl/cert-manager-controller`            |
-| [tailscale](./tailscale.yaml)                                | `docker pull ghcr.io/vaskozl/tailscale`                          |
-| [openresty](./openresty.yaml)                                | `docker pull ghcr.io/vaskozl/openresty`                          |
-| [baikal](./baikal.yaml)                                      | `docker pull ghcr.io/vaskozl/baikal`                             |
-| [kubelet](./kubelet.yaml)                                    | `docker pull ghcr.io/vaskozl/kubelet`                            |
-| [go](./go.yaml)                                              | `docker pull ghcr.io/vaskozl/go`                                 |
-| [prometheus-alertmanager](./prometheus-alertmanager.yaml)    | `docker pull ghcr.io/vaskozl/prometheus-alertmanager`            |
-| [perl-libwww](./perl-libwww.yaml)                            | `docker pull ghcr.io/vaskozl/perl-libwww`                        |
-| [golink](./golink.yaml)                                      | `docker pull ghcr.io/vaskozl/golink`                             |
-| [chromium](./chromium.yaml)                                  | `docker pull ghcr.io/vaskozl/chromium`                           |
-| [ripgrep](./ripgrep.yaml)                                    | `docker pull ghcr.io/vaskozl/ripgrep`                            |
-| [haproxy](./haproxy.yaml)                                    | `docker pull ghcr.io/vaskozl/haproxy`                            |
-| [grafana](./grafana.yaml)                                    | `docker pull ghcr.io/vaskozl/grafana`                            |
-| [net-tools](./net-tools.yaml)                                | `docker pull ghcr.io/vaskozl/net-tools`                          |
-| [kromgo](./kromgo.yaml)                                      | `docker pull ghcr.io/vaskozl/kromgo`                             |
-| [radarr](./radarr.yaml)                                      | `docker pull ghcr.io/vaskozl/radarr`                             |
-| [rust](./rust.yaml)                                          | `docker pull ghcr.io/vaskozl/rust`                               |
-| [synology-csi](./synology-csi.yaml)                          | `docker pull ghcr.io/vaskozl/synology-csi`                       |
-| [buildkitd](./buildkitd.yaml)                                | `docker pull ghcr.io/vaskozl/buildkitd`                          |
-| [perl-mojolicious](./perl-mojolicious.yaml)                  | `docker pull ghcr.io/vaskozl/perl-mojolicious`                   |
-| [containerd](./containerd.yaml)                              | `docker pull ghcr.io/vaskozl/containerd`                         |
-| [nginx](./nginx.yaml)                                        | `docker pull ghcr.io/vaskozl/nginx`                              |
-| [coredns](./coredns.yaml)                                    | `docker pull ghcr.io/vaskozl/coredns`                            |
-| [wolfictl](./wolfictl.yaml)                                  | `docker pull ghcr.io/vaskozl/wolfictl`                           |
-| [fluent-bit](./fluent-bit.yaml)                              | `docker pull ghcr.io/vaskozl/fluent-bit`                         |
-| [docker](./docker.yaml)                                      | `docker pull ghcr.io/vaskozl/docker`                             |
-| [cagebreak](./cagebreak.yaml)                                | `docker pull ghcr.io/vaskozl/cagebreak`                          |
-| [niri](./niri.yaml)                                          | `docker pull ghcr.io/vaskozl/niri`                               |
-| [qbittorrent-nox](./qbittorrent-nox.yaml)                    | `docker pull ghcr.io/vaskozl/qbittorrent-nox`                    |
-| [grype](./grype.yaml)                                        | `docker pull ghcr.io/vaskozl/grype`                              |
-| [minilb](./minilb.yaml)                                      | `docker pull ghcr.io/vaskozl/minilb`                             |
-| [git](./git.yaml)                                            | `docker pull ghcr.io/vaskozl/git`                                |
-| [flannel](./flannel.yaml)                                    | `docker pull ghcr.io/vaskozl/flannel`                            |
-| [claude](./claude.yaml)                                      | `docker pull ghcr.io/vaskozl/claude`                             |
-| [kube-network-policies](./kube-network-policies.yaml)        | `docker pull ghcr.io/vaskozl/kube-network-policies`              |
-| [logrotate](./logrotate.yaml)                                | `docker pull ghcr.io/vaskozl/logrotate`                          |
-| [ntfy](./ntfy.yaml)                                          | `docker pull ghcr.io/vaskozl/ntfy`                               |
-| [melange](./melange.yaml)                                    | `docker pull ghcr.io/vaskozl/melange`                            |
-| [postgresql](./postgresql.yaml)                              | `docker pull ghcr.io/vaskozl/postgresql`                         |
-| [minio](./minio.yaml)                                        | `docker pull ghcr.io/vaskozl/minio`                              |
-| [valkey](./valkey.yaml)                                      | `docker pull ghcr.io/vaskozl/valkey`                             |
-| [redis](./redis.yaml)                                        | `docker pull ghcr.io/vaskozl/redis`                              |
-| [sing-box](./sing-box.yaml)                                  | `docker pull ghcr.io/vaskozl/sing-box`                           |
-| [brew](./brew.yaml)                                          | `docker pull ghcr.io/vaskozl/brew`                               |
-| [mariadb](./mariadb.yaml)                                    | `docker pull ghcr.io/vaskozl/mariadb`                            |
-| [maddy](./maddy.yaml)                                        | `docker pull ghcr.io/vaskozl/maddy`                              |
-| [kubeconform](./kubeconform.yaml)                            | `docker pull ghcr.io/vaskozl/kubeconform`                        |
-| [jellyfin](./jellyfin.yaml)                                  | `docker pull ghcr.io/vaskozl/jellyfin`                           |
-| [tailscale-operator](./tailscale-operator.yaml)              | `docker pull ghcr.io/vaskozl/tailscale-operator`                 |
-| [syncthing](./syncthing.yaml)                                | `docker pull ghcr.io/vaskozl/syncthing`                          |
+- Packages (`melange` recipes, APK registry): [`packages/`](./packages/)
+- Home infra manifests: [`vaskozl/home-infra`](https://github.com/vaskozl/home-infra)
+- Router config: [`vaskozl/pinewall-config`](https://github.com/vaskozl/pinewall-config)
