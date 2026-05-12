@@ -16,6 +16,7 @@ contents:
     - iproute2
     - libva
     - linux-firmware-amdgpu
+    - linux-firmware-i915
     - mesa
     - mesa-egl
     - nftables
