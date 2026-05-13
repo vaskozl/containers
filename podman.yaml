@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: bootc.yaml
+contents:
+  packages:
+    - podman=5.8.2-r2
+    - iproute2
+    - curl
+    - iptables-nft
+    - nfs-utils
+    - openssh-server-config
+    - openssh-service
+    - openssl
+    - systemd-default-network
