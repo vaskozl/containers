@@ -44,6 +44,7 @@ contents:
     - perl-timedate
     - perl-types-serialiser
     - rustup
+    - tmux
     - util-linux-misc
     - wget
     - yq
