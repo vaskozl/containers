@@ -9,7 +9,7 @@ Two properties fall out of this for free:
 - **Composability.** Bump one package, rebuild one layer. Nothing else recompiles.
 - **Accountability.** Every file lives in `/usr/bin`, `/usr/lib`, `/etc` — not `/app/` or whatever cursed directory the upstream `Dockerfile` invented.
 
-Custom packages that aren't in Wolfi yet are built with [`melange`](https://github.com/chainguard-dev/melange) and live in [`packages/`](./packages/). Built APKs are published to `https://apks.sko.ai`.
+Custom packages that aren't in Wolfi yet are built with [`melange`](https://github.com/chainguard-dev/melange) and live in [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages). Built APKs are published to `https://apks.sko.ai`.
 
 A subset — `bootc`, `containerd`, `niri`, `cagebreak`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
 
@@ -121,6 +121,6 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
 ## Related
 
-- Packages (`melange` recipes, APK registry): [`packages/`](./packages/)
+- Packages (`melange` recipes, APK registry): [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages)
 - Home infra manifests: [`vaskozl/home-infra`](https://github.com/vaskozl/home-infra)
 - Router config: [`vaskozl/pinewall-config`](https://github.com/vaskozl/pinewall-config)
