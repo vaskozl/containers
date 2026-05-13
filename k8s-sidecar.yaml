@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - k8s-sidecar=2.7.1-r0
+    - k8s-sidecar=2.7.3-r0
     - python3
 entrypoint:
   command: python -u /usr/share/app/sidecar.py
