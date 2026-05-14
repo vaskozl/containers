@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - syncthing=2.0.16-r1
+    - syncthing=2.0.16-r2
 entrypoint:
   command: syncthing
 vcs-url: https://github.com/syncthing/syncthing
