@@ -48,6 +48,7 @@ contents:
     - tmux
     - util-linux-misc
     - wget
+    - wolfictl
     - yq
     - zlib-dev
 work-dir: /home/nonroot
