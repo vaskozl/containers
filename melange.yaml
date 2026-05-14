@@ -4,6 +4,8 @@ contents:
   packages:
     - melange=0.50.6-r1
     - openssl
+    - perl
+    - perl-yaml-pp
     - util-linux-misc
     - wolfi-keys
 entrypoint:
