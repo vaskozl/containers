@@ -5,6 +5,7 @@ contents:
     - renovate=43.170.15-r1
     - flux
     - go
+    - melange
     - nodejs-24
     - npm
     - perl
