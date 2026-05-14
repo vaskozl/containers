@@ -43,6 +43,7 @@ contents:
     - perl-path-tiny
     - perl-timedate
     - perl-types-serialiser
+    - perl-yaml-pp
     - rustup
     - tmux
     - util-linux-misc
