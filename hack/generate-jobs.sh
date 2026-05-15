@@ -41,6 +41,13 @@ EOF
 publish:$PKG:
   stage: publish
   image: ghcr.io/vaskozl/apko:latest
+  retry:
+    max: 1
+    when:
+      - runner_system_failure
+      - scheduler_failure
+      - stuck_or_timeout_failure
+      - api_failure
   only:
     changes:
       - hack/generate-jobs.sh
