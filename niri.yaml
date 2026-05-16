@@ -4,6 +4,7 @@ contents:
   packages:
     - niri=26.04-r1
     - bind-tools
+    - brightnessctl
     - cairo
     - chromium
     - conntrack-tools

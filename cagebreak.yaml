@@ -4,6 +4,7 @@ contents:
   packages:
     - cagebreak=3.2.0-r5
     - bind-tools
+    - brightnessctl
     - chromium
     - conntrack-tools
     - curl
