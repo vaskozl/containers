@@ -29,7 +29,6 @@ contents:
     - openssl
     - pciutils
     - pipewire
-    - pipewire-pulse
     - playerctl
     - pulseaudio
     - pulseaudio-alsa

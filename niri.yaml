@@ -39,7 +39,6 @@ contents:
     - pango
     - pciutils
     - pipewire
-    - pipewire-pulse
     - pixman
     - playerctl
     - podman
