@@ -11,12 +11,15 @@ contents:
     - fastfetch
     - foot
     - foot-terminfo
+    - fuzzel
+    - grim
     - grype
     - htop
     - iproute2
     - libva
     - linux-firmware-amdgpu
     - linux-firmware-i915
+    - mako
     - mesa
     - mesa-egl
     - nftables
@@ -25,11 +28,17 @@ contents:
     - openssh-service
     - openssl
     - pciutils
+    - pipewire
+    - pipewire-pulse
+    - playerctl
     - pulseaudio
     - pulseaudio-alsa
     - pulseaudio-utils
+    - slurp
+    - swaylock
     - systemd-default-network
     - ttf-dejavu
     - vulkan-loader-libs
+    - wireplumber
     - wl-clipboard
     - wlroots

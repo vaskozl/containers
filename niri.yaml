@@ -16,6 +16,8 @@ contents:
     - font-noto-emoji
     - foot
     - foot-terminfo
+    - fuzzel
+    - grim
     - grype
     - htop
     - iproute2
@@ -25,6 +27,7 @@ contents:
     - libxkbcommon
     - linux-firmware-amdgpu
     - linux-firmware-i915
+    - mako
     - mesa
     - mesa-egl
     - nftables
@@ -35,13 +38,16 @@ contents:
     - openssl
     - pango
     - pciutils
+    - pipewire
+    - pipewire-pulse
     - pixman
+    - playerctl
     - podman
-    - pulseaudio
-    - pulseaudio-alsa
-    - pulseaudio-utils
+    - slurp
+    - swaylock
     - systemd-default-network
     - ttf-dejavu
     - vulkan-loader-libs
     - wayland-libs-server # TODO: remove on next niri release
+    - wireplumber
     - wl-clipboard
