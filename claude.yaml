@@ -5,7 +5,7 @@ environment:
   PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin"
 contents:
   packages:
-    - claude=2.1.141-r0
+    - claude=2.1.142-r0
     - apk-tools
     - apko
     - bash
