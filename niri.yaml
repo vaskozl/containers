@@ -47,6 +47,5 @@ contents:
     - systemd-default-network
     - ttf-dejavu
     - vulkan-loader-libs
-    - wayland-libs-server # TODO: remove on next niri release
     - wireplumber
     - wl-clipboard
