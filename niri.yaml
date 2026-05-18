@@ -5,6 +5,7 @@ contents:
     - niri=26.04-r1
     - bind-tools
     - brightnessctl
+    - cage
     - cairo
     - chromium
     - conntrack-tools
