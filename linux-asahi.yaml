@@ -5,11 +5,11 @@ archs:
 contents:
   packages:
     - linux-asahi=7.0.8_p1-r0
-    - asahi-fwextract=0.7.9-r0
-    - asahi-scripts=20250713-r0
+    - asahi-fwextract
+    - asahi-scripts
     - bind-tools
     - binutils
-    - bootc=1.15.2-r2
+    - bootc
     - bootc-baselayout
     - brightnessctl
     - btrfs-progs
@@ -48,16 +48,16 @@ contents:
     - libselinux
     - libva
     - libxkbcommon
-    - linux-asahi-initramfs=7.0.8_p1-r0
+    - linux-asahi-initramfs
     - losetup
     - lsblk
-    - m1n1=1.5.2-r0
+    - m1n1
     - mako
     - mesa
     - mesa-egl
     - netavark
     - nftables
-    - niri=26.04-r1
+    - niri
     - niri-bash-completion
     - nori-user
     - openssh
@@ -87,7 +87,7 @@ contents:
     - udev
     - util-linux-login
     - vulkan-loader-libs
-    - wayland-libs-server
+    - wayland-libs-server # TODO: remove on next niri release
     - wipefs
     - wireplumber
     - wl-clipboard
