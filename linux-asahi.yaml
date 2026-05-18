@@ -87,7 +87,6 @@ contents:
     - udev
     - util-linux-login
     - vulkan-loader-libs
-    - wayland-libs-server # TODO: remove on next niri release
     - wipefs
     - wireplumber
     - wl-clipboard
