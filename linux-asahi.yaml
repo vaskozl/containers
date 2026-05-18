@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+archs:
+  - arm64
+contents:
+  packages:
+    - linux-asahi=7.0.8_p1-r0
+    - asahi-fwextract=0.7.9-r0
+    - asahi-scripts=20250713-r0
+    - bind-tools
+    - binutils
+    - bootc=1.15.2-r2
+    - bootc-baselayout
+    - brightnessctl
+    - btrfs-progs
+    - busybox-full
+    - cairo
+    - chromium
+    - composefs
+    - conmon
+    - conntrack-tools
+    - coreutils
+    - cpio
+    - crun
+    - curl
+    - dbus
+    - dbus-glib
+    - dosfstools
+    - e2fsprogs
+    - ethtool
+    - fastfetch
+    - findmnt
+    - findutils
+    - font-liberation
+    - font-noto
+    - font-noto-cjk
+    - font-noto-emoji
+    - foot
+    - fuzzel
+    - glib
+    - grim
+    - grype
+    - htop
+    - iproute2
+    - kmod-libs
+    - libinput
+    - libseat
+    - libselinux
+    - libva
+    - libxkbcommon
+    - linux-asahi-initramfs=7.0.8_p1-r0
+    - losetup
+    - lsblk
+    - m1n1=1.5.2-r0
+    - mako
+    - mesa
+    - mesa-egl
+    - netavark
+    - nftables
+    - niri=26.04-r1
+    - niri-bash-completion
+    - nori-user
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - openssl
+    - ostree
+    - pango
+    - pciutils
+    - pipewire
+    - pixman
+    - playerctl
+    - podman
+    - posix-libc-utils
+    - sfdisk
+    - shadow
+    - skopeo
+    - slurp
+    - strace
+    - sudo
+    - swaylock
+    - systemd
+    - systemd-default-network
+    - systemd-init
+    - systemd-logind-service
+    - ttf-dejavu
+    - udev
+    - util-linux-login
+    - vulkan-loader-libs
+    - wayland-libs-server
+    - wipefs
+    - wireplumber
+    - wl-clipboard
+    - wolfi-base
+    - xfsprogs
+    - zstd
+cmd: init
+stop-signal: SIGRTMIN+3
+accounts:
+  run-as: root
+annotations:
+  containers.bootc: "1"
+layering:
+  strategy: origin
+  budget: 96

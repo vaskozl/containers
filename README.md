@@ -75,6 +75,7 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
 | [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
+| [linux-asahi](./linux-asahi.yaml) | [`ghcr.io/vaskozl/linux-asahi`](https://github.com/vaskozl/containers/pkgs/container/linux-asahi) |
 | [logrotate](./logrotate.yaml) | [`ghcr.io/vaskozl/logrotate`](https://github.com/vaskozl/containers/pkgs/container/logrotate) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
 | [mariadb](./mariadb.yaml) | [`ghcr.io/vaskozl/mariadb`](https://github.com/vaskozl/containers/pkgs/container/mariadb) |
@@ -119,6 +120,18 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [valkey](./valkey.yaml) | [`ghcr.io/vaskozl/valkey`](https://github.com/vaskozl/containers/pkgs/container/valkey) |
 | [wolfi-scanner](./wolfi-scanner.yaml) | [`ghcr.io/vaskozl/wolfi-scanner`](https://github.com/vaskozl/containers/pkgs/container/wolfi-scanner) |
 | [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
+## Apple Silicon / Asahi
+
+[`linux-asahi`](./linux-asahi.yaml) is an `arm64`-only bootc image for M1/M2 Macs. It bundles the [Asahi Linux](https://asahilinux.org/) kernel, initramfs, `m1n1` bootloader, `asahi-fwextract`, and `asahi-scripts` from [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages) on top of the same `niri` desktop as [`niri.yaml`](./niri.yaml).
+
+Install is a three-stage flow:
+
+1. From macOS, run the upstream Asahi installer — `curl https://alx.sh | sh` — and pick the minimal Alpine option. It resizes the macOS volume, partitions the disk, flashes `m1n1`, and seeds `/boot/vendorfw/firmware.tar` on the ESP. See the [Alpine-on-M1 guide](https://arvanta.net/alpine/install-alpine-m1/) and the [upstream installer](https://github.com/AsahiLinux/asahi-installer).
+2. Reboot into the stub Alpine the installer leaves behind.
+3. Run [`install-asahi.sh`](./install-asahi.sh) from this repo. It `bootc install to-existing-root`s `ghcr.io/vaskozl/linux-asahi:latest` over the stub and extracts vendor firmware from the ESP into `/lib/firmware`.
+
+After reboot: niri starts, WiFi works, and `bootc status` reports `ghcr.io/vaskozl/linux-asahi:latest` as the booted image.
+
 ## Related
 
 - Packages (`melange` recipes, APK registry): [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages)
