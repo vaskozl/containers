@@ -31,9 +31,6 @@ contents:
     - pciutils
     - pipewire
     - playerctl
-    - pulseaudio
-    - pulseaudio-alsa
-    - pulseaudio-utils
     - slirp4netns
     - slurp
     - swaylock
