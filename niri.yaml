@@ -22,6 +22,7 @@ contents:
     - grype
     - htop
     - iproute2
+    - just-newuidmap-newgidmap
     - libinput
     - libseat
     - libva
@@ -43,6 +44,7 @@ contents:
     - pixman
     - playerctl
     - podman
+    - slirp4netns
     - slurp
     - swaylock
     - systemd-default-network
