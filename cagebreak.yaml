@@ -16,6 +16,7 @@ contents:
     - grype
     - htop
     - iproute2
+    - just-newuidmap-newgidmap
     - libva
     - linux-firmware-amdgpu
     - linux-firmware-i915
@@ -33,6 +34,7 @@ contents:
     - pulseaudio
     - pulseaudio-alsa
     - pulseaudio-utils
+    - slirp4netns
     - slurp
     - swaylock
     - systemd-default-network
