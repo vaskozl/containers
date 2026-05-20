@@ -33,7 +33,7 @@ contents:
     - curl
     - ethtool
     - iproute2
-    - iwd=3.12-r0
+    - iwd
     - nftables
     - systemd-default-network
 
