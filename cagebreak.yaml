@@ -1,42 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: bootc.yaml
+include: mesa.yaml
 contents:
   packages:
     - cagebreak=3.2.0-r6
-    - bind-tools
-    - brightnessctl
-    - chromium
-    - conntrack-tools
-    - curl
-    - ethtool
-    - fastfetch
-    - foot
-    - fuzzel
-    - grim
-    - grype
-    - htop
-    - iproute2
-    - just-newuidmap-newgidmap
-    - libva
-    - linux-firmware-amdgpu
-    - linux-firmware-i915
-    - mako
-    - mesa
-    - mesa-egl
-    - nftables
-    - openssh
-    - openssh-server-config
-    - openssh-service
-    - openssl
-    - pciutils
-    - pipewire
-    - playerctl
-    - slirp4netns
-    - slurp
-    - swaylock
-    - systemd-default-network
-    - ttf-dejavu
-    - vulkan-loader-libs
-    - wireplumber
-    - wl-clipboard
-    - wlroots

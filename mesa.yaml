@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: bootc.yaml
+contents:
+  packages:
+    # Graphics / GPU
+    - mesa
+    - mesa-egl
+    - libva
+    - linux-firmware-amdgpu
+    - linux-firmware-i915
+    - vulkan-loader-libs
+
+    # Wayland desktop utilities
+    - foot
+    - fuzzel
+    - grim
+    - mako
+    - slurp
+    - swaybg
+    - swayidle
+    - swaylock
+    - wl-clipboard
+    - brightnessctl
+    - playerctl
+
+    # Audio
+    - pipewire
+    - wireplumber
+
+    # Networking
+    - bind-tools
+    - conntrack-tools
+    - curl
+    - ethtool
+    - iproute2
+    - nftables
+    - systemd-default-network
+
+    # SSH
+    - openssh
+    - openssh-server-config
+    - openssh-service
+    - openssl
+
+    # Rootless containers
+    - just-newuidmap-newgidmap
+    - podman
+    - slirp4netns
+
+    # Shell
+    - bash-completion
+    - bash-default-config
+
+    # System / diagnostics
+    - fastfetch
+    - fzf
+    - htop
+    - just
+    - neovim
+    - pciutils
+
+    # Browser
+    - chromium
+    - xdg-utils
+
+    # Fonts
+    - font-liberation
+    - font-noto
+    - font-noto-cjk
+    - font-noto-emoji
+    - ttf-dejavu
