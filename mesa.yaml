@@ -58,6 +58,7 @@ contents:
     - just
     - neovim
     - pciutils
+    - powertop
 
     # Browser
     - chromium
