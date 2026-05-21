@@ -8,7 +8,6 @@ contents:
     - asahi-fwextract
     - asahi-scripts
     - bind-tools
-    - binutils
     - bootc
     - bootc-baselayout
     - brightnessctl
@@ -16,28 +15,23 @@ contents:
     - busybox-full
     - cairo
     - chromium
-    - composefs
     - conmon
     - conntrack-tools
     - coreutils
-    - cpio
     - crun
     - curl
-    - dbus
     - dbus-glib
     - dosfstools
     - e2fsprogs
     - ethtool
     - fastfetch
     - findmnt
-    - findutils
     - font-liberation
     - font-noto
     - font-noto-cjk
     - font-noto-emoji
     - foot
     - fuzzel
-    - glib
     - grim
     - grype
     - htop
@@ -45,7 +39,6 @@ contents:
     - kmod-libs
     - libinput
     - libseat
-    - libselinux
     - libva
     - libxkbcommon
     - linux-asahi-initramfs
@@ -53,7 +46,6 @@ contents:
     - lsblk
     - m1n1
     - mako
-    - mesa
     - mesa-egl
     - netavark
     - nftables
@@ -61,22 +53,19 @@ contents:
     - niri-bash-completion
     - nori-user
     - openssh
-    - openssh-server-config
     - openssh-service
     - openssl
-    - ostree
     - pango
     - pciutils
-    - pipewire
     - pixman
     - playerctl
     - podman
     - posix-libc-utils
     - sfdisk
     - shadow
+    # skopeo: required by bootc at runtime via containers-image-proxy for image pulls
     - skopeo
     - slurp
-    - strace
     - sudo
     - swaylock
     - systemd
@@ -85,14 +74,11 @@ contents:
     - systemd-logind-service
     - ttf-dejavu
     - udev
-    - util-linux-login
-    - vulkan-loader-libs
     - wipefs
     - wireplumber
     - wl-clipboard
     - wolfi-base
     - xfsprogs
-    - zstd
 cmd: init
 stop-signal: SIGRTMIN+3
 accounts:
