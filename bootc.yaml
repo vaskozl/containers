@@ -17,6 +17,7 @@ contents:
     - dbus-glib
     - dosfstools
     - e2fsprogs
+    - e2fsprogs-extra
     - findmnt
     - findutils
     - glib
@@ -29,6 +30,7 @@ contents:
     - netavark
     - nori-user
     - ostree
+    - parted
     - posix-libc-utils
     - sfdisk
     - shadow
