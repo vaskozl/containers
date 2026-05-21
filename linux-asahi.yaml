@@ -63,7 +63,6 @@ contents:
     - posix-libc-utils
     - sfdisk
     - shadow
-    # skopeo: required by bootc at runtime via containers-image-proxy for image pulls
     - skopeo
     - slurp
     - sudo
