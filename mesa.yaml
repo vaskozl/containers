@@ -3,12 +3,10 @@ include: bootc.yaml
 contents:
   packages:
     # Graphics / GPU
-    - mesa
     - mesa-egl
     - libva
     - linux-firmware-amdgpu
     - linux-firmware-i915
-    - vulkan-loader-libs
 
     # Wayland desktop utilities
     - foot
@@ -24,11 +22,9 @@ contents:
     - playerctl
 
     # Audio
-    - pipewire
     - wireplumber
 
     # Networking
-    - bind-tools
     - conntrack-tools
     - curl
     - ethtool
@@ -39,7 +35,6 @@ contents:
 
     # SSH
     - openssh
-    - openssh-server-config
     - openssh-service
     - openssl
 
@@ -63,7 +58,6 @@ contents:
 
     # Browser
     - chromium
-    - xdg-utils
 
     # Fonts
     - font-liberation

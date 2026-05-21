@@ -7,7 +7,6 @@ contents:
     - curl
     - iptables-nft
     - nfs-utils
-    - openssh-server-config
     - openssh-service
     - openssl
     - systemd-default-network

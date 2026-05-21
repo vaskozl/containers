@@ -4,49 +4,37 @@ contents:
   packages:
     - bootc=1.15.2-r2
     - bind-tools
-    - binutils
     - bootc-baselayout
     - btrfs-progs
     - busybox-full
-    - composefs
     - conmon
     - coreutils
-    - cpio
     - crun
-    - dbus
     - dbus-glib
     - dosfstools
     - e2fsprogs
     - e2fsprogs-extra
     - findmnt
-    - findutils
-    - glib
     - kmod-libs
-    - libselinux
     - linux-lts
     - linux-lts-initramfs
     - losetup
     - lsblk
     - netavark
     - nori-user
-    - ostree
     - parted
     - posix-libc-utils
     - sfdisk
     - shadow
     - skopeo
-    - strace
     - sudo
     - systemd
-    - systemd-boot
     - systemd-init
     - systemd-logind-service
     - udev
-    - util-linux-login
     - wipefs
     - wolfi-base
     - xfsprogs
-    - zstd
 cmd: init
 stop-signal: SIGRTMIN+3
 accounts:
@@ -66,5 +54,3 @@ paths:
     type: hardlink
     source: /var/log/journal-stub
     permissions: 0o755
-
-
