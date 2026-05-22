@@ -55,6 +55,7 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [containerd](./containerd.yaml) | [`ghcr.io/vaskozl/containerd`](https://github.com/vaskozl/containers/pkgs/container/containerd) |
 | [coredns](./coredns.yaml) | [`ghcr.io/vaskozl/coredns`](https://github.com/vaskozl/containers/pkgs/container/coredns) |
 | [docker](./docker.yaml) | [`ghcr.io/vaskozl/docker`](https://github.com/vaskozl/containers/pkgs/container/docker) |
+| [firefox](./firefox.yaml) | [`ghcr.io/vaskozl/firefox`](https://github.com/vaskozl/containers/pkgs/container/firefox) |
 | [flannel](./flannel.yaml) | [`ghcr.io/vaskozl/flannel`](https://github.com/vaskozl/containers/pkgs/container/flannel) |
 | [fluent-bit](./fluent-bit.yaml) | [`ghcr.io/vaskozl/fluent-bit`](https://github.com/vaskozl/containers/pkgs/container/fluent-bit) |
 | [git](./git.yaml) | [`ghcr.io/vaskozl/git`](https://github.com/vaskozl/containers/pkgs/container/git) |
