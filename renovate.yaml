@@ -10,7 +10,7 @@ contents:
     - npm
     - perl
     - perl-yaml-pp
-    - rust-1.95=1.95.0-r0
+    - rust=1.95.0-r0
 entrypoint:
   command: renovate
 vcs-url: https://github.com/renovatebot/renovate
