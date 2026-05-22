@@ -2,6 +2,6 @@
 include: mesa.yaml
 contents:
   packages:
-    - cagebreak
+    - cagebreak=3.2.0-r6
     - chromium
     - flatpak

@@ -2,6 +2,6 @@
 include: mesa.yaml
 contents:
   packages:
-    - labwc
+    - labwc=0.9.7-r0
     - chromium
     - flatpak

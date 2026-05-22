@@ -2,7 +2,7 @@
 include: mesa.yaml
 contents:
   packages:
-    - niri
+    - niri=26.04-r1
     - niri-bash-completion
     - chromium
     - flatpak
