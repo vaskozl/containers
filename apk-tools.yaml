@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - apk-tools=2.14.10-r10
+    - apk-tools=2.14.10-r11
     - catatonit
 entrypoint:
   command: catatonit -g --
