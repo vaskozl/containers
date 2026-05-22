@@ -7,6 +7,7 @@
   var browser = document.getElementById('browser');
   var flatpak = document.getElementById('flatpak');
   var cmdEl = document.getElementById('bootc-cmd');
+  var orasEl = document.getElementById('oras-cmd');
   var dlEl = document.getElementById('img-download');
   var metaEl = document.getElementById('img-meta');
 
@@ -26,6 +27,7 @@
   function update() {
     var name = flavorName();
     cmdEl.textContent = 'bootc switch ' + REGISTRY + name;
+    orasEl.textContent = 'oras pull ' + REGISTRY + name + '-img:latest';
 
     var entry = null;
     if (manifest && Array.isArray(manifest.flavors)) {
@@ -35,11 +37,11 @@
     }
 
     if (entry && entry.img_oci) {
-      // OCI artifact URL: link to the ghcr.io UI for the artifact; users pull with oras.
+      orasEl.textContent = 'oras pull ' + entry.img_oci;
       dlEl.href = 'https://' + entry.img_oci.replace(/:.*$/, '');
       dlEl.removeAttribute('aria-disabled');
       var size = fmtSize(entry.size_bytes);
-      metaEl.textContent = size ? ('Raw disk image · ' + size) : 'Raw disk image';
+      metaEl.textContent = size ? ('Raw disk image · ' + size + ' · pull with oras, then flash') : 'Raw disk image · pull with oras, then flash';
     } else {
       dlEl.href = '#';
       dlEl.setAttribute('aria-disabled', 'true');
@@ -74,21 +76,26 @@
       body.innerHTML = '<tr><td colspan="8" class="text-muted-foreground">Comparison data not yet generated.</td></tr>';
       return;
     }
-    var rows = data.images.map(function (img) {
+    body.replaceChildren();
+    data.images.forEach(function (img) {
       var c = img.cve || {};
-      function td(v, cls) { return '<td class="' + (cls || '') + '">' + (v == null ? '—' : v) + '</td>'; }
-      return '<tr>' +
-        td(img.name) +
-        td(img.size_mb, 'text-right') +
-        td(img.layers,  'text-right') +
-        td(c.critical,  'text-right') +
-        td(c.high,      'text-right') +
-        td(c.medium,    'text-right') +
-        td(c.low,       'text-right') +
-        td(c.total,     'text-right font-medium') +
-        '</tr>';
+      var tr = document.createElement('tr');
+      function td(v, cls) {
+        var el = document.createElement('td');
+        if (cls) el.className = cls;
+        el.textContent = (v == null ? '—' : String(v));
+        tr.appendChild(el);
+      }
+      td(img.name);
+      td(img.size_mb, 'text-right');
+      td(img.layers,  'text-right');
+      td(c.critical,  'text-right');
+      td(c.high,      'text-right');
+      td(c.medium,    'text-right');
+      td(c.low,       'text-right');
+      td(c.total,     'text-right font-medium');
+      body.appendChild(tr);
     });
-    body.innerHTML = rows.join('');
     if (data.generated_at) {
       meta.textContent = 'Generated ' + data.generated_at + (data.grype_db_built ? ' · grype DB ' + data.grype_db_built : '');
     }
