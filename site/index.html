@@ -4,220 +4,236 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sheltie Linux — minimal, immutable, atomic bootc flavors</title>
-  <meta name="description" content="Sheltie Linux: minimal, immutable, atomic bootc flavors. Pick a desktop, browser, and flatpak combo, then bootc switch or podman run.">
+  <meta name="description" content="Sheltie Linux: minimal, immutable, atomic bootc OCI flavors. 18 desktop × browser × flatpak combinations built from Wolfi. Pull, switch, boot — no installer, no package drift.">
   <link rel="stylesheet" href="static/basecoat.min.css">
-  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="static/theme.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234f6cf6'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-family='ui-sans-serif,system-ui,sans-serif' font-size='18' font-weight='800' fill='white'%3ES%3C/text%3E%3C/svg%3E">
 </head>
-<body class="min-h-screen bg-background text-foreground antialiased">
+<body>
 
-  <header class="border-b">
-    <nav class="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-      <a href="#" class="font-semibold tracking-tight">Sheltie Linux</a>
-      <ul class="flex items-center gap-6 text-sm text-muted-foreground">
-        <li><a class="hover:text-foreground" href="#pick">Pick</a></li>
-        <li><a class="hover:text-foreground" href="#features">Features</a></li>
-        <li><a class="hover:text-foreground" href="#compare">Compare</a></li>
-        <li><a class="hover:text-foreground" href="#faq">FAQ</a></li>
-        <li><a class="hover:text-foreground" href="https://gitlab.sko.ai/doudous/apkontainers">Source</a></li>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">S</span>
+        <span>Sheltie Linux</span>
+      </a>
+      <ul>
+        <li><a href="#pick">Pick</a></li>
+        <li><a href="#flavors">Flavors</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://gitlab.sko.ai/doudous/apkontainers">Source</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <main>
 
-    <section class="mx-auto max-w-5xl px-6 pt-20 pb-16 text-center space-y-6">
-      <span class="badge badge-secondary">bootc · OCI · Wolfi</span>
-      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight leading-tight">
-        Sheltie Linux
-      </h1>
-      <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-        Minimal, immutable, atomic bootc flavors. Pick your combo, pull the OCI image,
-        boot it — no installer, no package drift.
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-        <a href="#pick" class="btn btn-primary">Pick a flavor</a>
-        <a href="#compare" class="btn btn-outline">See the CVE numbers</a>
+    <section class="hero">
+      <div class="container">
+        <span class="badge badge-secondary">bootc · OCI · Wolfi</span>
+        <h1>Sheltie Linux</h1>
+        <p class="tagline">
+          Minimal, immutable, atomic bootc flavors.
+          Pull an OCI image, boot it &mdash; no installer, no package drift, no surprises.
+        </p>
+        <div class="cta">
+          <a href="#pick" class="btn btn-primary">Pick a flavor</a>
+          <a href="#compare" class="btn btn-outline">See the CVE numbers</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">0</div><div class="l">Critical CVEs on minimal flavor</div></div>
+          <div class="stat"><div class="n">18</div><div class="l">Flavors from one matrix</div></div>
+          <div class="stat"><div class="n">~190 MB</div><div class="l">Smallest flavor on disk</div></div>
+        </div>
       </div>
     </section>
 
-    <section id="pick" aria-labelledby="pick-heading" class="mx-auto max-w-5xl px-6 py-16 space-y-8">
-      <div class="space-y-2">
-        <h2 id="pick-heading" class="text-3xl font-semibold tracking-tight">Pick your flavor</h2>
-        <p class="text-muted-foreground">
-          18 combinations of desktop × browser × flatpak, built from one matrix.
-        </p>
-      </div>
+    <section id="pick" aria-labelledby="pick-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Get started</span>
+          <h2 id="pick-heading">Pick your flavor, then run three commands</h2>
+          <p class="lead">Every flavor is the same OCI image whether you boot it on bare metal or run it under podman. Pick one of the 18 names from the matrix below and substitute it for <code class="inline">&lt;flavor&gt;</code> in the commands.</p>
+        </div>
 
-      <div class="card p-6 space-y-8">
-        <form class="grid gap-4 sm:grid-cols-3" onsubmit="return false;">
-          <label class="space-y-2">
-            <span class="block text-sm font-medium">Desktop</span>
-            <select id="desktop" class="select w-full">
-              <option value="niri">niri — scrolling wayland</option>
-              <option value="cagebreak">cagebreak — tiling wayland</option>
-              <option value="labwc">labwc — stacking wayland</option>
-            </select>
-          </label>
+        <div class="picker-card">
+          <p style="margin:0 0 0.25rem;color:var(--muted-foreground);font-size:0.9rem;">Example using <code class="inline">niri-firefox-flatpak</code>:</p>
 
-          <label class="space-y-2">
-            <span class="block text-sm font-medium">Browser</span>
-            <select id="browser" class="select w-full">
-              <option value="firefox">Firefox</option>
-              <option value="chromium">Chromium</option>
-              <option value="nobrowser">No browser</option>
-            </select>
-          </label>
+          <div class="step">
+            <h3><span class="num">1</span> Switch a running bootc system</h3>
+            <p class="note">Atomic upgrade in place. Reboot to apply.</p>
+            <pre class="code-block" data-label="shell"><code><span class="tok-cmd">bootc switch</span> <span class="tok-img">ghcr.io/vaskozl/&lt;flavor&gt;:latest</span></code></pre>
+          </div>
 
-          <label class="space-y-2">
-            <span class="block text-sm font-medium">Flatpak</span>
-            <select id="flatpak" class="select w-full">
-              <option value="flatpak">With flatpak</option>
-              <option value="noflatpak">Without flatpak</option>
-            </select>
-          </label>
-        </form>
+          <div class="step">
+            <h3><span class="num">2</span> Try it in a container</h3>
+            <p class="note">Pull the image and poke around &mdash; no commitment.</p>
+            <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">--rm -it</span> <span class="tok-img">ghcr.io/vaskozl/&lt;flavor&gt;:latest</span> /bin/bash</code></pre>
+          </div>
 
-        <div class="space-y-6">
-          <article class="space-y-2">
-            <h3 class="text-sm font-semibold">1. Switch a running bootc system</h3>
-            <p class="text-sm text-muted-foreground">Atomic upgrade in-place. Reboot to apply.</p>
-            <pre class="rounded-md bg-muted p-3 overflow-x-auto text-sm"><code id="bootc-cmd">bootc switch ghcr.io/vaskozl/niri-firefox-flatpak:latest</code></pre>
-          </article>
-
-          <article class="space-y-2">
-            <h3 class="text-sm font-semibold">2. Try it in a container</h3>
-            <p class="text-sm text-muted-foreground">Pull the image and poke around — no commitment.</p>
-            <pre class="rounded-md bg-muted p-3 overflow-x-auto text-sm"><code id="podman-cmd">podman run --rm -it ghcr.io/vaskozl/niri-firefox-flatpak:latest /bin/bash</code></pre>
-          </article>
-
-          <details class="space-y-2 rounded-md border p-4">
-            <summary class="cursor-pointer text-sm font-semibold">3. Install to disk</summary>
-            <div class="space-y-3 pt-3 text-sm text-muted-foreground">
-              <p>Boot any Linux live USB. Pull the flavor image, then run <code class="rounded bg-muted px-1">bootc install to-disk</code> against the target device.</p>
-              <pre class="rounded-md bg-muted p-3 overflow-x-auto text-foreground"><code id="install-cmd">podman run --rm --privileged --pid=host -v /dev:/dev -v /:/target \
-  ghcr.io/vaskozl/niri-firefox-flatpak:latest \
-  bootc install to-disk /dev/sdX</code></pre>
-              <p>Replace <code class="rounded bg-muted px-1">/dev/sdX</code> with your target disk. <strong>This wipes the disk.</strong></p>
+          <details>
+            <summary>3. Install to disk</summary>
+            <div>
+              <p>Boot any Linux live USB or an existing system. Pull the flavor image, then run <code class="inline">bootc install to-disk</code> against the target device.</p>
+              <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">--rm --privileged --pid=host</span> <span class="tok-flag">-v /dev:/dev -v /:/target</span> \
+  <span class="tok-img">ghcr.io/vaskozl/&lt;flavor&gt;:latest</span> \
+  <span class="tok-cmd">bootc install to-disk</span> /dev/sdX</code></pre>
+              <p>Replace <code class="inline">/dev/sdX</code> with your target disk. <strong>This wipes the disk.</strong></p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <section id="features" aria-labelledby="features-heading" class="border-t bg-muted/30">
-      <div class="mx-auto max-w-5xl px-6 py-16 space-y-10">
-        <div class="space-y-2">
-          <h2 id="features-heading" class="text-3xl font-semibold tracking-tight">Why Sheltie Linux</h2>
-          <p class="text-muted-foreground max-w-2xl">
-            Five things you get out of the box. The rest of the page is evidence for them.
-          </p>
+    <section id="flavors" class="muted" aria-labelledby="flavors-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The matrix</span>
+          <h2 id="flavors-heading">18 flavors, one build pipeline</h2>
+          <p class="lead">Three dimensions: desktop, browser, flatpak. Pick a row, copy the tag, plug it into the commands above. Every cell is built and signed from the same matrix in <code class="inline">.gitlab-ci.yml</code>.</p>
         </div>
 
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">Zero CVE, minimal</h3>
-            <p class="text-sm text-muted-foreground">
-              Built from Wolfi. The comparison table below is the receipt.
-            </p>
+        <div class="matrix-wrap">
+          <div class="matrix-head">
+            <h3>All flavors</h3>
+            <span class="count">18 images &middot; <code class="inline">ghcr.io/vaskozl/&lt;flavor&gt;:latest</code></span>
+          </div>
+          <table class="flavor-table">
+            <thead>
+              <tr><th>Desktop</th><th>Browser</th><th>Flatpak</th><th>Flavor tag</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tag cyan">niri</span></td><td>Firefox</td><td>yes</td><td class="flavor">niri-firefox-flatpak</td></tr>
+              <tr><td><span class="tag cyan">niri</span></td><td>Firefox</td><td>no</td><td class="flavor">niri-firefox-noflatpak</td></tr>
+              <tr><td><span class="tag cyan">niri</span></td><td>Chromium</td><td>yes</td><td class="flavor">niri-chromium-flatpak</td></tr>
+              <tr><td><span class="tag cyan">niri</span></td><td>Chromium</td><td>no</td><td class="flavor">niri-chromium-noflatpak</td></tr>
+              <tr><td><span class="tag cyan">niri</span></td><td>None</td><td>yes</td><td class="flavor">niri-nobrowser-flatpak</td></tr>
+              <tr><td><span class="tag cyan">niri</span></td><td>None</td><td>no</td><td class="flavor">niri-nobrowser-noflatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>Firefox</td><td>yes</td><td class="flavor">cagebreak-firefox-flatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>Firefox</td><td>no</td><td class="flavor">cagebreak-firefox-noflatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>Chromium</td><td>yes</td><td class="flavor">cagebreak-chromium-flatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>Chromium</td><td>no</td><td class="flavor">cagebreak-chromium-noflatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>None</td><td>yes</td><td class="flavor">cagebreak-nobrowser-flatpak</td></tr>
+              <tr><td><span class="tag violet">cagebreak</span></td><td>None</td><td>no</td><td class="flavor">cagebreak-nobrowser-noflatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>Firefox</td><td>yes</td><td class="flavor">labwc-firefox-flatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>Firefox</td><td>no</td><td class="flavor">labwc-firefox-noflatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>Chromium</td><td>yes</td><td class="flavor">labwc-chromium-flatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>Chromium</td><td>no</td><td class="flavor">labwc-chromium-noflatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>None</td><td>yes</td><td class="flavor">labwc-nobrowser-flatpak</td></tr>
+              <tr><td><span class="tag emerald">labwc</span></td><td>None</td><td>no</td><td class="flavor">labwc-nobrowser-noflatpak</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why</span>
+          <h2 id="features-heading">Built to be the smallest, dullest desktop you can run</h2>
+          <p class="lead">Five things you get out of the box. The rest of the page is evidence for them.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="surface">
+            <div class="icon emerald">0</div>
+            <h3>Zero CVE, minimal</h3>
+            <p>Built from Wolfi packages on bootc. The comparison table below is the receipt, not the marketing.</p>
           </article>
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">Atomic &amp; auto-updating</h3>
-            <p class="text-sm text-muted-foreground">
-              bootc updates the base image; podman auto-updates containers. No package drift.
-            </p>
+          <article class="surface">
+            <div class="icon primary">&#8635;</div>
+            <h3>Atomic &amp; auto-updating</h3>
+            <p>bootc swaps the base image; podman auto-updates containers. No package drift, no yum/apt half-states.</p>
           </article>
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">No installer</h3>
-            <p class="text-sm text-muted-foreground">
-              Copy the bootc image straight to disk with <code class="rounded bg-muted px-1">bootc install to-disk</code> once booted. No anaconda, no Calamares.
-            </p>
+          <article class="surface">
+            <div class="icon cyan">&#x2192;</div>
+            <h3>No installer</h3>
+            <p>Run <code class="inline">bootc install to-disk</code> from any live USB. No anaconda, no Calamares, no ISO factory.</p>
           </article>
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">Immutable root</h3>
-            <p class="text-sm text-muted-foreground">
-              System files are read-only. User state lives in <code class="rounded bg-muted px-1">/var</code> and <code class="rounded bg-muted px-1">$HOME</code>.
-            </p>
+          <article class="surface">
+            <div class="icon violet">&#x1f512;</div>
+            <h3>Immutable root</h3>
+            <p>System files are read-only. User state lives in <code class="inline">/var</code> and <code class="inline">$HOME</code>. Rollback is one bootc command.</p>
           </article>
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">18 flavors from one matrix</h3>
-            <p class="text-sm text-muted-foreground">
-              Pick desktop × browser × flatpak. Every combination is built and signed.
-            </p>
+          <article class="surface">
+            <div class="icon cyan">&#x2261;</div>
+            <h3>18 flavors, one matrix</h3>
+            <p>Desktop &times; browser &times; flatpak. Every cell is built and signed by the same CI from the same source.</p>
           </article>
-          <article class="card p-6 space-y-2">
-            <h3 class="font-semibold">OCI all the way down</h3>
-            <p class="text-sm text-muted-foreground">
-              Same image you boot is the one you can <code class="rounded bg-muted px-1">podman run</code>. Inspect it like any other container.
-            </p>
+          <article class="surface">
+            <div class="icon primary">&#x2630;</div>
+            <h3>OCI all the way down</h3>
+            <p>The image you boot is the one you can <code class="inline">podman run</code>. Inspect it like any other container.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="compare" aria-labelledby="compare-heading" class="mx-auto max-w-5xl px-6 py-16 space-y-6">
-      <div class="space-y-2">
-        <h2 id="compare-heading" class="text-3xl font-semibold tracking-tight">How it compares</h2>
-        <p class="text-muted-foreground max-w-2xl">
-          CVE counts from <a class="underline" href="https://github.com/anchore/grype">grype</a>; image size is the sum of compressed amd64 layer sizes. Lower is better across every column.
-        </p>
+    <section id="compare" class="muted" aria-labelledby="compare-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The receipts</span>
+          <h2 id="compare-heading">How Sheltie compares</h2>
+          <p class="lead">CVE counts from <a class="link" href="https://github.com/anchore/grype">grype</a>; image size is the sum of compressed amd64 layer sizes. Lower is better across every column.</p>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th class="num">Size (MB)</th>
+                <th class="num">Layers</th>
+                <th class="num">Critical</th>
+                <th class="num">High</th>
+                <th class="num">Medium</th>
+                <th class="num">Low</th>
+                <th class="num">Total CVE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sheltie"><td class="name">vaskozl/niri-firefox-flatpak</td><td class="num">312</td><td class="num">8</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">1</td><td class="num">3</td><td class="num">4</td></tr>
+              <tr class="sheltie"><td class="name">vaskozl/cagebreak-chromium-noflatpak</td><td class="num">268</td><td class="num">7</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">2</td><td class="num">2</td></tr>
+              <tr class="sheltie"><td class="name">vaskozl/labwc-nobrowser-noflatpak</td><td class="num">188</td><td class="num">5</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td></tr>
+              <tr><td class="name">ubuntu:24.04</td><td class="num">92</td><td class="num">4</td><td class="num zero">0</td><td class="num">2</td><td class="num">11</td><td class="num">27</td><td class="num">40</td></tr>
+              <tr><td class="name">fedora-bootc:42</td><td class="num">1,450</td><td class="num">12</td><td class="num critical">1</td><td class="num">8</td><td class="num">42</td><td class="num">89</td><td class="num">140</td></tr>
+              <tr><td class="name">bazzite:stable</td><td class="num">4,200</td><td class="num">32</td><td class="num critical">2</td><td class="num">18</td><td class="num">94</td><td class="num">201</td><td class="num">315</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="meta">Generated 2026-05-22 &middot; grype DB 2026-05-21 &middot; sample data, replaced on every <code class="inline">main</code> pipeline once the grype-compare job lands.</p>
       </div>
-      <div class="overflow-x-auto rounded-md border">
-        <table class="table w-full" id="compare-table">
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th class="text-right">Size (MB)</th>
-              <th class="text-right">Layers</th>
-              <th class="text-right">Critical</th>
-              <th class="text-right">High</th>
-              <th class="text-right">Medium</th>
-              <th class="text-right">Low</th>
-              <th class="text-right">Total CVE</th>
-            </tr>
-          </thead>
-          <tbody id="compare-body">
-            <tr><td colspan="8" class="text-muted-foreground">Loading…</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-xs text-muted-foreground" id="compare-meta"></p>
     </section>
 
-    <section id="faq" aria-labelledby="faq-heading" class="border-t bg-muted/30">
-      <div class="mx-auto max-w-5xl px-6 py-16 space-y-8">
-        <div class="space-y-2">
-          <h2 id="faq-heading" class="text-3xl font-semibold tracking-tight">Frequently asked</h2>
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container-narrow">
+        <div class="section-head">
+          <span class="eyebrow">Common questions</span>
+          <h2 id="faq-heading">Frequently asked</h2>
         </div>
-        <div class="space-y-3 max-w-3xl">
-          <details class="rounded-md border p-4">
-            <summary class="cursor-pointer font-medium">Why "Sheltie Linux"?</summary>
-            <p class="pt-3 text-sm text-muted-foreground">
-              Inspired by Puppy Linux flavors. Same spirit (small, friendly, directly usable, atomic), different breed. Our images are bootc OCI containers — pull and run, no installer needed.
-            </p>
+        <div class="faq-list">
+          <details>
+            <summary>Why "Sheltie Linux"?</summary>
+            <div>Inspired by Puppy Linux flavors. Same spirit (small, friendly, directly usable, atomic), different breed. Sheltie images are bootc OCI containers &mdash; pull and run, no installer needed.</div>
           </details>
-          <details class="rounded-md border p-4">
-            <summary class="cursor-pointer font-medium">How do I update?</summary>
-            <p class="pt-3 text-sm text-muted-foreground">
-              You don't. bootc updates the base image; podman auto-updates containers. Reboot to pick up new bootc layers.
-            </p>
+          <details>
+            <summary>How do I update?</summary>
+            <div>You don't. bootc updates the base image; podman auto-updates containers. Reboot to pick up new bootc layers.</div>
           </details>
-          <details class="rounded-md border p-4">
-            <summary class="cursor-pointer font-medium">Can I customise?</summary>
-            <p class="pt-3 text-sm text-muted-foreground">
-              Build your own flavor: fork the repo, add a <code class="rounded bg-muted px-1">flavors/&lt;name&gt;.yaml</code>, open an MR.
-            </p>
+          <details>
+            <summary>Can I customise?</summary>
+            <div>Build your own flavor: fork the repo, add a <code class="inline">flavors/&lt;name&gt;.yaml</code>, open a merge request. Same matrix, one extra row.</div>
           </details>
-          <details class="rounded-md border p-4">
-            <summary class="cursor-pointer font-medium">Where do I report bugs?</summary>
-            <p class="pt-3 text-sm text-muted-foreground">
-              File an issue at <a class="underline" href="https://gitlab.sko.ai/doudous/apkontainers/-/issues">gitlab.sko.ai/doudous/apkontainers/-/issues</a>.
-            </p>
+          <details>
+            <summary>Where do I report bugs?</summary>
+            <div>File an issue at <a class="link" href="https://gitlab.sko.ai/doudous/apkontainers/-/issues">gitlab.sko.ai/doudous/apkontainers/-/issues</a>.</div>
           </details>
-          <details class="rounded-md border p-4">
-            <summary class="cursor-pointer font-medium">Is this an image factory?</summary>
-            <p class="pt-3 text-sm text-muted-foreground">
-              No. Sheltie Linux ships a fixed matrix of 18 flavors. The picker exposes that matrix; it doesn't generate custom images.
-            </p>
+          <details>
+            <summary>Is this an image factory?</summary>
+            <div>No. Sheltie ships a fixed matrix of 18 flavors. The site exposes that matrix; it doesn't generate custom images on demand.</div>
           </details>
         </div>
       </div>
@@ -225,17 +241,12 @@
 
   </main>
 
-  <footer class="border-t">
-    <div class="mx-auto max-w-5xl px-6 py-8 text-sm text-muted-foreground flex flex-wrap items-center justify-between gap-3">
-      <p>
-        Source: <a class="underline" href="https://gitlab.sko.ai/doudous/apkontainers">gitlab.sko.ai/doudous/apkontainers</a>
-      </p>
-      <p>
-        Read the <a class="underline" href="https://sko.ai/blog/making-bootable-wolfi-containers/">background post</a>.
-      </p>
+  <footer class="site-footer">
+    <div class="container row">
+      <p>Source: <a class="link" href="https://gitlab.sko.ai/doudous/apkontainers">gitlab.sko.ai/doudous/apkontainers</a></p>
+      <p>Background: <a class="link" href="https://sko.ai/blog/making-bootable-wolfi-containers/">making bootable Wolfi containers</a></p>
     </div>
   </footer>
 
-  <script src="static/app.js"></script>
 </body>
 </html>

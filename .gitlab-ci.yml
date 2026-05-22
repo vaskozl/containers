@@ -32,10 +32,6 @@ pages:
   script:
     - mkdir -p public
     - cp -r site/. public/
-    # Real data from #66's grype-compare job will be dropped into public/data/
-    # by adding an optional `needs:` once that job exists. Until then, promote
-    # the committed sample so the URL pattern matches production.
-    - mv -f public/data/cve-comparison.sample.json public/data/cve-comparison.json 2>/dev/null || true
   artifacts:
     paths:
       - public
