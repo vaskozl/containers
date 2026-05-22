@@ -27,7 +27,6 @@ pages:
   stage: pages
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
   image: ghcr.io/vaskozl/apko@sha256:0c865724f4d9f7d73ab5c243a727d9af84d8c7ba504bb5df2e0044a639fb6b14
   script:
     - mkdir -p public
