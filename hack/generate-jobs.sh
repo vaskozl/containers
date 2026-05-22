@@ -27,17 +27,10 @@ for file in **/*.yaml *.yaml; do
 
   PKG="$(basename "$file" .yaml)"
 
-  case "$file" in
-    flavors/*)
-      VERSION=""
-      ;;
-    *)
-      FIRST=$(yq e '.contents.packages[0]' "$file")
-      case "$FIRST" in
-        *=*) VERSION="${FIRST#*=}" ;;
-        *)   VERSION="" ;;
-      esac
-      ;;
+  FIRST=$(yq e '.contents.packages[0]' "$file")
+  case "$FIRST" in
+    *=*) VERSION="${FIRST#*=}" ;;
+    *)   VERSION="" ;;
   esac
   echo "Creating job for $file as $PKG:${VERSION:-latest}"
 
