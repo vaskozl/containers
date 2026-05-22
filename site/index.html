@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>apkontainers — minimal, immutable, audited bootc flavors</title>
+  <meta name="description" content="Pick a desktop, browser, and flatpak combo. Get a one-line bootc switch command or a raw .img to flash.">
+  <link rel="stylesheet" href="static/basecoat.min.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="min-h-screen bg-background text-foreground">
+  <main class="mx-auto max-w-5xl px-6 py-12 space-y-12">
+
+    <header class="space-y-3">
+      <h1 class="text-4xl font-bold tracking-tight">apkontainers</h1>
+      <p class="text-lg text-muted-foreground">
+        Minimal, immutable, audited <a class="underline" href="https://bootc-dev.github.io/bootc/">bootc</a> hosts built from Wolfi.
+        Pick a combo below and either switch a running system or flash a fresh disk.
+      </p>
+    </header>
+
+    <section aria-labelledby="picker-heading" class="card p-6 space-y-6">
+      <h2 id="picker-heading" class="text-2xl font-semibold">Pick your flavor</h2>
+
+      <div class="grid gap-4 sm:grid-cols-3">
+        <label class="space-y-2">
+          <span class="block text-sm font-medium">Desktop</span>
+          <select id="desktop" class="select w-full">
+            <option value="niri">niri (scrolling wayland)</option>
+            <option value="cagebreak">cagebreak (tiling wayland)</option>
+            <option value="labwc">labwc (stacking wayland)</option>
+          </select>
+        </label>
+
+        <label class="space-y-2">
+          <span class="block text-sm font-medium">Browser</span>
+          <select id="browser" class="select w-full">
+            <option value="firefox">Firefox</option>
+            <option value="chromium">Chromium</option>
+            <option value="nobrowser">No browser</option>
+          </select>
+        </label>
+
+        <label class="space-y-2">
+          <span class="block text-sm font-medium">Flatpak</span>
+          <select id="flatpak" class="select w-full">
+            <option value="flatpak">With flatpak</option>
+            <option value="noflatpak">Without flatpak</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <div class="text-sm font-medium mb-2">Switch a running bootc system</div>
+          <pre class="rounded-md bg-muted p-3 overflow-x-auto"><code id="bootc-cmd">bootc switch ghcr.io/vaskozl/niri-firefox-flatpak</code></pre>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a id="img-download" class="btn" href="#" rel="noopener">Download .img</a>
+          <span class="text-sm text-muted-foreground" id="img-meta">size unknown until manifest loads</span>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="compare-heading" class="space-y-4">
+      <h2 id="compare-heading" class="text-2xl font-semibold">How it compares</h2>
+      <p class="text-sm text-muted-foreground">
+        CVE counts from <a class="underline" href="https://github.com/anchore/grype">grype</a>; image size is the sum of compressed layer sizes for the amd64 manifest.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="table w-full" id="compare-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th class="text-right">Size (MB)</th>
+              <th class="text-right">Layers</th>
+              <th class="text-right">Critical</th>
+              <th class="text-right">High</th>
+              <th class="text-right">Medium</th>
+              <th class="text-right">Low</th>
+              <th class="text-right">Total CVE</th>
+            </tr>
+          </thead>
+          <tbody id="compare-body">
+            <tr><td colspan="8" class="text-muted-foreground">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-muted-foreground" id="compare-meta"></p>
+    </section>
+
+    <footer class="text-sm text-muted-foreground pt-6 border-t">
+      <p>
+        Source: <a class="underline" href="https://gitlab.sko.ai/doudous/apkontainers">gitlab.sko.ai/doudous/apkontainers</a>.
+        Read the <a class="underline" href="https://sko.ai/blog/making-bootable-wolfi-containers/">background post</a>.
+      </p>
+    </footer>
+  </main>
+
+  <script src="static/app.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 stages:
   - generate
   - publish
+  - pages
 generate:
   stage: generate
   rules:
@@ -21,3 +22,21 @@ builds:
     include:
       - artifact: generated-config.yml
         job: generate
+
+pages:
+  stage: pages
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  image: ghcr.io/vaskozl/apko@sha256:0c865724f4d9f7d73ab5c243a727d9af84d8c7ba504bb5df2e0044a639fb6b14
+  script:
+    - mkdir -p public
+    - cp -r site/. public/
+    # Real data from #65/#66 producers will be dropped into public/data/ by
+    # adding `needs:` once those jobs exist. Until then, promote the committed
+    # samples so the URL pattern matches production.
+    - mv -f public/data/flavors-manifest.sample.json public/data/flavors-manifest.json 2>/dev/null || true
+    - mv -f public/data/cve-comparison.sample.json public/data/cve-comparison.json 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
