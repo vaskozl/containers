@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: wolfi-base.yaml
+contents:
+  packages:
+    - firefox=151.0.1-r0
+entrypoint:
+  command: firefox
+cmd: --headless
