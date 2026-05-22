@@ -25,15 +25,13 @@ EOF
 for file in **/*.yaml *.yaml; do
   [ -f "$file" ] || continue  # Skip if not a file
 
-  # Extract package and version
+  PKG="$(basename "$file" .yaml)"
+
   FIRST=$(yq e '.contents.packages[0]' "$file")
-  IFS='=' read -r PKG VERSION <<EOF
-$FIRST
-EOF
-
-
-  basename=$(basename "$file")
-  [ -z "$VERSION" ] && PKG="${basename%.yaml}"
+  case "$FIRST" in
+    *=*) VERSION="${FIRST#*=}" ;;
+    *)   VERSION="" ;;
+  esac
   echo "Creating job for $file as $PKG:${VERSION:-latest}"
 
   # Append job to config
