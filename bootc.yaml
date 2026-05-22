@@ -13,7 +13,6 @@ contents:
     - dbus-glib
     - dosfstools
     - e2fsprogs
-    - e2fsprogs-extra
     - findmnt
     - kmod-libs
     - linux-lts
@@ -22,15 +21,14 @@ contents:
     - lsblk
     - netavark
     - nori-user
-    - parted
     - posix-libc-utils
-    - sfdisk
     - shadow
     - skopeo
     - sudo
     - systemd
     - systemd-init
     - systemd-logind-service
+    - systemd-repart-rootfs-ext4
     - udev
     - wipefs
     - wolfi-base
