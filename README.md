@@ -144,6 +144,9 @@ image and `{desktop}-{browser}-slim` for the variant without `flatpak`:
 
 | Image                    | Desktop   | Browser  | Flatpak |
 |--------------------------|-----------|----------|---------|
+| `niri`                   | niri      | none     | no      |
+| `cagebreak`              | cagebreak | none     | no      |
+| `labwc`                  | labwc     | none     | no      |
 | `niri-firefox`           | niri      | firefox  | yes     |
 | `niri-firefox-slim`      | niri      | firefox  | no      |
 | `niri-chromium`          | niri      | chromium | yes     |
@@ -157,8 +160,7 @@ image and `{desktop}-{browser}-slim` for the variant without `flatpak`:
 | `labwc-chromium`         | labwc     | chromium | yes     |
 | `labwc-chromium-slim`    | labwc     | chromium | no      |
 
-The plain top-level [`niri`](./niri.yaml), [`cagebreak`](./cagebreak.yaml),
-and [`labwc`](./labwc.yaml) images remain the no-browser variants.
+The plain variants ship no browser and no flatpak.
 
 ## Related
 
