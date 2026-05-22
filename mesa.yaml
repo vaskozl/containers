@@ -56,9 +56,6 @@ contents:
     - pciutils
     - powertop
 
-    # Browser
-    - chromium
-
     # Fonts
     - font-liberation
     - font-noto
