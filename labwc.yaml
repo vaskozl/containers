@@ -2,4 +2,4 @@
 include: mesa.yaml
 contents:
   packages:
-    - labwc=0.10.0_pre20260518-r0
+    - labwc=0.9.7-r0
