@@ -26,6 +26,10 @@ Even pinned tags are rebuilt nightly to pick up security fixes, so they're not i
 
 [Renovate](https://github.com/renovatebot/renovate) keeps the `=version` pins in the YAML files fresh via a custom [`renovate-apk-indexer`](https://github.com/hown3d/renovate-apk-indexer) datasource that reads `APKINDEX.tar.gz`.
 
+## Flavors
+
+Yaml files under `flavors/` are compositions: their image name is the filename (sans `.yaml`), not the first declared package. A file at `flavors/niri-firefox-flatpak.yaml` publishes `ghcr.io/vaskozl/niri-firefox-flatpak:latest`. Flavors are only tagged `:latest` (plus the short SHA from CI) since there is no single upstream version to derive semver tags from. Use `include: ../<base>.yaml` to compose on top of a root-level apko config.
+
 ## Usage
 
 Images have no custom entrypoint scripts. Pass the command and arguments directly. Configuration goes in via volume mounts. For real-world examples see [`vaskozl/home-infra`](https://github.com/vaskozl/home-infra).
