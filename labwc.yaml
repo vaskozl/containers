@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: mesa.yaml
+contents:
+  packages:
+    - labwc=0.9.7-r0

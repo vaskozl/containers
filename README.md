@@ -75,6 +75,7 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [kubeconform](./kubeconform.yaml) | [`ghcr.io/vaskozl/kubeconform`](https://github.com/vaskozl/containers/pkgs/container/kubeconform) |
 | [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
 | [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
+| [labwc](./labwc.yaml) | [`ghcr.io/vaskozl/labwc`](https://github.com/vaskozl/containers/pkgs/container/labwc) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
 | [logrotate](./logrotate.yaml) | [`ghcr.io/vaskozl/logrotate`](https://github.com/vaskozl/containers/pkgs/container/logrotate) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
