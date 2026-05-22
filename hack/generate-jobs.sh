@@ -25,22 +25,18 @@ EOF
 for file in **/*.yaml *.yaml; do
   [ -f "$file" ] || continue  # Skip if not a file
 
-  basename=$(basename "$file")
+  PKG="$(basename "$file" .yaml)"
 
   case "$file" in
     flavors/*)
-      # Flavor builds: image name is the filename (sans .yaml).
-      # Compositions have no single upstream version: just :latest.
-      PKG="${basename%.yaml}"
       VERSION=""
       ;;
     *)
-      # Extract package and version from the first declared package.
       FIRST=$(yq e '.contents.packages[0]' "$file")
-      IFS='=' read -r PKG VERSION <<EOF
-$FIRST
-EOF
-      [ -z "$VERSION" ] && PKG="${basename%.yaml}"
+      case "$FIRST" in
+        *=*) VERSION="${FIRST#*=}" ;;
+        *)   VERSION="" ;;
+      esac
       ;;
   esac
   echo "Creating job for $file as $PKG:${VERSION:-latest}"
