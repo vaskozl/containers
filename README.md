@@ -144,9 +144,9 @@ image and `{desktop}-{browser}-slim` for the variant without `flatpak`:
 
 | Image                    | Desktop   | Browser  | Flatpak |
 |--------------------------|-----------|----------|---------|
-| `niri`                   | niri      | none     | no      |
-| `cagebreak`              | cagebreak | none     | no      |
-| `labwc`                  | labwc     | none     | no      |
+| `niri`                   | niri      | none     | yes     |
+| `cagebreak`              | cagebreak | none     | yes     |
+| `labwc`                  | labwc     | none     | yes     |
 | `niri-firefox`           | niri      | firefox  | yes     |
 | `niri-firefox-slim`      | niri      | firefox  | no      |
 | `niri-chromium`          | niri      | chromium | yes     |
@@ -160,7 +160,7 @@ image and `{desktop}-{browser}-slim` for the variant without `flatpak`:
 | `labwc-chromium`         | labwc     | chromium | yes     |
 | `labwc-chromium-slim`    | labwc     | chromium | no      |
 
-The plain variants ship no browser and no flatpak.
+The plain variants ship no browser but include flatpak, so a browser (or any other app) can be installed at runtime.
 
 ## Related
 
