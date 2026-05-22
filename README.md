@@ -42,6 +42,12 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [bootc](./bootc.yaml) | [`ghcr.io/vaskozl/bootc`](https://github.com/vaskozl/containers/pkgs/container/bootc) |
 | [brew](./brew.yaml) | [`ghcr.io/vaskozl/brew`](https://github.com/vaskozl/containers/pkgs/container/brew) |
 | [buildkitd](./buildkitd.yaml) | [`ghcr.io/vaskozl/buildkitd`](https://github.com/vaskozl/containers/pkgs/container/buildkitd) |
+| [cagebreak-chromium-flatpak](./flavors/cagebreak-chromium-flatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-chromium-flatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-chromium-flatpak) |
+| [cagebreak-chromium-noflatpak](./flavors/cagebreak-chromium-noflatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-chromium-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-chromium-noflatpak) |
+| [cagebreak-firefox-flatpak](./flavors/cagebreak-firefox-flatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-firefox-flatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-firefox-flatpak) |
+| [cagebreak-firefox-noflatpak](./flavors/cagebreak-firefox-noflatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-firefox-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-firefox-noflatpak) |
+| [cagebreak-nobrowser-flatpak](./flavors/cagebreak-nobrowser-flatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-nobrowser-flatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-nobrowser-flatpak) |
+| [cagebreak-nobrowser-noflatpak](./flavors/cagebreak-nobrowser-noflatpak.yaml) | [`ghcr.io/vaskozl/cagebreak-nobrowser-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-nobrowser-noflatpak) |
 | [cagebreak](./cagebreak.yaml) | [`ghcr.io/vaskozl/cagebreak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak) |
 | [calibre](./calibre.yaml) | [`ghcr.io/vaskozl/calibre`](https://github.com/vaskozl/containers/pkgs/container/calibre) |
 | [cert-manager-acmesolver](./cert-manager/cert-manager-acmesolver.yaml) | [`ghcr.io/vaskozl/cert-manager-acmesolver`](https://github.com/vaskozl/containers/pkgs/container/cert-manager-acmesolver) |
@@ -75,18 +81,32 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [kubeconform](./kubeconform.yaml) | [`ghcr.io/vaskozl/kubeconform`](https://github.com/vaskozl/containers/pkgs/container/kubeconform) |
 | [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
 | [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
+| [labwc-chromium-flatpak](./flavors/labwc-chromium-flatpak.yaml) | [`ghcr.io/vaskozl/labwc-chromium-flatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-chromium-flatpak) |
+| [labwc-chromium-noflatpak](./flavors/labwc-chromium-noflatpak.yaml) | [`ghcr.io/vaskozl/labwc-chromium-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-chromium-noflatpak) |
+| [labwc-firefox-flatpak](./flavors/labwc-firefox-flatpak.yaml) | [`ghcr.io/vaskozl/labwc-firefox-flatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-firefox-flatpak) |
+| [labwc-firefox-noflatpak](./flavors/labwc-firefox-noflatpak.yaml) | [`ghcr.io/vaskozl/labwc-firefox-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-firefox-noflatpak) |
+| [labwc-nobrowser-flatpak](./flavors/labwc-nobrowser-flatpak.yaml) | [`ghcr.io/vaskozl/labwc-nobrowser-flatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-nobrowser-flatpak) |
+| [labwc-nobrowser-noflatpak](./flavors/labwc-nobrowser-noflatpak.yaml) | [`ghcr.io/vaskozl/labwc-nobrowser-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/labwc-nobrowser-noflatpak) |
 | [labwc](./labwc.yaml) | [`ghcr.io/vaskozl/labwc`](https://github.com/vaskozl/containers/pkgs/container/labwc) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
+| [linux-asahi](./linux-asahi.yaml) | [`ghcr.io/vaskozl/linux-asahi`](https://github.com/vaskozl/containers/pkgs/container/linux-asahi) |
 | [logrotate](./logrotate.yaml) | [`ghcr.io/vaskozl/logrotate`](https://github.com/vaskozl/containers/pkgs/container/logrotate) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
 | [mariadb](./mariadb.yaml) | [`ghcr.io/vaskozl/mariadb`](https://github.com/vaskozl/containers/pkgs/container/mariadb) |
 | [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
+| [mesa](./mesa.yaml) | [`ghcr.io/vaskozl/mesa`](https://github.com/vaskozl/containers/pkgs/container/mesa) |
 | [minilb](./minilb.yaml) | [`ghcr.io/vaskozl/minilb`](https://github.com/vaskozl/containers/pkgs/container/minilb) |
 | [minio](./minio.yaml) | [`ghcr.io/vaskozl/minio`](https://github.com/vaskozl/containers/pkgs/container/minio) |
 | [mosquitto](./mosquitto.yaml) | [`ghcr.io/vaskozl/mosquitto`](https://github.com/vaskozl/containers/pkgs/container/mosquitto) |
 | [net-tools](./net-tools.yaml) | [`ghcr.io/vaskozl/net-tools`](https://github.com/vaskozl/containers/pkgs/container/net-tools) |
 | [nfs-subdir-external-provisioner](./nfs-subdir-external-provisioner.yaml) | [`ghcr.io/vaskozl/nfs-subdir-external-provisioner`](https://github.com/vaskozl/containers/pkgs/container/nfs-subdir-external-provisioner) |
 | [nginx](./nginx.yaml) | [`ghcr.io/vaskozl/nginx`](https://github.com/vaskozl/containers/pkgs/container/nginx) |
+| [niri-chromium-flatpak](./flavors/niri-chromium-flatpak.yaml) | [`ghcr.io/vaskozl/niri-chromium-flatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-chromium-flatpak) |
+| [niri-chromium-noflatpak](./flavors/niri-chromium-noflatpak.yaml) | [`ghcr.io/vaskozl/niri-chromium-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-chromium-noflatpak) |
+| [niri-firefox-flatpak](./flavors/niri-firefox-flatpak.yaml) | [`ghcr.io/vaskozl/niri-firefox-flatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-firefox-flatpak) |
+| [niri-firefox-noflatpak](./flavors/niri-firefox-noflatpak.yaml) | [`ghcr.io/vaskozl/niri-firefox-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-firefox-noflatpak) |
+| [niri-nobrowser-flatpak](./flavors/niri-nobrowser-flatpak.yaml) | [`ghcr.io/vaskozl/niri-nobrowser-flatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-nobrowser-flatpak) |
+| [niri-nobrowser-noflatpak](./flavors/niri-nobrowser-noflatpak.yaml) | [`ghcr.io/vaskozl/niri-nobrowser-noflatpak`](https://github.com/vaskozl/containers/pkgs/container/niri-nobrowser-noflatpak) |
 | [niri](./niri.yaml) | [`ghcr.io/vaskozl/niri`](https://github.com/vaskozl/containers/pkgs/container/niri) |
 | [ntfy](./ntfy.yaml) | [`ghcr.io/vaskozl/ntfy`](https://github.com/vaskozl/containers/pkgs/container/ntfy) |
 | [oauth2-proxy](./oauth2-proxy.yaml) | [`ghcr.io/vaskozl/oauth2-proxy`](https://github.com/vaskozl/containers/pkgs/container/oauth2-proxy) |
@@ -94,6 +114,7 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [perl-libwww](./perl-libwww.yaml) | [`ghcr.io/vaskozl/perl-libwww`](https://github.com/vaskozl/containers/pkgs/container/perl-libwww) |
 | [perl-mojolicious](./perl-mojolicious.yaml) | [`ghcr.io/vaskozl/perl-mojolicious`](https://github.com/vaskozl/containers/pkgs/container/perl-mojolicious) |
 | [pinewall-config](./pinewall-config.yaml) | [`ghcr.io/vaskozl/pinewall-config`](https://github.com/vaskozl/containers/pkgs/container/pinewall-config) |
+| [podman](./podman.yaml) | [`ghcr.io/vaskozl/podman`](https://github.com/vaskozl/containers/pkgs/container/podman) |
 | [postgresql](./postgresql.yaml) | [`ghcr.io/vaskozl/postgresql`](https://github.com/vaskozl/containers/pkgs/container/postgresql) |
 | [prometheus-alertmanager](./prometheus-alertmanager.yaml) | [`ghcr.io/vaskozl/prometheus-alertmanager`](https://github.com/vaskozl/containers/pkgs/container/prometheus-alertmanager) |
 | [prometheus-node-exporter](./prometheus-node-exporter.yaml) | [`ghcr.io/vaskozl/prometheus-node-exporter`](https://github.com/vaskozl/containers/pkgs/container/prometheus-node-exporter) |
@@ -121,6 +142,27 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [valkey](./valkey.yaml) | [`ghcr.io/vaskozl/valkey`](https://github.com/vaskozl/containers/pkgs/container/valkey) |
 | [wolfi-scanner](./wolfi-scanner.yaml) | [`ghcr.io/vaskozl/wolfi-scanner`](https://github.com/vaskozl/containers/pkgs/container/wolfi-scanner) |
 | [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
+## Flavors
+
+The `flavors/` directory holds bootable desktop image variants assembled
+from `mesa.yaml` plus a desktop compositor, optionally a browser, and
+optionally `flatpak`. All combinations are built:
+
+| Axis    | Options                  |
+|---------|--------------------------|
+| Desktop | niri, cagebreak, labwc   |
+| Browser | firefox, chromium, none  |
+| Flatpak | yes, no                  |
+
+3 × 3 × 2 = 18 images, published as `ghcr.io/vaskozl/{desktop}-{browser}-{flatpak}:latest`
+(e.g. `niri-firefox-flatpak`, `labwc-nobrowser-noflatpak`). The plain
+`niri`, `cagebreak`, and `labwc` images remain unchanged and ship without
+a browser.
+
+The flavor yamls are generated by [`hack/generate-flavors.sh`](./hack/generate-flavors.sh):
+edit the script and re-run it rather than hand-editing the files under
+`flavors/`.
+
 ## Related
 
 - Packages (`melange` recipes, APK registry): [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages)
