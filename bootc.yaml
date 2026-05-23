@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - bootc=1.15.2-r2
+    - bootc=1.15.2-r3
     - bind-tools
     - bootc-baselayout
     - btrfs-progs
