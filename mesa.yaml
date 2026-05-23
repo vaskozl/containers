@@ -3,6 +3,7 @@ include: bootc.yaml
 contents:
   packages:
     # Graphics / GPU
+    - mesa
     - mesa-egl
     - libva
     - linux-firmware-amdgpu
