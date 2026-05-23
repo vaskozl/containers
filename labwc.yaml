@@ -4,3 +4,4 @@ contents:
   packages:
     - labwc=0.9.7-r0
     - flatpak
+    - flatpak-systemd

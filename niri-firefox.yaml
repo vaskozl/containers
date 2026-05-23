@@ -6,3 +6,4 @@ contents:
     - niri-bash-completion
     - firefox
     - flatpak
+    - flatpak-systemd

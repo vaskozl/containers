@@ -5,3 +5,4 @@ contents:
     - niri=26.04-r1
     - niri-bash-completion
     - flatpak
+    - flatpak-systemd
