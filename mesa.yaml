@@ -34,6 +34,7 @@ contents:
     - systemd-default-network
 
     # SSH
+    - gpg
     - openssh
     - openssh-service
     - openssl
