@@ -44,8 +44,8 @@
         </div>
         <div class="stats">
           <div class="stat"><div class="n">0</div><div class="l">Critical CVEs on minimal flavor</div></div>
-          <div class="stat"><div class="n">18</div><div class="l">Flavors from one matrix</div></div>
-          <div class="stat"><div class="n">Wolfi</div><div class="l">Same base as Chainguard images</div></div>
+          <div class="stat"><div class="n">Atomic</div><div class="l">bootc swap, no package drift</div></div>
+          <div class="stat"><div class="n">Wolfi</div><div class="l">Minimal hardened base</div></div>
         </div>
       </div>
     </section>
@@ -161,8 +161,8 @@
           </article>
           <article class="surface">
             <div class="icon cyan">&#x2261;</div>
-            <h3>18 flavors, one matrix</h3>
-            <p>Desktop &times; browser &times; flatpak. Every cell is built and signed by the same CI from the same source.</p>
+            <h3>One matrix, one source</h3>
+            <p>Desktop &times; browser &times; flatpak. Every cell is built and signed by the same CI from the same yaml.</p>
           </article>
           <article class="surface">
             <div class="icon primary">&#x2630;</div>
@@ -242,7 +242,7 @@
             <div>
               <p>Use rootless podman. It's the recommended way to run anything that isn't in your flavor:</p>
               <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">-it --rm --net=host</span> <span class="tok-img">ghcr.io/vaskozl/apk-tools</span> sh</code></pre>
-              <p>Inside, <code class="inline">apk add &lt;pkg&gt;</code> pulls from the Wolfi and Chainguard package repos. No daemon, no setup, no root.</p>
+              <p>Inside, <code class="inline">apk add &lt;pkg&gt;</code> pulls from the Wolfi package repos. No daemon, no setup, no root.</p>
             </div>
           </details>
           <details>
