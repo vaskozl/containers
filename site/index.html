@@ -45,7 +45,7 @@
         <div class="stats">
           <div class="stat"><div class="n">0</div><div class="l">Critical CVEs on minimal flavor</div></div>
           <div class="stat"><div class="n">18</div><div class="l">Flavors from one matrix</div></div>
-          <div class="stat"><div class="n">~190 MB</div><div class="l">Smallest flavor on disk</div></div>
+          <div class="stat"><div class="n">Wolfi</div><div class="l">Same base as Chainguard images</div></div>
         </div>
       </div>
     </section>
@@ -69,8 +69,9 @@
 
           <div class="step">
             <h3><span class="num">2</span> Try it in a container</h3>
-            <p class="note">Pull the image and poke around &mdash; no commitment.</p>
-            <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">--rm -it</span> <span class="tok-img">ghcr.io/vaskozl/&lt;flavor&gt;:latest</span> /bin/bash</code></pre>
+            <p class="note">Rootless. No daemon, no setup. Drop into a shell and look around.</p>
+            <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">-it --rm --net=host</span> <span class="tok-img">ghcr.io/vaskozl/&lt;flavor&gt;:latest</span> /bin/sh</code></pre>
+            <p class="note">Don't have podman? <code class="inline">podman run -it --rm --net=host ghcr.io/vaskozl/apk-tools sh</code> from any Linux gives you an apk shell to install it.</p>
           </div>
 
           <details>
@@ -195,9 +196,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="sheltie"><td class="name">vaskozl/niri-firefox-flatpak</td><td class="num">312</td><td class="num">8</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">1</td><td class="num">3</td><td class="num">4</td></tr>
-              <tr class="sheltie"><td class="name">vaskozl/cagebreak-chromium-noflatpak</td><td class="num">268</td><td class="num">7</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">2</td><td class="num">2</td></tr>
-              <tr class="sheltie"><td class="name">vaskozl/labwc-nobrowser-noflatpak</td><td class="num">188</td><td class="num">5</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td></tr>
+              <tr class="sheltie"><td class="name">vaskozl/labwc-nobrowser-noflatpak</td><td class="num">410</td><td class="num">5</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td><td class="num zero">0</td></tr>
+              <tr class="sheltie"><td class="name">vaskozl/niri-nobrowser-flatpak</td><td class="num">970</td><td class="num">7</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+              <tr class="sheltie"><td class="name">vaskozl/cagebreak-firefox-flatpak</td><td class="num">1,180</td><td class="num">8</td><td class="num zero">0</td><td class="num zero">0</td><td class="num">1</td><td class="num">3</td><td class="num">4</td></tr>
               <tr><td class="name">ubuntu:24.04</td><td class="num">92</td><td class="num">4</td><td class="num zero">0</td><td class="num">2</td><td class="num">11</td><td class="num">27</td><td class="num">40</td></tr>
               <tr><td class="name">fedora-bootc:42</td><td class="num">1,450</td><td class="num">12</td><td class="num critical">1</td><td class="num">8</td><td class="num">42</td><td class="num">89</td><td class="num">140</td></tr>
               <tr><td class="name">bazzite:stable</td><td class="num">4,200</td><td class="num">32</td><td class="num critical">2</td><td class="num">18</td><td class="num">94</td><td class="num">201</td><td class="num">315</td></tr>
@@ -220,8 +221,33 @@
             <div>Inspired by Puppy Linux flavors. Same spirit (small, friendly, directly usable, atomic), different breed. Sheltie images are bootc OCI containers &mdash; pull and run, no installer needed.</div>
           </details>
           <details>
+            <summary>How do I log in on first boot?</summary>
+            <div>
+              <p>Default user is <code class="inline">nori</code>, password <code class="inline">nori</code>. Log in on a tty and start your session manually:</p>
+              <pre class="code-block" data-label="tty"><code><span class="tok-cmd">niri-session</span>     <span class="tok-comment"># niri flavors</span>
+<span class="tok-cmd">cagebreak</span>         <span class="tok-comment"># cagebreak flavors</span>
+<span class="tok-cmd">labwc</span>             <span class="tok-comment"># labwc flavors</span></code></pre>
+              <p>There is no greeter. Change the password (<code class="inline">passwd</code>) before exposing the machine.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I install flatpaks?</summary>
+            <div>
+              <p>Use <code class="inline">sudo flatpak install …</code>. Sheltie doesn't ship polkit, so the polkit/system-helper path isn't enabled and per-user installs need root the first time around.</p>
+              <p><strong>Running</strong> a flatpak app, once installed, does not need root.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I run arbitrary software?</summary>
+            <div>
+              <p>Use rootless podman. It's the recommended way to run anything that isn't in your flavor:</p>
+              <pre class="code-block" data-label="shell"><code><span class="tok-cmd">podman run</span> <span class="tok-flag">-it --rm --net=host</span> <span class="tok-img">ghcr.io/vaskozl/apk-tools</span> sh</code></pre>
+              <p>Inside, <code class="inline">apk add &lt;pkg&gt;</code> pulls from the Wolfi and Chainguard package repos. No daemon, no setup, no root.</p>
+            </div>
+          </details>
+          <details>
             <summary>How do I update?</summary>
-            <div>You don't. bootc updates the base image; podman auto-updates containers. Reboot to pick up new bootc layers.</div>
+            <div>You don't. bootc swaps the base image; podman auto-updates the containers you run. Reboot to pick up new bootc layers.</div>
           </details>
           <details>
             <summary>Can I customise?</summary>

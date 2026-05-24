@@ -3,39 +3,39 @@
    (.btn, .card, .table, .badge, .select). Everything below is what the
    page actually needs to lay out and theme itself with no JavaScript. */
 
-/* Tricolour palette: light brown, white, black.
-   The whole page is rendered in shades drawn from these three colours;
-   only the warm-brown hue (~65deg) carries any chroma. */
+/* Warm tan / white / black palette, aligned with the rawfood basecoat theme
+   (same hue family, same primary darkness). Only the warm-brown hue
+   (~40–70deg) carries any chroma. */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.16 0 0);
+  --background: oklch(0.98 0.012 80);
+  --foreground: oklch(0.18 0.02 40);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0 0);
+  --card-foreground: oklch(0.18 0.02 40);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0 0);
-  --primary: oklch(0.58 0.08 60);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0.015 70);
-  --secondary-foreground: oklch(0.16 0 0);
-  --muted: oklch(0.96 0.015 70);
-  --muted-foreground: oklch(0.42 0.02 60);
-  --accent: oklch(0.92 0.03 65);
-  --accent-foreground: oklch(0.16 0 0);
-  --destructive: oklch(0.45 0.12 35);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.88 0.02 65);
-  --input: oklch(0.88 0.02 65);
-  --ring: oklch(0.58 0.08 60);
+  --popover-foreground: oklch(0.18 0.02 40);
+  --primary: oklch(0.45 0.12 40);
+  --primary-foreground: oklch(0.98 0.012 80);
+  --secondary: oklch(0.94 0.022 75);
+  --secondary-foreground: oklch(0.25 0.04 40);
+  --muted: oklch(0.94 0.022 75);
+  --muted-foreground: oklch(0.45 0.03 50);
+  --accent: oklch(0.88 0.04 65);
+  --accent-foreground: oklch(0.22 0.04 40);
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0.012 80);
+  --border: oklch(0.86 0.025 65);
+  --input: oklch(0.86 0.025 65);
+  --ring: oklch(0.55 0.12 45);
   --radius: 0.625rem;
   --brown-light: oklch(0.78 0.06 65);
-  --brown-mid: oklch(0.58 0.08 60);
-  --brown-dark: oklch(0.32 0.04 55);
+  --brown-mid: oklch(0.55 0.10 45);
+  --brown-dark: oklch(0.32 0.05 40);
   --accent-cyan: var(--brown-light);
   --accent-violet: var(--brown-mid);
   --accent-emerald: var(--brown-dark);
   --hero-grad: radial-gradient(at 20% 10%, oklch(0.78 0.06 65 / 0.45), transparent 55%),
-               radial-gradient(at 80% 30%, oklch(0.58 0.08 60 / 0.28), transparent 55%),
-               radial-gradient(at 50% 100%, oklch(0.32 0.04 55 / 0.12), transparent 60%);
+               radial-gradient(at 80% 30%, oklch(0.55 0.10 45 / 0.28), transparent 55%),
+               radial-gradient(at 50% 100%, oklch(0.32 0.05 40 / 0.12), transparent 60%);
 }
 
 * { box-sizing: border-box; }
