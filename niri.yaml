@@ -4,6 +4,7 @@ contents:
   packages:
     - niri=26.04-r1
     - niri-bash-completion
+    # For debugging while we sort out mesa on intel
     - cage
     - flatpak
     - flatpak-systemd
