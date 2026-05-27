@@ -64,3 +64,5 @@ contents:
     - font-noto-cjk
     - font-noto-emoji
     - ttf-dejavu
+archs:
+  - amd64
