@@ -41,7 +41,7 @@ annotations:
   containers.bootc: "1"
 layering:
   strategy: origin
-  budget: 96
+  budget: 128
 paths:
   # Strip POSIX ACL xattrs that bootc rejects on amd64 (Wolfi systemd quirk).
   # `hardlink` is abused here because it's the only mutator that can remove them
