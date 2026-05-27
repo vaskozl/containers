@@ -6,3 +6,4 @@ contents:
     - niri-bash-completion
     - flatpak
     - flatpak-systemd
+    - flatpak-update-timer

@@ -7,3 +7,4 @@ contents:
     - chromium
     - flatpak
     - flatpak-systemd
+    - flatpak-update-timer
