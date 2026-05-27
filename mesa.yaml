@@ -5,9 +5,9 @@ contents:
     # Graphics / GPU
     - mesa
     - mesa-egl
+    - intel-media-driver
     - libva
-    - linux-firmware-amdgpu
-    - linux-firmware-i915
+    - linux-firmware
 
     # Wayland desktop utilities
     - foot
