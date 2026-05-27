@@ -6,3 +6,4 @@ contents:
     - firefox
     - flatpak
     - flatpak-systemd
+    - flatpak-update-timer
