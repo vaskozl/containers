@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - grafana=13.0.1-r6
+    - grafana=13.0.1-r7
     - grafana-oci-compat
 entrypoint:
   command: /opt/grafana/run.sh
