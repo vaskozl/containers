@@ -22,6 +22,7 @@ contents:
     - netavark
     - nori-user
     - posix-libc-utils
+    - sfdisk
     - shadow
     - skopeo
     - sudo
