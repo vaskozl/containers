@@ -17,6 +17,7 @@ contents:
     - nftables
     - openssh
     - openssh-server-config
+    - just
     - openssh-service
     - openssl
     - prometheus-node-exporter
