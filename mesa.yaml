@@ -7,6 +7,7 @@ contents:
     - intel-media-driver
     - libva
     - linux-firmware
+    - spirv-tools # remove on mesa-full bump
 
     # Wayland desktop utilities
     - foot
