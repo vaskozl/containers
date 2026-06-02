@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - tailscale=1.98.3-r3
+    - tailscale=1.98.5-r0
     - iptables
     - ip6tables
     - iproute2
