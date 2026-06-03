@@ -40,12 +40,13 @@ publish:$PKG:
   stage: publish
   image: ghcr.io/vaskozl/apko:latest
   retry:
-    max: 1
+    max: 2
     when:
       - runner_system_failure
       - scheduler_failure
       - stuck_or_timeout_failure
       - api_failure
+      - script_failure
   only:
     changes:
       - hack/generate-jobs.sh
