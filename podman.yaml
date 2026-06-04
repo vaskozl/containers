@@ -2,7 +2,7 @@
 include: bootc.yaml
 contents:
   packages:
-    - podman=5.8.2-r5
+    - podman=5.8.2-r6
     - iproute2
     - curl
     - iptables-nft
