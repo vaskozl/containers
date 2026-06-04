@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - maddy=0.9.4-r1
+    - maddy=0.9.5-r0
 entrypoint:
   command: maddy
 cmd: run
