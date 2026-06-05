@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - coredns=1.14.3-r3
+    - coredns=1.14.3-r4
     - coredns-compat
 entrypoint:
   command: /usr/bin/coredns -dns.port=53
