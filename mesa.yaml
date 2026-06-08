@@ -71,5 +71,11 @@ contents:
     - font-noto-cjk
     - font-noto-emoji
     - ttf-dejavu
+
+    # Shell
+    - zsh
+    - zsh-autosuggestions
+    - zsh-history-substring-search
+    - zsh-syntax-highlighting
 archs:
   - amd64
