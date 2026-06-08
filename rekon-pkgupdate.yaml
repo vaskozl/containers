@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
+include: claude.yaml
+contents:
+  packages:
+    - rekon-pkgupdate=0.0.2-r0
+entrypoint:
+  command: rekon-pkgupdate
+vcs-url: https://gitlab.sko.ai/doudous/rekon
