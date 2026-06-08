@@ -4,6 +4,10 @@ contents:
   packages:
     # Graphics / GPU
     - mesa-full
+    - mesa-full-egl
+    - mesa-full-gbm
+    - mesa-full-glx
+    - mesa-full-libgallium
     - intel-media-driver
     - libva
     - linux-firmware
