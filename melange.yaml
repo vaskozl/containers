@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - melange=0.53.0-r0
+    - melange=0.53.1-r0
     - git
     - openssl
     - perl
