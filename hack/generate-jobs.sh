@@ -58,6 +58,12 @@ publish:$PKG:
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
     - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
     - |
+      # PRIVATE_REPOS is newline-separated; word-splitting builds the -b args
+      BUILD_REPO_ARGS=""
+      for repo in \$PRIVATE_REPOS; do
+        BUILD_REPO_ARGS="\$BUILD_REPO_ARGS -b \$repo"
+      done
+    - |
       IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
       # Strip version segments from right to left
       while [ -n "\$TAG" ]; do
@@ -69,7 +75,7 @@ publish:$PKG:
         fi
         TAG=\$NEW_TAG
       done
-    - apko publish --sbom=false "$file" \$IMAGES
+    - apko publish --sbom=false \$BUILD_REPO_ARGS "$file" \$IMAGES
 EOF
 done
 
