@@ -25,7 +25,7 @@ contents:
     - sfdisk
     - shadow
     - skopeo
-    - sudo
+    - sudo-rs
     - systemd
     - systemd-init
     - systemd-logind-service
