@@ -2,7 +2,7 @@
 include: claude.yaml
 contents:
   packages:
-    - rekon-pkgupdate=0.0.13-r0
+    - rekon-pkgupdate=0.0.14-r0
     - rekon
 entrypoint:
   command: rekon-pkgupdate
