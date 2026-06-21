@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - blocky=0.32.0-r1
+    - blocky=0.32.1-r0
 entrypoint:
   command: blocky
 vcs-url: https://github.com/0xERR0R/blocky
