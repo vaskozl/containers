@@ -6,6 +6,7 @@ contents:
     - git-lfs
     - dash-binsh
     - dash
+    - openssh-client
 entrypoint:
   command: /usr/bin/git
 work-dir: /home/git
