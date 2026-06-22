@@ -54,6 +54,7 @@ contents:
     # Shell
     - bash-completion
     - bash-default-config
+    - git
 
     # System / diagnostics
     - fastfetch
