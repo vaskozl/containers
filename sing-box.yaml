@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - sing-box=1.13.13-r0
+    - sing-box=1.13.14-r0
 entrypoint:
   command: sign-box
 vcs-url: https://github.com/sagernet/sing-box
