@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - chromium=149.0.7827.196-r1
+    - chromium=149.0.7827.200-r0
 entrypoint:
   command: chromium-browser
 cmd: --headless --no-sandbox --disable-gpu
