@@ -28,6 +28,7 @@ contents:
 
     # Audio
     - wireplumber
+    - pipewire-full
     - sof-firmware
 
     # Networking
