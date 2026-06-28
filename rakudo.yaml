@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - rakudo=2026.05-r0
+    - rakudo=2026.06-r0
     - build-base
     - openssl-dev
 entrypoint:
