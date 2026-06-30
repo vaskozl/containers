@@ -2,7 +2,7 @@
 include: alpine-base.yaml
 contents:
   packages:
-    - jellyfin=10.11.11-r0
+    - jellyfin=10.11.11-r1
     - jellyfin-web
     - intel-media-driver
     - libva-intel-driver
