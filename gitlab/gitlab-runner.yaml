@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - gitlab-runner=19.1.1-r0
+    - gitlab-runner=19.1.1-r1
     - gitlab-runner-oci-entrypoint
     - gitlab-docker-machine
     - git-lfs
