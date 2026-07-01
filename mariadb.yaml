@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - mariadb=12.3.2-r4
+    - mariadb=12.3.2-r5
     - mariadb-client
     - mariadb-oci-entrypoint
 entrypoint:
