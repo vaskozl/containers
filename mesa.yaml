@@ -50,6 +50,7 @@ contents:
     # Rootless containers
     - just-newuidmap-newgidmap
     - podman
+    - docker-compose
     - slirp4netns
 
     # Shell
