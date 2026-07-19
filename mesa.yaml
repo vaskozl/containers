@@ -57,6 +57,7 @@ contents:
     - bash-completion
     - bash-default-config
     - git
+    - delta
 
     # System / diagnostics
     - fastfetch
