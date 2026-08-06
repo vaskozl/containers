@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - anubis=1.25.0-r2
+    - anubis=1.26.2-r0
 entrypoint:
   command: anubis
 vcs-url: https://github.com/TecharoHQ/anubis

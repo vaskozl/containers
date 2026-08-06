@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - firefox=152.0.4-r1
+    - firefox=152.0.6-r3
 entrypoint:
   command: firefox
 cmd: --headless
