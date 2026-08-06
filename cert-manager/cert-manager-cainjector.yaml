@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - cert-manager-cainjector=1.20.3-r2
+    - cert-manager-cainjector=1.20.3-r9
 
 accounts:
   groups:

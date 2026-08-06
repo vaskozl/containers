@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - restic=0.19.0-r1
+    - restic=0.19.1-r2
 entrypoint:
   command: restic
 vcs-url: https://github.com/restic/restic
