@@ -12,7 +12,7 @@ contents:
     - https://packages.cgr.dev/extras
   packages:
     - wolfi-baselayout
-    - busybox
+    - busybox-full
     - ca-certificates-bundle
 accounts:
   groups:
