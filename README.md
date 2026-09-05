@@ -55,7 +55,6 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [go](./go.yaml) | [`ghcr.io/vaskozl/go`](https://github.com/vaskozl/containers/pkgs/container/go) |
 | [golink](./golink.yaml) | [`ghcr.io/vaskozl/golink`](https://github.com/vaskozl/containers/pkgs/container/golink) |
 | [grype](./grype.yaml) | [`ghcr.io/vaskozl/grype`](https://github.com/vaskozl/containers/pkgs/container/grype) |
-| [haproxy](./haproxy.yaml) | [`ghcr.io/vaskozl/haproxy`](https://github.com/vaskozl/containers/pkgs/container/haproxy) |
 | [hugo](./hugo.yaml) | [`ghcr.io/vaskozl/hugo`](https://github.com/vaskozl/containers/pkgs/container/hugo) |
 | [jellyfin](./jellyfin.yaml) | [`ghcr.io/vaskozl/jellyfin`](https://github.com/vaskozl/containers/pkgs/container/jellyfin) |
 | [kromgo](./kromgo.yaml) | [`ghcr.io/vaskozl/kromgo`](https://github.com/vaskozl/containers/pkgs/container/kromgo) |
@@ -71,9 +70,7 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [labwc](./labwc.yaml) | [`ghcr.io/vaskozl/labwc`](https://github.com/vaskozl/containers/pkgs/container/labwc) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
 | [linux-asahi](./linux-asahi.yaml) | [`ghcr.io/vaskozl/linux-asahi`](https://github.com/vaskozl/containers/pkgs/container/linux-asahi) |
-| [logrotate](./logrotate.yaml) | [`ghcr.io/vaskozl/logrotate`](https://github.com/vaskozl/containers/pkgs/container/logrotate) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
-| [mariadb](./mariadb.yaml) | [`ghcr.io/vaskozl/mariadb`](https://github.com/vaskozl/containers/pkgs/container/mariadb) |
 | [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
 | [mesa](./mesa.yaml) | [`ghcr.io/vaskozl/mesa`](https://github.com/vaskozl/containers/pkgs/container/mesa) |
 | [minilb](./minilb.yaml) | [`ghcr.io/vaskozl/minilb`](https://github.com/vaskozl/containers/pkgs/container/minilb) |
