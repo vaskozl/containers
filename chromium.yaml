@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
-contents:
-  packages:
-    - chromium=151.0.7922.75-r0
-entrypoint:
-  command: chromium-browser
-cmd: --headless --no-sandbox --disable-gpu

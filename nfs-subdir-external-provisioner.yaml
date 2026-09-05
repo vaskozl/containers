@@ -1,9 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
-contents:
-  packages:
-    - nfs-subdir-external-provisioner=4.0.18-r44
-accounts:
-  run-as: '0'
-entrypoint:
-  command: /usr/bin/nfs-subdir-external-provisioner
