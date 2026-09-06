@@ -21,6 +21,17 @@ stages:
   - publish
 EOF
 
+trusts_private_repos() {
+  f="$1"
+  while [ -f "$f" ]; do
+    if yq e '.contents.keyring[]' "$f" 2>/dev/null | grep -qF apks.sko.ai; then
+      return 0
+    fi
+    f=$(yq e '.include // ""' "$f")
+  done
+  return 1
+}
+
 # Process YAML files
 for file in **/*.yaml *.yaml; do
   [ -f "$file" ] || continue  # Skip if not a file
@@ -57,12 +68,20 @@ publish:$PKG:
     - TAG="${VERSION%-r[0-9]*}"
     - apko login ghcr.io -u "\$GHCR_USER" -p "\$GHCR_PASSWORD"
     - apko login docker.io -u "\$DOCKER_USER" -p "\$DOCKER_PASSWORD"
+EOF
+
+  if trusts_private_repos "$file"; then
+    cat >> "$CONFIG_FILE" <<EOF
     - |
       # PRIVATE_REPOS is newline-separated; word-splitting builds the -b args
       BUILD_REPO_ARGS=""
       for repo in \$PRIVATE_REPOS; do
         BUILD_REPO_ARGS="\$BUILD_REPO_ARGS -b \$repo"
       done
+EOF
+  fi
+
+  cat >> "$CONFIG_FILE" <<EOF
     - |
       IMAGES="${REPO}${PKG}:latest vszl/${PKG}:latest"
       # Strip version segments from right to left
