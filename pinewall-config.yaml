@@ -14,11 +14,12 @@ contents:
     - iftop
     - iperf3
     - iproute2
+    - just
     - nftables
     - openssh
     - openssh-server-config
-    - just
     - openssh-service
     - openssl
+    - podman
     - prometheus-node-exporter
     - tcpdump
