@@ -17,6 +17,6 @@ jobs:
         with:
           packages: '*'
           expand-packages: true
-          keep-n-tagged: 32
-          keep-n-untagged: 8
+          keep-n-tagged: 64
+          keep-n-untagged: 128
           token: ${{ secrets.CLEANUP_PAT }}
