@@ -73,7 +73,6 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
 | [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
 | [mesa](./mesa.yaml) | [`ghcr.io/vaskozl/mesa`](https://github.com/vaskozl/containers/pkgs/container/mesa) |
-| [minilb](./minilb.yaml) | [`ghcr.io/vaskozl/minilb`](https://github.com/vaskozl/containers/pkgs/container/minilb) |
 | [minio](./minio.yaml) | [`ghcr.io/vaskozl/minio`](https://github.com/vaskozl/containers/pkgs/container/minio) |
 | [mosquitto](./mosquitto.yaml) | [`ghcr.io/vaskozl/mosquitto`](https://github.com/vaskozl/containers/pkgs/container/mosquitto) |
 | [net-tools](./net-tools.yaml) | [`ghcr.io/vaskozl/net-tools`](https://github.com/vaskozl/containers/pkgs/container/net-tools) |
