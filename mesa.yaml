@@ -13,6 +13,11 @@ contents:
     - linux-firmware
     - spirv-tools # remove on mesa-full bump
 
+    # GTK / Icons
+    - gtk-3-compiled-gschemas
+    - hicolor-icon-theme
+    - glycin-2
+
     # Wayland desktop utilities
     - foot
     - fuzzel
