@@ -19,7 +19,7 @@ contents:
     - glycin-2
 
     # Wayland desktop utilities
-    - foot
+    - kitty
     - fuzzel
     - grim
     - mako
