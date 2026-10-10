@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - radarr=6.4.1.10545-r0
+    - radarr=6.4.4.10685-r0
 entrypoint:
   command: /usr/lib/radarr/bin/Radarr
 cmd: -nobrowser -data=/config
