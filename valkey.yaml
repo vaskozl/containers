@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - valkey=9.1.1-r1
+    - valkey=9.1.2-r2
     - valkey-cli
 entrypoint:
   command: valkey-server

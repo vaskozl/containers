@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - go=1.26.5-r2
+    - go=1.27.2-r0
 entrypoint:
   command: /usr/bin/go
 cmd: help

@@ -2,7 +2,7 @@
 include: wolfi-base.yaml
 contents:
   packages:
-    - rust=1.97.1-r0
+    - rust=1.99.0-r1
     - build-base
 entrypoint:
   command: /usr/bin/cargo
