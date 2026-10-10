@@ -86,5 +86,9 @@ contents:
     - zsh-autosuggestions
     - zsh-history-substring-search
     - zsh-syntax-highlighting
+paths:
+  - path: /usr/bin/unix_chkpwd
+    type: permissions
+    permissions: 0o4755
 archs:
   - amd64
