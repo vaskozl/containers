@@ -20,6 +20,7 @@ contents:
 
     # Wayland desktop utilities
     - kitty
+    - xkeyboard-config
     - fuzzel
     - grim
     - mako
