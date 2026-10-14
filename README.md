@@ -11,7 +11,7 @@ Two properties fall out of this for free:
 
 Custom packages that aren't in Wolfi yet are built with [`melange`](https://github.com/chainguard-dev/melange) and live in [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages). Built APKs are published to `https://apks.sko.ai`.
 
-A subset — `bootc`, `containerd`, `niri`, `cagebreak`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
+A subset — `bootc`, `containerd`, `niri`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
 
 ## Tagging
 
@@ -40,18 +40,11 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [baikal](./baikal.yaml) | [`ghcr.io/vaskozl/baikal`](https://github.com/vaskozl/containers/pkgs/container/baikal) |
 | [blocky](./blocky.yaml) | [`ghcr.io/vaskozl/blocky`](https://github.com/vaskozl/containers/pkgs/container/blocky) |
 | [bootc](./bootc.yaml) | [`ghcr.io/vaskozl/bootc`](https://github.com/vaskozl/containers/pkgs/container/bootc) |
-| [cagebreak-chromium-slim](./cagebreak-chromium-slim.yaml) | [`ghcr.io/vaskozl/cagebreak-chromium-slim`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-chromium-slim) |
-| [cagebreak-chromium](./cagebreak-chromium.yaml) | [`ghcr.io/vaskozl/cagebreak-chromium`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-chromium) |
-| [cagebreak-firefox-slim](./cagebreak-firefox-slim.yaml) | [`ghcr.io/vaskozl/cagebreak-firefox-slim`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-firefox-slim) |
-| [cagebreak-firefox](./cagebreak-firefox.yaml) | [`ghcr.io/vaskozl/cagebreak-firefox`](https://github.com/vaskozl/containers/pkgs/container/cagebreak-firefox) |
-| [cagebreak](./cagebreak.yaml) | [`ghcr.io/vaskozl/cagebreak`](https://github.com/vaskozl/containers/pkgs/container/cagebreak) |
 | [calibre](./calibre.yaml) | [`ghcr.io/vaskozl/calibre`](https://github.com/vaskozl/containers/pkgs/container/calibre) |
 | [containerd](./containerd.yaml) | [`ghcr.io/vaskozl/containerd`](https://github.com/vaskozl/containers/pkgs/container/containerd) |
 | [docker](./docker.yaml) | [`ghcr.io/vaskozl/docker`](https://github.com/vaskozl/containers/pkgs/container/docker) |
 | [firefox](./firefox.yaml) | [`ghcr.io/vaskozl/firefox`](https://github.com/vaskozl/containers/pkgs/container/firefox) |
 | [git](./git.yaml) | [`ghcr.io/vaskozl/git`](https://github.com/vaskozl/containers/pkgs/container/git) |
-| [gitlab-runner-helper](./gitlab/gitlab-runner-helper.yaml) | [`ghcr.io/vaskozl/gitlab-runner-helper`](https://github.com/vaskozl/containers/pkgs/container/gitlab-runner-helper) |
-| [gitlab-runner](./gitlab/gitlab-runner.yaml) | [`ghcr.io/vaskozl/gitlab-runner`](https://github.com/vaskozl/containers/pkgs/container/gitlab-runner) |
 | [go](./go.yaml) | [`ghcr.io/vaskozl/go`](https://github.com/vaskozl/containers/pkgs/container/go) |
 | [golink](./golink.yaml) | [`ghcr.io/vaskozl/golink`](https://github.com/vaskozl/containers/pkgs/container/golink) |
 | [grype](./grype.yaml) | [`ghcr.io/vaskozl/grype`](https://github.com/vaskozl/containers/pkgs/container/grype) |
@@ -63,24 +56,12 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [kubeconform](./kubeconform.yaml) | [`ghcr.io/vaskozl/kubeconform`](https://github.com/vaskozl/containers/pkgs/container/kubeconform) |
 | [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
 | [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
-| [labwc-chromium-slim](./labwc-chromium-slim.yaml) | [`ghcr.io/vaskozl/labwc-chromium-slim`](https://github.com/vaskozl/containers/pkgs/container/labwc-chromium-slim) |
-| [labwc-chromium](./labwc-chromium.yaml) | [`ghcr.io/vaskozl/labwc-chromium`](https://github.com/vaskozl/containers/pkgs/container/labwc-chromium) |
-| [labwc-firefox-slim](./labwc-firefox-slim.yaml) | [`ghcr.io/vaskozl/labwc-firefox-slim`](https://github.com/vaskozl/containers/pkgs/container/labwc-firefox-slim) |
-| [labwc-firefox](./labwc-firefox.yaml) | [`ghcr.io/vaskozl/labwc-firefox`](https://github.com/vaskozl/containers/pkgs/container/labwc-firefox) |
-| [labwc](./labwc.yaml) | [`ghcr.io/vaskozl/labwc`](https://github.com/vaskozl/containers/pkgs/container/labwc) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
-| [linux-asahi](./linux-asahi.yaml) | [`ghcr.io/vaskozl/linux-asahi`](https://github.com/vaskozl/containers/pkgs/container/linux-asahi) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
 | [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
-| [mesa](./mesa.yaml) | [`ghcr.io/vaskozl/mesa`](https://github.com/vaskozl/containers/pkgs/container/mesa) |
-| [minio](./minio.yaml) | [`ghcr.io/vaskozl/minio`](https://github.com/vaskozl/containers/pkgs/container/minio) |
 | [mosquitto](./mosquitto.yaml) | [`ghcr.io/vaskozl/mosquitto`](https://github.com/vaskozl/containers/pkgs/container/mosquitto) |
 | [net-tools](./net-tools.yaml) | [`ghcr.io/vaskozl/net-tools`](https://github.com/vaskozl/containers/pkgs/container/net-tools) |
 | [nginx](./nginx.yaml) | [`ghcr.io/vaskozl/nginx`](https://github.com/vaskozl/containers/pkgs/container/nginx) |
-| [niri-chromium-slim](./niri-chromium-slim.yaml) | [`ghcr.io/vaskozl/niri-chromium-slim`](https://github.com/vaskozl/containers/pkgs/container/niri-chromium-slim) |
-| [niri-chromium](./niri-chromium.yaml) | [`ghcr.io/vaskozl/niri-chromium`](https://github.com/vaskozl/containers/pkgs/container/niri-chromium) |
-| [niri-firefox-slim](./niri-firefox-slim.yaml) | [`ghcr.io/vaskozl/niri-firefox-slim`](https://github.com/vaskozl/containers/pkgs/container/niri-firefox-slim) |
-| [niri-firefox](./niri-firefox.yaml) | [`ghcr.io/vaskozl/niri-firefox`](https://github.com/vaskozl/containers/pkgs/container/niri-firefox) |
 | [niri](./niri.yaml) | [`ghcr.io/vaskozl/niri`](https://github.com/vaskozl/containers/pkgs/container/niri) |
 | [ntfy](./ntfy.yaml) | [`ghcr.io/vaskozl/ntfy`](https://github.com/vaskozl/containers/pkgs/container/ntfy) |
 | [openresty](./openresty.yaml) | [`ghcr.io/vaskozl/openresty`](https://github.com/vaskozl/containers/pkgs/container/openresty) |
@@ -113,32 +94,6 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [valkey](./valkey.yaml) | [`ghcr.io/vaskozl/valkey`](https://github.com/vaskozl/containers/pkgs/container/valkey) |
 | [wolfi-scanner](./wolfi-scanner.yaml) | [`ghcr.io/vaskozl/wolfi-scanner`](https://github.com/vaskozl/containers/pkgs/container/wolfi-scanner) |
 | [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
-## Flavors
-
-Bootable desktop image variants assemble `mesa.yaml` plus a desktop
-compositor and a browser. Naming is `{desktop}-{browser}` for the full
-image and `{desktop}-{browser}-slim` for the variant without `flatpak`:
-
-| Image                    | Desktop   | Browser  | Flatpak |
-|--------------------------|-----------|----------|---------|
-| `niri`                   | niri      | none     | yes     |
-| `cagebreak`              | cagebreak | none     | yes     |
-| `labwc`                  | labwc     | none     | yes     |
-| `niri-firefox`           | niri      | firefox  | yes     |
-| `niri-firefox-slim`      | niri      | firefox  | no      |
-| `niri-chromium`          | niri      | chromium | yes     |
-| `niri-chromium-slim`     | niri      | chromium | no      |
-| `cagebreak-firefox`      | cagebreak | firefox  | yes     |
-| `cagebreak-firefox-slim` | cagebreak | firefox  | no      |
-| `cagebreak-chromium`     | cagebreak | chromium | yes     |
-| `cagebreak-chromium-slim`| cagebreak | chromium | no      |
-| `labwc-firefox`          | labwc     | firefox  | yes     |
-| `labwc-firefox-slim`     | labwc     | firefox  | no      |
-| `labwc-chromium`         | labwc     | chromium | yes     |
-| `labwc-chromium-slim`    | labwc     | chromium | no      |
-
-The plain variants ship no browser but include flatpak, so a browser (or any other app) can be installed at runtime.
-
 ## Related
 
 - Packages (`melange` recipes, APK registry): [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages)
