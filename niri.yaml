@@ -87,6 +87,10 @@ contents:
     - pciutils
     - powertop-service
 
+    # Swap / hibernation
+    - bootc-kargs-zswap
+    - systemd-default-swapfile
+
     # Completions
     - btrfs-progs-bash-completion
     - kitty-bash-completion
