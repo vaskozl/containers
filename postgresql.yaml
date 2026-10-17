@@ -6,6 +6,7 @@ contents:
     - postgresql-contrib
     - postgresql-oci-entrypoint
     - postgresql-client
+    - gosu
 entrypoint:
   command: /usr/bin/docker-entrypoint.sh postgres
 work-dir: /home/postgres
