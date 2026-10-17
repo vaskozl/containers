@@ -21,7 +21,7 @@ accounts:
     - groupname: postgres
       gid: 70
 environment:
-  LANG: en_US.UTF-8
+  LANG: C.UTF-8
   PGDATA: /var/lib/postgresql/data
 paths:
   - path: /var/lib/postgresql/data
