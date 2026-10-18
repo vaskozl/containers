@@ -18,6 +18,7 @@ contents:
     - gtk-3-compiled-gschemas
     - hicolor-icon-theme
     - glycin-2
+    - bubblewrap
 
     # Wayland desktop utilities
     - kitty
