@@ -1,9 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
-contents:
-  packages:
-    - grype=0.120.1-r2
-    - kubectl
-entrypoint:
-  command: grype
-vcs-url: https://github.com/anchore/grype

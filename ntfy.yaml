@@ -1,9 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/chainguard-dev/apko/refs/heads/main/pkg/build/types/schema.json
-include: wolfi-base.yaml
-contents:
-  packages:
-    - ntfy=2.29.0-r0
-entrypoint:
-  command: ntfy
-cmd: serve --no-log-dates
-vcs-url: https://github.com/binwiederhier/ntfy

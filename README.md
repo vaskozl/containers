@@ -11,7 +11,7 @@ Two properties fall out of this for free:
 
 Custom packages that aren't in Wolfi yet are built with [`melange`](https://github.com/chainguard-dev/melange) and live in [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages). Built APKs are published to `https://apks.sko.ai`.
 
-A subset — `bootc`, `containerd`, `niri`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
+A subset — `bootc`, `niri`, `pinewall-config` — are also bootable hosts via [`bootc`](https://bootc-dev.github.io/bootc/). For how the pieces fit together, see [Making Bootable Wolfi Containers](https://sko.ai/blog/making-bootable-wolfi-containers/).
 
 ## Tagging
 
@@ -34,28 +34,21 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 
 | Image | Pull |
 | --- | --- |
-| [anubis](./anubis.yaml) | [`ghcr.io/vaskozl/anubis`](https://github.com/vaskozl/containers/pkgs/container/anubis) |
 | [apk-tools](./apk-tools.yaml) | [`ghcr.io/vaskozl/apk-tools`](https://github.com/vaskozl/containers/pkgs/container/apk-tools) |
 | [apko](./apko.yaml) | [`ghcr.io/vaskozl/apko`](https://github.com/vaskozl/containers/pkgs/container/apko) |
 | [baikal](./baikal.yaml) | [`ghcr.io/vaskozl/baikal`](https://github.com/vaskozl/containers/pkgs/container/baikal) |
-| [blocky](./blocky.yaml) | [`ghcr.io/vaskozl/blocky`](https://github.com/vaskozl/containers/pkgs/container/blocky) |
 | [bootc](./bootc.yaml) | [`ghcr.io/vaskozl/bootc`](https://github.com/vaskozl/containers/pkgs/container/bootc) |
 | [calibre](./calibre.yaml) | [`ghcr.io/vaskozl/calibre`](https://github.com/vaskozl/containers/pkgs/container/calibre) |
-| [containerd](./containerd.yaml) | [`ghcr.io/vaskozl/containerd`](https://github.com/vaskozl/containers/pkgs/container/containerd) |
 | [docker](./docker.yaml) | [`ghcr.io/vaskozl/docker`](https://github.com/vaskozl/containers/pkgs/container/docker) |
-| [firefox](./firefox.yaml) | [`ghcr.io/vaskozl/firefox`](https://github.com/vaskozl/containers/pkgs/container/firefox) |
 | [git](./git.yaml) | [`ghcr.io/vaskozl/git`](https://github.com/vaskozl/containers/pkgs/container/git) |
 | [go](./go.yaml) | [`ghcr.io/vaskozl/go`](https://github.com/vaskozl/containers/pkgs/container/go) |
 | [golink](./golink.yaml) | [`ghcr.io/vaskozl/golink`](https://github.com/vaskozl/containers/pkgs/container/golink) |
-| [grype](./grype.yaml) | [`ghcr.io/vaskozl/grype`](https://github.com/vaskozl/containers/pkgs/container/grype) |
 | [hugo](./hugo.yaml) | [`ghcr.io/vaskozl/hugo`](https://github.com/vaskozl/containers/pkgs/container/hugo) |
 | [jellyfin](./jellyfin.yaml) | [`ghcr.io/vaskozl/jellyfin`](https://github.com/vaskozl/containers/pkgs/container/jellyfin) |
 | [kromgo](./kromgo.yaml) | [`ghcr.io/vaskozl/kromgo`](https://github.com/vaskozl/containers/pkgs/container/kromgo) |
-| [kube-ip-tracker](./kube-ip-tracker.yaml) | [`ghcr.io/vaskozl/kube-ip-tracker`](https://github.com/vaskozl/containers/pkgs/container/kube-ip-tracker) |
 | [kube-network-policies](./kube-network-policies.yaml) | [`ghcr.io/vaskozl/kube-network-policies`](https://github.com/vaskozl/containers/pkgs/container/kube-network-policies) |
 | [kubeconform](./kubeconform.yaml) | [`ghcr.io/vaskozl/kubeconform`](https://github.com/vaskozl/containers/pkgs/container/kubeconform) |
 | [kubectl](./kubectl.yaml) | [`ghcr.io/vaskozl/kubectl`](https://github.com/vaskozl/containers/pkgs/container/kubectl) |
-| [kubelet](./kubelet.yaml) | [`ghcr.io/vaskozl/kubelet`](https://github.com/vaskozl/containers/pkgs/container/kubelet) |
 | [lidarr](./lidarr.yaml) | [`ghcr.io/vaskozl/lidarr`](https://github.com/vaskozl/containers/pkgs/container/lidarr) |
 | [maddy](./maddy.yaml) | [`ghcr.io/vaskozl/maddy`](https://github.com/vaskozl/containers/pkgs/container/maddy) |
 | [melange](./melange.yaml) | [`ghcr.io/vaskozl/melange`](https://github.com/vaskozl/containers/pkgs/container/melange) |
@@ -63,7 +56,6 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [net-tools](./net-tools.yaml) | [`ghcr.io/vaskozl/net-tools`](https://github.com/vaskozl/containers/pkgs/container/net-tools) |
 | [nginx](./nginx.yaml) | [`ghcr.io/vaskozl/nginx`](https://github.com/vaskozl/containers/pkgs/container/nginx) |
 | [niri](./niri.yaml) | [`ghcr.io/vaskozl/niri`](https://github.com/vaskozl/containers/pkgs/container/niri) |
-| [ntfy](./ntfy.yaml) | [`ghcr.io/vaskozl/ntfy`](https://github.com/vaskozl/containers/pkgs/container/ntfy) |
 | [openresty](./openresty.yaml) | [`ghcr.io/vaskozl/openresty`](https://github.com/vaskozl/containers/pkgs/container/openresty) |
 | [perl-libwww](./perl-libwww.yaml) | [`ghcr.io/vaskozl/perl-libwww`](https://github.com/vaskozl/containers/pkgs/container/perl-libwww) |
 | [perl-mojolicious](./perl-mojolicious.yaml) | [`ghcr.io/vaskozl/perl-mojolicious`](https://github.com/vaskozl/containers/pkgs/container/perl-mojolicious) |
@@ -74,26 +66,21 @@ Images have no custom entrypoint scripts. Pass the command and arguments directl
 | [prowlarr](./prowlarr.yaml) | [`ghcr.io/vaskozl/prowlarr`](https://github.com/vaskozl/containers/pkgs/container/prowlarr) |
 | [qbittorrent-nox](./qbittorrent-nox.yaml) | [`ghcr.io/vaskozl/qbittorrent-nox`](https://github.com/vaskozl/containers/pkgs/container/qbittorrent-nox) |
 | [radarr](./radarr.yaml) | [`ghcr.io/vaskozl/radarr`](https://github.com/vaskozl/containers/pkgs/container/radarr) |
-| [rakudo](./rakudo.yaml) | [`ghcr.io/vaskozl/rakudo`](https://github.com/vaskozl/containers/pkgs/container/rakudo) |
 | [renovate-apk-indexer](./renovate-apk-indexer.yaml) | [`ghcr.io/vaskozl/renovate-apk-indexer`](https://github.com/vaskozl/containers/pkgs/container/renovate-apk-indexer) |
 | [renovate](./renovate.yaml) | [`ghcr.io/vaskozl/renovate`](https://github.com/vaskozl/containers/pkgs/container/renovate) |
 | [rest-server](./rest-server.yaml) | [`ghcr.io/vaskozl/rest-server`](https://github.com/vaskozl/containers/pkgs/container/rest-server) |
 | [restic](./restic.yaml) | [`ghcr.io/vaskozl/restic`](https://github.com/vaskozl/containers/pkgs/container/restic) |
 | [ripgrep](./ripgrep.yaml) | [`ghcr.io/vaskozl/ripgrep`](https://github.com/vaskozl/containers/pkgs/container/ripgrep) |
-| [rust](./rust.yaml) | [`ghcr.io/vaskozl/rust`](https://github.com/vaskozl/containers/pkgs/container/rust) |
-| [sing-box](./sing-box.yaml) | [`ghcr.io/vaskozl/sing-box`](https://github.com/vaskozl/containers/pkgs/container/sing-box) |
 | [sonarr](./sonarr.yaml) | [`ghcr.io/vaskozl/sonarr`](https://github.com/vaskozl/containers/pkgs/container/sonarr) |
 | [syncthing](./syncthing.yaml) | [`ghcr.io/vaskozl/syncthing`](https://github.com/vaskozl/containers/pkgs/container/syncthing) |
 | [synology-csi](./synology-csi.yaml) | [`ghcr.io/vaskozl/synology-csi`](https://github.com/vaskozl/containers/pkgs/container/synology-csi) |
-| [tailscale-operator](./tailscale-operator.yaml) | [`ghcr.io/vaskozl/tailscale-operator`](https://github.com/vaskozl/containers/pkgs/container/tailscale-operator) |
-| [tailscale](./tailscale.yaml) | [`ghcr.io/vaskozl/tailscale`](https://github.com/vaskozl/containers/pkgs/container/tailscale) |
 | [thelounge](./thelounge.yaml) | [`ghcr.io/vaskozl/thelounge`](https://github.com/vaskozl/containers/pkgs/container/thelounge) |
 | [trusttunnel](./trusttunnel.yaml) | [`ghcr.io/vaskozl/trusttunnel`](https://github.com/vaskozl/containers/pkgs/container/trusttunnel) |
-| [tsidp](./tsidp.yaml) | [`ghcr.io/vaskozl/tsidp`](https://github.com/vaskozl/containers/pkgs/container/tsidp) |
 | [v2ray](./v2ray.yaml) | [`ghcr.io/vaskozl/v2ray`](https://github.com/vaskozl/containers/pkgs/container/v2ray) |
 | [valkey](./valkey.yaml) | [`ghcr.io/vaskozl/valkey`](https://github.com/vaskozl/containers/pkgs/container/valkey) |
 | [wolfi-scanner](./wolfi-scanner.yaml) | [`ghcr.io/vaskozl/wolfi-scanner`](https://github.com/vaskozl/containers/pkgs/container/wolfi-scanner) |
 | [wolfictl](./wolfictl.yaml) | [`ghcr.io/vaskozl/wolfictl`](https://github.com/vaskozl/containers/pkgs/container/wolfictl) |
+
 ## Related
 
 - Packages (`melange` recipes, APK registry): [`vaskozl/wolfi-packages`](https://github.com/vaskozl/wolfi-packages)
